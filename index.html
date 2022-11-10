@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/saves.css">  
+    <link rel="stylesheet" type="text/css" href="assets/css/cor.css">  
+    <link rel="stylesheet" type="text/css" href="assets/css/atributes.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/inputNumber.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montez&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e85ea023b4.js" crossorigin="anonymous"></script>
+    <title>Character Sheet - D&D 5e</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <section class="atributes">
+            <h2 class="title title--atribute">Atributos</h2>
+            <article>
+                <div class="atribute atribute--str">
+                    <label class="atribute__label atribute__label--str" for="str">Força</label>
+                    <input class="atribute__input" data-atributo="str"type="number" value="10" max="20" min="3" id="str"></input>
+                    <div class="modifier" data-str="modifier"></div>
+                    <button title="somar força" class="control control--soma" data-controle="+"></button>
+                    <button title="subtrair força" class="control control--subtrai" data-controle="-"></button>
+                    <div class="icon icon--str"></div>
+                    <button title="rolar força" class="atribute__roll"></button>
+                </div>
+                <div class="atribute atribute--dex">
+                    <label class="atribute__label atribute__label--dex" for="dex">Destreza</label>
+                    <input class="atribute__input" data-atributo="dex"type="number" value="10" max="20" min="3" id="dex"></input>
+                    <div class="modifier" data-dex="modifier"></div>
+                    <button title="somar destreza" class="control control--soma" data-controle="+"></button>
+                    <button title="subtrair destreza" class="control control--subtrai" data-controle="-"></button>
+                    <div class="icon icon--dex"></div>
+                    <button title="rolar destreza" class="atribute__roll"></button>
+                </div>
+                <div class="atribute atribute--con">
+                    <label class="atribute__label atribute__label--con" for="con">Constituição</label>
+                    <input class="atribute__input" data-atributo="con"type="number" value="10" max="20" min="3" id="con"></input>
+                    <div class="modifier" data-con="modifier"></div>
+                    <button title="somar constituição" class="control control--soma" data-controle="+"></button>
+                    <button title="subtrair constituição" class="control control--subtrai" data-controle="-"></button>
+                    <div class="icon icon--con"></div>
+                    <button title="rolar constituição" class="atribute__roll"></button>
+                </div>
+            </article>
+            <article>
+                <div class="atribute atribute--int">
+                    <label class="atribute__label atribute__label--int" for="int">Inteligência</label>
+                    <input class="atribute__input" data-atributo="int"type="number" value="10" max="20" min="3" id="int"></input>
+                    <div class="modifier" data-int="modifier"></div>
+                    <button title="somar inteligência" class="control control--soma" data-controle="+"></button>
+                    <button title="subtrair inteligência" class="control control--subtrai" data-controle="-"></button>
+                    <div class="icon icon--int"></div>
+                    <button title="rolar inteligência" class="atribute__roll"></button>
+                </div>
+                <div class="atribute atribute--wis">
+                    <label class="atribute__label atribute__label--wis" for="wis">Sabedoria</label>
+                    <input class="atribute__input" data-atributo="wis"type="number" value="10" max="20" min="3" id="wis"></input>
+                    <div class="modifier" data-wis="modifier"></div>
+                    <button title="somar sabedoria" class="control control--soma" data-controle="+"></button>
+                    <button title="subtrair sabedoria" class="control control--subtrai" data-controle="-"></button>
+                    <div class="icon icon--wis"></div>
+                    <button title="rolar sabedoria" class="atribute__roll"></button>
+                </div>
+                <div class="atribute atribute--cha">
+                    <label class="atribute__label atribute__label--cha" for="cha">Carisma</label>
+                    <input class="atribute__input" data-atributo="cha"type="number" value="10" max="20" min="3" id="cha"></input>
+                    <div class="modifier" data-cha="modifier"></div>
+                    <button title="somar carisma" class="control control--soma" data-controle="+"></button>
+                    <button title="subtrair carisma" class="control control--subtrai" data-controle="-"></button>
+                    <div class="icon icon--cha"></div>
+                    <button title="rolar carisma" class="atribute__roll"></button>
+                </div>
+            </article>
+            <div class="pointbuy__wrapper">
+                <input type="checkbox" aria-label="ocultar/ver" id="pointbuy">
+                <label id="pointbuy__label" for="pointbuy" data-pointbuy=""></label>
+                <p class="obs">*Utilize para contabilizar pontos a serem distribuidos antes de aplicar os pontos de raças e talentos.</p>
+                <p class="obs">*Lembre-se que o valor máximo nesse caso é 15 e o mínimo 8.</p>
+            </div>
+        </section>
+        <section class="saves">
+            <h2 class="title title--saves">Testes de Resistência</h2>
+            
+            <div class="saves__wrapper">
+                <input class="cor__str" type="checkbox" id="str__save"></input>
+                <label class="save__label cor__str" for="str__save">Força</label>
+            </div>
+            <button title="rolar teste de resistência de carisma" class="roll cor__str"></button>
+            <div class="saves__wrapper">
+                <input class="cor__dex" type="checkbox" id="dex__save"></input>
+                <label class="save__label cor__dex" for="dex__save">Destreza</label>
+            </div>
+            <button title="rolar teste de resistência de carisma" class="roll cor__dex"></button>
+            <div class="saves__wrapper">
+                <input class="cor__con" type="checkbox" id="con__save"></input>
+                <label class="save__label cor__con" for="con__save">Constituição</label>
+            </div>
+            <button title="rolar teste de resistência de carisma" class="roll cor__con"></button>
+            <div class="saves__wrapper">
+                <input class="cor__int" type="checkbox" id="int__save"></input>
+                <label class="save__label cor__int" for="int__save">Inteligência</label>
+            </div>
+            <button title="rolar teste de resistência de carisma" class="roll cor__int"></button>
+            <div class="saves__wrapper">
+                <input class="cor__wis" type="checkbox" id="wis__save"></input>
+                <label class="save__label cor__wis" for="wis__save">Sabedoria</label>
+            </div>
+            <button title="rolar teste de resistência de carisma" class="roll cor__wis"></button>
+            <div class="saves__wrapper">
+                <input class="cor__cha" type="checkbox" id="cha__save"></input>
+                <label class="save__label cor__cha" for="cha__save">Carisma</label>
+            </div>
+            <button title="rolar teste de resistência de carisma" class="roll cor__cha"></button>
+        </section>
+    </main>
+    <script src="assets/script/index.js"></script>
+    <script src="assets/script/pointbuy.js"></script>
+</body>
+</html>

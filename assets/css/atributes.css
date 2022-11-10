@@ -1,0 +1,244 @@
+.atributes{
+    display: grid;
+    grid-area: atributes;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+    align-self: flex-start;
+    width: 100%;
+}
+
+.atributes article{
+    display: grid;
+    gap: 12px;
+    margin-inline: auto;
+}
+
+.title--atribute{
+    grid-column: span 2;
+}
+
+.atribute{
+    font-family: 'montez', sans-serif;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-areas: 
+        "title title title"
+        "atribute modifier soma"
+        "atribute modifier subtrai"
+        "icon roll roll";
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 160px;
+    gap: 5px;
+    padding: 6px;
+    border-radius: 10px;
+}
+
+.atribute--str{
+    background-color: var(--str);
+}
+
+.atribute--dex{
+    background-color: var(--dex);
+}
+
+.atribute--con{
+    background-color: var(--con);
+}
+
+.atribute--int{
+    background-color: var(--int);
+}
+
+.atribute--wis{
+    background-color: var(--wis);
+}
+
+.atribute--cha{
+    background-color: var(--cha);
+}
+
+.atribute__label{
+    grid-area: title;
+    font-weight: bold;
+    font-size: 1.6rem;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.atribute__label--str{
+    background-color: var(--strLight);
+}
+
+.atribute__label--dex{
+    background-color: var(--dexLight);
+}
+
+.atribute__label--con{
+    background-color: var(--conLight);
+}
+
+.atribute__label--int{
+    background-color: var(--intLight);
+}
+
+.atribute__label--wis{
+    background-color: var(--wisLight);
+}
+
+.atribute__label--cha{
+    background-color: var(--chaLight);
+}
+
+.atribute__input{
+    grid-area: atribute;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    width: 50px;
+    border-radius: 6px;
+    padding-top: 6px;
+}
+
+.modifier{
+    grid-area: modifier;
+    border-radius: 6px;
+    padding-top: 8px;
+    height: 35px;
+    width: 40px;
+    margin-inline: auto;
+    font-weight: bold;
+    font-size: 1.5rem;
+    background-color: white;
+}
+
+.control{
+    grid-area: control;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.control--soma{
+    grid-area: soma;
+}
+
+.control--soma::after{
+    content:"\f139";
+    font: var(--fa-font-solid);
+    color: white;
+}
+
+.control--subtrai{
+    grid-area: subtrai;
+}
+
+.control--subtrai::after{
+    content:"\f13a";
+    font: var(--fa-font-solid);
+    color: white;
+}
+
+.icon{
+    font-size: 1.6rem;
+}
+
+.icon--str::after{
+    content:"\f6de";
+    font: var(--fa-font-solid);
+    color: white;
+}
+
+.icon--dex::after{
+    content:"\f2a7";
+    font: var(--fa-font-solid);
+    color: white;
+}
+
+.icon--con::after{
+    content:"\e574";
+    font: var(--fa-font-solid);
+    color: white;
+}
+
+.icon--int::after{
+    content:"\f6e8";
+    font: var(--fa-font-solid);
+    color: white;
+}
+
+.icon--wis::after{
+    content:"\f06e";
+    font: var(--fa-font-solid);
+    color: white;
+}
+
+.icon--cha::after{
+    content:"\f630";
+    font: var(--fa-font-solid);
+    color: white;
+}
+
+.atribute__roll{
+    grid-area: roll;
+    font-size: 1.4rem;
+    padding-top: 4px;
+    border: 1px solid white;
+    box-shadow: inset 0px 0px 3px 1px white;
+    width: 65px;
+    margin-inline: auto;
+    cursor: pointer;
+}
+.atribute__roll::after{
+    content:"\f522";
+    font: var(--fa-font-solid);
+    color: white;
+}
+
+.pointbuy__wrapper{
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    margin-top: 6px;
+    font-size: 1.2rem;
+}
+
+#pointbuy,
+#pointbuy__label{
+    cursor: pointer;
+}
+
+.pointbuy__icon{
+    display: flex;
+    align-items: center;
+}
+
+.pointbuy__icon::before{
+    margin-left: 20px;
+    content:"\f1ec";
+    font: var(--fa-font-solid);
+}
+
+.pointbuy__icon::after{
+    content:"Pointbuy";
+    margin-left: 4px;
+}
+
+.obs{
+    grid-column: span 2;
+    width: 275px;
+    margin-inline: auto;
+    color: brown;
+}
+
+@media screen and (max-width: 560px) {
+    .pointbuy__wrapper{
+        justify-content: center;
+    }
+
+    .obs{
+        margin-inline: 0px;
+    }
+}

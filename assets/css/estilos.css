@@ -1,0 +1,64 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body{
+  background: url(../img/wood.jpg) no-repeat;
+  background-size: cover;
+}
+
+section{
+  background: url(../img/sheet2.jpg) no-repeat;
+  background-size: cover;
+  padding: 12px;
+  border-radius: 20px;
+  box-shadow: -4px 4px 4px 2px #222;
+}
+
+header{
+  height: 50px;
+}
+
+main{
+  display: grid;
+  grid-template-columns: auto auto auto 1fr;
+  grid-template-areas: "atributes";
+  gap: 32px;
+  padding: 16px;
+}
+
+.title{
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.roll::after{
+  content:"\f522";
+  font: var(--fa-font-solid);
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 560px) {
+  main{
+    display: grid;
+    padding: 12px;
+    grid-template-columns: auto;
+    grid-template-areas: "atributes"
+    "saves"
+    "sheetTitle";
+  }
+
+  .sheet__title{
+    grid-area: sheetTitle;
+    writing-mode: horizontal-tb;
+    margin: 0;
+  }
+}
+
+.off{
+  display: none;
+}

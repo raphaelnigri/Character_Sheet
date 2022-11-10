@@ -1,0 +1,22 @@
+.saves{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-self: flex-start;
+    max-width: 220px;
+}
+
+.title--saves{
+    grid-column: span 2;
+}
+
+.saves__wrapper{
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    gap: 8px;
+}
+
+.save__label{
+    cursor: pointer;
+}
