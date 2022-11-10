@@ -1,44 +1,40 @@
 :root {
     --str: brown;
     --strLight: rgb(168, 120, 120);
-    --dex: yellowgreen;
-    --dexLight: rgb(195, 212, 160);
+    --dex: rgba(255, 134, 195, 0.9);
+    --dexLight: rgb(255, 172, 213);
     --con: rgb(255, 190, 0);
     --conLight: rgb(255, 223, 125);
     --int: royalblue;
     --intLight: rgb(120, 146, 221);
-    --wis: rgba(255, 134, 195, 0.9);
-    --wisLight: rgb(255, 172, 213);
+    --wis: yellowgreen;
+    --wisLight: rgb(195, 212, 160);
     --cha: purple;
     --chaLight: rgb(131, 60, 131);
+    
+    --checkbox: black;
 }
 
 .cor__str{
     color: var(--str);
-    accent-color: var(--str);
 }
 
 .cor__dex{
     color: var(--dex);
-    accent-color: var(--dex);
 }
 
 .cor__con{
     color: var(--con);
-    accent-color: var(--con);
 }
 
 .cor__int{
     color: var(--int);
-    accent-color: var(--int);
 }
 
 .cor__wis{
     color: var(--wis);
-    accent-color: var(--wis);
 }
 
 .cor__cha{
     color: var(--cha);
-    accent-color: var(--cha);
 }

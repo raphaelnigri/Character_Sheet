@@ -7,10 +7,13 @@
 
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/estilos.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/saves.css">  
-    <link rel="stylesheet" type="text/css" href="assets/css/cor.css">  
     <link rel="stylesheet" type="text/css" href="assets/css/atributes.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/inputNumber.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/saves.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/inspiracao.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/proficiencia.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/pericias.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/root.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/input.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montez&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
@@ -23,7 +26,7 @@
     </header>
     <main>
         <section class="atributes">
-            <h2 class="title title--atribute">Atributos</h2>
+            <h2 class="title title--2c">Atributos</h2>
             <article>
                 <div class="atribute atribute--str">
                     <label class="atribute__label atribute__label--str" for="str">Força</label>
@@ -90,41 +93,143 @@
             </div>
         </section>
         <section class="saves">
-            <h2 class="title title--saves">Testes de Resistência</h2>
+            <h2 class="title">Testes de Resistência</h2>
             
-            <div class="saves__wrapper">
-                <input class="cor__str" type="checkbox" id="str__save"></input>
-                <label class="save__label cor__str" for="str__save">Força</label>
+            <div class="input__wrapper">
+                <input type="checkbox" id="str__save"></input>
+                <label class="input__label cor__str" for="str__save">Força</label>
+                <button title="rolar resistência de força" class="roll cor__str"></button>
             </div>
-            <button title="rolar teste de resistência de carisma" class="roll cor__str"></button>
-            <div class="saves__wrapper">
-                <input class="cor__dex" type="checkbox" id="dex__save"></input>
-                <label class="save__label cor__dex" for="dex__save">Destreza</label>
+            <div class="input__wrapper">
+                <input type="checkbox" id="dex__save"></input>
+                <label class="input__label cor__dex" for="dex__save">Destreza</label>
+                <button title="rolar resistência de destreza" class="roll cor__dex"></button>
             </div>
-            <button title="rolar teste de resistência de carisma" class="roll cor__dex"></button>
-            <div class="saves__wrapper">
-                <input class="cor__con" type="checkbox" id="con__save"></input>
-                <label class="save__label cor__con" for="con__save">Constituição</label>
+            <div class="input__wrapper">
+                <input type="checkbox" id="con__save"></input>
+                <label class="input__label cor__con" for="con__save">Constituição</label>
+                <button title="rolar resistência de constituição" class="roll cor__con"></button>
             </div>
-            <button title="rolar teste de resistência de carisma" class="roll cor__con"></button>
-            <div class="saves__wrapper">
-                <input class="cor__int" type="checkbox" id="int__save"></input>
-                <label class="save__label cor__int" for="int__save">Inteligência</label>
+            <div class="input__wrapper">
+                <input type="checkbox" id="int__save"></input>
+                <label class="input__label cor__int" for="int__save">Inteligência</label>
+                <button title="rolar resistência de inteligência" class="roll cor__int"></button>
             </div>
-            <button title="rolar teste de resistência de carisma" class="roll cor__int"></button>
-            <div class="saves__wrapper">
-                <input class="cor__wis" type="checkbox" id="wis__save"></input>
-                <label class="save__label cor__wis" for="wis__save">Sabedoria</label>
+            <div class="input__wrapper">
+                <input type="checkbox" id="wis__save"></input>
+                <label class="input__label cor__wis" for="wis__save">Sabedoria</label>
+                <button title="rolar resistência de sabedoria" class="roll cor__wis"></button>
             </div>
-            <button title="rolar teste de resistência de carisma" class="roll cor__wis"></button>
-            <div class="saves__wrapper">
-                <input class="cor__cha" type="checkbox" id="cha__save"></input>
-                <label class="save__label cor__cha" for="cha__save">Carisma</label>
+            <div class="input__wrapper">
+                <input type="checkbox" id="cha__save"></input>
+                <label class="input__label cor__cha" for="cha__save">Carisma</label>
+            <button title="rolar resistência de carisma" class="roll cor__cha"></button>
             </div>
-            <button title="rolar teste de resistência de carisma" class="roll cor__cha"></button>
+        </section>
+        <section class="inspiracao">
+            <div class="icon__inspiracao" id="inspiracao"></div>
+            <h2 class="title title--inspiracao">Inspiração</h2>
+        </section>
+        <section class="proficiencia">
+            <h2 class="title title--prof">Bônus de proficiência</h2>
+        </section>
+
+        <section class="pericias">
+            <h2 class="title">Perícias</h2>
+            <div class="input__wrapper">
+                <input type="checkbox" id="acrobacia"></input>
+                <label class="input__label" for="acrobacia">Acrobacia (<span class="cor__dex font__atribute">Des</span>)</label>
+                <button title="rolar perícia acrobacia" class="roll"></button>
+            </div>
+            <div class="input__wrapper">
+                <input type="checkbox" id="arcanismo"></input>
+                <label class="input__label" for="arcanismo">Arcanismo (<span class="cor__int font__atribute">Int</span>)</label>
+                <button title="rolar perícia arcanismo" class="roll"></button>
+            </div>
+            <div class="input__wrapper">
+                <input type="checkbox" id="atletismo"></input>
+                <label class="input__label" for="atletismo">Atletismo (<span class="cor__str font__atribute">For</span>)</label>
+                <button title="rolar perícia atletismo" class="roll"></button>
+            </div>
+            <div class="input__wrapper">
+                <input type="checkbox" id="atuacao"></input>
+                <label class="input__label" for="atuacao">Atuação (<span class="cor__cha font__atribute">Car</span>)</label>
+                <button title="rolar perícia atuação" class="roll"></button>
+            </div>
+            <div class="input__wrapper">
+                <input type="checkbox" id="blefar"></input>
+                <label class="input__label" for="blefar">Blefar (<span class="cor__cha font__atribute">Car</span>)</label>
+                <button title="rolar perícia blefar" class="roll"></button>
+            </div>
+            <div class="input__wrapper">
+                <input type="checkbox" id="furtividade"></input>
+                <label class="input__label" for="furtividade">Furtividade (<span class="cor__dex font__atribute">Des</span>)</label>
+                <button title="rolar perícia furtividade" class="roll"></button>
+            </div>
+            <div class="input__wrapper">
+                <input type="checkbox" id="historia"></input>
+                <label class="input__label" for="historia">História (<span class="cor__int font__atribute">Int</span>)</label>
+                <button title="rolar perícia história" class="roll"></button>
+            </div>
+            <div class="input__wrapper">
+                <input type="checkbox" id="intimidar"></input>
+                <label class="input__label" for="intimidar">Intimidar (<span class="cor__cha font__atribute">Car</span>)</label>
+                <button title="rolar perícia intimidar" class="roll"></button>
+            </div>
+            <div class="input__wrapper">
+                <input type="checkbox" id="intuicao"></input>
+                <label class="input__label" for="intuicao">Intuição (<span class="cor__wis font__atribute">Sab</span>)</label>
+                <button title="rolar perícia intuição" class="roll"></button>
+            </div>
+            <div class="input__wrapper">
+                <input type="checkbox" id="investigacao"></input>
+                <label class="input__label" for="investigacao">Investigação (<span class="cor__int font__atribute">Int</span>)</label>
+                <button title="rolar perícia investigação" class="roll"></button>
+            </div>
+            <div class="input__wrapper">
+                <input type="checkbox" id="animais"></input>
+                <label class="input__label" for="animais">Adestrar animais (<span class="cor__cha font__atribute">Car</span>)</label>
+                <button title="rolar perícia adestrar animais" class="roll"></button>
+            </div>
+            <div class="input__wrapper">
+                <input type="checkbox" id="medicina"></input>
+                <label class="input__label" for="medicina">Medicina (<span class="cor__wis font__atribute">Sab</span>)</label>
+                <button title="rolar perícia medicina" class="roll"></button>
+            </div>
+            <div class="input__wrapper">
+                <input type="checkbox" id="natureza"></input>
+                <label class="input__label" for="natureza">Natureza (<span class="cor__wis font__atribute">Sab</span>)</label>
+                <button title="rolar perícia natureza" class="roll"></button>
+            </div>
+            <div class="input__wrapper">
+                <input type="checkbox" id="percepcao"></input>
+                <label class="input__label" for="percepcao">Percepção (<span class="cor__wis font__atribute">Sab</span>)</label>
+                <button title="rolar perícia percepção" class="roll"></button>
+            </div>
+            <div class="input__wrapper">
+                <input type="checkbox" id="persuasao"></input>
+                <label class="input__label" for="persuasao">Persuasão (<span class="cor__cha font__atribute">Car</span>)</label>
+                <button title="rolar perícia persuasão" class="roll"></button>
+            </div>
+            <div class="input__wrapper">
+                <input type="checkbox" id="prestidigitacao"></input>
+                <label class="input__label" for="prestidigitacao">Prestidigitação (<span class="cor__dex font__atribute">Des</span>)</label>
+                <button title="rolar perícia prestidigitação" class="roll"></button>
+            </div>
+            <div class="input__wrapper">
+                <input type="checkbox" id="religiao"></input>
+                <label class="input__label" for="religiao">Religiâo (<span class="cor__int font__atribute">Int</span>)</label>
+                <button title="rolar perícia religião" class="roll"></button>
+            </div>
+            <div class="input__wrapper">
+                <input type="checkbox" id="sobrevivencia"></input>
+                <label class="input__label" for="sobrevivencia">Sobrevivência (<span class="cor__wis font__atribute">Sab</span>)</label>
+                <button title="rolar perícia sobrevivência" class="roll"></button>
+            </div>
         </section>
     </main>
     <script src="assets/script/index.js"></script>
     <script src="assets/script/pointbuy.js"></script>
+    <script src="assets/script/inspiracao.js"></script>
 </body>
 </html>

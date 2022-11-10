@@ -1,20 +1,15 @@
 .atributes{
-    display: grid;
     grid-area: atributes;
     grid-template-columns: 1fr 1fr;
     column-gap: 16px;
-    align-self: flex-start;
     width: 100%;
+    max-width: 306px;
 }
 
 .atributes article{
     display: grid;
     gap: 12px;
     margin-inline: auto;
-}
-
-.title--atribute{
-    grid-column: span 2;
 }
 
 .atribute{
@@ -196,6 +191,11 @@
     color: white;
 }
 
+.atribute__roll:hover{
+    scale: 0.9;
+    transition: 0.2s;
+}
+
 .pointbuy__wrapper{
     grid-column: span 2;
     display: grid;
@@ -231,6 +231,10 @@
     width: 275px;
     margin-inline: auto;
     color: brown;
+}
+
+.font__atribute{
+    font-family: 'montez', sans-serif;
 }
 
 @media screen and (max-width: 560px) {

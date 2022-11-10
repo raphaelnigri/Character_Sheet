@@ -13,6 +13,8 @@ section{
   padding: 12px;
   border-radius: 20px;
   box-shadow: -4px 4px 4px 2px #222;
+  display: grid;
+  gap: 6px;
 }
 
 header{
@@ -22,9 +24,15 @@ header{
 main{
   display: grid;
   grid-template-columns: auto auto auto 1fr;
-  grid-template-areas: "atributes";
+  grid-template-areas: 
+    "atributes inspiracao"
+    "atributes proficiencia"
+    "atributes pericias"
+    "atributes pericias"
+    "saves pericias";
   gap: 32px;
   padding: 16px;
+  align-items: flex-start;
 }
 
 .title{
@@ -34,22 +42,49 @@ main{
   margin-bottom: 12px;
 }
 
+.title--2c{
+  grid-column: span 2;
+}
+
+.input__wrapper{
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.input__label{
+  cursor: pointer;
+}
+
+.roll{
+  margin-left: auto;
+}
+
 .roll::after{
   content:"\f522";
   font: var(--fa-font-solid);
   font-size: 1.2rem;
-  cursor: pointer;
-  margin-left: 10px;
+  margin-right: 4px;
 }
 
-@media screen and (max-width: 560px) {
+.roll:hover{
+  cursor: pointer;
+  scale: 1.25;
+  transition: 0.15s;
+}
+
+@media screen and (max-width: 660px) {
   main{
     display: grid;
     padding: 12px;
     grid-template-columns: auto;
-    grid-template-areas: "atributes"
+    grid-template-areas:
+    "inspiracao"
+    "proficiencia"
+    "atributes"
     "saves"
-    "sheetTitle";
+    "pericias";
   }
 
   .sheet__title{
