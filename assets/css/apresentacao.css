@@ -4,7 +4,8 @@
     grid-template-areas:
         "portrait portrait"
         "xp jogador" 
-        "classe race";
+        "antecedente race"
+        "nome nome";
     position: relative;
     background: none;
     background-size: cover;
@@ -26,7 +27,7 @@
     position: absolute;
     left: 10px;
     right: 0px;
-    top: 244px;
+    top: 200px;
     bottom: 0px;
     margin-inline: auto;
     margin-top: auto;
@@ -58,7 +59,7 @@
 
 .portrait{
     grid-area: portrait;
-    background: url(../img/elf2.png) no-repeat;
+    background: url(../img/elf.png) no-repeat;
     background-size: contain;
     background-position: center;
     width: 80%;
@@ -101,10 +102,22 @@
     padding-right: 20px;
 }
 
-.classe{
-    grid-area: classe;
+.input__presentation--full{
+    grid-column: span 2;
+    border-radius: 20px;
+    width: 80%;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.antecedente{
+    grid-area: antecedente;
 }
 
 .race{
     grid-area: race;
+}
+
+.nome{
+    grid-area: nome;
 }
