@@ -1,8 +1,8 @@
 :root {
     --str: brown;
     --strLight: rgb(168, 120, 120);
-    --dex: rgba(255, 134, 195, 0.9);
-    --dexLight: rgb(255, 172, 213);
+    --dex: rgba(255, 123, 0, 0.904);
+    --dexLight: rgb(255, 190, 70);
     --con: rgb(255, 190, 0);
     --conLight: rgb(255, 223, 125);
     --int: royalblue;
