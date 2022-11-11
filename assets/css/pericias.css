@@ -42,3 +42,9 @@
     margin-top: -1px;
     margin-left: -2px;
 }
+
+@media screen and (max-width: 660px) {
+    .pericias{
+        margin-inline: auto;
+    }
+}

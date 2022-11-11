@@ -238,12 +238,8 @@
     font-family: 'montez', sans-serif;
 }
 
-@media screen and (max-width: 560px) {
-    .pointbuy__wrapper{
-        justify-content: center;
-    }
-
-    .obs{
-        margin-inline: 0px;
+@media screen and (max-width: 660px) {
+    .atributes{
+        margin-inline: auto;
     }
 }

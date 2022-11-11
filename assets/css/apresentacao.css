@@ -1,0 +1,110 @@
+.apresentacao{
+    grid-area: apresentacao;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "portrait portrait"
+        "xp jogador" 
+        "classe race";
+    position: relative;
+    background: none;
+    background-size: cover;
+    box-shadow: none;
+    max-width: 400px;
+    gap: 10px;
+    column-gap: 14%;
+    margin-inline: auto;
+}
+
+.apresentacao::before{
+    content: "";
+    width: 24vw;
+    height: 24vw;
+    max-width: 94px;
+    max-height: 94px;
+    background: url(../img/d20.png) no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 10px;
+    right: 0px;
+    top: 244px;
+    bottom: 0px;
+    margin-inline: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    filter: brightness(0.8);
+    transition: 0.2s;
+}
+
+.apresentacao:hover::before{
+    filter: brightness(1);
+    transform: rotate(20deg);
+    transition: 0.2s;
+}
+
+.apresentacao::after{
+    content: "";
+    grid-area: portrait;
+    background: url(../img/sheet2.jpg) no-repeat;
+    background-position: center;
+    height: 240px;
+    width: 80%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border: 1px solid rgb(211, 211, 211);
+    position: relative;
+    margin-inline: auto;
+    z-index: -1;
+}
+
+.portrait{
+    grid-area: portrait;
+    background: url(../img/elf2.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 80%;
+    height: 240px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    box-shadow: inset 0px 0px 8px 6px rgba(0,0,0,0.75);
+    position: relative;
+    margin-inline: auto;
+    cursor: pointer;
+}
+
+.xp{
+    grid-area: xp;
+}
+
+.jogador{
+    grid-area: jogador;
+}
+
+.input__presentation{
+    box-shadow: -4px 4px 4px 2px #222;
+    background: url(../img/sheet2.jpg) no-repeat;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.input__presentation--left{
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.input__presentation--right{
+    width: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.classe{
+    grid-area: classe;
+}
+
+.race{
+    grid-area: race;
+}

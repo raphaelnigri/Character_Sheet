@@ -23,8 +23,9 @@ header{
 
 main{
   display: grid;
-  grid-template-columns: auto auto auto 1fr;
-  grid-template-areas: 
+  grid-template-columns: auto auto;
+  grid-template-areas:
+    "apresentacao apresentacao"
     "atributes inspiracao"
     "atributes proficiencia"
     "atributes pericias"
@@ -33,6 +34,8 @@ main{
   gap: 32px;
   padding: 16px;
   align-items: flex-start;
+  margin-inline: auto;
+  max-width: 700px;
 }
 
 .title{
@@ -81,6 +84,7 @@ main{
     padding: 12px;
     grid-template-columns: auto;
     grid-template-areas:
+    "apresentacao"
     "inspiracao"
     "proficiencia"
     "atributes"
@@ -88,11 +92,6 @@ main{
     "pericias";
   }
 
-  .sheet__title{
-    grid-area: sheetTitle;
-    writing-mode: horizontal-tb;
-    margin: 0;
-  }
 }
 
 .off{

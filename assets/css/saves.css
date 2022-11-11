@@ -2,3 +2,9 @@
     grid-area: saves;
     max-width: 230px;
 }
+
+@media screen and (max-width: 660px) {
+    .saves{
+        margin-inline: auto;
+    }
+}
