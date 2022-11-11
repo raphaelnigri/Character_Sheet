@@ -49,11 +49,12 @@ main{
 .input__wrapper{
   display: flex;
   align-items: center;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: bold;
 }
 
 .input__label{
+  margin-left: 2px;
   cursor: pointer;
 }
 

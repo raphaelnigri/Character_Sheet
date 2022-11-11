@@ -22,7 +22,6 @@
 </head>
 <body>
     <header>
-
     </header>
     <main>
         <section class="atributes">
@@ -88,13 +87,13 @@
             <div class="pointbuy__wrapper">
                 <input type="checkbox" aria-label="ocultar/ver" id="pointbuy">
                 <label id="pointbuy__label" for="pointbuy" data-pointbuy=""></label>
+                <label id="pointbuy__label--inativo" for="pointbuy"></label>
                 <p class="obs">*Utilize para contabilizar pontos a serem distribuidos antes de aplicar os pontos de raças e talentos.</p>
                 <p class="obs">*Lembre-se que o valor máximo nesse caso é 15 e o mínimo 8.</p>
             </div>
         </section>
         <section class="saves">
             <h2 class="title">Testes de Resistência</h2>
-            
             <div class="input__wrapper">
                 <input type="checkbox" id="str__save"></input>
                 <label class="input__label cor__str" for="str__save">Força</label>
@@ -137,93 +136,113 @@
 
         <section class="pericias">
             <h2 class="title">Perícias</h2>
+            <p class="prof">Prof.</p>
+            <p class="exp">Esp.</p>
             <div class="input__wrapper">
                 <input type="checkbox" id="acrobacia"></input>
+                <input type="checkbox" data-expertise="" title="Especializar"></input>
                 <label class="input__label" for="acrobacia">Acrobacia (<span class="cor__dex font__atribute">Des</span>)</label>
                 <button title="rolar perícia acrobacia" class="roll"></button>
             </div>
             <div class="input__wrapper">
                 <input type="checkbox" id="arcanismo"></input>
+                <input type="checkbox" data-expertise="" title="Especializar"></input>
                 <label class="input__label" for="arcanismo">Arcanismo (<span class="cor__int font__atribute">Int</span>)</label>
                 <button title="rolar perícia arcanismo" class="roll"></button>
             </div>
             <div class="input__wrapper">
                 <input type="checkbox" id="atletismo"></input>
+                <input type="checkbox" data-expertise="" title="Especializar"></input>
                 <label class="input__label" for="atletismo">Atletismo (<span class="cor__str font__atribute">For</span>)</label>
                 <button title="rolar perícia atletismo" class="roll"></button>
             </div>
             <div class="input__wrapper">
                 <input type="checkbox" id="atuacao"></input>
+                <input type="checkbox" data-expertise="" title="Especializar"></input>
                 <label class="input__label" for="atuacao">Atuação (<span class="cor__cha font__atribute">Car</span>)</label>
                 <button title="rolar perícia atuação" class="roll"></button>
             </div>
             <div class="input__wrapper">
                 <input type="checkbox" id="blefar"></input>
+                <input type="checkbox" data-expertise="" title="Especializar"></input>
                 <label class="input__label" for="blefar">Blefar (<span class="cor__cha font__atribute">Car</span>)</label>
                 <button title="rolar perícia blefar" class="roll"></button>
             </div>
             <div class="input__wrapper">
                 <input type="checkbox" id="furtividade"></input>
+                <input type="checkbox" data-expertise="" title="Especializar"></input>
                 <label class="input__label" for="furtividade">Furtividade (<span class="cor__dex font__atribute">Des</span>)</label>
                 <button title="rolar perícia furtividade" class="roll"></button>
             </div>
             <div class="input__wrapper">
                 <input type="checkbox" id="historia"></input>
+                <input type="checkbox" data-expertise="" title="Especializar"></input>
                 <label class="input__label" for="historia">História (<span class="cor__int font__atribute">Int</span>)</label>
                 <button title="rolar perícia história" class="roll"></button>
             </div>
             <div class="input__wrapper">
                 <input type="checkbox" id="intimidar"></input>
+                <input type="checkbox" data-expertise="" title="Especializar"></input>
                 <label class="input__label" for="intimidar">Intimidar (<span class="cor__cha font__atribute">Car</span>)</label>
                 <button title="rolar perícia intimidar" class="roll"></button>
             </div>
             <div class="input__wrapper">
                 <input type="checkbox" id="intuicao"></input>
+                <input type="checkbox" data-expertise="" title="Especializar"></input>
                 <label class="input__label" for="intuicao">Intuição (<span class="cor__wis font__atribute">Sab</span>)</label>
                 <button title="rolar perícia intuição" class="roll"></button>
             </div>
             <div class="input__wrapper">
                 <input type="checkbox" id="investigacao"></input>
+                <input type="checkbox" data-expertise="" title="Especializar"></input>
                 <label class="input__label" for="investigacao">Investigação (<span class="cor__int font__atribute">Int</span>)</label>
                 <button title="rolar perícia investigação" class="roll"></button>
             </div>
             <div class="input__wrapper">
                 <input type="checkbox" id="animais"></input>
+                <input type="checkbox" data-expertise="" title="Especializar"></input>
                 <label class="input__label" for="animais">Adestrar Animais (<span class="cor__cha font__atribute">Car</span>)</label>
                 <button title="rolar perícia adestrar animais" class="roll"></button>
             </div>
             <div class="input__wrapper">
                 <input type="checkbox" id="medicina"></input>
+                <input type="checkbox" data-expertise="" title="Especializar"></input>
                 <label class="input__label" for="medicina">Medicina (<span class="cor__wis font__atribute">Sab</span>)</label>
                 <button title="rolar perícia medicina" class="roll"></button>
             </div>
             <div class="input__wrapper">
                 <input type="checkbox" id="natureza"></input>
+                <input type="checkbox" data-expertise="" title="Especializar"></input>
                 <label class="input__label" for="natureza">Natureza (<span class="cor__wis font__atribute">Sab</span>)</label>
                 <button title="rolar perícia natureza" class="roll"></button>
             </div>
             <div class="input__wrapper">
                 <input type="checkbox" id="percepcao"></input>
+                <input type="checkbox" data-expertise="" title="Especializar"></input>
                 <label class="input__label" for="percepcao">Percepção (<span class="cor__wis font__atribute">Sab</span>)</label>
                 <button title="rolar perícia percepção" class="roll"></button>
             </div>
             <div class="input__wrapper">
                 <input type="checkbox" id="persuasao"></input>
+                <input type="checkbox" data-expertise="" title="Especializar"></input>
                 <label class="input__label" for="persuasao">Persuasão (<span class="cor__cha font__atribute">Car</span>)</label>
                 <button title="rolar perícia persuasão" class="roll"></button>
             </div>
             <div class="input__wrapper">
                 <input type="checkbox" id="prestidigitacao"></input>
+                <input type="checkbox" data-expertise="" title="Especializar"></input>
                 <label class="input__label" for="prestidigitacao">Prestidigitação (<span class="cor__dex font__atribute">Des</span>)</label>
                 <button title="rolar perícia prestidigitação" class="roll"></button>
             </div>
             <div class="input__wrapper">
                 <input type="checkbox" id="religiao"></input>
+                <input type="checkbox" data-expertise="" title="Especializar"></input>
                 <label class="input__label" for="religiao">Religiâo (<span class="cor__int font__atribute">Int</span>)</label>
                 <button title="rolar perícia religião" class="roll"></button>
             </div>
             <div class="input__wrapper">
                 <input type="checkbox" id="sobrevivencia"></input>
+                <input type="checkbox" data-expertise="" title="Especializar"></input>
                 <label class="input__label" for="sobrevivencia">Sobrevivência (<span class="cor__wis font__atribute">Sab</span>)</label>
                 <button title="rolar perícia sobrevivência" class="roll"></button>
             </div>

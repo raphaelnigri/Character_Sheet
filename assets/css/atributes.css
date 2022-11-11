@@ -206,7 +206,8 @@
 }
 
 #pointbuy,
-#pointbuy__label{
+#pointbuy__label,
+#pointbuy__label--inativo{
     cursor: pointer;
 }
 
@@ -216,7 +217,7 @@
 }
 
 .pointbuy__icon::before{
-    margin-left: 20px;
+    margin-left: 4px;
     content:"\f1ec";
     font: var(--fa-font-solid);
 }
