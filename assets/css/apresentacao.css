@@ -75,7 +75,6 @@
     filter: brightness(1);
 }
 
-.d6::after,
 .d4::after,
 .d4::before{
     background: url(../img/dice/d4.png) no-repeat;
@@ -117,15 +116,21 @@
 }
 
 .d6::after{
-    left: -1.4vw;
-    top: 30px;
-    filter: brightness(0) blur(5px);
-    transform: scale(0.8) ;
+    left: -1.55vw;
+    top: 28px;
+    width: 18vw;
+    height: 18vw;
+    max-width: 84px;
+    max-height: 85px;
+    background-color: black;
+    filter: blur(8px);
+    transform: scale(0.5) rotate(18deg);
 }
 
 .d6:hover::after{
-    left: -2vw;
-    transform: scale(0.7) rotate(15deg);
+    left: -1.8vw;
+    top:26px;
+    transform: scale(0.45) rotate(34deg);
 }
 
 .d8::after,
@@ -168,12 +173,30 @@
 .d10::before{
     background: url(../img/dice/d10.png) no-repeat;
     background-size: contain;
-    right: -2vw;
+    right: -2.5vw;
     top: 10px;
     width: 19vw;
     height: 19vw;
     max-width: 90px;
     max-height: 90px;
+}
+
+.d10::after{
+    right: -2vw;
+    top: 68px;
+    width: 19vw;
+    height: 19vw;
+    max-width: 100px;
+    max-height: 40px;
+    background-color: black;
+    filter: blur(8px);
+    transform: rotate(18deg);
+    border-radius: 50%;
+    transform: scale(0.7);
+}
+
+.d10:hover::after{
+    transform: scale(0.7);
 }
 
 .d12::before{
@@ -186,6 +209,25 @@
     max-width: 80px;
     max-height: 80px;
 }
+
+.d12::after{
+    right: -5.2vw;
+    top: 190px;
+    width: 17vw;
+    height: 17vw;
+    max-width: 80px;
+    max-height: 80px;
+    background-color: black;
+    filter: blur(8px);
+    transform: rotate(18deg);
+    border-radius: 50%;
+    transform: scale(0.7);
+}
+
+.d12:hover::after{
+    transform: scale(0.7);
+}
+
 
 .d20::before{
     background: url(../img/dice/d20.png) no-repeat;
