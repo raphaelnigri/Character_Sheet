@@ -8,10 +8,12 @@
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/estilos.css">
     <link rel="stylesheet" type="text/css" href="assets/css/apresentacao.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/atributes.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/saves.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/classes.css">  
     <link rel="stylesheet" type="text/css" href="assets/css/inspiracao.css">
     <link rel="stylesheet" type="text/css" href="assets/css/proficiencia.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/atributes.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/saves.css">
+
     <link rel="stylesheet" type="text/css" href="assets/css/pericias.css">
     <link rel="stylesheet" type="text/css" href="assets/css/root.css">
     <link rel="stylesheet" type="text/css" href="assets/css/input.css">
@@ -26,6 +28,35 @@
     <header>
     </header>
     <main>
+        <section class="classes">
+            <h2 class="title">Classes</h2>
+            <article class="class__wrapper">
+                <label class="class__label" for="class__nome">Classe:</label>
+                <input class="class__input" type="text" id="class__nome" placeholder="___________"></input>
+                <label class="class__label class__label--lvl" for="class__lvl">Lvl:</label>
+                <input class="class__input class__input--lvl" type="number" id="class__lvl" value="" placeholder="_____"></input>
+                <button class="class__btn--add" type="submit" aria-label="Adicionar classe."></button>
+            </article>
+            <fieldset class="class__wrapper class__wrapper--class__field">
+                <!--Exemplo, Remover-->
+                <div class="class__wrapper--classes">
+                    <label  class="class__label" data-classe="" for="fighter">Warlock:</label>
+                    <input class="class__input class__input--lvl" type="number" data-lvl="" id="fighter" value="" placeholder="_____"></input>  
+                    <button class="class__btn--remove" aria-label="Deleta classe."></button>
+                </div>
+                <div class="class__wrapper--classes">
+                    <label  class="class__label" data-classe="" for="fighter">Fighter:</label>
+                    <input class="class__input class__input--lvl" type="number" data-lvl="" id="fighter" value="" placeholder="_____"></input>  
+                    <button class="class__btn--remove" aria-label="Deleta classe."></button>
+                </div>
+                <div class="class__wrapper--classes">
+                    <label  class="class__label" data-classe="" for="fighter">Artificer:</label>
+                    <input class="class__input class__input--lvl" type="number" data-lvl="" id="fighter" value="" placeholder="_____"></input>  
+                    <button class="class__btn--remove" aria-label="Deleta classe."></button>
+                </div>
+                <!--Exemplo, Remover-->
+            </fieldset>
+        </section>
         <section class="apresentacao">
             <div class="portrait"></div>
             <input class="input__presentation input__presentation--left xp" type="number" placeholder="Experiência" aria-label="Experiência"></input>

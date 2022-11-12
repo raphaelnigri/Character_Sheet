@@ -26,9 +26,8 @@ main{
   grid-template-columns: auto auto;
   grid-template-areas:
     "apresentacao apresentacao"
-    "atributes inspiracao"
-    "atributes proficiencia"
-    "atributes pericias"
+    "classes inspiracao"
+    "classes proficiencia"
     "atributes pericias"
     "saves pericias";
   gap: 32px;
@@ -87,6 +86,7 @@ main{
     "apresentacao"
     "inspiracao"
     "proficiencia"
+    "classes"
     "atributes"
     "saves"
     "pericias";

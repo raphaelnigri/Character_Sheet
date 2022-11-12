@@ -1,0 +1,80 @@
+.classes{
+    grid-area: classes;
+    display: flex;
+    flex-direction: column;
+    column-gap: 16px;
+    width: 100%;
+    
+}
+
+.class__wrapper{
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.class__wrapper--class__field{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 12px;
+    column-gap: 8px;
+}
+
+.class__wrapper--classes{
+    margin-top: 18px;
+    background: url(../img/sheet2.jpg) no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: -2.5px 2px 4px 2px #222;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: baseline;
+    padding: 12px;
+}
+
+.class__label{
+    font-family: 'montez', sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.class__label--lvl{
+    margin-left: auto;
+}
+
+.class__input{
+    width: 40%;
+    background: transparent;
+    font-weight: bold;
+    font-size: 1.4rem;
+    font-family: 'montez', sans-serif;
+}
+
+.class__input--lvl{
+    width: 30px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: 2px;
+}
+
+.class__btn--add::before,
+.class__btn--remove::before{
+    content:"\f055";
+    cursor: pointer;
+    font: var(--fa-font-solid);
+    transition: 0.2s;
+    filter: brightness(1);
+    color: black;
+}
+
+.class__btn--remove::before{
+    content:"\f056";
+    color: var(--str);
+}
+
+.class__btn--add:hover::before{
+    color: var(--wis);
+}
