@@ -196,7 +196,7 @@
 }
 
 .d10:hover::after{
-    transform: scale(0.7);
+    transform: scale(0.68);
 }
 
 .d12::before{
