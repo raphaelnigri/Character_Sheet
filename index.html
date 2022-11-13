@@ -7,8 +7,10 @@
 
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/estilos.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/apresentacao.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/classes.css">  
+    <link rel="stylesheet" type="text/css" href="assets/css/apresentacao/apresentacao.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/apresentacao/portrait.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/apresentacao/dice.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/classes.css">
     <link rel="stylesheet" type="text/css" href="assets/css/inspiracao.css">
     <link rel="stylesheet" type="text/css" href="assets/css/proficiencia.css">
     <link rel="stylesheet" type="text/css" href="assets/css/atributes.css">
@@ -29,8 +31,8 @@
     </header>
     <main>
         <section class="apresentacao">
-            <label class="portrait" for="portrait" aria-label="Selecione sua imagem.">
-            <input class="portrait__input" type="file" id="portrait"></label>
+            <label class="portrait" id="portrait" for="portrait__input" aria-label="Selecione sua imagem.">
+            <input class="portrait__input" type="file" id="portrait__input"></label>
             <div class="caixa caixa--char__lvl">Lvl
                 <div class="char__lvl" id="char__lvl"></div>
             </div>
@@ -39,11 +41,26 @@
             <input class="input__presentation input__presentation--right jogador" type="text" placeholder="Jogador" aria-label="Jogador"></input>
             <input class="input__presentation input__presentation--right race" data-race="" type="text" id="race" placeholder="Raça" aria-label="Raça"></input>
             <input class="input__presentation input__presentation--full nome" type="text" id="nome" aria-label="Nome do personagem" placeholder="Nome do personagem"></input>
-            <button class="dice d4" id="d4" aria-label="Rolar d4"></button>
-            <button class="dice d6" id="d6" aria-label="Rolar d6"></button>
-            <button class="dice d8" id="d8" aria-label="Rolar d8"></button>
-            <button class="dice d10" id="d10" aria-label="Rolar d10"></button>
-            <button class="dice d12" id="d12" aria-label="Rolar d12"></button>
+            <div class="dice__wrapper">
+                <button class="dice d4" id="d4" aria-label="Rolar d4"></button>
+                <span class="dice__shadow shadow--d4"></span>
+            </div>
+            <div class="dice__wrapper">
+                <button class="dice d6" id="d6" aria-label="Rolar d6"></button>
+                <span class="dice__shadow shadow--d6"></span>
+            </div>
+            <div class="dice__wrapper">
+                <button class="dice d8" id="d8" aria-label="Rolar d8"></button>
+                <span class="dice__shadow shadow--d8"></span>
+            </div>
+            <div class="dice__wrapper">
+                <button class="dice d10" id="d10" aria-label="Rolar d10"></button>
+                <span class="dice__shadow shadow--d10"></span>
+            </div>
+            <div class="dice__wrapper">
+                <button class="dice d12" id="d12" aria-label="Rolar d12"></button>
+                <span class="dice__shadow shadow--d12"></span>
+            </div>
             <button class="dice d20" id="d20" aria-label="Rolar d20"></button>
         </section>
         <section class="inspiracao">
@@ -285,5 +302,6 @@
     <script src="assets/script/pointbuy.js"></script>
     <script src="assets/script/inspiracao.js"></script>
     <script src="assets/script/pericias.js"></script>
+    <script src="assets/script/portrait.js"></script>
 </body>
 </html>

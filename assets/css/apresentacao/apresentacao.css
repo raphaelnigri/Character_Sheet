@@ -1,0 +1,85 @@
+.apresentacao{
+    grid-area: apresentacao;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "portrait portrait"
+        "xp jogador" 
+        "antecedente race"
+        "nome nome";
+    position: relative;
+    background: none;
+    background-size: cover;
+    box-shadow: none;
+    max-width: 400px;
+    gap: 10px;
+    column-gap: 14%;
+    margin-top: 50px;
+    margin-inline: auto;
+}
+
+.caixa--char__lvl{
+    position: absolute;
+    bottom: 184px;
+    left: 30px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    font-family: 'montez', sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    box-shadow: -1.5px 3px 3px 0px #333;
+}
+
+.xp{
+    grid-area: xp;
+}
+
+.jogador{
+    grid-area: jogador;
+}
+
+.input__presentation{
+    box-shadow: -4px 4px 4px 2px #222;
+    background: url(../../img/sheet2.jpg) no-repeat;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.input__presentation--left{
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.input__presentation--right{
+    width: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.input__presentation--full{
+    grid-column: span 2;
+    border-radius: 20px;
+    width: 80%;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.antecedente{
+    grid-area: antecedente;
+}
+
+.race{
+    grid-area: race;
+}
+
+.nome{
+    grid-area: nome;
+}

@@ -1,0 +1,34 @@
+.portrait::before{
+    content: "";
+    grid-area: portrait;
+    background: url(../../img/sheet2.jpg) no-repeat;
+    background-position: center;
+    height: 240px;
+    width: 100%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border: 1px solid rgb(211, 211, 211);
+    z-index: -1;
+}
+
+.portrait{
+    grid-area: portrait;
+    background-image: url(../../img/elf.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 80%;
+    height: 240px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    box-shadow: inset -8px 0px 6px 0px rgba(0,0,0,0.75);
+    margin-inline: auto;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portrait__input{
+    display: none;
+}

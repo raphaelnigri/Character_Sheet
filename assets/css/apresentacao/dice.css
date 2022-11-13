@@ -1,0 +1,194 @@
+.dice{
+    filter: brightness(0.8);
+    transition: 0.2s;
+    position: absolute;
+}
+
+.dice__shadow{
+    filter: brightness(0) blur(4px);
+    z-index: -1;
+    transition: 0.2s;
+    position: absolute;
+}
+
+.dice:hover{
+    transform: rotate(20deg);
+    transition: 0.2s;
+    cursor: pointer;
+    filter: brightness(1.025);
+}
+
+.shadow--d4,
+.d4{
+    background: url(../../img/dice/d4.png) no-repeat;
+    background-size: contain;
+    left: -5vw;
+    right: 0px;
+    top: 160px;
+    width: 18vw;
+    height: 18vw;
+    max-width: 84px;
+    max-height: 85px;
+}
+
+.shadow--d4{
+    left: -5.2vw;
+    top: 170px;
+    transform: scale(0.8);
+}
+
+.dice__wrapper:hover .shadow--d4{
+    transform: scale(0.9) rotate(12deg);
+}
+
+.d6{
+    background: url(../../img/dice/d6.png) no-repeat;
+    background-size: contain;
+    left: -1vw;
+    right: 0px;
+    top: 5px;
+    filter: brightness(1);
+    width: 19vw;
+    height: 19vw;
+    max-width: 90px;
+    max-height: 90px;
+}
+
+.d6:hover .dice{
+    filter: brightness(1.125)
+}
+
+.shadow--d6{
+    left: -1.3vw;
+    top: 28px;
+    width: 18vw;
+    height: 18vw;
+    max-width: 84px;
+    max-height: 85px;
+    background-color: black;
+    filter: blur(8px);
+    transform: scale(0.5) rotate(18deg);
+}
+
+.dice__wrapper:hover .shadow--d6{
+    left: -1.5vw;
+    transform: scale(0.45) rotate(34deg);
+}
+
+.shadow--d8,
+.d8{
+    background: url(../../img/dice/d8.png) no-repeat;
+    background-size: contain;
+    left: 10px;
+    right: 0px;
+    top: -500px;
+    bottom: 0px;
+    margin-inline: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    filter: brightness(0.9);
+    width: 19vw;
+    height: 19vw;
+    max-width: 84px;
+    max-height: 84px;
+}
+
+.d8:hover .dice{
+    filter: brightness(1.1)
+}
+
+.d8:hover .dice{
+    filter: brightness(1.3)
+}
+
+.shadow--d8{
+    right: 32px;
+    top: -490px;
+    filter: brightness(0) blur(5px);
+    transform: scale(0.8) ;
+}
+
+.dice__wrapper:hover .shadow--d8{
+    transform: scale(0.7) rotate(18deg);
+}
+
+.d10{
+    background: url(../../img/dice/d10.png) no-repeat;
+    background-size: contain;
+    right: -2.5vw;
+    top: 10px;
+    width: 20.5vw;
+    height: 20.5vw;
+    max-width: 90px;
+    max-height: 90px;
+}
+
+.shadow--d10{
+    right: -1.9vw;
+    top: 68px;
+    width: 22vw;
+    height: 10vw;
+    max-width: 100px;
+    max-height: 40px;
+    background-color: black;
+    filter: blur(8px);
+    transform: rotate(18deg);
+    border-radius: 50%;
+    transform: scale(0.7);
+}
+
+.dice__wrapper:hover .shadow--d10{
+    transform: scale(0.68);
+}
+
+@media screen and (max-width: 375px) {
+    .shadow--d10{
+        top: 58px;
+        right: -1vw;
+    }
+}
+
+.d12{
+    background: url(../../img/dice/d12.png) no-repeat;
+    background-size: contain;
+    right: -5.5vw;
+    top: 170px;
+    width: 17vw;
+    height: 17vw;
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.shadow--d12{
+    right: -5.2vw;
+    top: 190px;
+    width: 17vw;
+    height: 17vw;
+    max-width: 80px;
+    max-height: 80px;
+    background-color: black;
+    filter: blur(8px);
+    transform: rotate(18deg);
+    border-radius: 50%;
+    transform: scale(0.7);
+}
+
+.dice__wrapper:hover .shadow--d12{
+    transform: scale(0.7);
+}
+
+.d20{
+    background: url(../../img/dice/d20.png) no-repeat;
+    background-size: contain;
+    left: 10px;
+    right: 0px;
+    top: 170px;
+    bottom: 0px;
+    margin-inline: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 24vw;
+    height: 24vw;
+    max-width: 94px;
+    max-height: 94px;
+}

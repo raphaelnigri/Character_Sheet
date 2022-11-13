@@ -6,10 +6,13 @@ const lvlTotal = document.getElementById('char__lvl');
 const proficiencia = document.getElementById('proficiencia');
 
 addClassBtn.addEventListener('click', () =>{
-    if(checaClasseRepetida(className.value) != 'repetido' && className.value != ''){
+
+    if(checaLimiteDeLvl(classLvl) && checaClasseRepetida(className.value) != 'repetido' && className.value != '' && classLvl.value != ''){
         addClass(className,classLvl);
         calculaLvlTotal();
         calculaProficiencia();
+        className.value = '';
+        classLvl.value = '';
     }
 })
 
@@ -26,7 +29,7 @@ function addClass(nome,nivel){
     novaClasse.appendChild(label);
     label.classList.add('class__label');
     label.setAttribute('for', `${nome.value}`);
-    label.innerHTML = `${nome.value}:`
+    label.innerHTML = `${nome.value}:`;
 
     novaClasse.appendChild(input);
     input.classList.add('class__input');
@@ -44,6 +47,9 @@ function addClass(nome,nivel){
     novaClasse.appendChild(del);
     del.classList.add('class__btn--remove');
     del.setAttribute('aria-label','Deleta classe.');
+    del.addEventListener('click', ()=>{
+        novaClasse.remove();
+    })
 }
 
 function checaClasseRepetida(nome){
@@ -78,5 +84,16 @@ function calculaProficiencia(){
         proficiencia.innerHTML = `+2`;
     } else{
         proficiencia.innerHTML = `+${2 + parseInt((baseDeCalculo - 1)/4)}`;
+    }
+}
+
+function checaLimiteDeLvl(aumentoDeLvl){
+    let lvlAtual = parseInt(lvlTotal.innerHTML);
+    lvlAtual += parseInt(aumentoDeLvl.value);
+
+    if(lvlAtual > 20){
+        return;
+    }else{
+        return true;
     }
 }
