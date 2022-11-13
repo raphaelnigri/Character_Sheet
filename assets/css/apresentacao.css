@@ -47,6 +47,10 @@
     cursor: pointer;
 }
 
+.portrait__input{
+    display: none;
+}
+
 .caixa--char__lvl{
     position: absolute;
     bottom: 184px;
