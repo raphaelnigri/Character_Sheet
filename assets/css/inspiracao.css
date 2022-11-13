@@ -10,21 +10,11 @@
 }
 
 .icon__inspiracao{
-    border: 2px solid black;
-    width: 80px;
-    height: 80px;
-    border-radius: 20px;
-    position: absolute;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: -16px;
-    background: url(../img/sheet2.jpg) no-repeat;
-    background-size: cover;
-    box-shadow: -2px 2px 3px 2px #333;
     cursor: pointer;
-    margin-left: -10px;
+    position: absolute;
+        left: 0;
+        top: -16px;
+        left: -10px;
 }
 
 .icon__inspiracao::before{

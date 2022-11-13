@@ -4,7 +4,7 @@
     flex-direction: column;
     column-gap: 16px;
     width: 100%;
-    
+    position: relative;
 }
 
 .class__wrapper{
@@ -22,7 +22,7 @@
     column-gap: 8px;
 }
 
-.class__wrapper--classes{
+.class__wrapper--classe{
     margin-top: 18px;
     background: url(../img/sheet2.jpg) no-repeat;
     background-size: cover;

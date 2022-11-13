@@ -47,6 +47,23 @@
     cursor: pointer;
 }
 
+.caixa--char__lvl{
+    position: absolute;
+    bottom: 184px;
+    left: 30px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    font-family: 'montez', sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    box-shadow: -1.5px 3px 3px 0px #333;
+}
+
 .dice::after,
 .dice::before{
     content: "";

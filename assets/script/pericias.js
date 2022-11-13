@@ -8,7 +8,6 @@ pericias.forEach(pericia => {
         let esp = evento.target.parentNode.querySelector('[data-expertise]')
         
         evento.preventDefault();
-
         
         if(!prof.checked){
             prof.checked = true;

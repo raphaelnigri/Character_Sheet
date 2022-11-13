@@ -28,37 +28,11 @@
     <header>
     </header>
     <main>
-        <section class="classes">
-            <h2 class="title">Classes</h2>
-            <article class="class__wrapper">
-                <label class="class__label" for="class__nome">Classe:</label>
-                <input class="class__input" type="text" id="class__nome" placeholder="___________"></input>
-                <label class="class__label class__label--lvl" for="class__lvl">Lvl:</label>
-                <input class="class__input class__input--lvl" type="number" id="class__lvl" value="" placeholder="_____"></input>
-                <button class="class__btn--add" type="submit" aria-label="Adicionar classe."></button>
-            </article>
-            <fieldset class="class__wrapper class__wrapper--class__field">
-                <!--Exemplo, Remover-->
-                <div class="class__wrapper--classes">
-                    <label  class="class__label" data-classe="" for="fighter">Warlock:</label>
-                    <input class="class__input class__input--lvl" type="number" data-lvl="" id="fighter" value="" placeholder="_____"></input>  
-                    <button class="class__btn--remove" aria-label="Deleta classe."></button>
-                </div>
-                <div class="class__wrapper--classes">
-                    <label  class="class__label" data-classe="" for="fighter">Fighter:</label>
-                    <input class="class__input class__input--lvl" type="number" data-lvl="" id="fighter" value="" placeholder="_____"></input>  
-                    <button class="class__btn--remove" aria-label="Deleta classe."></button>
-                </div>
-                <div class="class__wrapper--classes">
-                    <label  class="class__label" data-classe="" for="fighter">Artificer:</label>
-                    <input class="class__input class__input--lvl" type="number" data-lvl="" id="fighter" value="" placeholder="_____"></input>  
-                    <button class="class__btn--remove" aria-label="Deleta classe."></button>
-                </div>
-                <!--Exemplo, Remover-->
-            </fieldset>
-        </section>
         <section class="apresentacao">
             <div class="portrait"></div>
+            <div class="caixa caixa--char__lvl">Lvl
+                <div class="char__lvl" id="char__lvl"></div>
+            </div>
             <input class="input__presentation input__presentation--left xp" type="number" placeholder="Experiência" aria-label="Experiência"></input>
             <input class="input__presentation input__presentation--left antecedente" data-antecedente="" type="text" id="antecedente" placeholder="Antecedente" aria-label="Antecedente"></input>
             <input class="input__presentation input__presentation--right jogador" type="text" placeholder="Jogador" aria-label="Jogador"></input>
@@ -70,6 +44,25 @@
             <button class="dice d10" id="d10" aria-label="Rolar d10"></button>
             <button class="dice d12" id="d12" aria-label="Rolar d12"></button>
             <button class="dice d20" id="d20" aria-label="Rolar d20"></button>
+        </section>
+        <section class="inspiracao">
+            <h2 class="title title--inspiracao">Inspiração</h2>
+            <div class="caixa icon__inspiracao" id="inspiracao"></div>
+        </section>
+        <section class="proficiencia">
+            <h2 class="title title--prof">Proficiência</h2>
+            <div class="caixa caixa--prof" id="proficiencia"></div>
+        </section>
+        <section class="classes">
+            <h2 class="title">Classes</h2>
+            <article class="class__wrapper">
+                <label class="class__label" for="class__nome">Classe:</label>
+                <input class="class__input" type="text" id="class__nome" placeholder="___________"></input>
+                <label class="class__label class__label--lvl" for="class__lvl">Lvl:</label>
+                <input class="class__input class__input--lvl" type="number" id="class__lvl" value="" placeholder="_____"></input>
+                <button class="class__btn--add" id="class__btn--add" aria-label="Adicionar classe."></button>
+            </article>
+            <ul class="class__wrapper class__wrapper--class__field" id="listaDeClasses"></ul>
         </section>
         <section class="atributes">
             <h2 class="title title--2c">Atributos</h2>
@@ -172,15 +165,6 @@
             <button title="rolar resistência de carisma" class="roll cor__cha"></button>
             </div>
         </section>
-        <section class="inspiracao">
-            <h2 class="title title--inspiracao">Inspiração</h2>
-            <div class="icon__inspiracao" id="inspiracao"></div>
-        </section>
-        <section class="proficiencia">
-            <h2 class="title title--prof">Proficiência</h2>
-            <div class="input__proficiencia" id="proficiencia"></div>
-        </section>
-
         <section class="pericias">
             <h2 class="title">Perícias</h2>
             <p class="prof">Prof.</p>
@@ -295,6 +279,7 @@
             </div>
         </section>
     </main>
+    <script src="assets/script/classes.js"></script>
     <script src="assets/script/atributos.js"></script>
     <script src="assets/script/pointbuy.js"></script>
     <script src="assets/script/inspiracao.js"></script>

@@ -10,21 +10,11 @@
     margin-right: 70px;
 }
 
-.input__proficiencia{
-    border: 2px solid black;
-    width: 80px;
-    height: 80px;
-    border-radius: 20px;
+.caixa--prof{
     position: absolute;
         right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: -16px;
-    background: url(../img/sheet2.jpg) no-repeat;
-    background-size: cover;
-    box-shadow: 0px 4px 3px 0px #333;
-    margin-right: -10px;
+        top: -16px;
+        right: -10px;
     font-family: 'montez', sans-serif;
     font-size: 2.5rem;
     font-weight: bold;
