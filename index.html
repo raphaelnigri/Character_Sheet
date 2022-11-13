@@ -36,11 +36,11 @@
             <div class="caixa caixa--char__lvl">Lvl
                 <div class="char__lvl" id="char__lvl"></div>
             </div>
-            <input class="input__presentation input__presentation--left xp" type="number" placeholder="Experiência" aria-label="Experiência"></input>
-            <input class="input__presentation input__presentation--left antecedente" data-antecedente="" type="text" id="antecedente" placeholder="Antecedente" aria-label="Antecedente"></input>
-            <input class="input__presentation input__presentation--right jogador" type="text" placeholder="Jogador" aria-label="Jogador"></input>
-            <input class="input__presentation input__presentation--right race" data-race="" type="text" id="race" placeholder="Raça" aria-label="Raça"></input>
-            <input class="input__presentation input__presentation--full nome" type="text" id="nome" aria-label="Nome do personagem" placeholder="Nome do personagem"></input>
+            <input class="input__presentation input__presentation--left xp" type="number" placeholder="Experiência" aria-label="Experiência">
+            <input class="input__presentation input__presentation--left antecedente" data-antecedente="" type="text" id="antecedente" placeholder="Antecedente" aria-label="Antecedente">
+            <input class="input__presentation input__presentation--right jogador" type="text" placeholder="Jogador" aria-label="Jogador">
+            <input class="input__presentation input__presentation--right race" data-race="" type="text" id="race" placeholder="Raça" aria-label="Raça">
+            <input class="input__presentation input__presentation--full nome" type="text" id="nome" aria-label="Nome do personagem" placeholder="Nome do personagem">
             <div class="dice__wrapper">
                 <button class="dice d4" id="d4" aria-label="Rolar d4"></button>
                 <span class="dice__shadow shadow--d4"></span>
@@ -75,9 +75,9 @@
             <h2 class="title">Classes</h2>
             <article class="class__wrapper">
                 <label class="class__label" for="class__nome">Classe:</label>
-                <input class="class__input" type="text" id="class__nome" placeholder="___________"></input>
+                <input class="class__input" type="text" id="class__nome" placeholder="___________">
                 <label class="class__label class__label--lvl" for="class__lvl">Lvl:</label>
-                <input class="class__input class__input--lvl" type="number" id="class__lvl" value="" placeholder="_____"></input>
+                <input class="class__input class__input--lvl" type="number" id="class__lvl" value="" placeholder="_____">
                 <button class="class__btn--add" id="class__btn--add" aria-label="Adicionar classe."></button>
             </article>
             <ul class="class__wrapper class__wrapper--class__field" id="listaDeClasses"></ul>
@@ -87,7 +87,7 @@
             <article>
                 <div class="atribute atribute--str">
                     <label class="atribute__label atribute__label--str" for="str">Força</label>
-                    <input class="atribute__input" data-atributo="str"type="number" value="10" max="20" min="3" id="str"></input>
+                    <input class="atribute__input" data-atributo="str" type="number" value="10" max="20" min="3" id="str">
                     <div class="modifier" data-str="modifier"></div>
                     <button title="somar força" class="control control--soma" data-controle="+"></button>
                     <button title="subtrair força" class="control control--subtrai" data-controle="-"></button>
@@ -96,7 +96,7 @@
                 </div>
                 <div class="atribute atribute--dex">
                     <label class="atribute__label atribute__label--dex" for="dex">Destreza</label>
-                    <input class="atribute__input" data-atributo="dex"type="number" value="10" max="20" min="3" id="dex"></input>
+                    <input class="atribute__input" data-atributo="dex"type="number" value="10" max="20" min="3" id="dex">
                     <div class="modifier" data-dex="modifier"></div>
                     <button title="somar destreza" class="control control--soma" data-controle="+"></button>
                     <button title="subtrair destreza" class="control control--subtrai" data-controle="-"></button>
@@ -105,7 +105,7 @@
                 </div>
                 <div class="atribute atribute--con">
                     <label class="atribute__label atribute__label--con" for="con">Constituição</label>
-                    <input class="atribute__input" data-atributo="con"type="number" value="10" max="20" min="3" id="con"></input>
+                    <input class="atribute__input" data-atributo="con"type="number" value="10" max="20" min="3" id="con">
                     <div class="modifier" data-con="modifier"></div>
                     <button title="somar constituição" class="control control--soma" data-controle="+"></button>
                     <button title="subtrair constituição" class="control control--subtrai" data-controle="-"></button>
@@ -116,7 +116,7 @@
             <article>
                 <div class="atribute atribute--int">
                     <label class="atribute__label atribute__label--int" for="int">Inteligência</label>
-                    <input class="atribute__input" data-atributo="int"type="number" value="10" max="20" min="3" id="int"></input>
+                    <input class="atribute__input" data-atributo="int"type="number" value="10" max="20" min="3" id="int">
                     <div class="modifier" data-int="modifier"></div>
                     <button title="somar inteligência" class="control control--soma" data-controle="+"></button>
                     <button title="subtrair inteligência" class="control control--subtrai" data-controle="-"></button>
@@ -125,7 +125,7 @@
                 </div>
                 <div class="atribute atribute--wis">
                     <label class="atribute__label atribute__label--wis" for="wis">Sabedoria</label>
-                    <input class="atribute__input" data-atributo="wis"type="number" value="10" max="20" min="3" id="wis"></input>
+                    <input class="atribute__input" data-atributo="wis"type="number" value="10" max="20" min="3" id="wis">
                     <div class="modifier" data-wis="modifier"></div>
                     <button title="somar sabedoria" class="control control--soma" data-controle="+"></button>
                     <button title="subtrair sabedoria" class="control control--subtrai" data-controle="-"></button>
@@ -134,7 +134,7 @@
                 </div>
                 <div class="atribute atribute--cha">
                     <label class="atribute__label atribute__label--cha" for="cha">Carisma</label>
-                    <input class="atribute__input" data-atributo="cha"type="number" value="10" max="20" min="3" id="cha"></input>
+                    <input class="atribute__input" data-atributo="cha"type="number" value="10" max="20" min="3" id="cha">
                     <div class="modifier" data-cha="modifier"></div>
                     <button title="somar carisma" class="control control--soma" data-controle="+"></button>
                     <button title="subtrair carisma" class="control control--subtrai" data-controle="-"></button>
@@ -153,32 +153,32 @@
         <section class="saves">
             <h2 class="title">Testes de Resistência</h2>
             <div class="input__wrapper">
-                <input type="checkbox" id="str__save"></input>
+                <input type="checkbox" id="str__save">
                 <label class="input__label cor__str" for="str__save">Força</label>
                 <button title="rolar resistência de força" class="roll cor__str"></button>
             </div>
             <div class="input__wrapper">
-                <input type="checkbox" id="dex__save"></input>
+                <input type="checkbox" id="dex__save">
                 <label class="input__label cor__dex" for="dex__save">Destreza</label>
                 <button title="rolar resistência de destreza" class="roll cor__dex"></button>
             </div>
             <div class="input__wrapper">
-                <input type="checkbox" id="con__save"></input>
+                <input type="checkbox" id="con__save">
                 <label class="input__label cor__con" for="con__save">Constituição</label>
                 <button title="rolar resistência de constituição" class="roll cor__con"></button>
             </div>
             <div class="input__wrapper">
-                <input type="checkbox" id="int__save"></input>
+                <input type="checkbox" id="int__save">
                 <label class="input__label cor__int" for="int__save">Inteligência</label>
                 <button title="rolar resistência de inteligência" class="roll cor__int"></button>
             </div>
             <div class="input__wrapper">
-                <input type="checkbox" id="wis__save"></input>
+                <input type="checkbox" id="wis__save">
                 <label class="input__label cor__wis" for="wis__save">Sabedoria</label>
                 <button title="rolar resistência de sabedoria" class="roll cor__wis"></button>
             </div>
             <div class="input__wrapper">
-                <input type="checkbox" id="cha__save"></input>
+                <input type="checkbox" id="cha__save">
                 <label class="input__label cor__cha" for="cha__save">Carisma</label>
             <button title="rolar resistência de carisma" class="roll cor__cha"></button>
             </div>
@@ -188,110 +188,110 @@
             <p class="prof">Prof.</p>
             <p class="exp">Esp.</p>
             <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="acrobacia"></input>
-                <input type="checkbox" data-expertise="" title="Especializar"></input>
+                <input type="checkbox" data-proficiencia="" id="acrobacia">
+                <input type="checkbox" data-expertise="" title="Especializar">
                 <label class="input__label" data-pericia="acrobacia" for="acrobacia">Acrobacia (<span class="cor__dex font__atribute">Des</span>)</label>
                 <button title="rolar perícia acrobacia" class="roll"></button>
             </div>
             <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="arcanismo"></input>
-                <input type="checkbox" data-expertise="" title="Especializar"></input>
+                <input type="checkbox" data-proficiencia="" id="arcanismo">
+                <input type="checkbox" data-expertise="" title="Especializar">
                 <label class="input__label" data-pericia="arcanismo" for="arcanismo">Arcanismo (<span class="cor__int font__atribute">Int</span>)</label>
                 <button title="rolar perícia arcanismo" class="roll"></button>
             </div>
             <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="atletismo"></input>
-                <input type="checkbox" data-expertise="" title="Especializar"></input>
+                <input type="checkbox" data-proficiencia="" id="atletismo">
+                <input type="checkbox" data-expertise="" title="Especializar">
                 <label class="input__label" data-pericia="atletismo" for="atletismo">Atletismo (<span class="cor__str font__atribute">For</span>)</label>
                 <button title="rolar perícia atletismo" class="roll"></button>
             </div>
             <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="atuacao"></input>
-                <input type="checkbox" data-expertise="" title="Especializar"></input>
+                <input type="checkbox" data-proficiencia="" id="atuacao">
+                <input type="checkbox" data-expertise="" title="Especializar">
                 <label class="input__label" data-pericia="atuacao" for="atuacao">Atuação (<span class="cor__cha font__atribute">Car</span>)</label>
                 <button title="rolar perícia atuação" class="roll"></button>
             </div>
             <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="blefar"></input>
-                <input type="checkbox" data-expertise="" title="Especializar"></input>
+                <input type="checkbox" data-proficiencia="" id="blefar">
+                <input type="checkbox" data-expertise="" title="Especializar">
                 <label class="input__label" data-pericia="blefar" for="blefar">Blefar (<span class="cor__cha font__atribute">Car</span>)</label>
                 <button title="rolar perícia blefar" class="roll"></button>
             </div>
             <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="furtividade"></input>
-                <input type="checkbox" data-expertise="" title="Especializar"></input>
+                <input type="checkbox" data-proficiencia="" id="furtividade">
+                <input type="checkbox" data-expertise="" title="Especializar">
                 <label class="input__label" data-pericia="furtividade" for="furtividade">Furtividade (<span class="cor__dex font__atribute">Des</span>)</label>
                 <button title="rolar perícia furtividade" class="roll"></button>
             </div>
             <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="historia"></input>
-                <input type="checkbox" data-expertise="" title="Especializar"></input>
+                <input type="checkbox" data-proficiencia="" id="historia">
+                <input type="checkbox" data-expertise="" title="Especializar">
                 <label class="input__label" data-pericia="historia" for="historia">História (<span class="cor__int font__atribute">Int</span>)</label>
                 <button title="rolar perícia história" class="roll"></button>
             </div>
             <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="intimidar"></input>
-                <input type="checkbox" data-expertise="" title="Especializar"></input>
+                <input type="checkbox" data-proficiencia="" id="intimidar">
+                <input type="checkbox" data-expertise="" title="Especializar">
                 <label class="input__label" data-pericia="intimidar" for="intimidar">Intimidar (<span class="cor__cha font__atribute">Car</span>)</label>
                 <button title="rolar perícia intimidar" class="roll"></button>
             </div>
             <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="intuicao"></input>
-                <input type="checkbox" data-expertise="" title="Especializar"></input>
+                <input type="checkbox" data-proficiencia="" id="intuicao">
+                <input type="checkbox" data-expertise="" title="Especializar">
                 <label class="input__label" data-pericia="intuicao" for="intuicao">Intuição (<span class="cor__wis font__atribute">Sab</span>)</label>
                 <button title="rolar perícia intuição" class="roll"></button>
             </div>
             <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="investigacao"></input>
-                <input type="checkbox" data-expertise="" title="Especializar"></input>
+                <input type="checkbox" data-proficiencia="" id="investigacao">
+                <input type="checkbox" data-expertise="" title="Especializar">
                 <label class="input__label" data-pericia="investigacao" for="investigacao">Investigação (<span class="cor__int font__atribute">Int</span>)</label>
                 <button title="rolar perícia investigação" class="roll"></button>
             </div>
             <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="animais"></input>
-                <input type="checkbox" data-expertise="" title="Especializar"></input>
+                <input type="checkbox" data-proficiencia="" id="animais">
+                <input type="checkbox" data-expertise="" title="Especializar">
                 <label class="input__label" data-pericia="animais" for="animais">Adestrar Animais (<span class="cor__cha font__atribute">Car</span>)</label>
                 <button title="rolar perícia adestrar animais" class="roll"></button>
             </div>
             <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="medicina"></input>
-                <input type="checkbox" data-expertise="" title="Especializar"></input>
+                <input type="checkbox" data-proficiencia="" id="medicina">
+                <input type="checkbox" data-expertise="" title="Especializar">
                 <label class="input__label" data-pericia="medicina" for="medicina">Medicina (<span class="cor__wis font__atribute">Sab</span>)</label>
                 <button title="rolar perícia medicina" class="roll"></button>
             </div>
             <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="natureza"></input>
-                <input type="checkbox" data-expertise="" title="Especializar"></input>
+                <input type="checkbox" data-proficiencia="" id="natureza">
+                <input type="checkbox" data-expertise="" title="Especializar">
                 <label class="input__label" data-pericia="natureza" for="natureza">Natureza (<span class="cor__wis font__atribute">Sab</span>)</label>
                 <button title="rolar perícia natureza" class="roll"></button>
             </div>
             <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="percepcao"></input>
-                <input type="checkbox" data-expertise="" title="Especializar"></input>
+                <input type="checkbox" data-proficiencia="" id="percepcao">
+                <input type="checkbox" data-expertise="" title="Especializar">
                 <label class="input__label" data-pericia="percepcao" for="percepcao">Percepção (<span class="cor__wis font__atribute">Sab</span>)</label>
                 <button title="rolar perícia percepção" class="roll"></button>
             </div>
             <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="persuasao"></input>
-                <input type="checkbox" data-expertise="" title="Especializar"></input>
+                <input type="checkbox" data-proficiencia="" id="persuasao">
+                <input type="checkbox" data-expertise="" title="Especializar">
                 <label class="input__label" data-pericia="persuasao" for="persuasao">Persuasão (<span class="cor__cha font__atribute">Car</span>)</label>
                 <button title="rolar perícia persuasão" class="roll"></button>
             </div>
             <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="prestidigitacao"></input>
-                <input type="checkbox" data-expertise="" title="Especializar"></input>
+                <input type="checkbox" data-proficiencia="" id="prestidigitacao">
+                <input type="checkbox" data-expertise="" title="Especializar">
                 <label class="input__label" data-pericia="prestidigitacao" for="prestidigitacao">Prestidigitação (<span class="cor__dex font__atribute">Des</span>)</label>
                 <button title="rolar perícia prestidigitação" class="roll"></button>
             </div>
             <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="religiao"></input>
-                <input type="checkbox" data-expertise="" title="Especializar"></input>
+                <input type="checkbox" data-proficiencia="" id="religiao">
+                <input type="checkbox" data-expertise="" title="Especializar">
                 <label class="input__label" data-pericia="religiao" for="religiao">Religiâo (<span class="cor__int font__atribute">Int</span>)</label>
                 <button title="rolar perícia religião" class="roll"></button>
             </div>
             <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="sobrevivencia"></input>
-                <input type="checkbox" data-expertise="" title="Especializar"></input>
+                <input type="checkbox" data-proficiencia="" id="sobrevivencia">
+                <input type="checkbox" data-expertise="" title="Especializar">
                 <label class="input__label" data-pericia="sobrevivencia" for="sobrevivencia">Sobrevivência (<span class="cor__wis font__atribute">Sab</span>)</label>
                 <button title="rolar perícia sobrevivência" class="roll"></button>
             </div>

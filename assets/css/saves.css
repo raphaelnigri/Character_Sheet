@@ -3,6 +3,17 @@
     max-width: 230px;
 }
 
+/*
+.wrapper--saves{
+    background: transparent no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    box-shadow: -2px 2px 4px 2px #222;
+    padding: 8px;
+    margin-bottom: 8px;
+}
+*/
+
 @media screen and (max-width: 660px) {
     .saves{
         margin-inline: auto;
