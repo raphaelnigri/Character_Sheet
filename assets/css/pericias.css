@@ -43,6 +43,14 @@
     margin-left: -2px;
 }
 
+.input__label--pericia{
+    user-select: none;
+}
+
+.pericia__label--atribute{
+    font-family: 'montez', sans-serif;
+}
+
 @media screen and (max-width: 660px) {
     .pericias{
         margin-inline: auto;

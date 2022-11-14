@@ -1,5 +1,4 @@
-pericias = document.querySelectorAll('[data-pericia]');
-
+const pericias = document.querySelectorAll('[data-pericia]');
 
 pericias.forEach(pericia => {
     
