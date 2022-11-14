@@ -1,0 +1,42 @@
+.outras-proficiencias{
+    display: grid;
+    grid-template-columns: auto 1fr 40px;
+    margin-top: 32px;
+}
+
+.outras-proficiencias:nth-child(1) {
+    margin-top: 0px;
+}
+
+.title--outras,
+.title--ferramentas,
+.title--idiomas{
+    grid-column: span 3;
+}
+
+.title--ferramentas::before{
+    content: "\f0ad";
+    font: var(--fa-font-solid);
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.title--idiomas::before{
+    content: "\f2a2";
+    font: var(--fa-font-solid);
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.outra__input{
+    width: 100%;
+    background: transparent;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-bottom: 1px solid black;
+    margin-left: 4px;
+}
+
+.outras-proficiencias .btn--add{
+    justify-self: flex-end;
+}

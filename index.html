@@ -10,13 +10,14 @@
     <link rel="stylesheet" type="text/css" href="assets/css/apresentacao/apresentacao.css">
     <link rel="stylesheet" type="text/css" href="assets/css/apresentacao/portrait.css">
     <link rel="stylesheet" type="text/css" href="assets/css/apresentacao/dice.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/classes.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/classes/classes.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/classes/btn.css">
     <link rel="stylesheet" type="text/css" href="assets/css/inspiracao.css">
     <link rel="stylesheet" type="text/css" href="assets/css/proficiencia.css">
     <link rel="stylesheet" type="text/css" href="assets/css/atributes.css">
     <link rel="stylesheet" type="text/css" href="assets/css/saves.css">
-
     <link rel="stylesheet" type="text/css" href="assets/css/pericias.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/outras.css">
     <link rel="stylesheet" type="text/css" href="assets/css/root.css">
     <link rel="stylesheet" type="text/css" href="assets/css/input.css">
 
@@ -78,9 +79,9 @@
                 <input class="class__input" type="text" id="class__nome" placeholder="___________">
                 <label class="class__label class__label--lvl" for="class__lvl">Lvl:</label>
                 <input class="class__input class__input--lvl" type="number" id="class__lvl" value="" placeholder="_____">
-                <button class="class__btn--add" id="class__btn--add" aria-label="Adicionar classe."></button>
+                <button class="btn--add" id="class__btn--add" aria-label="Adicionar classe."></button>
             </article>
-            <ul class="class__wrapper class__wrapper--class__field" id="listaDeClasses"></ul>
+            <ul class="class__wrapper class__wrapper--class__field" id="lista__classes"></ul>
         </section>
         <section class="atributes">
             <h2 class="title title--2c">Atributos</h2>
@@ -296,8 +297,32 @@
                 <button title="rolar perícia sobrevivência" class="roll"></button>
             </div>
         </section>
+        <section>
+            <article class="outras-proficiencias">
+                <h2 class="title title--outras">Outras Proficiências</h2>
+                <label class="class__label" for="outra__prof">Proficiência:</label>
+                <input class="outra__input" type="text" id="outra__prof" value="">
+                <button class="btn--add" id="outra__prof--add" aria-label="Adicionar proficiencia."></button>
+                <ul class="wrapper__outras" id="outra__prof"></ul>
+            </article>
+            <article class="outras-proficiencias">
+                <h2 class="title title--idiomas">Idiomas</h2>
+                <label class="class__label" for="idioma">Idioma:</label>
+                <input class="outra__input" type="text" id="idioma" value="">
+                <button class="btn--add" id="idioma--add" aria-label="Adicionar lingua."></button>
+                <ul class="wrapper__outras" id="idiomas"></ul>
+            </article>
+            <article class="outras-proficiencias">
+                <h2 class="title title--ferramentas">Ferramentas</h2>
+                <label class="class__label" for="ferramenta">Ferramenta:</label>
+                <input class="outra__input" type="text" id="ferramenta" value="">
+                <button class="btn--add" id="ferramenta--add" aria-label="Adicionar ferramenta."></button>
+                <ul class="wrapper__outras" id="lista__ferramentas"></ul>
+            </article>
+        </section>
     </main>
     <script src="assets/script/classes.js"></script>
+    <script src="assets/script/outras.js"></script>
     <script src="assets/script/atributos.js"></script>
     <script src="assets/script/pointbuy.js"></script>
     <script src="assets/script/inspiracao.js"></script>

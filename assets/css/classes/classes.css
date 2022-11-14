@@ -59,22 +59,3 @@
     margin-right: auto;
     margin-left: 2px;
 }
-
-.class__btn--add::before,
-.class__btn--remove::before{
-    content:"\f055";
-    cursor: pointer;
-    font: var(--fa-font-solid);
-    transition: 0.2s;
-    filter: brightness(1);
-    color: black;
-}
-
-.class__btn--remove::before{
-    content:"\f056";
-    color: var(--str);
-}
-
-.class__btn--add:hover::before{
-    color: var(--wis);
-}

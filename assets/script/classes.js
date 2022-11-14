@@ -1,7 +1,7 @@
 const addClassBtn = document.getElementById('class__btn--add');
 const className = document.getElementById('class__nome');
 const classLvl = document.getElementById('class__lvl');
-const listaDeClasses = document.getElementById('listaDeClasses');
+const listaDeClasses = document.getElementById('lista__classes');
 const lvlTotal = document.getElementById('char__lvl');
 const proficiencia = document.getElementById('proficiencia');
 
@@ -45,10 +45,12 @@ function addClass(nome,nivel){
     });
     
     novaClasse.appendChild(del);
-    del.classList.add('class__btn--remove');
+    del.classList.add('btn--remove');
     del.setAttribute('aria-label','Deleta classe.');
     del.addEventListener('click', ()=>{
         novaClasse.remove();
+        calculaLvlTotal();
+        calculaProficiencia();
     })
 }
 
