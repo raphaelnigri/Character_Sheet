@@ -1,0 +1,48 @@
+.tesouro{
+    text-align: center;
+}
+
+.tesouro--title{
+    margin-top: 32px;
+}
+
+.coins__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.coins__wrapper{
+    box-shadow: -2.5px 2px 4px 2px #222;
+    display: flex;
+    padding: 4px;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.coin::before{
+    content: "\f51e";
+    font: var(--fa-font-solid);
+}
+
+.coin--platina{
+    color: var(--platina);
+}
+
+.coin--ouro{
+    color: var(--ouro);
+}
+
+.coin--prata{
+    color: var(--prata);
+}
+
+.coin--cobre{
+    color: var(--cobre);
+}
+
+.coins__wrapper input{
+    width: 30px;
+    text-align: right;
+    background: transparent;
+}

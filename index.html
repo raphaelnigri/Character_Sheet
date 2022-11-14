@@ -18,6 +18,8 @@
     <link rel="stylesheet" type="text/css" href="assets/css/saves.css">
     <link rel="stylesheet" type="text/css" href="assets/css/pericias.css">
     <link rel="stylesheet" type="text/css" href="assets/css/outras.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/iventario/iventario.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/iventario/tesouro.css">
     <link rel="stylesheet" type="text/css" href="assets/css/root.css">
     <link rel="stylesheet" type="text/css" href="assets/css/input.css">
 
@@ -74,18 +76,18 @@
         </section>
         <section class="classes">
             <h2 class="title">Classes</h2>
-            <article class="class__wrapper">
+            <div class="class__wrapper">
                 <label class="class__label" for="class__nome">Classe:</label>
                 <input class="class__input" type="text" id="class__nome" placeholder="___________">
                 <label class="class__label class__label--lvl" for="class__lvl">Lvl:</label>
                 <input class="class__input class__input--lvl" type="number" id="class__lvl" value="" placeholder="_____">
                 <button class="btn--add" id="class__btn--add" aria-label="Adicionar classe."></button>
-            </article>
+            </div>
             <ul class="class__wrapper class__wrapper--class__field" id="lista__classes"></ul>
         </section>
         <section class="atributes">
             <h2 class="title title--2c">Atributos</h2>
-            <article>
+            <div class="atributes__divisor">
                 <div class="atribute atribute--str">
                     <label class="atribute__label atribute__label--str" for="str">Força</label>
                     <input class="atribute__input" data-atributo="str" type="number" value="10" max="20" min="3" id="str">
@@ -113,8 +115,8 @@
                     <div class="icon icon--con"></div>
                     <button title="rolar constituição" class="atribute__roll"></button>
                 </div>
-            </article>
-            <article>
+            </div>
+            <div class="atributes__divisor">
                 <div class="atribute atribute--int">
                     <label class="atribute__label atribute__label--int" for="int">Inteligência</label>
                     <input class="atribute__input" data-atributo="int" type="number" value="10" max="20" min="3" id="int">
@@ -142,7 +144,7 @@
                     <div class="icon icon--cha"></div>
                     <button title="rolar carisma" class="atribute__roll"></button>
                 </div>
-            </article>
+            </div>
             <div class="pointbuy__wrapper">
                 <input type="checkbox" aria-label="ocultar/ver" id="pointbuy">
                 <label id="pointbuy__label" for="pointbuy" data-pointbuy=""></label>
@@ -297,27 +299,72 @@
                 <button title="rolar perícia sobrevivência" class="roll"></button>
             </div>
         </section>
-        <section>
+        <section class="outras">
+            <h2 class="title">Outras Proficiências</h2>
             <article class="outras-proficiencias">
-                <h2 class="title title--outras">Outras Proficiências</h2>
-                <label class="class__label" for="outra__prof">Proficiência:</label>
-                <input class="outra__input" type="text" id="outra__prof" value="">
-                <button class="btn--add" id="outra__prof--add" aria-label="Adicionar proficiencia."></button>
-                <ul class="wrapper__outras" id="outra__prof"></ul>
+                <h2 class="title title--outras">Armas e Equipamentos</h2>
+                <label class="class__label" for="outras__prof">Proficiência:</label>
+                <input class="outra__input" type="text" id="outras__prof" value="">
+                <button class="btn--add" id="outras__prof--add" aria-label="Adicionar proficiencia."></button>
+                <ul class="wrapper__outras" id="lista__outras"></ul>
             </article>
             <article class="outras-proficiencias">
                 <h2 class="title title--idiomas">Idiomas</h2>
                 <label class="class__label" for="idioma">Idioma:</label>
                 <input class="outra__input" type="text" id="idioma" value="">
                 <button class="btn--add" id="idioma--add" aria-label="Adicionar lingua."></button>
-                <ul class="wrapper__outras" id="idiomas"></ul>
+                <ul class="wrapper__outras" id="lista__idioma"></ul>
             </article>
             <article class="outras-proficiencias">
                 <h2 class="title title--ferramentas">Ferramentas</h2>
                 <label class="class__label" for="ferramenta">Ferramenta:</label>
                 <input class="outra__input" type="text" id="ferramenta" value="">
                 <button class="btn--add" id="ferramenta--add" aria-label="Adicionar ferramenta."></button>
-                <ul class="wrapper__outras" id="lista__ferramentas"></ul>
+                <ul class="wrapper__outras" id="lista__ferramenta"></ul>
+            </article>
+        </section>
+        <section class="iventario">
+            <h2 class="title">Iventário</h2>
+            <div class="iventario__menu__container">
+                <div class="iventario__menu--titles">
+                    <h2 class="title title--iventario__menu">Consumíveis</h2>
+                    <h2 class="title title--iventario__menu hidden">Itens</h2>
+                    <h2 class="title title--iventario__menu hidden">Itens Mágicos</h2>
+                    <h2 class="title title--iventario__menu hidden">Quest</h2>
+                </div>
+                <div class="iventario__menu">
+                    <button class="icon__consumiveis" aria-label="Consumíveis" id="btn__consumiveis"></button>
+                    <button class="icon__itens off" aria-label="itens" id="btn__itens"></button>
+                    <button class="icon__magicos off" aria-label="itens Mágicos" id="btn__itensMagicos"></button>
+                    <button class="icon__quest off" aria-label="Itens de Quest" id="btn__quest"></button>
+                </div>
+            </div>
+            <textarea class="textarea" rows="8" cols="25" id="consumables" placeholder="Seus consumíveis..."></textarea>
+            <textarea class="textarea hidden" rows="8" cols="25" id="items" placeholder="Seus itens..."></textarea>
+            <textarea class="textarea hidden" rows="8" cols="25" id="magicItems" placeholder="Seus itens mágicos..."></textarea>
+            <textarea class="textarea hidden" rows="8" cols="25" id="questItems" placeholder="Seus itens de quest..."></textarea>
+            <article class="tesouro">
+                <h2 class="title tesouro--title">Tesouro</h2>
+                <div class="coins__container">
+                    <div class="coins__wrapper">
+                        <label for="platina" class="coin coin--platina" aria-label="Platina"></label>
+                        <input id="platina" type="number" value="0">
+                    </div>
+                    <div class="coins__wrapper">
+                        <label for="gold" class="coin coin--ouro" aria-label="Ouro"></label>
+                        <input id="gold" type="number" value="0">
+                    </div>
+                    <div class="coins__wrapper">
+                        <label for="prata" class="coin coin--prata" aria-label="Prata"></label>
+                        <input id="prata" type="number" value="0">
+                    </div>
+                    <div class="coins__wrapper">
+                        <label for="cobre" class="coin coin--cobre" aria-label="Cobre"></label>
+                        <input id="cobre" type="number" value="0">
+                    </div>
+                </div>
+                <h3 class="title tesouro--title">Outros</h2>
+                <textarea class="textarea" rows="3" cols="25"></textarea>
             </article>
         </section>
     </main>

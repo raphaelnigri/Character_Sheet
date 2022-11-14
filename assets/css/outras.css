@@ -1,11 +1,11 @@
+.outras{
+
+}
+
 .outras-proficiencias{
     display: grid;
     grid-template-columns: auto 1fr 40px;
     margin-top: 32px;
-}
-
-.outras-proficiencias:nth-child(1) {
-    margin-top: 0px;
 }
 
 .title--outras,

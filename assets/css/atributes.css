@@ -6,7 +6,7 @@
     max-width: 306px;
 }
 
-.atributes article{
+.atributes__divisor{
     display: grid;
     gap: 12px;
     margin-inline: auto;

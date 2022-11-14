@@ -1,0 +1,81 @@
+.iventario{
+
+}
+
+.iventario__menu__container{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: 
+        "iventarioMenuTitle iventarioMenu";
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.iventario__menu--titles{
+    grid-area: iventarioMenuTitle;
+
+}
+
+.title--iventario__menu{
+    font-size: 1.3rem;
+}
+
+.iventario__menu{
+    grid-area: iventarioMenu;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    align-items: center;
+}
+
+.icon__itens::before,
+.icon__consumiveis::before,
+.icon__magicos::before,
+.icon__quest::before{
+    box-shadow: -1px 1.5px 2px 2px #222;
+    border-radius: 50%;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.icon__consumiveis::before{
+    content: "\f6d7";
+    font: var(--fa-font-solid);
+    color: var(--str);
+}
+
+.icon__itens::before,
+.icon__itens:hover::before{
+    content: "\f0f2";
+    font: var(--fa-font-solid);
+    color: var(--dex);
+}
+
+.icon__magicos::before{
+    content: "\e2ca";
+    font: var(--fa-font-solid);
+    color: var(--int);
+}
+
+.icon__quest::before{
+    content: "\f084";
+    font: var(--fa-font-solid);
+    color: var(--cha);
+}
+
+.iventario__menu .off{
+    display: block;
+}
+
+.iventario__menu .off::before{
+    color: black;
+}
+
+.textarea{
+    box-shadow: -2.5px 2px 4px 2px #222;
+    background: transparent;
+    border-radius: 4px;
+    padding: 4px;
+    font-size: 1.1rem;
+}

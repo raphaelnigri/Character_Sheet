@@ -13,6 +13,11 @@
     --chaLight: rgb(131, 60, 131);
     
     --checkbox: black;
+
+    --platina: #666;
+    --ouro: rgb(255, 180, 0);
+    --prata: silver;
+    --cobre: darkorange;
 }
 
 .cor__str{
