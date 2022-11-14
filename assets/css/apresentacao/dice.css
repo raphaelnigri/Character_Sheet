@@ -11,7 +11,7 @@
     position: absolute;
 }
 
-.dice:hover{
+.dice:hover, .dice:focus{
     transform: rotate(20deg);
     transition: 0.2s;
     cursor: pointer;
@@ -89,10 +89,6 @@
     height: 19vw;
     max-width: 84px;
     max-height: 84px;
-}
-
-.d8:hover .dice{
-    filter: brightness(1)
 }
 
 .shadow--d8{

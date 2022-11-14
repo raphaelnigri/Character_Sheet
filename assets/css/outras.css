@@ -14,14 +14,14 @@
     grid-column: span 3;
 }
 
-.title--ferramentas::before{
+.icon--ferramentas::before{
     content: "\f0ad";
     font: var(--fa-font-solid);
     margin-right: 10px;
     margin-left: 10px;
 }
 
-.title--idiomas::before{
+.icon--idiomas::before{
     content: "\f2a2";
     font: var(--fa-font-solid);
     margin-right: 10px;
