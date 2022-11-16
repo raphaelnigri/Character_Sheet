@@ -38,6 +38,10 @@
     border-radius: 2px;
 }
 
+.iventario__quantidade--peso{
+    width: 44px;
+}
+
 .iventario__item{
     background: transparent;
     box-shadow: -2.5px 2px 4px 2px #222;
