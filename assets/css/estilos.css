@@ -134,6 +134,6 @@ main{
 
 .hidden{
   position: absolute;
-  right: -100vw;
   visibility: hidden;
+  opacity: 0;
 }
