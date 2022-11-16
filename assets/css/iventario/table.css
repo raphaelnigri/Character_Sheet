@@ -1,0 +1,48 @@
+.table--iventario{
+    box-shadow: -2.5px 2px 4px 2px #222;
+    background: transparent;
+    border-radius: 4px;
+    font-size: 1.1rem;
+}
+
+.table__header--iventario{
+    height: 1.5em;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.iventario__header{
+    vertical-align: middle;
+    padding: 2px;
+}
+
+.table__td{
+    padding: 8px;
+    padding-top: 4px;
+    text-align: center;
+}
+
+.table__btn{
+    padding-right: 8px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.iventario__quantidade{
+    background: transparent;
+    box-shadow: -2.5px 2px 4px 2px #222;
+    width: 24px;
+    text-align: center;
+    padding: 1px;
+    border-radius: 2px;
+}
+
+.iventario__item{
+    background: transparent;
+    box-shadow: -2.5px 2px 4px 2px #222;
+    border-radius: 8px;
+    padding: 4px;
+    padding-left: 8px;
+    width: 100%;
+}

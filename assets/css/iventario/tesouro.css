@@ -2,8 +2,8 @@
     text-align: center;
 }
 
-.tesouro--title{
-    margin-top: 32px;
+.title--tesouro{
+    margin-top: 24px;
 }
 
 .coins__container{
@@ -45,4 +45,8 @@
     width: 30px;
     text-align: right;
     background: transparent;
+}
+
+.textarea--tesouro{
+    margin-top: 24px;
 }

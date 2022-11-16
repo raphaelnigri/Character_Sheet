@@ -1,3 +1,4 @@
+.btn--info::before,
 .btn--add::before,
 .btn--remove::before{
     content:"\f055";
@@ -15,4 +16,9 @@
 
 .btn--add:hover::before{
     color: var(--wis);
+}
+
+.btn--info::before{
+    content:"\f05a";
+    color: var(--int);
 }

@@ -90,6 +90,27 @@ main{
   transition: 0.15s;
 }
 
+.wrapper{
+  margin-top: 18px;
+  background: transparent;
+  border-radius: 20px;
+  box-shadow: -2.5px 2px 4px 2px #222;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: baseline;
+  padding: 12px;
+  backdrop-filter: grayscale(0.2);
+}
+
+.textarea{
+  box-shadow: -2.5px 2px 4px 2px #222;
+  background: transparent;
+  border-radius: 4px;
+  padding: 4px;
+  font-size: 1.1rem;
+}
+
 @media screen and (max-width: 660px) {
   main{
     display: grid;
@@ -112,6 +133,7 @@ main{
 }
 
 .hidden{
-  visibility: hidden;
   position: absolute;
+  right: -100vw;
+  visibility: hidden;
 }

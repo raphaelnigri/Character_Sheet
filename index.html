@@ -1,379 +1,480 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/estilos.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/apresentacao/apresentacao.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/apresentacao/portrait.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/apresentacao/dice.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/classes/classes.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/classes/btn.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/inspiracao.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/proficiencia.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/atributes.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/saves.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/pericias.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/outras.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/iventario/iventario.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/iventario/tesouro.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/root.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/input.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/estilos.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/apresentacao/apresentacao.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/apresentacao/portrait.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/apresentacao/dice.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/classes/classes.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/classes/btn.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/inspiracao.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/proficiencia.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/atributes.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/saves.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/pericias.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/outras.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/iventario/iventario.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/iventario/table.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/iventario/tesouro.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/root.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/input.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montez&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/e85ea023b4.js" crossorigin="anonymous"></script>
-    <title>Character Sheet - D&D 5e</title>
-</head>
-<body>
-    <header>
-    </header>
-    <main>
-        <section class="apresentacao">
-            <label class="portrait" id="portrait" for="portrait__input" aria-label="Selecione sua imagem.">
-            <input class="portrait__input" type="file" id="portrait__input"></label>
-            <div class="caixa caixa--char__lvl">Lvl
-                <div class="char__lvl" id="char__lvl"></div>
-            </div>
-            <input class="input__presentation input__presentation--left xp" type="number" placeholder="Experiência" aria-label="Experiência">
-            <input class="input__presentation input__presentation--left antecedente" data-antecedente="" type="text" id="antecedente" placeholder="Antecedente" aria-label="Antecedente">
-            <input class="input__presentation input__presentation--right jogador" type="text" placeholder="Jogador" aria-label="Jogador">
-            <input class="input__presentation input__presentation--right race" data-race="" type="text" id="race" placeholder="Raça" aria-label="Raça">
-            <input class="input__presentation input__presentation--full nome" type="text" id="nome" aria-label="Nome do personagem" placeholder="Nome do personagem">
-            <div class="dice__wrapper">
-                <button class="dice d4" id="d4" aria-label="Rolar d4"></button>
-                <span class="dice__shadow shadow--d4"></span>
-            </div>
-            <div class="dice__wrapper">
-                <button class="dice d6" id="d6" aria-label="Rolar d6"></button>
-                <span class="dice__shadow shadow--d6"></span>
-            </div>
-            <div class="dice__wrapper">
-                <button class="dice d8" id="d8" aria-label="Rolar d8"></button>
-                <span class="dice__shadow shadow--d8"></span>
-            </div>
-            <div class="dice__wrapper">
-                <button class="dice d10" id="d10" aria-label="Rolar d10"></button>
-                <span class="dice__shadow shadow--d10"></span>
-            </div>
-            <div class="dice__wrapper">
-                <button class="dice d12" id="d12" aria-label="Rolar d12"></button>
-                <span class="dice__shadow shadow--d12"></span>
-            </div>
-            <button class="dice d20" id="d20" aria-label="Rolar d20"></button>
-        </section>
-        <section class="inspiracao">
-            <h2 class="title title--inspiracao">Inspiração</h2>
-            <div class="caixa icon__inspiracao" id="inspiracao"></div>
-        </section>
-        <section class="proficiencia">
-            <h2 class="title title--prof">Proficiência</h2>
-            <div class="caixa caixa--prof" id="proficiencia"></div>
-        </section>
-        <section class="classes">
-            <h2 class="title">Classes</h2>
-            <div class="class__wrapper">
-                <label class="class__label" for="class__nome">Classe:</label>
-                <input class="class__input" type="text" id="class__nome" placeholder="___________">
-                <label class="class__label class__label--lvl" for="class__lvl">Lvl:</label>
-                <input class="class__input class__input--lvl" type="number" id="class__lvl" value="" placeholder="_____">
-                <button class="btn--add" id="class__btn--add" aria-label="Adicionar classe."></button>
-            </div>
-            <ul class="class__wrapper class__wrapper--class__field" id="lista__classes"></ul>
-        </section>
-        <section class="atributes">
-            <h2 class="title title--2c">Atributos</h2>
-            <div class="atributes__divisor">
-                <div class="atribute atribute--str">
-                    <label class="atribute__label atribute__label--str" for="str">Força</label>
-                    <input class="atribute__input" data-atributo="str" type="number" value="10" max="20" min="3" id="str">
-                    <div class="modifier" data-str="modifier"></div>
-                    <button title="somar força" class="control control--soma" data-controle="+"></button>
-                    <button title="subtrair força" class="control control--subtrai" data-controle="-"></button>
-                    <div class="icon icon--str"></div>
-                    <button title="rolar força" class="atribute__roll"></button>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montez&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/e85ea023b4.js" crossorigin="anonymous"></script>
+        <title>Character Sheet - D&D 5e</title>
+    </head>
+    <body>
+        <header>
+        </header>
+        <main>
+            <section class="apresentacao">
+                <label class="portrait" id="portrait" for="portrait__input" aria-label="Selecione sua imagem.">
+                <input class="portrait__input" type="file" id="portrait__input"></label>
+                <div class="caixa caixa--char__lvl">Lvl
+                    <div class="char__lvl" id="char__lvl"></div>
                 </div>
-                <div class="atribute atribute--dex">
-                    <label class="atribute__label atribute__label--dex" for="dex">Destreza</label>
-                    <input class="atribute__input" data-atributo="dex" type="number" value="10" max="20" min="3" id="dex">
-                    <div class="modifier" data-dex="modifier"></div>
-                    <button title="somar destreza" class="control control--soma" data-controle="+"></button>
-                    <button title="subtrair destreza" class="control control--subtrai" data-controle="-"></button>
-                    <div class="icon icon--dex"></div>
-                    <button title="rolar destreza" class="atribute__roll"></button>
+                <input class="input__presentation input__presentation--left xp" type="number" placeholder="Experiência" aria-label="Experiência">
+                <input class="input__presentation input__presentation--left antecedente" data-antecedente="" type="text" id="antecedente" placeholder="Antecedente" aria-label="Antecedente">
+                <input class="input__presentation input__presentation--right jogador" type="text" placeholder="Jogador" aria-label="Jogador">
+                <input class="input__presentation input__presentation--right race" data-race="" type="text" id="race" placeholder="Raça" aria-label="Raça">
+                <input class="input__presentation input__presentation--full nome" type="text" id="nome" aria-label="Nome do personagem" placeholder="Nome do personagem">
+                <div class="dice__wrapper">
+                    <button class="dice d4" id="d4" aria-label="Rolar d4"></button>
+                    <span class="dice__shadow shadow--d4"></span>
                 </div>
-                <div class="atribute atribute--con">
-                    <label class="atribute__label atribute__label--con" for="con">Constituição</label>
-                    <input class="atribute__input" data-atributo="con" type="number" value="10" max="20" min="3" id="con">
-                    <div class="modifier" data-con="modifier"></div>
-                    <button title="somar constituição" class="control control--soma" data-controle="+"></button>
-                    <button title="subtrair constituição" class="control control--subtrai" data-controle="-"></button>
-                    <div class="icon icon--con"></div>
-                    <button title="rolar constituição" class="atribute__roll"></button>
+                <div class="dice__wrapper">
+                    <button class="dice d6" id="d6" aria-label="Rolar d6"></button>
+                    <span class="dice__shadow shadow--d6"></span>
                 </div>
-            </div>
-            <div class="atributes__divisor">
-                <div class="atribute atribute--int">
-                    <label class="atribute__label atribute__label--int" for="int">Inteligência</label>
-                    <input class="atribute__input" data-atributo="int" type="number" value="10" max="20" min="3" id="int">
-                    <div class="modifier" data-int="modifier"></div>
-                    <button title="somar inteligência" class="control control--soma" data-controle="+"></button>
-                    <button title="subtrair inteligência" class="control control--subtrai" data-controle="-"></button>
-                    <div class="icon icon--int"></div>
-                    <button title="rolar inteligência" class="atribute__roll"></button>
+                <div class="dice__wrapper">
+                    <button class="dice d8" id="d8" aria-label="Rolar d8"></button>
+                    <span class="dice__shadow shadow--d8"></span>
                 </div>
-                <div class="atribute atribute--wis">
-                    <label class="atribute__label atribute__label--wis" for="wis">Sabedoria</label>
-                    <input class="atribute__input" data-atributo="wis" type="number" value="10" max="20" min="3" id="wis">
-                    <div class="modifier" data-wis="modifier"></div>
-                    <button title="somar sabedoria" class="control control--soma" data-controle="+"></button>
-                    <button title="subtrair sabedoria" class="control control--subtrai" data-controle="-"></button>
-                    <div class="icon icon--wis"></div>
-                    <button title="rolar sabedoria" class="atribute__roll"></button>
+                <div class="dice__wrapper">
+                    <button class="dice d10" id="d10" aria-label="Rolar d10"></button>
+                    <span class="dice__shadow shadow--d10"></span>
                 </div>
-                <div class="atribute atribute--cha">
-                    <label class="atribute__label atribute__label--cha" for="cha">Carisma</label>
-                    <input class="atribute__input" data-atributo="cha" type="number" value="10" max="20" min="3" id="cha">
-                    <div class="modifier" data-cha="modifier"></div>
-                    <button title="somar carisma" class="control control--soma" data-controle="+"></button>
-                    <button title="subtrair carisma" class="control control--subtrai" data-controle="-"></button>
-                    <div class="icon icon--cha"></div>
-                    <button title="rolar carisma" class="atribute__roll"></button>
+                <div class="dice__wrapper">
+                    <button class="dice d12" id="d12" aria-label="Rolar d12"></button>
+                    <span class="dice__shadow shadow--d12"></span>
                 </div>
-            </div>
-            <div class="pointbuy__wrapper">
-                <input type="checkbox" aria-label="ocultar/ver" id="pointbuy">
-                <label id="pointbuy__label" for="pointbuy" data-pointbuy=""></label>
-                <label id="pointbuy__label--inativo" for="pointbuy"></label>
-                <p class="obs">*Utilize para contabilizar pontos a serem distribuidos antes de aplicar os pontos de raças e talentos.</p>
-                <p class="obs">*Lembre-se que o valor máximo nesse caso é 15 e o mínimo 8.</p>
-            </div>
-        </section>
-        <section class="saves">
-            <h2 class="title">Testes de Resistência</h2>
-            <div class="input__wrapper wrapper--saves">
-                <input type="checkbox" id="str__save">
-                <label class="input__label cor__str" for="str__save">Força</label>
-                <button title="rolar resistência de força" class="roll cor__str"></button>
-            </div>
-            <div class="input__wrapper wrapper--saves">
-                <input type="checkbox" id="dex__save">
-                <label class="input__label cor__dex" for="dex__save">Destreza</label>
-                <button title="rolar resistência de destreza" class="roll cor__dex"></button>
-            </div>
-            <div class="input__wrapper wrapper--saves">
-                <input type="checkbox" id="con__save">
-                <label class="input__label cor__con" for="con__save">Constituição</label>
-                <button title="rolar resistência de constituição" class="roll cor__con"></button>
-            </div>
-            <div class="input__wrapper wrapper--saves">
-                <input type="checkbox" id="int__save">
-                <label class="input__label cor__int" for="int__save">Inteligência</label>
-                <button title="rolar resistência de inteligência" class="roll cor__int"></button>
-            </div>
-            <div class="input__wrapper wrapper--saves">
-                <input type="checkbox" id="wis__save">
-                <label class="input__label cor__wis" for="wis__save">Sabedoria</label>
-                <button title="rolar resistência de sabedoria" class="roll cor__wis"></button>
-            </div>
-            <div class="input__wrapper wrapper--saves">
-                <input type="checkbox" id="cha__save">
-                <label class="input__label cor__cha" for="cha__save">Carisma</label>
-                <button title="rolar resistência de carisma" class="roll cor__cha"></button>
-            </div>
-        </section>
-        <section class="pericias">
-            <h2 class="title">Perícias</h2>
-            <p class="prof">Prof.</p>
-            <p class="exp">Esp.</p>
-            <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="acrobacia">
-                <input type="checkbox" data-expertise="" title="Especializar">
-                <label class="input__label input__label--pericia" data-pericia="acrobacia" for="acrobacia">Acrobacia (<span class="cor__dex pericia__label--atribute">Des</span>)</label>
-                <button title="rolar perícia acrobacia" class="roll"></button>
-            </div>
-            <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="arcanismo">
-                <input type="checkbox" data-expertise="" title="Especializar">
-                <label class="input__label input__label--pericia" data-pericia="arcanismo" for="arcanismo">Arcanismo (<span class="cor__int pericia__label--atribute">Int</span>)</label>
-                <button title="rolar perícia arcanismo" class="roll"></button>
-            </div>
-            <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="atletismo">
-                <input type="checkbox" data-expertise="" title="Especializar">
-                <label class="input__label input__label--pericia" data-pericia="atletismo" for="atletismo">Atletismo (<span class="cor__str pericia__label--atribute">For</span>)</label>
-                <button title="rolar perícia atletismo" class="roll"></button>
-            </div>
-            <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="atuacao">
-                <input type="checkbox" data-expertise="" title="Especializar">
-                <label class="input__label input__label--pericia" data-pericia="atuacao" for="atuacao">Atuação (<span class="cor__cha pericia__label--atribute">Car</span>)</label>
-                <button title="rolar perícia atuação" class="roll"></button>
-            </div>
-            <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="blefar">
-                <input type="checkbox" data-expertise="" title="Especializar">
-                <label class="input__label input__label--pericia" data-pericia="blefar" for="blefar">Blefar (<span class="cor__cha pericia__label--atribute">Car</span>)</label>
-                <button title="rolar perícia blefar" class="roll"></button>
-            </div>
-            <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="furtividade">
-                <input type="checkbox" data-expertise="" title="Especializar">
-                <label class="input__label input__label--pericia" data-pericia="furtividade" for="furtividade">Furtividade (<span class="cor__dex pericia__label--atribute">Des</span>)</label>
-                <button title="rolar perícia furtividade" class="roll"></button>
-            </div>
-            <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="historia">
-                <input type="checkbox" data-expertise="" title="Especializar">
-                <label class="input__label input__label--pericia" data-pericia="historia" for="historia">História (<span class="cor__int pericia__label--atribute">Int</span>)</label>
-                <button title="rolar perícia história" class="roll"></button>
-            </div>
-            <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="intimidar">
-                <input type="checkbox" data-expertise="" title="Especializar">
-                <label class="input__label input__label--pericia" data-pericia="intimidar" for="intimidar">Intimidar (<span class="cor__cha pericia__label--atribute">Car</span>)</label>
-                <button title="rolar perícia intimidar" class="roll"></button>
-            </div>
-            <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="intuicao">
-                <input type="checkbox" data-expertise="" title="Especializar">
-                <label class="input__label input__label--pericia" data-pericia="intuicao" for="intuicao">Intuição (<span class="cor__wis pericia__label--atribute">Sab</span>)</label>
-                <button title="rolar perícia intuição" class="roll"></button>
-            </div>
-            <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="investigacao">
-                <input type="checkbox" data-expertise="" title="Especializar">
-                <label class="input__label input__label--pericia" data-pericia="investigacao" for="investigacao">Investigação (<span class="cor__int pericia__label--atribute">Int</span>)</label>
-                <button title="rolar perícia investigação" class="roll"></button>
-            </div>
-            <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="animais">
-                <input type="checkbox" data-expertise="" title="Especializar">
-                <label class="input__label input__label--pericia" data-pericia="animais" for="animais">Adestrar Animais (<span class="cor__cha pericia__label--atribute">Car</span>)</label>
-                <button title="rolar perícia adestrar animais" class="roll"></button>
-            </div>
-            <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="medicina">
-                <input type="checkbox" data-expertise="" title="Especializar">
-                <label class="input__label input__label--pericia" data-pericia="medicina" for="medicina">Medicina (<span class="cor__wis pericia__label--atribute">Sab</span>)</label>
-                <button title="rolar perícia medicina" class="roll"></button>
-            </div>
-            <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="natureza">
-                <input type="checkbox" data-expertise="" title="Especializar">
-                <label class="input__label input__label--pericia" data-pericia="natureza" for="natureza">Natureza (<span class="cor__wis pericia__label--atribute">Sab</span>)</label>
-                <button title="rolar perícia natureza" class="roll"></button>
-            </div>
-            <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="percepcao">
-                <input type="checkbox" data-expertise="" title="Especializar">
-                <label class="input__label input__label--pericia" data-pericia="percepcao" for="percepcao">Percepção (<span class="cor__wis pericia__label--atribute">Sab</span>)</label>
-                <button title="rolar perícia percepção" class="roll"></button>
-            </div>
-            <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="persuasao">
-                <input type="checkbox" data-expertise="" title="Especializar">
-                <label class="input__label input__label--pericia" data-pericia="persuasao" for="persuasao">Persuasão (<span class="cor__cha pericia__label--atribute">Car</span>)</label>
-                <button title="rolar perícia persuasão" class="roll"></button>
-            </div>
-            <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="prestidigitacao">
-                <input type="checkbox" data-expertise="" title="Especializar">
-                <label class="input__label input__label--pericia" data-pericia="prestidigitacao" for="prestidigitacao">Prestidigitação (<span class="cor__dex pericia__label--atribute">Des</span>)</label>
-                <button title="rolar perícia prestidigitação" class="roll"></button>
-            </div>
-            <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="religiao">
-                <input type="checkbox" data-expertise="" title="Especializar">
-                <label class="input__label input__label--pericia" data-pericia="religiao" for="religiao">Religiâo (<span class="cor__int pericia__label--atribute">Int</span>)</label>
-                <button title="rolar perícia religião" class="roll"></button>
-            </div>
-            <div class="input__wrapper">
-                <input type="checkbox" data-proficiencia="" id="sobrevivencia">
-                <input type="checkbox" data-expertise="" title="Especializar">
-                <label class="input__label input__label--pericia" data-pericia="sobrevivencia" for="sobrevivencia">Sobrevivência (<span class="cor__wis pericia__label--atribute">Sab</span>)</label>
-                <button title="rolar perícia sobrevivência" class="roll"></button>
-            </div>
-        </section>
-        <section class="outras">
-            <h2 class="title">Outras Proficiências</h2>
-            <article class="outras-proficiencias">
-                <h2 class="title title--outras">Armas e Equipamentos</h2>
-                <label class="class__label" for="outras__prof">Proficiência:</label>
-                <input class="outra__input" type="text" id="outras__prof" value="">
-                <button class="btn--add" id="outras__prof--add" aria-label="Adicionar proficiencia."></button>
-                <ul class="wrapper__outras" id="lista__outras"></ul>
-            </article>
-            <article class="outras-proficiencias">
-                <h2 class="title title--idiomas">Idiomas</h2>
-                <label class="class__label" for="idioma">Idioma:</label>
-                <input class="outra__input" type="text" id="idioma" value="">
-                <button class="btn--add" id="idioma--add" aria-label="Adicionar lingua."></button>
-                <ul class="wrapper__outras" id="lista__idioma"></ul>
-            </article>
-            <article class="outras-proficiencias">
-                <h2 class="title title--ferramentas">Ferramentas</h2>
-                <label class="class__label" for="ferramenta">Ferramenta:</label>
-                <input class="outra__input" type="text" id="ferramenta" value="">
-                <button class="btn--add" id="ferramenta--add" aria-label="Adicionar ferramenta."></button>
-                <ul class="wrapper__outras" id="lista__ferramenta"></ul>
-            </article>
-        </section>
-        <section class="iventario">
-            <h2 class="title">Iventário</h2>
-            <div class="iventario__menu__container">
-                <div class="iventario__menu--titles">
-                    <h2 class="title title--iventario__menu">Consumíveis</h2>
-                    <h2 class="title title--iventario__menu hidden">Itens</h2>
-                    <h2 class="title title--iventario__menu hidden">Itens Mágicos</h2>
-                    <h2 class="title title--iventario__menu hidden">Quest</h2>
+                <button class="dice d20" id="d20" aria-label="Rolar d20"></button>
+            </section>
+            <section class="inspiracao">
+                <h2 class="title title--inspiracao">Inspiração</h2>
+                <div class="caixa icon__inspiracao" id="inspiracao"></div>
+            </section>
+            <section class="proficiencia">
+                <h2 class="title title--prof">Proficiência</h2>
+                <div class="caixa caixa--prof" id="bonusDeProficiencia"></div>
+            </section>
+            <section class="classes">
+                <h2 class="title">Classes</h2>
+                <div class="class__wrapper">
+                    <label class="class__label" for="class__nome">Classe:</label>
+                    <input class="class__input" type="text" id="class__nome" placeholder="___________">
+                    <label class="class__label class__label--lvl" for="class__lvl">Lvl:</label>
+                    <input class="class__input class__input--lvl" type="number" id="class__lvl" value="" placeholder="_____">
+                    <button class="btn--add" id="class__btn--add" aria-label="Adicionar classe."></button>
                 </div>
-                <div class="iventario__menu">
-                    <button class="icon__consumiveis" aria-label="Consumíveis" id="btn__consumiveis"></button>
-                    <button class="icon__itens off" aria-label="itens" id="btn__itens"></button>
-                    <button class="icon__magicos off" aria-label="itens Mágicos" id="btn__itensMagicos"></button>
-                    <button class="icon__quest off" aria-label="Itens de Quest" id="btn__quest"></button>
-                </div>
-            </div>
-            <textarea class="textarea" rows="8" cols="25" id="consumables" placeholder="Seus consumíveis..."></textarea>
-            <textarea class="textarea hidden" rows="8" cols="25" id="items" placeholder="Seus itens..."></textarea>
-            <textarea class="textarea hidden" rows="8" cols="25" id="magicItems" placeholder="Seus itens mágicos..."></textarea>
-            <textarea class="textarea hidden" rows="8" cols="25" id="questItems" placeholder="Seus itens de quest..."></textarea>
-            <article class="tesouro">
-                <h2 class="title tesouro--title">Tesouro</h2>
-                <div class="coins__container">
-                    <div class="coins__wrapper">
-                        <label for="platina" class="coin coin--platina" aria-label="Platina"></label>
-                        <input id="platina" type="number" value="0">
+                <ul class="class__wrapper class__wrapper--class__field" id="lista__classes"></ul>
+            </section>
+            <section class="atributes">
+                <h2 class="title title--2c">Atributos</h2>
+                <div class="atributes__divisor">
+                    <div class="atribute atribute--str">
+                        <label class="atribute__label atribute__label--str" for="str">Força</label>
+                        <input class="atribute__input" data-atributo="str" type="number" value="10" max="20" min="3" id="str">
+                        <div class="modifier" data-str="modifier"></div>
+                        <button title="somar força" class="control control--soma" data-controle="+"></button>
+                        <button title="subtrair força" class="control control--subtrai" data-controle="-"></button>
+                        <div class="icon icon--str"></div>
+                        <button title="rolar força" class="atribute__roll"></button>
                     </div>
-                    <div class="coins__wrapper">
-                        <label for="gold" class="coin coin--ouro" aria-label="Ouro"></label>
-                        <input id="gold" type="number" value="0">
+                    <div class="atribute atribute--dex">
+                        <label class="atribute__label atribute__label--dex" for="dex">Destreza</label>
+                        <input class="atribute__input" data-atributo="dex" type="number" value="10" max="20" min="3" id="dex">
+                        <div class="modifier" data-dex="modifier"></div>
+                        <button title="somar destreza" class="control control--soma" data-controle="+"></button>
+                        <button title="subtrair destreza" class="control control--subtrai" data-controle="-"></button>
+                        <div class="icon icon--dex"></div>
+                        <button title="rolar destreza" class="atribute__roll"></button>
                     </div>
-                    <div class="coins__wrapper">
-                        <label for="prata" class="coin coin--prata" aria-label="Prata"></label>
-                        <input id="prata" type="number" value="0">
-                    </div>
-                    <div class="coins__wrapper">
-                        <label for="cobre" class="coin coin--cobre" aria-label="Cobre"></label>
-                        <input id="cobre" type="number" value="0">
+                    <div class="atribute atribute--con">
+                        <label class="atribute__label atribute__label--con" for="con">Constituição</label>
+                        <input class="atribute__input" data-atributo="con" type="number" value="10" max="20" min="3" id="con">
+                        <div class="modifier" data-con="modifier"></div>
+                        <button title="somar constituição" class="control control--soma" data-controle="+"></button>
+                        <button title="subtrair constituição" class="control control--subtrai" data-controle="-"></button>
+                        <div class="icon icon--con"></div>
+                        <button title="rolar constituição" class="atribute__roll"></button>
                     </div>
                 </div>
-                <h3 class="title tesouro--title">Outros</h2>
-                <textarea class="textarea" rows="3" cols="25"></textarea>
-            </article>
-        </section>
-    </main>
-    <script src="assets/script/classes.js"></script>
-    <script src="assets/script/outras.js"></script>
-    <script src="assets/script/atributos.js"></script>
-    <script src="assets/script/pointbuy.js"></script>
-    <script src="assets/script/inspiracao.js"></script>
-    <script src="assets/script/pericias.js"></script>
-    <script src="assets/script/portrait.js"></script>
-</body>
+                <div class="atributes__divisor">
+                    <div class="atribute atribute--int">
+                        <label class="atribute__label atribute__label--int" for="int">Inteligência</label>
+                        <input class="atribute__input" data-atributo="int" type="number" value="10" max="20" min="3" id="int">
+                        <div class="modifier" data-int="modifier"></div>
+                        <button title="somar inteligência" class="control control--soma" data-controle="+"></button>
+                        <button title="subtrair inteligência" class="control control--subtrai" data-controle="-"></button>
+                        <div class="icon icon--int"></div>
+                        <button title="rolar inteligência" class="atribute__roll"></button>
+                    </div>
+                    <div class="atribute atribute--wis">
+                        <label class="atribute__label atribute__label--wis" for="wis">Sabedoria</label>
+                        <input class="atribute__input" data-atributo="wis" type="number" value="10" max="20" min="3" id="wis">
+                        <div class="modifier" data-wis="modifier"></div>
+                        <button title="somar sabedoria" class="control control--soma" data-controle="+"></button>
+                        <button title="subtrair sabedoria" class="control control--subtrai" data-controle="-"></button>
+                        <div class="icon icon--wis"></div>
+                        <button title="rolar sabedoria" class="atribute__roll"></button>
+                    </div>
+                    <div class="atribute atribute--cha">
+                        <label class="atribute__label atribute__label--cha" for="cha">Carisma</label>
+                        <input class="atribute__input" data-atributo="cha" type="number" value="10" max="20" min="3" id="cha">
+                        <div class="modifier" data-cha="modifier"></div>
+                        <button title="somar carisma" class="control control--soma" data-controle="+"></button>
+                        <button title="subtrair carisma" class="control control--subtrai" data-controle="-"></button>
+                        <div class="icon icon--cha"></div>
+                        <button title="rolar carisma" class="atribute__roll"></button>
+                    </div>
+                </div>
+                <div class="pointbuy__wrapper">
+                    <input type="checkbox" aria-label="ocultar/ver" id="pointbuy">
+                    <label id="pointbuy__label" for="pointbuy" data-pointbuy=""></label>
+                    <label id="pointbuy__label--inativo" for="pointbuy"></label>
+                    <p class="obs">*Utilize para contabilizar pontos a serem distribuidos antes de aplicar os pontos de raças e talentos.</p>
+                    <p class="obs">*Lembre-se que o valor máximo nesse caso é 15 e o mínimo 8.</p>
+                </div>
+            </section>
+            <section class="saves">
+                <h2 class="title">Testes de Resistência</h2>
+                <div class="input__wrapper wrapper--saves">
+                    <input type="checkbox" id="str__save">
+                    <label class="input__label cor__str" for="str__save">Força</label>
+                    <button title="rolar resistência de força" class="roll cor__str"></button>
+                </div>
+                <div class="input__wrapper wrapper--saves">
+                    <input type="checkbox" id="dex__save">
+                    <label class="input__label cor__dex" for="dex__save">Destreza</label>
+                    <button title="rolar resistência de destreza" class="roll cor__dex"></button>
+                </div>
+                <div class="input__wrapper wrapper--saves">
+                    <input type="checkbox" id="con__save">
+                    <label class="input__label cor__con" for="con__save">Constituição</label>
+                    <button title="rolar resistência de constituição" class="roll cor__con"></button>
+                </div>
+                <div class="input__wrapper wrapper--saves">
+                    <input type="checkbox" id="int__save">
+                    <label class="input__label cor__int" for="int__save">Inteligência</label>
+                    <button title="rolar resistência de inteligência" class="roll cor__int"></button>
+                </div>
+                <div class="input__wrapper wrapper--saves">
+                    <input type="checkbox" id="wis__save">
+                    <label class="input__label cor__wis" for="wis__save">Sabedoria</label>
+                    <button title="rolar resistência de sabedoria" class="roll cor__wis"></button>
+                </div>
+                <div class="input__wrapper wrapper--saves">
+                    <input type="checkbox" id="cha__save">
+                    <label class="input__label cor__cha" for="cha__save">Carisma</label>
+                    <button title="rolar resistência de carisma" class="roll cor__cha"></button>
+                </div>
+            </section>
+            <section class="pericias">
+                <h2 class="title">Perícias</h2>
+                <p class="prof">Prof.</p>
+                <p class="exp">Esp.</p>
+                <div class="input__wrapper">
+                    <input type="checkbox" data-pericia__proficiencia="" id="acrobacia">
+                    <input type="checkbox" data-pericia__expertise="" title="Especializar">
+                    <label class="input__label input__label--pericia" data-pericia="acrobacia" for="acrobacia">Acrobacia (<span class="cor__dex pericia__label--atribute">Des</span>)</label>
+                    <button title="rolar perícia acrobacia" class="roll"></button>
+                </div>
+                <div class="input__wrapper">
+                    <input type="checkbox" data-pericia__proficiencia="" id="arcanismo">
+                    <input type="checkbox" data-pericia__expertise="" title="Especializar">
+                    <label class="input__label input__label--pericia" data-pericia="arcanismo" for="arcanismo">Arcanismo (<span class="cor__int pericia__label--atribute">Int</span>)</label>
+                    <button title="rolar perícia arcanismo" class="roll"></button>
+                </div>
+                <div class="input__wrapper">
+                    <input type="checkbox" data-pericia__proficiencia="" id="atletismo">
+                    <input type="checkbox" data-pericia__expertise="" title="Especializar">
+                    <label class="input__label input__label--pericia" data-pericia="atletismo" for="atletismo">Atletismo (<span class="cor__str pericia__label--atribute">For</span>)</label>
+                    <button title="rolar perícia atletismo" class="roll"></button>
+                </div>
+                <div class="input__wrapper">
+                    <input type="checkbox" data-pericia__proficiencia="" id="atuacao">
+                    <input type="checkbox" data-pericia__expertise="" title="Especializar">
+                    <label class="input__label input__label--pericia" data-pericia="atuacao" for="atuacao">Atuação (<span class="cor__cha pericia__label--atribute">Car</span>)</label>
+                    <button title="rolar perícia atuação" class="roll"></button>
+                </div>
+                <div class="input__wrapper">
+                    <input type="checkbox" data-pericia__proficiencia="" id="blefar">
+                    <input type="checkbox" data-pericia__expertise="" title="Especializar">
+                    <label class="input__label input__label--pericia" data-pericia="blefar" for="blefar">Blefar (<span class="cor__cha pericia__label--atribute">Car</span>)</label>
+                    <button title="rolar perícia blefar" class="roll"></button>
+                </div>
+                <div class="input__wrapper">
+                    <input type="checkbox" data-pericia__proficiencia="" id="furtividade">
+                    <input type="checkbox" data-pericia__expertise="" title="Especializar">
+                    <label class="input__label input__label--pericia" data-pericia="furtividade" for="furtividade">Furtividade (<span class="cor__dex pericia__label--atribute">Des</span>)</label>
+                    <button title="rolar perícia furtividade" class="roll"></button>
+                </div>
+                <div class="input__wrapper">
+                    <input type="checkbox" data-pericia__proficiencia="" id="historia">
+                    <input type="checkbox" data-pericia__expertise="" title="Especializar">
+                    <label class="input__label input__label--pericia" data-pericia="historia" for="historia">História (<span class="cor__int pericia__label--atribute">Int</span>)</label>
+                    <button title="rolar perícia história" class="roll"></button>
+                </div>
+                <div class="input__wrapper">
+                    <input type="checkbox" data-pericia__proficiencia="" id="intimidar">
+                    <input type="checkbox" data-pericia__expertise="" title="Especializar">
+                    <label class="input__label input__label--pericia" data-pericia="intimidar" for="intimidar">Intimidar (<span class="cor__cha pericia__label--atribute">Car</span>)</label>
+                    <button title="rolar perícia intimidar" class="roll"></button>
+                </div>
+                <div class="input__wrapper">
+                    <input type="checkbox" data-pericia__proficiencia="" id="intuicao">
+                    <input type="checkbox" data-pericia__expertise="" title="Especializar">
+                    <label class="input__label input__label--pericia" data-pericia="intuicao" for="intuicao">Intuição (<span class="cor__wis pericia__label--atribute">Sab</span>)</label>
+                    <button title="rolar perícia intuição" class="roll"></button>
+                </div>
+                <div class="input__wrapper">
+                    <input type="checkbox" data-pericia__proficiencia="" id="investigacao">
+                    <input type="checkbox" data-pericia__expertise="" title="Especializar">
+                    <label class="input__label input__label--pericia" data-pericia="investigacao" for="investigacao">Investigação (<span class="cor__int pericia__label--atribute">Int</span>)</label>
+                    <button title="rolar perícia investigação" class="roll"></button>
+                </div>
+                <div class="input__wrapper">
+                    <input type="checkbox" data-pericia__proficiencia="" id="animais">
+                    <input type="checkbox" data-pericia__expertise="" title="Especializar">
+                    <label class="input__label input__label--pericia" data-pericia="animais" for="animais">Adestrar Animais (<span class="cor__cha pericia__label--atribute">Car</span>)</label>
+                    <button title="rolar perícia adestrar animais" class="roll"></button>
+                </div>
+                <div class="input__wrapper">
+                    <input type="checkbox" data-pericia__proficiencia="" id="medicina">
+                    <input type="checkbox" data-pericia__expertise="" title="Especializar">
+                    <label class="input__label input__label--pericia" data-pericia="medicina" for="medicina">Medicina (<span class="cor__wis pericia__label--atribute">Sab</span>)</label>
+                    <button title="rolar perícia medicina" class="roll"></button>
+                </div>
+                <div class="input__wrapper">
+                    <input type="checkbox" data-pericia__proficiencia="" id="natureza">
+                    <input type="checkbox" data-pericia__expertise="" title="Especializar">
+                    <label class="input__label input__label--pericia" data-pericia="natureza" for="natureza">Natureza (<span class="cor__wis pericia__label--atribute">Sab</span>)</label>
+                    <button title="rolar perícia natureza" class="roll"></button>
+                </div>
+                <div class="input__wrapper">
+                    <input type="checkbox" data-pericia__proficiencia="" id="percepcao">
+                    <input type="checkbox" data-pericia__expertise="" title="Especializar">
+                    <label class="input__label input__label--pericia" data-pericia="percepcao" for="percepcao">Percepção (<span class="cor__wis pericia__label--atribute">Sab</span>)</label>
+                    <button title="rolar perícia percepção" class="roll"></button>
+                </div>
+                <div class="input__wrapper">
+                    <input type="checkbox" data-pericia__proficiencia="" id="persuasao">
+                    <input type="checkbox" data-pericia__expertise="" title="Especializar">
+                    <label class="input__label input__label--pericia" data-pericia="persuasao" for="persuasao">Persuasão (<span class="cor__cha pericia__label--atribute">Car</span>)</label>
+                    <button title="rolar perícia persuasão" class="roll"></button>
+                </div>
+                <div class="input__wrapper">
+                    <input type="checkbox" data-pericia__proficiencia="" id="prestidigitacao">
+                    <input type="checkbox" data-pericia__expertise="" title="Especializar">
+                    <label class="input__label input__label--pericia" data-pericia="prestidigitacao" for="prestidigitacao">Prestidigitação (<span class="cor__dex pericia__label--atribute">Des</span>)</label>
+                    <button title="rolar perícia prestidigitação" class="roll"></button>
+                </div>
+                <div class="input__wrapper">
+                    <input type="checkbox" data-pericia__proficiencia="" id="religiao">
+                    <input type="checkbox" data-pericia__expertise="" title="Especializar">
+                    <label class="input__label input__label--pericia" data-pericia="religiao" for="religiao">Religiâo (<span class="cor__int pericia__label--atribute">Int</span>)</label>
+                    <button title="rolar perícia religião" class="roll"></button>
+                </div>
+                <div class="input__wrapper">
+                    <input type="checkbox" data-pericia__proficiencia="" id="sobrevivencia">
+                    <input type="checkbox" data-pericia__expertise="" title="Especializar">
+                    <label class="input__label input__label--pericia" data-pericia="sobrevivencia" for="sobrevivencia">Sobrevivência (<span class="cor__wis pericia__label--atribute">Sab</span>)</label>
+                    <button title="rolar perícia sobrevivência" class="roll"></button>
+                </div>
+            </section>
+            <section class="outras">
+                <article class="outras__container">
+                    <h2 class="title title--ferramentas">Ferramentas</h2>
+                    <label class="class__label" for="ferramenta">Ferramenta:</label>
+                    <input class="outra__input" type="text" id="ferramenta" value="">
+                    <button class="btn--add" id="ferramenta--add" aria-label="Adicionar ferramenta."></button>
+                    <ul class="wrapper__outras" id="lista__ferramenta"></ul>
+                </article>
+                <article class="outras__container">
+                    <h2 class="title title--idiomas">Idiomas</h2>
+                    <label class="class__label" for="idioma">Idioma:</label>
+                    <input class="outra__input" type="text" id="idioma" value="">
+                    <button class="btn--add" id="idioma--add" aria-label="Adicionar lingua."></button>
+                    <ul class="wrapper__outras" id="lista__idioma"></ul>
+                </article>
+                <article class="outras__container">
+                    <h2 class="title title--outras">Outras Proficiências</h2>
+                    <label class="class__label" for="outras__prof">Proficiência:</label>
+                    <input class="outra__input" type="text" id="outras__prof" value="">
+                    <button class="btn--add" id="outras__prof--add" aria-label="Adicionar proficiencia."></button>
+                    <ul class="wrapper__outras" id="lista__outras"></ul>
+                </article>
+            </section>
+            <section class="iventario">
+                <h2 class="title">Iventário</h2>
+                <div class="iventario__menu__container">
+                    <div class="iventario__menu--titles">
+                        <h2 class="title title--iventario__menu " data-iventario__titulo="consumables" name="test">Consumíveis:</h2>
+                        <h2 class="title title--iventario__menu hidden" data-iventario__titulo="items">Itens:</h2>
+                        <h2 class="title title--iventario__menu hidden" data-iventario__titulo="magicItems">Itens Mágicos:</h2>
+                        <h2 class="title title--iventario__menu hidden" data-iventario__titulo="questItems">Itens de Quest:</h2>
+                    </div>
+                    <div class="iventario__menu">
+                        <button class="icon__consumiveis" aria-label="Consumíveis" data-iventario__botao="consumables"></button>
+                        <button class="icon__itens off" aria-label="itens" data-iventario__botao="items"></button>
+                        <button class="icon__magicos off" aria-label="itens Mágicos" data-iventario__botao="magicItems"></button>
+                        <button class="icon__quest off" aria-label="Itens de Quest" data-iventario__botao="questItems"></button>
+                    </div>
+                </div>
+                <table class="table--iventario" data-iventario="consumables">
+                    <tr class="table__header--iventario">
+                        <th class="iventario__header">Q</th>
+                        <th class="iventario__header">Item</th>
+                        <th class="iventario__header">Kg</th>
+                    </tr>
+                    <tr>
+                        <td class="table__td"><input class="iventario__quantidade" type="number" placeholder="0"></td>
+                        <td class="table__td"><input class="iventario__item" type="text"></td>
+                        <td class="table__td"><input class="iventario__quantidade" type="number" placeholder="0"></td>
+                        <td class="table__btn"><button class="btn--info"></button></td>
+                    </tr>
+                    <tr>
+                        <td class="table__td"><input class="iventario__quantidade" type="number" placeholder="0"></td>
+                        <td class="table__td"><input class="iventario__item" type="text"></td>
+                        <td class="table__td"><input class="iventario__quantidade" type="number" placeholder="0"></td>
+                        <td class="table__btn"><button class="btn--info"></button></td>
+                    </tr>
+                    <tr>
+                        <td class="table__td"><input class="iventario__quantidade" type="number" placeholder="0"></td>
+                        <td class="table__td"><input class="iventario__item" type="text"></td>
+                        <td class="table__td"><input class="iventario__quantidade" type="number" placeholder="0"></td>
+                        <td class="table__btn"><button class="btn--info"></button></td>
+                    </tr>
+                </table>
+                <table class="table--iventario hidden" data-iventario="items">
+                    <tr class="table__header--iventario">
+                        <th class="iventario__header">Q</th>
+                        <th class="iventario__header">Item</th>
+                        <th class="iventario__header">Kg</th>
+                    </tr>
+                    <tr>
+                        <td class="table__td"><input class="iventario__quantidade" type="number" placeholder="0"></td>
+                        <td class="table__td"><input class="iventario__item" type="text"></td>
+                        <td class="table__td"><input class="iventario__quantidade" type="number" placeholder="0"></td>
+                        <td class="table__btn"><button class="btn--info"></button></td>
+                    </tr>
+                    <tr>
+                        <td class="table__td"><input class="iventario__quantidade" type="number" placeholder="0"></td>
+                        <td class="table__td"><input class="iventario__item" type="text"></td>
+                        <td class="table__td"><input class="iventario__quantidade" type="number" placeholder="0"></td>
+                        <td class="table__btn"><button class="btn--info"></button></td>
+                    </tr>
+                    <tr>
+                        <td class="table__td"><input class="iventario__quantidade" type="number" placeholder="0"></td>
+                        <td class="table__td"><input class="iventario__item" type="text"></td>
+                        <td class="table__td"><input class="iventario__quantidade" type="number" placeholder="0"></td>
+                        <td class="table__btn"><button class="btn--info"></button></td>
+                    </tr>
+                </table>
+                <table class="table--iventario hidden" data-iventario="magicItems">
+                    <tr class="table__header--iventario">
+                        <th class="iventario__header">Q</th>
+                        <th class="iventario__header">Item</th>
+                        <th class="iventario__header">Kg</th>
+                    </tr>
+                    <tr>
+                        <td class="table__td"><input class="iventario__quantidade" type="number" placeholder="0"></td>
+                        <td class="table__td"><input class="iventario__item" type="text"></td>
+                        <td class="table__td"><input class="iventario__quantidade" type="number" placeholder="0"></td>
+                        <td class="table__btn"><button class="btn--info"></button></td>
+                    </tr>
+                    <tr>
+                        <td class="table__td"><input class="iventario__quantidade" type="number" placeholder="0"></td>
+                        <td class="table__td"><input class="iventario__item" type="text"></td>
+                        <td class="table__td"><input class="iventario__quantidade" type="number" placeholder="0"></td>
+                        <td class="table__btn"><button class="btn--info"></button></td>
+                    </tr>
+                    <tr>
+                        <td class="table__td"><input class="iventario__quantidade" type="number" placeholder="0"></td>
+                        <td class="table__td"><input class="iventario__item" type="text"></td>
+                        <td class="table__td"><input class="iventario__quantidade" type="number" placeholder="0"></td>
+                        <td class="table__btn"><button class="btn--info"></button></td>
+                    </tr>
+                </table>
+                <table class="table--iventario hidden" data-iventario="questItems">
+                    <tr class="table__header--iventario">
+                        <th class="iventario__header">Q</th>
+                        <th class="iventario__header">Item</th>
+                        <th class="iventario__header">Kg</th>
+                    </tr>
+                    <tr>
+                        <td class="table__td"><input class="iventario__quantidade" type="number" placeholder="0"></td>
+                        <td class="table__td"><input class="iventario__item" type="text"></td>
+                        <td class="table__td"><input class="iventario__quantidade" type="number" placeholder="0"></td>
+                        <td class="table__btn"><button class="btn--info"></button></td>
+                    </tr>
+                    <tr>
+                        <td class="table__td"><input class="iventario__quantidade" type="number" placeholder="0"></td>
+                        <td class="table__td"><input class="iventario__item" type="text"></td>
+                        <td class="table__td"><input class="iventario__quantidade" type="number" placeholder="0"></td>
+                        <td class="table__btn"><button class="btn--info"></button></td>
+                    </tr>
+                    <tr>
+                        <td class="table__td"><input class="iventario__quantidade" type="number" placeholder="0"></td>
+                        <td class="table__td"><input class="iventario__item" type="text"></td>
+                        <td class="table__td"><input class="iventario__quantidade" type="number" placeholder="0"></td>
+                        <td class="table__btn"><button class="btn--info"></button></td>
+                    </tr>
+                </table>
+                <div class="iventario__menu--botton">
+                    <button class="btn--add" id="additem" aria-label="Adicionar item"></button>
+                    <p id="peso">Peso total: 0kg</p>
+                </div>
+                <article class="tesouro">
+                    <h2 class="title title--tesouro">Tesouro</h2>
+                    <div class="coins__container">
+                        <div class="coins__wrapper">
+                            <label for="platina" class="coin coin--platina" aria-label="Platina" data-tesouro="platina"></label>
+                            <input id="platina" type="number" value="0">
+                        </div>
+                        <div class="coins__wrapper">
+                            <label for="gold" class="coin coin--ouro" aria-label="Ouro" data-tesouro="ouro"></label>
+                            <input id="gold" type="number" value="0">
+                        </div>
+                        <div class="coins__wrapper">
+                            <label for="prata" class="coin coin--prata" aria-label="Prata" data-tesouro="prata"></label>
+                            <input id="prata" type="number" value="0">
+                        </div>
+                        <div class="coins__wrapper">
+                            <label for="cobre" class="coin coin--cobre" aria-label="Cobre" data-tesouro="cobre"></label>
+                            <input id="cobre" type="number" value="0">
+                        </div>
+                    </div>
+                    <label class="tittle title--outrosTesouros hidden" for="outrosTesouros">Outros tesouros</label>
+                    <textarea class="textarea textarea--tesouro" rows="3" cols="25" placeholder="Outros tesouros..." id="outrosTesouros"></textarea>
+                </article>
+            </section>
+        </main>
+        <script src="assets/script/portrait.js"></script>
+        <script src="assets/script/classes.js"></script>
+        <script src="assets/script/atributos.js"></script>
+        <script src="assets/script/pointbuy.js"></script>
+        <script src="assets/script/inspiracao.js"></script>
+        <script src="assets/script/pericias.js"></script>
+        <script src="assets/script/iventario.js"></script>
+        <script src="assets/script/outras.js"></script>
+    </body>
 </html>

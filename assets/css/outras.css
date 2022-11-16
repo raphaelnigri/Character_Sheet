@@ -1,11 +1,11 @@
-.outras{
-
-}
-
-.outras-proficiencias{
+.outras__container{
     display: grid;
     grid-template-columns: auto 1fr 40px;
     margin-top: 32px;
+}
+
+.outras__container:first-child{
+    margin-top: 0px;
 }
 
 .title--outras,
@@ -37,6 +37,51 @@
     margin-left: 4px;
 }
 
-.outras-proficiencias .btn--add{
+.outras__container .btn--add{
     justify-self: flex-end;
+}
+
+.outras__container .btn--remove{
+    justify-self: flex-end;
+}
+
+.wrapper__outras{
+    grid-column: span 3;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+.outras__p{
+    font-family: 'montez', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: left;
+    margin-right: 12px;
+}
+
+.outras__p--prof{
+    color: var(--dex)
+}
+
+.outras__p--idioma{
+    color: var(--cha)
+}
+
+.label--ferramenta{
+    font-family: 'montez', sans-serif;
+}
+
+.wrapper--ferramenta{
+    display: grid;
+
+}
+
+.outras__p--ferramenta{
+    color: var(--int);
+}
+
+.select--atribute{
+    background: transparent;
 }

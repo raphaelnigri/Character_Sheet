@@ -3,14 +3,14 @@ const className = document.getElementById('class__nome');
 const classLvl = document.getElementById('class__lvl');
 const listaDeClasses = document.getElementById('lista__classes');
 const lvlTotal = document.getElementById('char__lvl');
-const proficiencia = document.getElementById('proficiencia');
+const bonusDeProficiencia = document.getElementById('bonusDeProficiencia');
 
 addClassBtn.addEventListener('click', () =>{
 
     if(checaLimiteDeLvl(classLvl) && checaClasseRepetida(className.value) != 'repetido' && className.value != '' && classLvl.value != ''){
         addClass(className,classLvl);
         calculaLvlTotal();
-        calculaProficiencia();
+        calculabonusDeProficiencia();
         className.value = '';
         classLvl.value = '';
     }
@@ -24,7 +24,7 @@ function addClass(nome,nivel){
 
     listaDeClasses.appendChild(novaClasse);
     novaClasse.setAttribute('data-classe',`${nome.value}`);
-    novaClasse.classList.add('class__wrapper--classe');
+    novaClasse.classList.add('wrapper');
     
     novaClasse.appendChild(label);
     label.classList.add('class__label');
@@ -41,7 +41,7 @@ function addClass(nome,nivel){
     input.setAttribute('aria-label','lvl');
     input.addEventListener('input', ()=>{
         calculaLvlTotal();
-        calculaProficiencia();
+        calculabonusDeProficiencia();
     });
     
     novaClasse.appendChild(del);
@@ -50,7 +50,7 @@ function addClass(nome,nivel){
     del.addEventListener('click', ()=>{
         novaClasse.remove();
         calculaLvlTotal();
-        calculaProficiencia();
+        calculabonusDeProficiencia();
     })
 }
 
@@ -79,13 +79,13 @@ function calculaLvlTotal(){
     lvlTotal.innerHTML = nivelDeClasses;
 }
 
-function calculaProficiencia(){
+function calculabonusDeProficiencia(){
     const baseDeCalculo =  parseInt(lvlTotal.innerHTML);
 
     if(isNaN(baseDeCalculo)){
-        proficiencia.innerHTML = `+2`;
+        bonusDeProficiencia.innerHTML = `+2`;
     } else{
-        proficiencia.innerHTML = `+${2 + parseInt((baseDeCalculo - 1)/4)}`;
+        bonusDeProficiencia.innerHTML = `+${2 + parseInt((baseDeCalculo - 1)/4)}`;
     }
 }
 
