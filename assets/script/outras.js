@@ -5,9 +5,10 @@ const addProfBtn = document.getElementById('outras__prof--add');
 
 
 addProfBtn.addEventListener('click', () =>{
-    addProficiencia(proficiencia);
+    if(proficiencia.value != ''){
+        addProficiencia(proficiencia);
+    }
 })
-
 
 function addProficiencia(nome){
     const novaProf = document.createElement('li');
@@ -40,9 +41,10 @@ const addIdiomaBtn = document.getElementById('idioma--add');
 
 
 addIdiomaBtn.addEventListener('click', () =>{
-    addIdioma(idioma);
+    if(idioma.value != ''){
+        addIdioma(idioma);
+    }
 })
-
 
 function addIdioma(nome){
     const novaProf = document.createElement('li');
@@ -75,9 +77,10 @@ const addFerramentaBtn = document.getElementById('ferramenta--add');
 
 
 addFerramentaBtn.addEventListener('click', () =>{
-    addFerramenta(ferramenta);
+    if(ferramenta.value != ''){
+        addFerramenta(ferramenta);
+    }
 })
-
 
 function addFerramenta(nome){
     const novaProf = document.createElement('li');
@@ -152,18 +155,20 @@ function addFerramenta(nome){
     optionCha.setAttribute('value', 'cha');
     optionCha.innerHTML = 'Car'
 
-    novaProf.appendChild(roll);
-    roll.classList.add('roll');
-    roll.setAttribute('aria-label','Rolar ferramenta.');
-    roll.addEventListener('click', ()=>{
-        rollSelectAtribute();
-    })
-
     novaProf.appendChild(del);
     del.classList.add('btn--remove');
+    del.classList.add('btn--ferramenta');
     del.setAttribute('aria-label','Deleta proficiência.');
     del.addEventListener('click', ()=>{
         novaProf.remove();
+    })
+
+    novaProf.appendChild(roll);
+    roll.classList.add('roll');
+    roll.classList.add('roll--ferramenta');
+    roll.setAttribute('aria-label','Rolar ferramenta.');
+    roll.addEventListener('click', ()=>{
+        rollSelectAtribute();
     })
 
     ferramenta.value = '';

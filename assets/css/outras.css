@@ -69,19 +69,40 @@
     color: var(--cha)
 }
 
-.label--ferramenta{
-    font-family: 'montez', sans-serif;
-}
+
 
 .wrapper--ferramenta{
     display: grid;
-
+    grid-template-areas: 
+    "ferramenta ferramenta remover"
+    "label select roll";
+    row-gap: 4px;
 }
 
 .outras__p--ferramenta{
     color: var(--int);
+    grid-area: ferramenta;
+}
+
+.label--ferramenta{
+    font-family: 'montez', sans-serif;
+    font-size: 1.2rem;
+    grid-area: label;
 }
 
 .select--atribute{
     background: transparent;
+    grid-area: select;
+    margin-right: 4px;
+    font-family: 'montez', sans-serif;
+    font-size: 1.2rem;
+    margin-right: 16px;
+}
+
+.btn--ferramenta{
+    grid-area: remover;
+}
+
+.roll--ferramenta{
+    grid-area: roll;
 }
