@@ -74,6 +74,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-right: 10px;
-    margin-left: 8px;
+    margin-inline: 10px;
+    margin-top: 3px;
+}
+
+.btn--iventario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn--iventario::before{
+    content: '\f0d7';
+    box-shadow: -1px 1.5px 2px 2px #333;
+    border-radius: 4px;
+    width: 18px;
+    height: 18px;
+    padding: 1px;
 }

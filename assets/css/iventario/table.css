@@ -50,3 +50,12 @@
     padding-left: 8px;
     width: 100%;
 }
+
+.table__label{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+

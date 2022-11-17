@@ -22,3 +22,7 @@
     content:"\f05a";
     color: var(--int);
 }
+
+.btn--info--ativo::before{
+    color: var(--str);
+}

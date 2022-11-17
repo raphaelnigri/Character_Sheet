@@ -67,7 +67,8 @@ addItemBtn.addEventListener('click', () =>{
 })
 
 function addItem(tabela){
-    const novoItem = document.createElement('tr');
+    const novoItem = document.createElement('tbody');
+    const itemLinha = document.createElement('tr');
     const td1 = document.createElement('td');
     const td2 = document.createElement('td');
     const td3 = document.createElement('td');
@@ -77,17 +78,61 @@ function addItem(tabela){
     const itemPeso = document.createElement('input');
     const info = document.createElement('button');
 
+    const equipadoLinha = document.createElement('tr');
+    const equipadoTD = document.createElement('td');
+    const equipadoLabel = document.createElement('label');
+    const equipadoInput = document.createElement('input');
+
+    const comoRecursoLinha = document.createElement('tr');
+    const comoRecursoTD = document.createElement('td');
+    const usarComoRecursoLabel = document.createElement('label');
+    const usarComoRecursoInput = document.createElement('input');
+
+    const temAtaqueLinha = document.createElement('tr');
+    const temAtaqueTD = document.createElement('td');
+    const temAtaqueLabel = document.createElement('label');
+    const temAtaqueInput = document.createElement('input');
+
+    const descricaoLinha = document.createElement('tr');
+    const descricaoTD = document.createElement('td');
+    const descricao = document.createElement('textarea');
+
     iventarioArrTables.forEach(element => {
         if(element.dataset.iventario == `${tabela}`){
             element.appendChild(novoItem);
-            novoItem.appendChild(td1);
+            novoItem.appendChild(itemLinha);
+            itemLinha.appendChild(td1);
             td1.classList.add('table__td');
-            novoItem.appendChild(td2);
+            itemLinha.appendChild(td2);
             td2.classList.add('table__td');
-            novoItem.appendChild(td3);
+            itemLinha.appendChild(td3);
             td3.classList.add('table__td');
-            novoItem.appendChild(td4);
+            itemLinha.appendChild(td4);
             td4.classList.add('table__btn');
+
+            novoItem.appendChild(equipadoLinha);
+            equipadoLinha.classList.add('hidden');
+            equipadoLinha.appendChild(equipadoTD);
+            equipadoTD.classList.add('table__td');
+            equipadoTD.setAttribute('colspan','4');
+
+            novoItem.appendChild(comoRecursoLinha);
+            comoRecursoLinha.classList.add('hidden');
+            comoRecursoLinha.appendChild(comoRecursoTD);
+            comoRecursoTD.classList.add('table__td');
+            comoRecursoTD.setAttribute('colspan','4');
+
+            novoItem.appendChild(temAtaqueLinha);
+            temAtaqueLinha.classList.add('hidden');
+            temAtaqueLinha.appendChild(temAtaqueTD);
+            temAtaqueTD.classList.add('table__td');
+            temAtaqueTD.setAttribute('colspan','4');
+
+            novoItem.appendChild(descricaoLinha);
+            descricaoLinha.classList.add('hidden');
+            descricaoLinha.appendChild(descricaoTD);
+            descricaoTD.classList.add('table__td');
+            descricaoTD.setAttribute('colspan','4');
 
             td1.appendChild(itemQ);
             itemQ.classList.add('iventario__quantidade');
@@ -116,6 +161,37 @@ function addItem(tabela){
 
             td4.appendChild(info);
             info.classList.add('btn--info');
+            info.addEventListener('click', ()=>{
+                info.classList.toggle('btn--info--ativo');
+                equipadoLinha.classList.toggle('hidden');
+                comoRecursoLinha.classList.toggle('hidden');
+                temAtaqueLinha.classList.toggle('hidden');
+                descricaoLinha.classList.toggle('hidden');
+            });
+
+            equipadoTD.appendChild(equipadoLabel);
+            equipadoLabel.classList.add('table__label');
+            equipadoLabel.innerHTML = 'Equipar.';
+            equipadoLabel.appendChild(equipadoInput);
+            equipadoInput.setAttribute('type','checkbox');
+
+            comoRecursoTD.appendChild(usarComoRecursoLabel);
+            usarComoRecursoLabel.classList.add('table__label');
+            usarComoRecursoLabel.innerHTML = 'Usar como recurso.';
+            usarComoRecursoLabel.appendChild(usarComoRecursoInput);
+            usarComoRecursoInput.setAttribute('type','checkbox');
+
+            temAtaqueTD.appendChild(temAtaqueLabel);
+            temAtaqueLabel.classList.add('table__label');
+            temAtaqueLabel.innerHTML = 'Tem ataque.';
+            temAtaqueLabel.appendChild(temAtaqueInput);
+            temAtaqueInput.setAttribute('type','checkbox');
+
+            descricaoTD.appendChild(descricao);
+            descricao.classList.add('textarea');
+            descricao.setAttribute('rows','3');
+            descricao.setAttribute('cols','25');
+            descricao.setAttribute('placeholder','Descrição...');
         }
     })
 }
