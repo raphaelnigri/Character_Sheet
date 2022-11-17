@@ -28,8 +28,8 @@
     font: var(--fa-font-solid);
     font-size: 1.8rem;
     margin-inline: auto;
-    color: var(--con);
-    opacity: 0.55;
+    color: var(--cha);
+    opacity: 0.2;
     margin-top: -6px;
 }
 

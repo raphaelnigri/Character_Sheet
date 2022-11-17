@@ -17,6 +17,7 @@
         <link rel="stylesheet" type="text/css" href="assets/css/atributes.css">
         <link rel="stylesheet" type="text/css" href="assets/css/saves.css">
         <link rel="stylesheet" type="text/css" href="assets/css/pericias.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/recursos.css">
         <link rel="stylesheet" type="text/css" href="assets/css/outras.css">
         <link rel="stylesheet" type="text/css" href="assets/css/iventario/iventario.css">
         <link rel="stylesheet" type="text/css" href="assets/css/iventario/table.css">
@@ -302,6 +303,17 @@
                     <button title="rolar perícia sobrevivência" class="roll"></button>
                 </div>
             </section>
+            <section class="recursos">
+                <h2 class="title title--recursos">Recursos</h2>
+                <button class="btn--add btn--add--recurso" id="recurso__btn--add" aria-label="Adicionar recurso"></button>
+                <div class="article__recurso">
+                    <label class="total__label">Total:
+                    <input class="caixa caixa--recurso caixa--total" type="number" placeholder="0"></input></label>
+                    <input class="caixa caixa--recurso caixa--quantidade" type="number" placeholder="0/0"></input>
+                    <input class="title title--sub title--recurso__input" placeholder="Nome"></input>
+                    <button class="btn--remove btn--remove--recurso"></button>
+                </div>
+            </section>
             <section class="outras">
                 <h2 class="title">Outras Proficiências</h2>
                 <article class="outras__container">
@@ -424,10 +436,6 @@
                     <input class="caixa caixa--fisico" type="number" id="fisico__idade" placeholder="Idade..."></input>
                 </div>
                 <div class="article__fisico">
-                    <label class="title title--sub title--personalidade" for="fisico__olhos" >Olhos</label>
-                    <input class="caixa caixa--fisico" type="text" id="fisico__olhos" placeholder="Cor..."></input>
-                </div>
-                <div class="article__fisico">
                     <label class="title title--sub title--personalidade" for="fisico__altura">Altura</label>
                     <input class="caixa caixa--fisico" type="number" id="fisico__altura" placeholder="Altura..."></input>
                 </div>
@@ -442,6 +450,10 @@
                 <div class="article__fisico">
                     <label class="title title--sub title--personalidade" for="fisico__cabelo">Cabelo</label>
                     <input class="caixa caixa--fisico" type="text" id="fisico__cabelo" placeholder="Cor..."></input>
+                </div>
+                <div class="article__fisico">
+                    <label class="title title--sub title--personalidade" for="fisico__olhos" >Olhos</label>
+                    <input class="caixa caixa--fisico" type="text" id="fisico__olhos" placeholder="Cor..."></input>
                 </div>
             </section>
         </main>

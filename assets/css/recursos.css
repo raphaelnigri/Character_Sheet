@@ -1,0 +1,100 @@
+.recursos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+    position: relative;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.title--recursos{
+    width: 100%;
+    font-weight: bold;
+}
+
+.title--recurso__input{
+    grid-area: titulo;
+    background: transparent;
+    box-shadow: -2.5px 2px 4px 2px #222;
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+    border-radius: 2px;
+    margin-top: 4px;
+}
+
+.article__recurso{
+    background: url(../img/sheet2.jpg) no-repeat;
+    background-size: cover;
+    padding: 12px;
+    box-shadow: -4px 4px 4px 2px #222;
+    display: grid;
+    grid-template-areas: 
+    "label label"
+    "quantidade quantidade"
+    "titulo titulo"
+    "icone icone";
+    grid-template-columns: auto 1fr;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    width: 44%;
+    position: relative;
+}
+
+.article__recurso::before{
+    grid-area: icone;
+    margin-right: 20px;
+    content: "\f521";
+    font: var(--fa-font-solid);
+    font-size: 1.4rem;
+    margin-inline: auto;
+    color: var(--dex);
+    opacity: 0.4;
+}
+
+.total__label{
+    grid-area: label;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 1rem;
+    border-bottom: 1px solid black;
+}
+
+.caixa--recurso{
+    background: transparent;
+    margin-inline: auto;
+    text-align: center;
+    height: 100%;
+    border-radius: 0px;
+    box-shadow: none;
+    border: none;
+    font-size: 0.8rem;
+}
+
+.caixa--total{
+    width: 100%;
+    font-size: 1rem;
+    font-size: 1.1rem;
+}
+
+.caixa--quantidade{
+    grid-area: quantidade;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.btn--add--recurso{
+    position: absolute;
+    right: 12px;
+    top: 16px;
+    font-size: 1.25em;
+}
+
+.btn--remove--recurso{
+    position: absolute;
+    right: 4px;
+    top: 4px;
+}

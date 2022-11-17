@@ -4,10 +4,6 @@
     margin-top: 32px;
 }
 
-.outras__container:first-child{
-    margin-top: 0px;
-}
-
 .title--outras{
     grid-column: span 3;
 }
