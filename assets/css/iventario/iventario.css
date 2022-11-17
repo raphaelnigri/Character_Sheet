@@ -15,10 +15,6 @@
     grid-area: iventarioMenuTitle;
 }
 
-.title--iventario__menu{
-    font-size: 1.3rem;
-}
-
 .iventario__menu{
     grid-area: iventarioMenu;
     display: flex;

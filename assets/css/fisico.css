@@ -1,0 +1,44 @@
+.fisico{
+    background: none;
+    box-shadow: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.article__fisico{
+    background: url(../img/sheet2.jpg) no-repeat;
+    background-size: cover;
+    padding: 12px;
+    box-shadow: -4px 4px 4px 2px #222;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    width: 44%;
+}
+
+.article__fisico::before{
+    margin-right: 20px;
+    content: "\f70e";
+    font: var(--fa-font-solid);
+    font-size: 1.8rem;
+    margin-inline: auto;
+    color: var(--con);
+    opacity: 0.55;
+    margin-top: -6px;
+}
+
+.caixa--fisico{
+    background: transparent;
+    margin-inline: auto;
+    text-align: center;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: -2.5px 2px 4px 2px #222;
+    border: none;
+}

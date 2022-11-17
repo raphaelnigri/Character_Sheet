@@ -21,12 +21,14 @@
         <link rel="stylesheet" type="text/css" href="assets/css/iventario/iventario.css">
         <link rel="stylesheet" type="text/css" href="assets/css/iventario/table.css">
         <link rel="stylesheet" type="text/css" href="assets/css/iventario/tesouro.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/personalidade.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/fisico.css">
         <link rel="stylesheet" type="text/css" href="assets/css/root.css">
         <link rel="stylesheet" type="text/css" href="assets/css/input.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montez&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=MedievalSharp&family=Montez&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/e85ea023b4.js" crossorigin="anonymous"></script>
         <title>Character Sheet - D&D 5e</title>
     </head>
@@ -42,7 +44,7 @@
                 </div>
                 <input class="input__presentation input__presentation--left xp" type="number" placeholder="Experiência" aria-label="Experiência">
                 <input class="input__presentation input__presentation--left antecedente" data-antecedente="" type="text" id="antecedente" placeholder="Antecedente" aria-label="Antecedente">
-                <input class="input__presentation input__presentation--right jogador" type="text" placeholder="Jogador" aria-label="Jogador">
+                <input class="input__presentation input__presentation--right jogador" type="text" placeholder="Tendência" aria-label="Tendência">
                 <input class="input__presentation input__presentation--right race" data-race="" type="text" id="race" placeholder="Raça" aria-label="Raça">
                 <input class="input__presentation input__presentation--full nome" type="text" id="nome" aria-label="Nome do personagem" placeholder="Nome do personagem">
                 <div class="dice__wrapper">
@@ -303,21 +305,21 @@
             <section class="outras">
                 <h2 class="title">Outras Proficiências</h2>
                 <article class="outras__container">
-                    <h2 class="title title--ferramentas">Ferramentas</h2>
+                    <h2 class="title title--sub title--outras">Ferramentas</h2>
                     <label class="class__label" for="ferramenta">Ferramenta:</label>
                     <input class="outra__input" type="text" id="ferramenta" value="">
                     <button class="btn--add" id="ferramenta--add" aria-label="Adicionar ferramenta."></button>
                     <ul class="wrapper__outras" id="lista__ferramenta"></ul>
                 </article>
                 <article class="outras__container">
-                    <h2 class="title title--idiomas">Idiomas</h2>
+                    <h2 class="title title--sub title--outras">Idiomas</h2>
                     <label class="class__label" for="idioma">Idioma:</label>
                     <input class="outra__input" type="text" id="idioma" value="">
                     <button class="btn--add" id="idioma--add" aria-label="Adicionar lingua."></button>
                     <ul class="wrapper__outras" id="lista__idioma"></ul>
                 </article>
                 <article class="outras__container">
-                    <h2 class="title title--equipamentos">Equipamentos</h2>
+                    <h2 class="title title--sub title--outras">Equipamentos</h2>
                     <label class="class__label" for="outras__prof">Proficiência:</label>
                     <input class="outra__input" type="text" id="outras__prof" value="">
                     <button class="btn--add" id="outras__prof--add" aria-label="Adicionar proficiencia."></button>
@@ -328,10 +330,10 @@
                 <h2 class="title">Iventário</h2>
                 <div class="iventario__menu__container">
                     <div class="iventario__menu--titles">
-                        <h2 class="title title--iventario__menu " data-iventario__titulo="consumables" name="test">Consumíveis:</h2>
-                        <h2 class="title title--iventario__menu hidden" data-iventario__titulo="items">Itens:</h2>
-                        <h2 class="title title--iventario__menu hidden" data-iventario__titulo="magicItems">Itens Mágicos:</h2>
-                        <h2 class="title title--iventario__menu hidden" data-iventario__titulo="questItems">Itens de Quest:</h2>
+                        <h2 class="title title--sub" data-iventario__titulo="consumables" name="test">Consumíveis:</h2>
+                        <h2 class="title title--sub hidden" data-iventario__titulo="items">Itens:</h2>
+                        <h2 class="title title--sub hidden" data-iventario__titulo="magicItems">Itens Mágicos:</h2>
+                        <h2 class="title title--sub hidden" data-iventario__titulo="questItems">Itens de Quest:</h2>
                     </div>
                     <div class="iventario__menu">
                         <button class="icon__consumiveis" aria-label="Consumíveis" data-iventario__botao="consumables"></button>
@@ -370,10 +372,10 @@
                 </table>
                 <div class="iventario__menu--botton">
                     <button class="btn--add btn--iventario" id="additem" aria-label="Adicionar item"></button>
-                    <p id="peso">Peso total: 0kg</p>
+                    <p id="peso">Peso Total: 0kg</p>
                 </div>
                 <article class="tesouro">
-                    <h2 class="title title--tesouro">Tesouro</h2>
+                    <h2 class="title title--sub title--tesouro">Tesouro</h2>
                     <div class="coins__container">
                         <div class="coins__wrapper">
                             <label for="platina" class="coin coin--platina" aria-label="Platina" data-tesouro="platina"></label>
@@ -395,6 +397,52 @@
                     <label class="tittle title--outrosTesouros hidden" for="outrosTesouros">Outros tesouros</label>
                     <textarea class="textarea textarea--tesouro" rows="3" cols="25" placeholder="Outros tesouros..." id="outrosTesouros"></textarea>
                 </article>
+            </section>
+            <section class="personalidade">
+                    <h2 class="hidden">Personalidade</h2>
+                <div class="article__personalidade article__personalidade--tracos">
+                    <label class="title title--sub title--personalidade" for="personalidade__tracos">Traços de personalidade</label>
+                    <textarea class="textarea" rows="4" cols="25" id="personalidade__tracos" placeholder="Seus traços de personalidade..."></textarea>
+                </div>
+                <div class="article__personalidade article__personalidade--ideais">
+                    <label class="title title--sub title--personalidade" for="personalidade__ideais">Ideais</label>
+                    <textarea class="textarea" rows="4" cols="25" id="personalidade__ideais" placeholder="Seus ideais..."></textarea>
+                </div>
+                <div class="article__personalidade article__personalidade--vinculos">
+                    <label class="title title--sub title--personalidade" for="personalidade__vinculos">Vínculos</label>
+                    <textarea class="textarea" rows="4" cols="25" id="personalidade__vinculos" placeholder="Seus vínculos..."></textarea>
+                </div>
+                <div class="article__personalidade article__personalidade--defeitos">
+                    <label class="title title--sub title--personalidade" for="personalidade__defeitos">Defeitos</label>
+                    <textarea class="textarea" rows="4" cols="25" id="personalidade__defeitos" placeholder="Seus defeitos..."></textarea>
+                </div>
+            </section>
+            <section class="fisico">
+                <h2 class="hidden">Características Físicas</h2>
+                <div class="article__fisico">
+                    <label class="title title--sub title--personalidade" for="fisico__idade">Idade</label>
+                    <input class="caixa caixa--fisico" type="number" id="fisico__idade" placeholder="Idade..."></input>
+                </div>
+                <div class="article__fisico">
+                    <label class="title title--sub title--personalidade" for="fisico__olhos" >Olhos</label>
+                    <input class="caixa caixa--fisico" type="text" id="fisico__olhos" placeholder="Cor..."></input>
+                </div>
+                <div class="article__fisico">
+                    <label class="title title--sub title--personalidade" for="fisico__altura">Altura</label>
+                    <input class="caixa caixa--fisico" type="number" id="fisico__altura" placeholder="Altura..."></input>
+                </div>
+                <div class="article__fisico">
+                    <label class="title title--sub title--personalidade" for="fisico__peso">Peso</label>
+                    <input class="caixa caixa--fisico" type="number" id="fisico__peso" placeholder="Peso..."></input>
+                </div>
+                <div class="article__fisico">
+                    <label class="title title--sub title--personalidade" for="fisico__pele">Pele</label>
+                    <input class="caixa caixa--fisico" type="text" id="fisico__pele" placeholder="Cor..."></input>
+                </div>
+                <div class="article__fisico">
+                    <label class="title title--sub title--personalidade" for="fisico__cabelo">Cabelo</label>
+                    <input class="caixa caixa--fisico" type="text" id="fisico__cabelo" placeholder="Cor..."></input>
+                </div>
             </section>
         </main>
         <script src="assets/script/portrait.js"></script>
