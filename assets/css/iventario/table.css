@@ -59,3 +59,11 @@
     gap: 8px;
 }
 
+.table__label--ataque{
+    margin-left: 17px;
+}
+
+.btn--remove__item::before{
+    content: "\f2ed";
+    color: black;
+}

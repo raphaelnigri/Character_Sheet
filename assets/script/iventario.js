@@ -93,9 +93,18 @@ function addItem(tabela){
     const temAtaqueLabel = document.createElement('label');
     const temAtaqueInput = document.createElement('input');
 
+    const removerItemTD = document.createElement('td');
+    const removerItem = document.createElement('button');
+
     const descricaoLinha = document.createElement('tr');
     const descricaoTD = document.createElement('td');
     const descricao = document.createElement('textarea');
+
+    const listaDeRecursos = document.getElementById('lista__recursos');
+    const recurso = document.createElement('li');
+    const recursoQuantidade = document.createElement('input');
+    const recursoNome = document.createElement('input');
+    const recursoBtn = document.createElement('button');
 
     iventarioArrTables.forEach(element => {
         if(element.dataset.iventario == `${tabela}`){
@@ -126,7 +135,7 @@ function addItem(tabela){
             temAtaqueLinha.classList.add('hidden');
             temAtaqueLinha.appendChild(temAtaqueTD);
             temAtaqueTD.classList.add('table__td');
-            temAtaqueTD.setAttribute('colspan','4');
+            temAtaqueTD.setAttribute('colspan','3');
 
             novoItem.appendChild(descricaoLinha);
             descricaoLinha.classList.add('hidden');
@@ -139,10 +148,23 @@ function addItem(tabela){
             itemQ.setAttribute('type','number');
             itemQ.setAttribute('placeholder','0');
             itemQ.value=1;
+            itemQ.addEventListener('input', ()=>{
+                calculaItemPeso(itemPeso,itemQ);
+                calculaPeso();
+                recursoQuantidade.value = itemQ.value;
+            });
+            itemQ.addEventListener('input', ()=>{
+                if(itemQ.value===''){
+                    itemQ.value = 0;
+                };
+            });
 
             td2.appendChild(itemNome);
             itemNome.classList.add('iventario__item');
             itemNome.setAttribute('type','text');
+            itemNome.addEventListener('input', ()=>{
+                recursoNome.value = itemNome.value;
+            })
 
             td3.appendChild(itemPeso);
             itemPeso.classList.add('iventario__quantidade');
@@ -151,10 +173,6 @@ function addItem(tabela){
             itemPeso.setAttribute('placeholder','0');
             itemPeso.setAttribute('data-itempeso','0');
             itemPeso.addEventListener('input', ()=>{
-                calculaItemPeso(itemPeso,itemQ);
-                calculaPeso();
-            });
-            itemQ.addEventListener('input', ()=>{
                 calculaItemPeso(itemPeso,itemQ);
                 calculaPeso();
             });
@@ -167,6 +185,7 @@ function addItem(tabela){
                 comoRecursoLinha.classList.toggle('hidden');
                 temAtaqueLinha.classList.toggle('hidden');
                 descricaoLinha.classList.toggle('hidden');
+                removerItem.classList.toggle('hidden');
             });
 
             equipadoTD.appendChild(equipadoLabel);
@@ -180,12 +199,63 @@ function addItem(tabela){
             usarComoRecursoLabel.innerHTML = 'Usar como recurso.';
             usarComoRecursoLabel.appendChild(usarComoRecursoInput);
             usarComoRecursoInput.setAttribute('type','checkbox');
+            usarComoRecursoInput.addEventListener('input', ()=>{
+                if(!usarComoRecursoInput.checked){
+                   return recurso.remove();
+                }
+                listaDeRecursos.appendChild(recurso);
+                recurso.classList.add('li__recurso');
+
+                recurso.appendChild(recursoQuantidade);
+                recursoQuantidade.classList.add('caixa');
+                recursoQuantidade.classList.add('caixa--recurso');
+                recursoQuantidade.classList.add('caixa--quantidade');
+                recursoQuantidade.setAttribute('type','number');
+                recursoQuantidade.setAttribute('placeholder','0/0');
+                recursoQuantidade.value = `${itemQ.value}`;
+                recursoQuantidade.addEventListener('input', ()=>{
+                    itemQ.value = recursoQuantidade.value;
+                    calculaItemPeso(itemPeso,itemQ);
+                    calculaPeso();
+                })
+
+                recurso.appendChild(recursoNome);
+                recursoNome.classList.add('title');
+                recursoNome.classList.add('title--sub');
+                recursoNome.classList.add('title--recurso__input');
+                recursoNome.setAttribute('type','text');
+                recursoNome.setAttribute('placeholder','Nome');
+                recursoNome.value = `${itemNome.value}`;
+                recursoNome.addEventListener('input', ()=>{
+                    itemNome.value = recursoNome.value;
+                })
+
+                recurso.appendChild(recursoBtn);
+                recursoBtn.classList.add('btn--remove');
+                recursoBtn.classList.add('btn--remove--recurso');
+                recursoBtn.addEventListener('click', ()=>{
+                    usarComoRecursoInput.checked = false
+                    recurso.remove();
+                })
+            })
 
             temAtaqueTD.appendChild(temAtaqueLabel);
             temAtaqueLabel.classList.add('table__label');
+            temAtaqueLabel.classList.add('table__label--ataque');
             temAtaqueLabel.innerHTML = 'Tem ataque.';
             temAtaqueLabel.appendChild(temAtaqueInput);
             temAtaqueInput.setAttribute('type','checkbox');
+
+            temAtaqueLinha.appendChild(removerItemTD)
+            removerItemTD.appendChild(removerItem);
+            removerItem.classList.add('btn--remove');
+            removerItem.classList.add('btn--remove__item');
+            removerItem.setAttribute('aria-label','Remover Item.');
+            removerItem.classList.add('hidden');
+            removerItem.addEventListener('click', ()=>{
+                recurso.remove();
+                novoItem.remove();
+            });
 
             descricaoTD.appendChild(descricao);
             descricao.classList.add('textarea');
