@@ -1,0 +1,85 @@
+.caracteristicas{
+    grid-template-columns: auto 1fr;
+    row-gap: 16px;
+}
+
+.textarea--caracteristica{
+    grid-column: span 2;
+}
+
+.label--caracteristica{
+    grid-column: span 2;
+    display: flex;
+    margin-right: 12px;
+}
+
+.input--caracteristica{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.btn--caracteristica{
+    width: 20px;
+    justify-self: flex-end;
+    font-size: 1.25em;
+}
+
+.textarea--caracteristica{
+    grid-column: span 2;
+}
+
+.lista__caracteristicas{
+    display: grid;
+    grid-column: span 2;
+}
+
+.li__caracteristica{
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: auto 1fr 25px;
+    grid-template-areas: 
+        "nome inspec del"
+        "fonte fonte fonte"
+        "desc desc desc";
+    column-gap: 8px;
+    align-items: baseline;
+}
+
+.nome__caracteristica{
+    grid-area: nome;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--str);
+    text-transform: uppercase;
+    border-bottom: 3px solid #666;
+    margin-right: 12px;
+}
+
+.nome__caracteristica::first-letter{
+    font-size: 2.1rem;
+}
+
+.fonte__caracteristica{
+    grid-area: fonte;
+    margin-top: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #444;
+}
+
+.desc__caracteristica{
+    grid-area: desc;
+    margin-top: 4px;
+    font-size: 1.4rem;
+}
+
+.btn--inspecionar--caracteristica{
+    margin-left: auto;
+    font-size: 1.25rem;
+    grid-area: inspec;
+}
+
+.btn--remove--caracteristica{
+    font-size: 1.25rem;
+    grid-area: del;
+}

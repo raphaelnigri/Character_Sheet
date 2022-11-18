@@ -17,6 +17,7 @@
         <link rel="stylesheet" type="text/css" href="assets/css/atributes.css">
         <link rel="stylesheet" type="text/css" href="assets/css/saves.css">
         <link rel="stylesheet" type="text/css" href="assets/css/pericias.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/caracteristicas.css">
         <link rel="stylesheet" type="text/css" href="assets/css/recursos.css">
         <link rel="stylesheet" type="text/css" href="assets/css/outras.css">
         <link rel="stylesheet" type="text/css" href="assets/css/iventario/iventario.css">
@@ -81,10 +82,10 @@
             <section class="classes">
                 <h2 class="title">Classes</h2>
                 <div class="class__wrapper">
-                    <label class="class__label" for="class__nome">Classe:</label>
-                    <input class="class__input" type="text" id="class__nome" placeholder="___________">
-                    <label class="class__label class__label--lvl" for="class__lvl">Lvl:</label>
-                    <input class="class__input class__input--lvl" type="number" id="class__lvl" value="" placeholder="_____">
+                    <label class="class__label" for="class__nome">Classe:
+                    <input class="outra__input input--class" type="text" id="class__nome"></label>
+                    <label class="class__label class__label--lvl" for="class__lvl">Lvl:
+                    <input class="outra__input input--class--lvl" type="number" id="class__lvl" value=""></label>
                     <button class="btn--add" id="class__btn--add" aria-label="Adicionar classe."></button>
                 </div>
                 <ul class="class__wrapper class__wrapper--class__field" id="lista__classes"></ul>
@@ -303,10 +304,16 @@
                     <button title="rolar perícia sobrevivência" class="roll"></button>
                 </div>
             </section>
-            <section class="recursos">
-                <h2 class="title title--recursos">Recursos</h2>
-                <button class="btn--add btn--add--recurso" id="recurso__btn--add" aria-label="Adicionar recurso"></button>
-                <ul class="lista__recursos" id="lista__recursos"></ul>
+            <section class="caracteristicas">
+                <h2 class="title title--2c">Características e Traços</h2>
+                <label class="class__label label--caracteristica" for="caracteristica__nome">Nome:
+                <input class="outra__input input--caracteristica" type="text" id="caracteristica__nome" value=""></label>
+                <label class="class__label label--caracteristica" for="caracteristica__fonte">Fonte:
+                <input class="outra__input input--caracteristica" type="text" id="caracteristica__fonte" value=""></label>
+                <label class="class__label" for="descricao">Descrição:</label>
+                <button class="btn--add btn--caracteristica" id="caracteristica--add" aria-label="Adicionar característica."></button>
+                <textarea class="textarea textarea--caracteristica" id="caracteristica__descricao" rows="5" cols="25" placeholder="Descrição..."></textarea>
+                <ul class="lista__caracteristicas" id="lista__caracteristicas"></ul>
             </section>
             <section class="outras">
                 <h2 class="title">Outras Proficiências</h2>
@@ -331,6 +338,11 @@
                     <button class="btn--add" id="outras__prof--add" aria-label="Adicionar proficiencia."></button>
                     <ul class="wrapper__outras" id="lista__outras"></ul>
                 </article>
+            </section>
+            <section class="recursos">
+                <h2 class="title title--recursos">Recursos</h2>
+                <button class="btn--add btn--add--recurso" id="recurso__btn--add" aria-label="Adicionar recurso"></button>
+                <ul class="lista__recursos" id="lista__recursos"></ul>
             </section>
             <section class="iventario" data-currenttable="consumables">
                 <h2 class="title">Iventário</h2>
@@ -457,6 +469,7 @@
         <script src="assets/script/pointbuy.js"></script>
         <script src="assets/script/inspiracao.js"></script>
         <script src="assets/script/pericias.js"></script>
+        <script src="assets/script/caracteristica.js"></script>
         <script src="assets/script/recursos.js"></script>
         <script src="assets/script/iventario.js"></script>
         <script src="assets/script/outras.js"></script>

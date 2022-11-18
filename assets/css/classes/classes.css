@@ -25,10 +25,27 @@
     font-family: 'montez', sans-serif;
     font-size: 1.4rem;
     font-weight: bold;
+    display: flex;
 }
 
 .class__label--lvl{
-    margin-left: auto;
+    margin-left: 24px;
+    margin-right: 12px;
+    width: 100px;
+}
+
+.input--class{
+    font-family: 'Times New Roman', Times, serif;
+    width: 40%;
+    background: transparent;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.input--class--lvl{
+    text-align: center;
+    margin-right: auto;
+    margin-left: 2px;
 }
 
 .class__input{

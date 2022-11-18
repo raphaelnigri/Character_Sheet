@@ -1,3 +1,4 @@
+.btn--inspecionar::before,
 .btn--info::before,
 .btn--add::before,
 .btn--remove::before{
@@ -10,7 +11,7 @@
 }
 
 .btn--remove::before{
-    content:"\f056";
+    content:"\f057";
     color: var(--str);
 }
 
@@ -25,4 +26,9 @@
 
 .btn--info--ativo::before{
     color: var(--str);
+}
+
+.btn--inspecionar::before{
+    content:"\f002";
+    color: var(--wis);
 }

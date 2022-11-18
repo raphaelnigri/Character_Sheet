@@ -47,5 +47,4 @@ function addRecurso(){
     recursoBtn.addEventListener('click', ()=>{
         recurso.remove();
     })
-
 }
