@@ -2,6 +2,7 @@
     background: none;
     box-shadow: none;
     gap: 12px;
+    grid-area: personalidade;
 }
 
 .article__personalidade{

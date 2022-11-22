@@ -28,8 +28,14 @@ main{
     "apresentacao apresentacao"
     "classes inspiracao"
     "classes proficiencia"
+    "classes pericias"
     "atributes pericias"
-    "saves pericias";
+    "saves pericias"
+    "saves outras"
+    "caracteristicas caracteristicas"
+    "recursos iventario"
+    "personalidade iventario"
+    "personalidade fisico";
   gap: 32px;
   padding: 16px;
   align-items: flex-start;
@@ -129,7 +135,13 @@ main{
     "classes"
     "atributes"
     "saves"
-    "pericias";
+    "pericias"
+    "outras"
+    "caracteristicas"
+    "recursos"
+    "iventario"
+    "personalidade"
+    "fisico";
   }
 
 }

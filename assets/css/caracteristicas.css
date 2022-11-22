@@ -1,4 +1,5 @@
 .caracteristicas{
+    grid-area: caracteristicas;
     grid-template-columns: auto 1fr;
     row-gap: 16px;
 }
