@@ -21,29 +21,30 @@ function addClass(nome,nivel){
     const label = document.createElement('label');
     const input = document.createElement('input');
     const del = document.createElement('button');
+    const arquetipo = document.createElement('input')
 
     listaDeClasses.appendChild(novaClasse);
-    novaClasse.setAttribute('data-classe',`${nome.value}`);
+    novaClasse.setAttribute('data-classe',`${nome.value.toLowerCase()}`);
     novaClasse.classList.add('wrapper');
     
     novaClasse.appendChild(label);
-    label.classList.add('class__label');
-    label.setAttribute('for', `${nome.value}`);
-    label.innerHTML = `${nome.value}:`;
+    label.classList.add('class__nome');
+    label.setAttribute('for', `${nome.value.toLowerCase()}`);
+    label.innerHTML = `${nome.value.toLowerCase()}:`;
 
     novaClasse.appendChild(input);
     input.classList.add('class__input');
     input.classList.add('class__input--lvl');
     input.setAttribute('type','number');
-    input.setAttribute('id',`${nome.value}`);
+    input.setAttribute('id',`${nome.value.toLowerCase()}`);
     input.setAttribute('value',`${nivel.value}`);
-    input.setAttribute('placeholder','_____');
+    input.setAttribute('placeholder','lvl');
     input.setAttribute('aria-label','lvl');
     input.addEventListener('input', ()=>{
         calculaLvlTotal();
         calculabonusDeProficiencia();
     });
-    
+
     novaClasse.appendChild(del);
     del.classList.add('btn--remove');
     del.setAttribute('aria-label','Deleta classe.');
@@ -52,6 +53,15 @@ function addClass(nome,nivel){
         calculaLvlTotal();
         calculabonusDeProficiencia();
     })
+
+    novaClasse.appendChild(arquetipo);
+    arquetipo.setAttribute('placeholder','Arquétipo...');
+    arquetipo.setAttribute('aria-label','Insira seu arquétipo');
+    arquetipo.setAttribute('type','Text');
+    arquetipo.setAttribute('id',`${nome.value.toLowerCase()}__arquetipo`);
+    arquetipo.classList.add('title--sub');
+    arquetipo.classList.add('fonte__caracteristica');
+    arquetipo.classList.add('arquetipo');
 }
 
 function checaClasseRepetida(nome){

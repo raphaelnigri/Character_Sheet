@@ -15,7 +15,7 @@
     align-items: baseline;
 }
 
-.class__wrapper--class__field{
+.class__lista{
     flex-wrap: wrap;
     margin-top: 12px;
     column-gap: 8px;
@@ -61,4 +61,23 @@
     text-align: center;
     margin-right: auto;
     margin-left: 2px;
+}
+
+.class__nome{
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--str);
+    text-transform: uppercase;
+    border-bottom: 3px solid #666;
+    margin-right: 12px;
+}
+
+.class__nome::first-letter{
+    font-size: 1.6rem;
+}
+
+.arquetipo{
+    width: 100%;
+    font-size: 0.9rem !important;
+    background: transparent;
 }

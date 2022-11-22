@@ -16,7 +16,7 @@ function addProficiencia(nome){
     const del = document.createElement('button');
 
     listaOutrasProf.appendChild(novaProf);
-    novaProf.setAttribute('data-proficiencia',`${nome.value}`);
+    novaProf.setAttribute('data-proficiencia',`${nome.value.toLowerCase()}`);
     novaProf.classList.add('wrapper');
 
     novaProf.appendChild(prof);
@@ -52,7 +52,7 @@ function addIdioma(nome){
     const del = document.createElement('button');
 
     listaIdiomas.appendChild(novaProf);
-    novaProf.setAttribute('data-proficiencia',`${nome.value}`);
+    novaProf.setAttribute('data-proficiencia',`${nome.value.toLowerCase()}`);
     novaProf.classList.add('wrapper');
 
     novaProf.appendChild(prof);
@@ -97,7 +97,7 @@ function addFerramenta(nome){
     const roll = document.createElement('button');
 
     listaFerramentas.appendChild(novaProf);
-    novaProf.setAttribute('data-proficiencia',`${nome.value}`);
+    novaProf.setAttribute('data-proficiencia',`${nome.value.toLowerCase()}`);
     novaProf.classList.add('wrapper');
     novaProf.classList.add('wrapper--ferramenta');
 
@@ -108,11 +108,11 @@ function addFerramenta(nome){
 
     novaProf.appendChild(label);
     label.classList.add('label--ferramenta');
-    label.setAttribute('for', `${nome.value}`);
+    label.setAttribute('for', `${nome.value.toLowerCase()}`);
     label.innerHTML = `Atribute:`;
 
     novaProf.appendChild(select);
-    select.setAttribute('id', `${nome.value}`);
+    select.setAttribute('id', `${nome.value.toLowerCase()}`);
     select.classList.add('select--atribute');
     select.classList.add('cor__str');
     select.addEventListener('change', ()=>{
