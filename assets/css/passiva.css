@@ -1,0 +1,52 @@
+.passiva{
+    position: relative;
+    margin-top: 16px;
+    grid-area: passiva;
+    width: 306px;
+    margin-inline: auto;
+}
+
+.wrapper--passiva{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 302px;
+    overflow: hidden;
+}
+
+.title--passiva{
+    margin-bottom: 0px;
+    margin-right: 70px;
+    font-size: 1.2rem !important;
+}
+
+.title--passiva--select{
+    margin-bottom: 0px;
+    margin-left: -10px;
+    font-size: 1.1rem;
+    width: 130px;
+    background: transparent;
+    cursor: pointer;
+    text-align: left;
+}
+
+.label--passiva{
+    text-align: right;
+    margin-bottom: 0px;
+    padding-right: 20px;
+    font-size: 1.3rem;
+}
+
+.caixa--passiva{
+    position: absolute;
+        right: 0;
+        top: -16px;
+        right: 0px;
+        left: 0px;
+    margin-left: 135px;
+    font-family: 'montez', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-top: 6px;
+    text-align: center;
+}

@@ -17,6 +17,7 @@
         <link rel="stylesheet" type="text/css" href="assets/css/atributes.css">
         <link rel="stylesheet" type="text/css" href="assets/css/saves.css">
         <link rel="stylesheet" type="text/css" href="assets/css/pericias.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/passiva.css">
         <link rel="stylesheet" type="text/css" href="assets/css/estatisticas.css">
         <link rel="stylesheet" type="text/css" href="assets/css/caracteristicas.css">
         <link rel="stylesheet" type="text/css" href="assets/css/recursos/recursos.css">
@@ -306,6 +307,21 @@
                     <button title="rolar perícia sobrevivência" class="roll"></button>
                 </div>
             </section>
+            <section class="passiva">
+                <div class="wrapper--passiva">
+                    <select class="title title--passiva--select">
+                        <option class="title title--passiva cor__wis">Percepção</option>
+                        <option class="title title--passiva cor__dex">Intuição</option>
+                        <option class="title title--passiva cor__int">Investigação</option>
+                    </select>
+                    <label class="title label--passiva" for="percepcao__passiva">Passiva</label>
+                    <label class="title label--passiva hidden" for="intuicao__passiva">Passiva</label>
+                    <label class="title label--passiva hidden" for="investigacao__passiva">Passiva</label>
+                </div>
+                <input class="caixa caixa--passiva" id="percepcao__passiva" placeholder="0"></input>
+                <input class="caixa caixa--passiva hidden" id="intuicao__passiva" placeholder="0"></input>
+                <input class="caixa caixa--passiva hidden" id="investigacao__passiva" placeholder="0"></input>
+            </section>
             <section class="estatisticas">
                 <h2 class="hidden">Estatísticas</h2>
                 <div class="wrapper--estatisticas caixa--ca">
@@ -347,7 +363,7 @@
                 </div>
             </section>
             <section class="caracteristicas">
-                <h2 class="title title--2c">Características e Traços</h2>
+                <h2 class="title title--2c">Características, Traços e Talentos</h2>
                 <label class="class__label label--caracteristica" for="caracteristica__nome">Nome:
                 <input class="outra__input input--caracteristica" type="text" id="caracteristica__nome" value=""></label>
                 <label class="class__label label--caracteristica" for="caracteristica__fonte">Fonte:

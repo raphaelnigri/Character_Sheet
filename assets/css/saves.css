@@ -2,6 +2,7 @@
     grid-area: saves;
     max-width: 230px;
     user-select: none;
+    margin-inline: auto;
 }
 
 .wrapper--saves{
