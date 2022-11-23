@@ -3,7 +3,7 @@
 }
 
 body{
-  background: url(../img/wood.jpg) repeat;
+  background: url(../img/wood4.jpg) repeat;
   background-size: auto;
 }
 
@@ -159,7 +159,7 @@ main{
 
 @media screen and (max-width: 880px) {
   body{
-    background: url(../img/wood2.jpg) repeat;
+    background: url(../img/wood5.jpg) repeat;
     background-size: auto;
   }
 }
