@@ -1,9 +1,11 @@
 .estatisticas{
+    grid-area: estatisticas;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
     flex-wrap: wrap;
-    grid-area: estatisticas;
+    max-width: 306px;
+    margin-inline: auto;
 }
 
 .wrapper--estatisticas{

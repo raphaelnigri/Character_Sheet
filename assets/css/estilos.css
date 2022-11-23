@@ -3,8 +3,8 @@
 }
 
 body{
-  background: url(../img/wood.jpg) no-repeat;
-  background-size: cover;
+  background: url(../img/wood.jpg) repeat;
+  background-size: auto;
 }
 
 section{
@@ -154,5 +154,12 @@ main{
     "iventario"
     "personalidade"
     "fisico";
+  }
+}
+
+@media screen and (max-width: 880px) {
+  body{
+    background: url(../img/wood2.jpg) repeat;
+    background-size: auto;
   }
 }
