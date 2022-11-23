@@ -1,0 +1,161 @@
+.estatisticas{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.wrapper--estatisticas{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 12px;
+    position: relative;
+    text-align: center;
+}
+
+.caixa--ca::after{
+    content:"\f132";
+    font: var(--fa-font-solid);
+    color: bisque;
+    text-shadow: 0px 0px 8px black, 0px 0px 12px var(--int);
+    font-size: 4rem;
+}
+
+.caixa--iniciativa::after{
+    content:"\f753";
+    font: var(--fa-font-solid);
+    color: bisque;
+    text-shadow: 0px 0px 8px black, 0px 0px 12px var(--str);
+    font-size: 4rem;
+}
+
+.caixa--desloc::after{
+    content:"\f696";
+    font: var(--fa-font-solid);
+    color: bisque;
+    text-shadow: 0px 0px 8px black, 0px 0px 12px var(--wis);
+    font-size: 4rem;
+}
+
+.caixa--pv::after{
+    content:"\f21e";
+    font: var(--fa-font-solid);
+    color: bisque;
+    text-shadow: 0px 0px 8px black, 0px 0px 12px var(--con);
+    font-size: 14rem;
+}
+
+.caixa--pvtemp::after{
+    content:"\f5d1";
+    font: var(--fa-font-solid);
+    color: bisque;
+    text-shadow: 0px 0px 8px black, 0px 0px 12px var(--cha);
+    font-size: 4rem;
+}
+
+.input--estatisticas{
+    position: absolute;
+        top: 14px;
+        left: 0px;
+        right: 0px;
+    margin-inline: auto;
+    width: 30px;
+    font-size: 1.6rem;
+    font-family: 'montez', sans-serif;
+    font-weight: bold;
+    background: transparent;
+    text-align: center;
+}
+
+.input--iniciativa{
+    position: absolute;
+        top: 22px;
+        left: 0px;
+        right: 15px;
+    width: 34px;
+    border-radius: 50%;
+    background: bisque;
+}
+
+.input--desloc{
+    background: bisque;
+    top: 18px;
+    left: 13px;
+    border-radius: 50%;
+    width: 40px;
+    height: 28px;
+}
+
+.input--pvtemp{
+    top: 22px;
+    width: 40px;
+}
+
+.label--morte,
+.label--estatisticas{
+    margin-bottom: 0px;
+}
+
+.label--pv{
+    margin-bottom: 18px;
+    margin-top: -18px;
+}
+
+.label--pvmaximo{
+    position: absolute;
+        top: 40px;
+        left: 0px;
+        right: 0px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: row;
+    width: 140px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.825rem;
+}
+
+.label--morte{
+    font-size: 0.825rem;
+}
+
+.input--pvmaximo{
+    position: unset;
+    width: 40px;
+    height: 22px;
+    margin-left: 6px;
+    font-size: 1.25rem;
+    border-bottom: 1px solid black;
+}
+
+.input--pv{
+    top: 155px;
+    font-size: 2.3rem;
+    width: 55px;
+}
+
+.wrapper--morte{
+    margin-top: 0px;
+    margin-left: auto;
+}
+
+.title--morte{
+    font-size: 1.25rem;
+    margin-bottom: 0px;
+    cursor: pointer;
+    transition: 0.2s;
+    color: var(--str);
+}
+
+.title--morte:hover,
+.title--morte:focus{
+    color: var(--cobre);
+    transition: 0.2s;
+}
+
+.input__wrapper--morte{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}

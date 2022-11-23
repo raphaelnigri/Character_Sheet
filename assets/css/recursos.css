@@ -5,11 +5,6 @@
     border-top-right-radius: 4px;
 }
 
-.title--recursos{
-    width: 100%;
-    font-weight: bold;
-}
-
 .title--recurso__input{
     grid-area: titulo;
     background: transparent;
@@ -57,6 +52,11 @@
     margin-inline: auto;
     color: var(--dex);
     opacity: 0.4;
+}
+
+.li__recurso--hitdice::before{
+    content: "\f6d1";
+    color: var(--int);
 }
 
 .total__label{

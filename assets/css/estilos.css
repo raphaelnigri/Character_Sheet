@@ -123,6 +123,16 @@ main{
   font-size: 1.1rem;
 }
 
+.off{
+  display: none;
+}
+
+.hidden{
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+}
+
 @media screen and (max-width: 660px) {
   main{
     display: grid;
@@ -143,15 +153,4 @@ main{
     "personalidade"
     "fisico";
   }
-
-}
-
-.off{
-  display: none;
-}
-
-.hidden{
-  position: absolute;
-  visibility: hidden;
-  opacity: 0;
 }
