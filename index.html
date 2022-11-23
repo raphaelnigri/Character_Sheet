@@ -19,7 +19,8 @@
         <link rel="stylesheet" type="text/css" href="assets/css/pericias.css">
         <link rel="stylesheet" type="text/css" href="assets/css/estatisticas.css">
         <link rel="stylesheet" type="text/css" href="assets/css/caracteristicas.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/recursos.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/recursos/recursos.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/recursos/hitdice.css">
         <link rel="stylesheet" type="text/css" href="assets/css/outras.css">
         <link rel="stylesheet" type="text/css" href="assets/css/iventario/iventario.css">
         <link rel="stylesheet" type="text/css" href="assets/css/iventario/table.css">
@@ -43,7 +44,7 @@
                 <label class="portrait" id="portrait" for="portrait__input" aria-label="Selecione sua imagem.">
                 <input class="portrait__input" type="file" id="portrait__input"></label>
                 <div class="caixa caixa--char__lvl">Lvl
-                    <div class="char__lvl" id="char__lvl"></div>
+                    <p class="char__lvl" id="char__lvl"></p>
                 </div>
                 <input class="input__presentation input__presentation--left xp" type="number" placeholder="Experiência" aria-label="Experiência">
                 <input class="input__presentation input__presentation--left antecedente" data-antecedente="" type="text" id="antecedente" placeholder="Antecedente" aria-label="Antecedente">
@@ -386,10 +387,18 @@
                 <ul class="lista__recursos" id="lista__recursos">
                     <li class="li__recurso li__recurso--hitdice">
                         <label class="total__label">Total:
-                            <input class="caixa caixa--recurso caixa--total" type="number" value="" readonly id="total__hitdice">
+                            <input class="caixa caixa--recurso caixa--total" type="number" placeholder="0" readonly id="total__hitdice">
                         </label>
-                        <input class="caixa caixa--recurso caixa--quantidade" type="number" placeholder="0">
+                        <input class="caixa caixa--recurso caixa--quantidade" type="number" placeholder="0" id="quantidade__hitdice">
+                        <select class="hitdice" id="select__hitdice">
+                            <option class="cor__cha" value="d4">d4</option>
+                            <option class="cor__int" value="d6" selected>d6</option>
+                            <option class="cor__wis" value="d8">d8</option>
+                            <option class="cor__dex" value="d10">d10</option>
+                            <option class="cor__str" value="d12">d12</option>
+                        </select>
                         <input class="title title--sub title--recurso__input" value="Dados de Vida" type="text" readonly>
+                        <button class="roll btn--remove--recurso" id="roll__hitdice"></button>
                     </li>
                 </ul>
             </section>
@@ -520,6 +529,7 @@
         <script src="assets/script/pericias.js"></script>
         <script src="assets/script/caracteristica.js"></script>
         <script src="assets/script/recursos.js"></script>
+        <script src="assets/script/hitdice.js"></script>
         <script src="assets/script/iventario.js"></script>
         <script src="assets/script/outras.js"></script>
     </body>

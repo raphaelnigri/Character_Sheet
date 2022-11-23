@@ -31,9 +31,10 @@ main{
     "classes pericias"
     "atributes pericias"
     "saves pericias"
-    "saves outras"
+    "saves estatisticas"
     "caracteristicas caracteristicas"
     "recursos iventario"
+    "outras iventario"
     "personalidade iventario"
     "personalidade fisico";
   gap: 32px;
@@ -145,10 +146,11 @@ main{
     "classes"
     "atributes"
     "saves"
+    "estatisticas"
+    "recursos"
+    "caracteristicas"
     "pericias"
     "outras"
-    "caracteristicas"
-    "recursos"
     "iventario"
     "personalidade"
     "fisico";

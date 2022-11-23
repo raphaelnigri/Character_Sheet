@@ -123,37 +123,37 @@ function addFerramenta(nome){
     optionStr.classList.add('cor__str');
     optionStr.classList.add('pericia__label--atribute');
     optionStr.setAttribute('value', 'str');
-    optionStr.innerHTML = 'For'
+    optionStr.innerHTML = 'For';
 
     select.appendChild(optionDex);
     optionDex.classList.add('cor__dex');
     optionDex.classList.add('pericia__label--atribute');
     optionDex.setAttribute('value', 'dex');
-    optionDex.innerHTML = 'Des'
+    optionDex.innerHTML = 'Des';
 
     select.appendChild(optionCon);
     optionCon.classList.add('cor__con');
     optionCon.classList.add('pericia__label--atribute');
     optionCon.setAttribute('value', 'con');
-    optionCon.innerHTML = 'Con'
+    optionCon.innerHTML = 'Con';
 
     select.appendChild(optionInt);
     optionInt.classList.add('cor__int');
     optionInt.classList.add('pericia__label--atribute');
     optionInt.setAttribute('value', 'int');
-    optionInt.innerHTML = 'Int'
+    optionInt.innerHTML = 'Int';
 
     select.appendChild(optionWis);
     optionWis.classList.add('cor__wis');
     optionWis.classList.add('pericia__label--atribute');
     optionWis.setAttribute('value', 'wis');
-    optionWis.innerHTML = 'Sab'
+    optionWis.innerHTML = 'Sab';
 
     select.appendChild(optionCha);
     optionCha.classList.add('cor__cha');
     optionCha.classList.add('pericia__label--atribute');
     optionCha.setAttribute('value', 'cha');
-    optionCha.innerHTML = 'Car'
+    optionCha.innerHTML = 'Car';
 
     novaProf.appendChild(del);
     del.classList.add('btn--remove');
@@ -177,57 +177,57 @@ function addFerramenta(nome){
 //muda a cor do select baseado no valor selecionado
 function trocaCorDoValor(elemento){
     if(elemento.value == 'str'){
-        elemento.classList.add('cor__str')
-        elemento.classList.remove('cor__dex')
-        elemento.classList.remove('cor__con')
-        elemento.classList.remove('cor__int')
-        elemento.classList.remove('cor__wis')
-        elemento.classList.remove('cor__cha')
+        elemento.classList.add('cor__str');
+        elemento.classList.remove('cor__dex');
+        elemento.classList.remove('cor__con');
+        elemento.classList.remove('cor__int');
+        elemento.classList.remove('cor__wis');
+        elemento.classList.remove('cor__cha');
     }
     if(elemento.value == 'dex'){
-        elemento.classList.remove('cor__str')
-        elemento.classList.add('cor__dex')
-        elemento.classList.remove('cor__con')
-        elemento.classList.remove('cor__int')
-        elemento.classList.remove('cor__wis')
-        elemento.classList.remove('cor__cha')
+        elemento.classList.remove('cor__str');
+        elemento.classList.add('cor__dex');
+        elemento.classList.remove('cor__con');
+        elemento.classList.remove('cor__int');
+        elemento.classList.remove('cor__wis');
+        elemento.classList.remove('cor__cha');
     }
     if(elemento.value == 'con'){
-        elemento.classList.remove('cor__str')
-        elemento.classList.remove('cor__dex')
-        elemento.classList.add('cor__con')
-        elemento.classList.remove('cor__int')
-        elemento.classList.remove('cor__wis')
-        elemento.classList.remove('cor__cha')
+        elemento.classList.remove('cor__str');
+        elemento.classList.remove('cor__dex');
+        elemento.classList.add('cor__con');
+        elemento.classList.remove('cor__int');
+        elemento.classList.remove('cor__wis');
+        elemento.classList.remove('cor__cha');
     }
     if(elemento.value == 'int'){
-        elemento.classList.remove('cor__str')
-        elemento.classList.remove('cor__dex')
-        elemento.classList.remove('cor__con')
-        elemento.classList.add('cor__int')
-        elemento.classList.remove('cor__wis')
-        elemento.classList.remove('cor__cha')
+        elemento.classList.remove('cor__str');
+        elemento.classList.remove('cor__dex');
+        elemento.classList.remove('cor__con');
+        elemento.classList.add('cor__int');
+        elemento.classList.remove('cor__wis');
+        elemento.classList.remove('cor__cha');
     }
     if(elemento.value == 'wis'){
-        elemento.classList.remove('cor__str')
-        elemento.classList.remove('cor__dex')
-        elemento.classList.remove('cor__con')
-        elemento.classList.remove('cor__int')
-        elemento.classList.add('cor__wis')
-        elemento.classList.remove('cor__cha')
+        elemento.classList.remove('cor__str');
+        elemento.classList.remove('cor__dex');
+        elemento.classList.remove('cor__con');
+        elemento.classList.remove('cor__int');
+        elemento.classList.add('cor__wis');
+        elemento.classList.remove('cor__cha');
     }
     if(elemento.value == 'cha'){
-        elemento.classList.remove('cor__str')
-        elemento.classList.remove('cor__dex')
-        elemento.classList.remove('cor__con')
-        elemento.classList.remove('cor__int')
-        elemento.classList.remove('cor__wis')
-        elemento.classList.add('cor__cha')
+        elemento.classList.remove('cor__str');
+        elemento.classList.remove('cor__dex');
+        elemento.classList.remove('cor__con');
+        elemento.classList.remove('cor__int');
+        elemento.classList.remove('cor__wis');
+        elemento.classList.add('cor__cha');
     }
 }
 
 //rola o dado aplicando os bonus do atributo selecionado
 
 function rollSelectAtribute(){
-    console.log('função ainda não feita => outras.js')
+    console.log('função ainda não feita => outras.js');
 }

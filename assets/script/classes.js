@@ -11,6 +11,7 @@ addClassBtn.addEventListener('click', () =>{
         addClass(className,classLvl);
         calculaLvlTotal();
         calculabonusDeProficiencia();
+        calculaHitdice();
         className.value = '';
         classLvl.value = '';
     }
@@ -43,6 +44,7 @@ function addClass(nome,nivel){
     input.addEventListener('input', ()=>{
         calculaLvlTotal();
         calculabonusDeProficiencia();
+        calculaHitdice();
     });
 
     novaClasse.appendChild(del);
@@ -52,6 +54,7 @@ function addClass(nome,nivel){
         novaClasse.remove();
         calculaLvlTotal();
         calculabonusDeProficiencia();
+        calculaHitdice();
     })
 
     novaClasse.appendChild(arquetipo);
