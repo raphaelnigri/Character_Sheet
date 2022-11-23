@@ -3,7 +3,7 @@
 }
 
 body{
-  background: url(../img/wood4.jpg) repeat;
+  background: url(../img/wood.jpg) repeat;
   background-size: auto;
 }
 
@@ -135,6 +135,11 @@ main{
 }
 
 @media screen and (max-width: 660px) {
+  body{
+    background: url(../img/wood_small.jpg) repeat;
+    background-size: auto;
+  }
+
   main{
     display: grid;
     padding: 12px;
@@ -154,12 +159,5 @@ main{
     "iventario"
     "personalidade"
     "fisico";
-  }
-}
-
-@media screen and (max-width: 880px) {
-  body{
-    background: url(../img/wood5.jpg) repeat;
-    background-size: auto;
   }
 }

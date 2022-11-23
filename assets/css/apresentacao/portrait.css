@@ -8,7 +8,7 @@
     height: 240px;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
-    box-shadow: inset -8px 0px 6px 0px rgba(0,0,0,0.75);
+    box-shadow: inset -8px 0px 6px 0px rgba(0,0,0,0.75), -1px 1px 4px 2px #222;
     margin-inline: auto;
     cursor: pointer;
     display: flex;
