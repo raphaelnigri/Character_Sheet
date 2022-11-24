@@ -146,9 +146,11 @@ function addItem(tabela){
             td1.appendChild(itemQ);
             itemQ.classList.add('iventario__quantidade');
             itemQ.setAttribute('type','number');
-            itemQ.setAttribute('placeholder','0');
             itemQ.value=1;
             itemQ.addEventListener('input', ()=>{
+                if(itemQ.value == ''){
+                    itemQ.value = 0;
+                }
                 calculaItemPeso(itemPeso,itemQ);
                 calculaPeso();
                 recursoQuantidade.value = itemQ.value;
@@ -169,10 +171,13 @@ function addItem(tabela){
             td3.appendChild(itemPeso);
             itemPeso.classList.add('iventario__quantidade');
             itemPeso.classList.add('iventario__quantidade--peso');
+            itemPeso.value = 0;
             itemPeso.setAttribute('type','number');
-            itemPeso.setAttribute('placeholder','0');
             itemPeso.setAttribute('data-itempeso','0');
             itemPeso.addEventListener('input', ()=>{
+                if(itemPeso.value == ''){
+                    itemPeso.value = 0;
+                }
                 calculaItemPeso(itemPeso,itemQ);
                 calculaPeso();
             });
@@ -212,9 +217,11 @@ function addItem(tabela){
                 recursoQuantidade.classList.add('caixa--recurso');
                 recursoQuantidade.classList.add('caixa--quantidade');
                 recursoQuantidade.setAttribute('type','number');
-                recursoQuantidade.setAttribute('placeholder','0/0');
                 recursoQuantidade.value = `${itemQ.value}`;
                 recursoQuantidade.addEventListener('input', ()=>{
+                    if(recursoQuantidade.value == ''){
+                        recursoQuantidade.value = 0;
+                    }
                     itemQ.value = recursoQuantidade.value;
                     calculaItemPeso(itemPeso,itemQ);
                     calculaPeso();
@@ -280,6 +287,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     tesouro.forEach(element =>{
         element.addEventListener('input', ()=>{
+            if(element.value == ''){
+                element.value = 0;
+            }
+
             if(pesoDoTesouro.checked){
                 calculaPeso();
             }
@@ -293,17 +304,19 @@ function calculaItemPeso(pesoDoItem,quantidade){
 
 function calculaPeso(){
     let pesoTotal = 0;
+    let moedas = 0;
     let pesoDosItemsArr = document.querySelectorAll('[data-itempeso]');
 
     if(pesoDoTesouro.checked){
         tesouro.forEach(element=>{
-            pesoTotal += parseInt(parseInt(element.value)/110);
+            moedas += parseInt(element.value);
         })
+        pesoTotal += parseFloat(moedas / 50 * 0.45359237);
     }
 
     pesoDosItemsArr.forEach(element=>{
         pesoTotal += parseFloat(element.dataset.itempeso);
     })
 
-    pesoDisplay.innerHTML = `Peso Total: ${pesoTotal}kg`;
+    pesoDisplay.innerHTML = `Peso Total: ${pesoTotal.toFixed(2)}kg`;
 }
