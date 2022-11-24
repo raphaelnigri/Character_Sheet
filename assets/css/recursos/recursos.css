@@ -56,11 +56,6 @@
     opacity: 0.4;
 }
 
-.li__recurso--hitdice::before{
-    content: "\f6d1";
-    color: var(--int);
-}
-
 .total__label{
     grid-area: label;
     display: flex;

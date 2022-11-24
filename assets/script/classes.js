@@ -7,7 +7,7 @@ const bonusDeProficiencia = document.getElementById('bonusDeProficiencia');
 
 addClassBtn.addEventListener('click', () =>{
 
-    if(checaLimiteDeLvl(classLvl) && checaClasseRepetida(className.value) != 'repetido' && className.value != '' && classLvl.value != ''){
+    if(checaLimiteDeLvl(classLvl) && checaClasseRepetida(className.value) != 'repetido' && className.value != '' && classLvl.value != '' && classLvl.value <= 20){
         addClass(className,classLvl);
         calculaLvlTotal();
         calculabonusDeProficiencia();
@@ -42,6 +42,9 @@ function addClass(nome,nivel){
     input.setAttribute('placeholder','lvl');
     input.setAttribute('aria-label','lvl');
     input.addEventListener('input', ()=>{
+        if(input.value > 20){
+            input.value = 20;
+        };
         calculaLvlTotal();
         calculabonusDeProficiencia();
         calculaHitdice();
@@ -107,7 +110,7 @@ function checaLimiteDeLvl(aumentoDeLvl){
     lvlAtual += parseInt(aumentoDeLvl.value);
 
     if(lvlAtual > 20){
-        return;
+        return false;
     }else{
         return true;
     }

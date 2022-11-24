@@ -6,6 +6,11 @@
     "icone icone";
 }
 
+.li__recurso--hitdice::before{
+    content: "\f6d1";
+    color: var(--int);
+}
+
 .hitdice{
     grid-area: dado;
     font-size: 1rem;
