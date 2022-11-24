@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,6 +42,7 @@
         </header>
         <main>
             <section class="apresentacao">
+                <h1 class="hidden">Ficha de personagem, 5e - Dungeons and Dragons</h1>
                 <label class="portrait" id="portrait" for="portrait__input" aria-label="Selecione sua imagem.">
                 <input class="portrait__input" type="file" id="portrait__input"></label>
                 <div class="caixa caixa--char__lvl">Lvl
@@ -308,6 +309,7 @@
                 </div>
             </section>
             <section class="passiva">
+                <h2 class="hidden">Pericias passivas</h2>
                 <div class="wrapper--passiva">
                     <select class="title title--passiva--select">
                         <option class="title title--passiva cor__wis">Percepção</option>
@@ -318,9 +320,9 @@
                     <label class="title label--passiva hidden" for="intuicao__passiva">Passiva</label>
                     <label class="title label--passiva hidden" for="investigacao__passiva">Passiva</label>
                 </div>
-                <input class="caixa caixa--passiva" id="percepcao__passiva" placeholder="0"></input>
-                <input class="caixa caixa--passiva hidden" id="intuicao__passiva" placeholder="0"></input>
-                <input class="caixa caixa--passiva hidden" id="investigacao__passiva" placeholder="0"></input>
+                <input class="caixa caixa--passiva" id="percepcao__passiva" placeholder="0">
+                <input class="caixa caixa--passiva hidden" id="intuicao__passiva" placeholder="0">
+                <input class="caixa caixa--passiva hidden" id="investigacao__passiva" placeholder="0">
             </section>
             <section class="estatisticas">
                 <h2 class="hidden">Estatísticas</h2>
@@ -349,13 +351,13 @@
                 <div class="wrapper wrapper--estatisticas wrapper--morte">
                     <button class="title title--morte">Resistir a Morte</button>
                     <div class="input__wrapper--morte">
-                        <label class="title title--sub label--morte" for="fracassos">Fracassos:</label>
+                        <label class="title title--sub label--morte">Fracassos:</label>
                         <input type="checkbox">
                         <input type="checkbox">
                         <input type="checkbox">
                     </div>
                     <div class="input__wrapper--morte">
-                        <label class="title title--sub label--morte" for="sucessos">Sucessos:</label>
+                        <label class="title title--sub label--morte">Sucessos:</label>
                         <input type="checkbox">
                         <input type="checkbox">
                         <input type="checkbox">
@@ -368,7 +370,7 @@
                 <input class="outra__input input--caracteristica" type="text" id="caracteristica__nome" value=""></label>
                 <label class="class__label label--caracteristica" for="caracteristica__fonte">Fonte:
                 <input class="outra__input input--caracteristica" type="text" id="caracteristica__fonte" value=""></label>
-                <label class="class__label" for="descricao">Descrição:</label>
+                <label class="class__label" for="caracteristica__descricao">Descrição:</label>
                 <button class="btn--add btn--caracteristica" id="caracteristica--add" aria-label="Adicionar característica."></button>
                 <textarea class="textarea textarea--caracteristica" id="caracteristica__descricao" rows="5" cols="25" placeholder="Descrição..."></textarea>
                 <ul class="lista__caracteristicas" id="lista__caracteristicas"></ul>
@@ -422,7 +424,7 @@
                 <h2 class="title">Iventário</h2>
                 <div class="iventario__menu__container">
                     <div class="iventario__menu--titles">
-                        <h2 class="title title--sub" data-iventario__titulo="consumables" name="test">Consumíveis:</h2>
+                        <h2 class="title title--sub" data-iventario__titulo="consumables">Consumíveis:</h2>
                         <h2 class="title title--sub hidden" data-iventario__titulo="items">Itens:</h2>
                         <h2 class="title title--sub hidden" data-iventario__titulo="magicItems">Itens Mágicos:</h2>
                         <h2 class="title title--sub hidden" data-iventario__titulo="questItems">Itens de Quest:</h2>
@@ -513,27 +515,27 @@
                 <h2 class="hidden">Características Físicas</h2>
                 <div class="article__fisico">
                     <label class="title title--sub title--personalidade" for="fisico__idade">Idade</label>
-                    <input class="caixa caixa--fisico" type="number" id="fisico__idade" placeholder="Idade..."></input>
+                    <input class="caixa caixa--fisico" type="number" id="fisico__idade" placeholder="Idade...">
                 </div>
                 <div class="article__fisico">
                     <label class="title title--sub title--personalidade" for="fisico__altura">Altura</label>
-                    <input class="caixa caixa--fisico" type="number" id="fisico__altura" placeholder="Altura..."></input>
+                    <input class="caixa caixa--fisico" type="number" id="fisico__altura" placeholder="Altura...">
                 </div>
                 <div class="article__fisico">
                     <label class="title title--sub title--personalidade" for="fisico__peso">Peso</label>
-                    <input class="caixa caixa--fisico" type="number" id="fisico__peso" placeholder="Peso..."></input>
+                    <input class="caixa caixa--fisico" type="number" id="fisico__peso" placeholder="Peso...">
                 </div>
                 <div class="article__fisico">
                     <label class="title title--sub title--personalidade" for="fisico__pele">Pele</label>
-                    <input class="caixa caixa--fisico" type="text" id="fisico__pele" placeholder="Cor..."></input>
+                    <input class="caixa caixa--fisico" type="text" id="fisico__pele" placeholder="Cor...">
                 </div>
                 <div class="article__fisico">
                     <label class="title title--sub title--personalidade" for="fisico__cabelo">Cabelo</label>
-                    <input class="caixa caixa--fisico" type="text" id="fisico__cabelo" placeholder="Cor..."></input>
+                    <input class="caixa caixa--fisico" type="text" id="fisico__cabelo" placeholder="Cor...">
                 </div>
                 <div class="article__fisico">
                     <label class="title title--sub title--personalidade" for="fisico__olhos" >Olhos</label>
-                    <input class="caixa caixa--fisico" type="text" id="fisico__olhos" placeholder="Cor..."></input>
+                    <input class="caixa caixa--fisico" type="text" id="fisico__olhos" placeholder="Cor...">
                 </div>
             </section>
         </main>
