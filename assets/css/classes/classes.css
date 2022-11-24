@@ -75,6 +75,7 @@
     text-transform: uppercase;
     border-bottom: 3px solid #666;
     margin-right: 12px;
+    background: transparent;
 }
 
 .class__nome::first-letter{
