@@ -88,3 +88,18 @@
     height: 18px;
     padding: 1px;
 }
+
+.li__recurso--iventario::before{
+    content: "\f0c3";
+    color: var(--str);
+    margin-top: 4px;
+}
+
+.label--peso{
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 8px;
+}

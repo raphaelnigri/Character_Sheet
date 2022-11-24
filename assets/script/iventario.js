@@ -205,6 +205,7 @@ function addItem(tabela){
                 }
                 listaDeRecursos.appendChild(recurso);
                 recurso.classList.add('li__recurso');
+                recurso.classList.add('li__recurso--iventario');
 
                 recurso.appendChild(recursoQuantidade);
                 recursoQuantidade.classList.add('caixa');
@@ -266,6 +267,26 @@ function addItem(tabela){
     })
 }
 
+
+//lidando com o peso
+const tesouro = document.querySelectorAll('[data-tesouro]');
+const pesoDoTesouro = document.getElementById('peso__tesouro');
+
+document.addEventListener('DOMContentLoaded', ()=>{
+
+    pesoDoTesouro.addEventListener('input', ()=>{
+        calculaPeso();
+    })
+
+    tesouro.forEach(element =>{
+        element.addEventListener('input', ()=>{
+            if(pesoDoTesouro.checked){
+                calculaPeso();
+            }
+        })
+    })
+})
+
 function calculaItemPeso(pesoDoItem,quantidade){
     pesoDoItem.dataset.itempeso = parseFloat(pesoDoItem.value) * parseFloat(quantidade.value);
 }
@@ -273,6 +294,12 @@ function calculaItemPeso(pesoDoItem,quantidade){
 function calculaPeso(){
     let pesoTotal = 0;
     let pesoDosItemsArr = document.querySelectorAll('[data-itempeso]');
+
+    if(pesoDoTesouro.checked){
+        tesouro.forEach(element=>{
+            pesoTotal += parseInt(parseInt(element.value)/110);
+        })
+    }
 
     pesoDosItemsArr.forEach(element=>{
         pesoTotal += parseFloat(element.dataset.itempeso);

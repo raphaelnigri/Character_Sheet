@@ -12,7 +12,6 @@ addClassBtn.addEventListener('click', () =>{
         calculaLvlTotal();
         calculabonusDeProficiencia();
         calculaHitdice();
-        className.value = '';
         classLvl.value = '';
     }
 })
