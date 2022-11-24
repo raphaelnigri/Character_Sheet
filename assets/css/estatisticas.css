@@ -140,14 +140,16 @@
 .wrapper--morte{
     margin-top: 0px;
     margin-left: auto;
+    border-radius: 10px;
 }
 
 .title--morte{
+    color: var(--str);
     font-size: 1.25rem;
-    margin-bottom: 0px;
+    text-align: center;
+    font-weight: bold;
     cursor: pointer;
     transition: 0.2s;
-    color: var(--str);
 }
 
 .title--morte:hover,

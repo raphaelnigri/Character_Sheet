@@ -311,14 +311,14 @@
             <section class="passiva">
                 <h2 class="hidden">Pericias passivas</h2>
                 <div class="wrapper--passiva">
-                    <select class="title title--passiva--select">
+                    <select class="title title--passiva--select" id="passiva__select">
                         <option class="title title--passiva cor__wis">Percepção</option>
                         <option class="title title--passiva cor__dex">Intuição</option>
                         <option class="title title--passiva cor__int">Investigação</option>
                     </select>
-                    <label class="title label--passiva" for="percepcao__passiva">Passiva</label>
-                    <label class="title label--passiva hidden" for="intuicao__passiva">Passiva</label>
-                    <label class="title label--passiva hidden" for="investigacao__passiva">Passiva</label>
+                    <label class="title label--passiva" for="percepcao__passiva" id="percepcao__passiva__label">Passiva</label>
+                    <label class="title label--passiva hidden" for="intuicao__passiva" id="intuicao__passiva__label">Passiva</label>
+                    <label class="title label--passiva hidden" for="investigacao__passiva" id="investigacao__passiva__label">Passiva</label>
                 </div>
                 <input class="caixa caixa--passiva" id="percepcao__passiva" placeholder="0">
                 <input class="caixa caixa--passiva hidden" id="intuicao__passiva" placeholder="0">
@@ -349,7 +349,7 @@
                     <input class="input--estatisticas input--pvtemp" id="pv__temp" type="number" placeholder="00">
                 </div>
                 <div class="wrapper wrapper--estatisticas wrapper--morte">
-                    <button class="title title--morte">Resistir a Morte</button>
+                    <button class="title--morte">Resistir a Morte</button>
                     <div class="input__wrapper--morte">
                         <label class="title title--sub label--morte">Fracassos:</label>
                         <input type="checkbox">
@@ -545,6 +545,7 @@
         <script src="assets/script/pointbuy.js"></script>
         <script src="assets/script/inspiracao.js"></script>
         <script src="assets/script/pericias.js"></script>
+        <script src="assets/script/passiva.js"></script>
         <script src="assets/script/caracteristica.js"></script>
         <script src="assets/script/recursos.js"></script>
         <script src="assets/script/hitdice.js"></script>
