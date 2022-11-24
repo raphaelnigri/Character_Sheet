@@ -87,7 +87,20 @@
                 <h2 class="title">Classes</h2>
                 <div class="class__wrapper">
                     <label class="class__label" for="class__nome">Classe:
-                    <input class="outra__input input--class" type="text" id="class__nome"></label>
+                    <select class="input--class" type="text" id="class__nome">
+                        <option class="input--class cor__str" value="barbaro">Barbaro</option>
+                        <option class="input--class cor__dex" value="bardo">Bardo</option>
+                        <option class="input--class cor__con" value="bruxo">Bruxo</option>
+                        <option class="input--class cor__wis" value="clerigo">Clerigo</option>
+                        <option class="input--class cor__int" value="druida">Druida</option>
+                        <option class="input--class cor__cha" value="feiticeiro">Feiticeiro</option>
+                        <option class="input--class cor__str" value="guerreiro">Guerreiro</option>
+                        <option class="input--class cor__dex" value="ladino">Ladino</option>
+                        <option class="input--class cor__con" value="mago">Mago</option>
+                        <option class="input--class cor__int" value="monge">Monge</option>
+                        <option class="input--class cor__wis" value="paladino">Paladino</option>
+                        <option class="input--class cor__cha" value="patrulheiro">Patrulheiro</option>
+                    </select>
                     <label class="class__label class__label--lvl" for="class__lvl">Lvl:
                     <input class="outra__input input--class--lvl" type="number" id="class__lvl" value=""></label>
                     <button class="btn--add" id="class__btn--add" aria-label="Adicionar classe."></button>
@@ -328,25 +341,25 @@
                 <h2 class="hidden">Estatísticas</h2>
                 <div class="wrapper--estatisticas caixa--ca">
                     <label class="title title--sub label--estatisticas" for="ca">CA</label>
-                    <input class="input--estatisticas" id="ca" type="number" placeholder="00">
+                    <input class="input--estatisticas" id="ca" type="number" placeholder="0">
                 </div>
                 <div class="wrapper--estatisticas caixa--iniciativa">
                     <label class="title title--sub label--estatisticas" for="iniciativa">Iniciativa</label>
-                    <input class="input--estatisticas input--iniciativa" id="iniciativa" type="number" placeholder="00">
+                    <input class="input--estatisticas input--iniciativa" id="iniciativa" type="number" placeholder="0">
                 </div>
                 <div class="wrapper--estatisticas caixa--desloc">
                     <label class="title title--sub label--estatisticas" for="deslocamento">Desloc.</label>
-                    <input class="input--estatisticas input--desloc" id="deslocamento" type="number" placeholder="00">
+                    <input class="input--estatisticas input--desloc" id="deslocamento" type="number" placeholder="0">
                 </div>
                 <div class="wrapper--estatisticas caixa--pv">
                     <label class="title title--sub label--pv" for="pv__atual">Pontos de Vida Atuais</label>
-                    <input class="input--estatisticas input--pv" id="pv__atual" type="number" placeholder="00">
+                    <input class="input--estatisticas input--pv" id="pv__atual" type="number" placeholder="0">
                     <label class="title title--sub label--pvmaximo" for="pv__maximo">PV. Máximo:
-                    <input class="input--estatisticas input--pvmaximo" id="pv__maximo" type="number" placeholder="00"></label>
+                    <input class="input--estatisticas input--pvmaximo" id="pv__maximo" type="number" placeholder="0"></label>
                 </div>
                 <div class="wrapper--estatisticas caixa--pvtemp">
                     <label class="title title--sub label--estatisticas" for="pv__temp">PV. Temp.</label>
-                    <input class="input--estatisticas input--pvtemp" id="pv__temp" type="number" placeholder="00">
+                    <input class="input--estatisticas input--pvtemp" id="pv__temp" type="number" placeholder="0">
                 </div>
                 <div class="wrapper wrapper--estatisticas wrapper--morte">
                     <button class="title--morte">Resistir a Morte</button>
