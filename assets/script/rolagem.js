@@ -5,6 +5,16 @@ const rolagemResultado = document.getElementById('rolagem__resultado');
 function roll(n){
     let resultado = Math.floor(Math.random() * n + 1);
     mostraRolagem(n);
+
+    //pinta critico e fracasso
+    if(resultado == n){
+        rolagemResultado.classList.add('critico');
+    }
+
+    if(resultado == 1){
+        rolagemResultado.classList.add('fracasso');
+    }
+
     return resultado;
 }
 
@@ -26,7 +36,7 @@ function fechaRolagem(){
 }
 
 document.addEventListener('DOMContentLoaded', ()=>{
-    //botões da seção apresentação (rola 1 dado do tipo específicado)
+    //botões da seção apresentação
     let dadosBtn = document.querySelectorAll('[data-dice]');
 
     dadosBtn.forEach(Element =>{
@@ -35,7 +45,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         })
     })
 
-    //botões da seção atributos (faz o teste do atributo especificado e soma com o modificador)
+    //botões da seção atributos
     let atributoBtn = document.querySelectorAll('[data-rollAtributo]');
 
     atributoBtn.forEach(Element =>{
@@ -43,6 +53,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
             rolaAtributo(Element);
         })
     })
+
+    //botões da seção pericias
 
     //botâo de fechar a rolagem
     let fecharRolagemBtn = document.getElementById('fechar__rolagem');
@@ -62,17 +74,6 @@ function rolaUnicoDado(dado){
 
     rolagemExpressao.innerHTML = `1d${dado.dataset.dice}`;
     rolagemResultado.innerHTML = `${resultado}`;
-
-    //pinta resultado
-    if(resultado == dado.dataset.dice){
-        rolagemResultado.classList.add('critico');
-        rolagemResultado.innerHTML += '!'
-    }
-
-    if(resultado == 1){
-        rolagemResultado.classList.add('fracasso');
-        rolagemResultado.innerHTML += '!'
-    }
 }
 
 //botões da seção atributos (rola o d20 e soma com o modificador do atributo especificado)
@@ -87,15 +88,4 @@ function rolaAtributo(atributo){
 
     rolagemExpressao.innerHTML = `1d20(${d20Resultado}) ${modificador}`;
     rolagemResultado.innerHTML = `${d20Resultado + parseInt(modificador)}`;
-
-    //pinta resultado
-    if(d20Resultado == 20){
-        rolagemResultado.classList.add('critico');
-        rolagemResultado.innerHTML += '!'
-    }
-
-    if(d20Resultado == 1){
-        rolagemResultado.classList.add('fracasso');
-        rolagemResultado.innerHTML += '!'
-    }
 }

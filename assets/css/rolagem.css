@@ -98,3 +98,8 @@
 .fracasso{
     color: var(--str);
 }
+
+.critico::after,
+.fracasso::after{
+    content: '!';
+}

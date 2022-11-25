@@ -37,6 +37,7 @@
     transform: scale(0.8);
 }
 
+.dice__wrapper:focus-within .shadow--d4,
 .dice__wrapper:hover .shadow--d4{
     transform: scale(0.9) rotate(12deg);
 }
@@ -69,6 +70,7 @@
     transform: scale(0.5) rotate(18deg);
 }
 
+.dice__wrapper:focus-within .shadow--d6,
 .dice__wrapper:hover .shadow--d6{
     left: -1.5vw;
     transform: scale(0.45) rotate(34deg);
@@ -98,6 +100,7 @@
     transform: scale(0.8) ;
 }
 
+.dice__wrapper:focus-within .shadow--d8,
 .dice__wrapper:hover .shadow--d8{
     transform: scale(0.7) rotate(18deg);
 }
@@ -127,6 +130,7 @@
     transform: scale(0.7);
 }
 
+.dice__wrapper:focus-within .shadow--d10,
 .dice__wrapper:hover .shadow--d10{
     transform: scale(0.68);
 }
@@ -163,6 +167,7 @@
     transform: scale(0.7);
 }
 
+.dice__wrapper:focus-within .shadow--d12,
 .dice__wrapper:hover .shadow--d12{
     transform: scale(0.7);
 }
