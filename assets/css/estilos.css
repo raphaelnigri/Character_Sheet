@@ -163,3 +163,10 @@ main{
     "fisico";
   }
 }
+
+@media screen and (min-width: 1921px) {
+  body{
+    background: url(../img/wood_fullhd.jpg) repeat;
+    background-size: auto;
+  }
+}

@@ -4,7 +4,13 @@ const rolagemResultado = document.getElementById('rolagem__resultado');
 
 function roll(n){
     let resultado = Math.floor(Math.random() * n + 1);
+    mostraRolagem(n);
     return resultado;
+}
+
+function mostraRolagem(dado){
+    rolagemContainer.classList.remove('hidden');
+    rolagemContainer.querySelector('h2').classList.add(`rolagem--d${dado}`);
 }
 
 function fechaRolagem(){
@@ -51,9 +57,6 @@ function rolaUnicoDado(dado){
         fechaRolagem();
         return;
     }
-    rolagemContainer.classList.remove('hidden');
-    rolagemContainer.querySelector('h2').classList.add(`rolagem--d${dado.dataset.dice}`);
-
 
     let resultado = roll(dado.dataset.dice);
 
@@ -78,9 +81,7 @@ function rolaAtributo(atributo){
         fechaRolagem();
         return;
     }
-    rolagemContainer.classList.remove('hidden');
-    rolagemContainer.querySelector('h2').classList.add(`rolagem--d20`);
-    
+
     let modificador = document.querySelector(`[data-${atributo.dataset.rollatributo}]`).innerHTML;
     let d20Resultado = roll(20);
 
