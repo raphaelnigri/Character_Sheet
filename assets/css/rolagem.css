@@ -6,6 +6,7 @@
     width: 300px;
     height: 240px;
     display: grid;
+    box-shadow: -4px 4px 6px 3px #222;
 }
 
 .title--rolagem{
@@ -88,4 +89,12 @@
 .resultado--total{
     font-size: 1.8rem;
     font-weight: bold;
+}
+
+.critico{
+    color: green;
+}
+
+.fracasso{
+    color: var(--str);
 }

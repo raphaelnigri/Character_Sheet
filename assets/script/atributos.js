@@ -46,9 +46,9 @@ function manipulaAtributo(botao, atributo){
 function ajustaModificador(atributo){
     let modifier = document.querySelector(`[data-${atributo.dataset.atributo}]`);
     if(atributo.value < 10){
-        modifier.innerHTML = parseInt((atributo.value - 11)/2)
+        modifier.innerHTML = parseInt((atributo.value - 11)/2);
     } else{
-        modifier.innerHTML = `+ ${parseInt((atributo.value - 10)/2)}`
+        modifier.innerHTML = `+${parseInt((atributo.value - 10)/2)}`;
     }
 }
 

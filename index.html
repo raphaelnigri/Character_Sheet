@@ -113,8 +113,8 @@
             <section class="classes">
                 <h2 class="title">Classes</h2>
                 <div class="class__wrapper">
-                    <label class="class__label" for="class__nome">Classe:
-                    <select class="input--class" type="text" id="class__nome">
+                    <label class="class__label" for="class__nome">Classe:</label>
+                    <select class="input--class" id="class__nome">
                         <option class="input--class cor__str" value="barbaro">Barbaro</option>
                         <option class="input--class cor__dex" value="bardo">Bardo</option>
                         <option class="input--class cor__con" value="bruxo">Bruxo</option>
@@ -130,7 +130,8 @@
                         <option class="input--class" value="custom">Outra</option>
                     </select>
                     <label class="class__label class__label--lvl" for="class__lvl">Lvl:
-                    <input class="outra__input input--class--lvl" type="number" id="class__lvl" value=""></label>
+                        <input class="outra__input input--class--lvl" type="number" id="class__lvl" value="">
+                    </label>
                     <button class="btn--add" id="class__btn--add" aria-label="Adicionar classe."></button>
                 </div>
                 <ul class="class__lista" id="lista__classes"></ul>
@@ -145,7 +146,7 @@
                         <button title="somar força" class="control control--soma" data-controle="+"></button>
                         <button title="subtrair força" class="control control--subtrai" data-controle="-"></button>
                         <div class="icon icon--str"></div>
-                        <button title="rolar força" class="atribute__roll"></button>
+                        <button title="rolar força" class="atribute__roll" data-rollAtributo="str"></button>
                     </div>
                     <div class="atribute atribute--dex">
                         <label class="atribute__label atribute__label--dex" for="dex">Destreza</label>
@@ -154,7 +155,7 @@
                         <button title="somar destreza" class="control control--soma" data-controle="+"></button>
                         <button title="subtrair destreza" class="control control--subtrai" data-controle="-"></button>
                         <div class="icon icon--dex"></div>
-                        <button title="rolar destreza" class="atribute__roll"></button>
+                        <button title="rolar destreza" class="atribute__roll" data-rollAtributo="dex"></button>
                     </div>
                     <div class="atribute atribute--con">
                         <label class="atribute__label atribute__label--con" for="con">Constituição</label>
@@ -163,7 +164,7 @@
                         <button title="somar constituição" class="control control--soma" data-controle="+"></button>
                         <button title="subtrair constituição" class="control control--subtrai" data-controle="-"></button>
                         <div class="icon icon--con"></div>
-                        <button title="rolar constituição" class="atribute__roll"></button>
+                        <button title="rolar constituição" class="atribute__roll" data-rollAtributo="con"></button>
                     </div>
                 </div>
                 <div class="atributes__divisor">
@@ -174,7 +175,7 @@
                         <button title="somar inteligência" class="control control--soma" data-controle="+"></button>
                         <button title="subtrair inteligência" class="control control--subtrai" data-controle="-"></button>
                         <div class="icon icon--int"></div>
-                        <button title="rolar inteligência" class="atribute__roll"></button>
+                        <button title="rolar inteligência" class="atribute__roll" data-rollAtributo="int"></button>
                     </div>
                     <div class="atribute atribute--wis">
                         <label class="atribute__label atribute__label--wis" for="wis">Sabedoria</label>
@@ -183,7 +184,7 @@
                         <button title="somar sabedoria" class="control control--soma" data-controle="+"></button>
                         <button title="subtrair sabedoria" class="control control--subtrai" data-controle="-"></button>
                         <div class="icon icon--wis"></div>
-                        <button title="rolar sabedoria" class="atribute__roll"></button>
+                        <button title="rolar sabedoria" class="atribute__roll" data-rollAtributo="wis"></button>
                     </div>
                     <div class="atribute atribute--cha">
                         <label class="atribute__label atribute__label--cha" for="cha">Carisma</label>
@@ -192,7 +193,7 @@
                         <button title="somar carisma" class="control control--soma" data-controle="+"></button>
                         <button title="subtrair carisma" class="control control--subtrai" data-controle="-"></button>
                         <div class="icon icon--cha"></div>
-                        <button title="rolar carisma" class="atribute__roll"></button>
+                        <button title="rolar carisma" class="atribute__roll" data-rollAtributo="cha"></button>
                     </div>
                 </div>
                 <div class="pointbuy__wrapper">
@@ -583,7 +584,7 @@
                 </div>
             </section>
             <section class="rolagem hidden" id="rolagem__container">
-                <h2 class="title title--rolagem">Resultado</h2>
+                <h2 class="title title--rolagem">Rolagem</h2>
                 <button class="btn--remove btn--remove--rolagem" aria-label="Fechar rolagem" id="fechar__rolagem"></button>
                 <div class="wrapper wrapper--resultado">
                     <p id="rolagem__expressao"></p>
