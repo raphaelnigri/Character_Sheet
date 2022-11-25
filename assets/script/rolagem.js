@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     })
 
     //botões da seção atributos
-    let atributoBtn = document.querySelectorAll('[data-rollAtributo]');
+    let atributoBtn = document.querySelectorAll('[data-rollatributo]');
 
     atributoBtn.forEach(Element =>{
         Element.addEventListener('click',()=>{
@@ -55,6 +55,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
     })
 
     //botões da seção pericias
+    let periciaBtn = document.querySelectorAll('[data-rollpericia]');
+
+    periciaBtn.forEach(Element =>{
+        Element.addEventListener('click',()=>{
+            rolaPericia(Element);
+        })
+    })
 
     //botâo de fechar a rolagem
     let fecharRolagemBtn = document.getElementById('fechar__rolagem');
@@ -88,4 +95,32 @@ function rolaAtributo(atributo){
 
     rolagemExpressao.innerHTML = `1d20(${d20Resultado}) ${modificador}`;
     rolagemResultado.innerHTML = `${d20Resultado + parseInt(modificador)}`;
+}
+
+//botões da seção pericias (rola o d20, soma proficiencia, expecialização e modificador do atributo correspondente)
+function rolaPericia(pericia){
+    if(!rolagemContainer.classList.contains('hidden')){
+        fechaRolagem();
+        return;
+    }
+
+    let prof = pericia.parentNode.querySelector('[data-pericia__proficiencia]');
+    let exp = pericia.parentNode.querySelector('[data-pericia__expertise]');
+    let modificador = document.querySelector(`[data-${pericia.dataset.rollpericia}]`).innerHTML;
+    let d20Resultado = roll(20);
+
+    if(!prof.checked && !exp.checked){
+        rolagemExpressao.innerHTML = `1d20(${d20Resultado}) ${modificador}`;
+        rolagemResultado.innerHTML = `${d20Resultado + parseInt(modificador)}`;
+    }
+
+    if(prof.checked && !exp.checked){
+        rolagemExpressao.innerHTML = `1d20(${d20Resultado}) ${modificador} ${bonusDeProficiencia.innerHTML}`;
+        rolagemResultado.innerHTML = `${d20Resultado + parseInt(modificador) + parseInt(bonusDeProficiencia.innerHTML)}`;
+    }
+
+    if(prof.checked && exp.checked || !prof.checked && exp.checked){
+        rolagemExpressao.innerHTML = `1d20(${d20Resultado}) ${modificador} +${parseInt(bonusDeProficiencia.innerHTML)*2}`;
+        rolagemResultado.innerHTML = `${d20Resultado + parseInt(modificador) + parseInt(bonusDeProficiencia.innerHTML)*2}`;
+    }
 }

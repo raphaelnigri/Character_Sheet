@@ -3,8 +3,8 @@ const pericias = document.querySelectorAll('[data-pericia]');
 pericias.forEach(pericia => {
     
     pericia.addEventListener('click', (evento) => {
-        let prof = evento.target.parentNode.querySelector('[data-pericia__proficiencia]')
-        let esp = evento.target.parentNode.querySelector('[data-pericia__expertise]')
+        let prof = evento.target.parentNode.querySelector('[data-pericia__proficiencia]');
+        let esp = evento.target.parentNode.querySelector('[data-pericia__expertise]');
         
         evento.preventDefault();
         
