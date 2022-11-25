@@ -11,12 +11,12 @@ addCaracteristicaBtn.addEventListener('click', () =>{
 })
 
 function addCaracteristica(nome, fonte, desc){
-    const caracteristica = document.createElement('li');
-    const nomeDaCaracteristica = document.createElement('h3');
-    const fonteDaCaracteristica = document.createElement('p');
-    const descDaCaracteristica = document.createElement('p');
-    const infoCaracteristicaBtn = document.createElement('button');
-    const deletarCaracteristicaBtn = document.createElement('button');
+    let caracteristica = document.createElement('li');
+    let nomeDaCaracteristica = document.createElement('h3');
+    let fonteDaCaracteristica = document.createElement('p');
+    let descDaCaracteristica = document.createElement('p');
+    let infoCaracteristicaBtn = document.createElement('button');
+    let deletarCaracteristicaBtn = document.createElement('button');
 
     listaDeCaracteristicas.appendChild(caracteristica);
     caracteristica.classList.add('li__caracteristica');

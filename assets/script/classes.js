@@ -15,19 +15,17 @@ addClassBtn.addEventListener('click', () =>{
     if(checaLimiteDeLvl(classLvl) && checaClasseRepetida(className.value) != 'repetido' && className.value != '' && classLvl.value != ''){
         addClass(className,classLvl);
         calculaLvlTotal();
-        calculabonusDeProficiencia();
-        calculaHitdice();
         classLvl.value = '';
     }
 })
 
 function addClass(nome,nivel){
-    const novaClasse = document.createElement('li');
-    const label = document.createElement('label');
-    const input = document.createElement('input');
-    const del = document.createElement('button');
-    const arquetipo = document.createElement('input');
-    const custom = document.createElement('input');
+    let novaClasse = document.createElement('li');
+    let label = document.createElement('label');
+    let input = document.createElement('input');
+    let del = document.createElement('button');
+    let arquetipo = document.createElement('input');
+    let custom = document.createElement('input');
 
     listaDeClasses.appendChild(novaClasse);
     novaClasse.setAttribute('data-classe',`${nome.value.toLowerCase()}`);
@@ -62,8 +60,6 @@ function addClass(nome,nivel){
             input.value = 20;
         };
         calculaLvlTotal();
-        calculabonusDeProficiencia();
-        calculaHitdice();
     });
 
     novaClasse.appendChild(del);
@@ -72,8 +68,6 @@ function addClass(nome,nivel){
     del.addEventListener('click', ()=>{
         novaClasse.remove();
         calculaLvlTotal();
-        calculabonusDeProficiencia();
-        calculaHitdice();
     })
 
     novaClasse.appendChild(arquetipo);
@@ -87,9 +81,8 @@ function addClass(nome,nivel){
 }
 
 function checaClasseRepetida(nome){
-
-    const lista = document.querySelectorAll('[data-classe]');
-    var repetido = '';
+    let lista = document.querySelectorAll('[data-classe]');
+    let repetido = '';
     
     lista.forEach(element => {
         if(element.dataset.classe == nome && element.dataset.classe != 'custom'){
@@ -101,7 +94,7 @@ function checaClasseRepetida(nome){
 
 function calculaLvlTotal(){
     let nivelDeClasses = 0;
-    const lista = document.querySelectorAll('[data-classe]');
+    let lista = document.querySelectorAll('[data-classe]');
     
     lista.forEach(element => {
         let nivel = element.querySelector('[data-inputLvl]').value;
@@ -109,10 +102,13 @@ function calculaLvlTotal(){
     })
 
     lvlTotal.innerHTML = nivelDeClasses;
+    calculaHitdice();
+    calculabonusDeProficiencia();
+    calculaXP();
 }
 
 function calculabonusDeProficiencia(){
-    const baseDeCalculo =  parseInt(lvlTotal.innerHTML);
+    let baseDeCalculo =  parseInt(lvlTotal.innerHTML);
 
     if(isNaN(baseDeCalculo)){
         bonusDeProficiencia.innerHTML = `+2`;
@@ -130,4 +126,14 @@ function checaLimiteDeLvl(aumentoDeLvl){
     }else{
         return true;
     }
+}
+
+
+//Xp para subir de lvl
+function calculaXP(){
+    let xpParaSubirLvl = document.getElementById('xp__subirlvl');
+    let lvl = parseInt(lvlTotal.innerHTML);
+    let xpArray = [300,900,2700,6500,14000,23000,34000,48000,64000,85000,100000,120000,140000,165000,195000,225000,265000,305000,355000,'max'];
+
+    xpParaSubirLvl.innerHTML = `/${xpArray[lvl - 1]}`
 }

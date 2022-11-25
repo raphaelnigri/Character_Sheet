@@ -67,44 +67,44 @@ addItemBtn.addEventListener('click', () =>{
 })
 
 function addItem(tabela){
-    const novoItem = document.createElement('tbody');
-    const itemLinha = document.createElement('tr');
-    const td1 = document.createElement('td');
-    const td2 = document.createElement('td');
-    const td3 = document.createElement('td');
-    const td4 = document.createElement('td');
-    const itemQ = document.createElement('input');
-    const itemNome = document.createElement('input');
-    const itemPeso = document.createElement('input');
-    const info = document.createElement('button');
+    let novoItem = document.createElement('tbody');
+    let itemLinha = document.createElement('tr');
+    let td1 = document.createElement('td');
+    let td2 = document.createElement('td');
+    let td3 = document.createElement('td');
+    let td4 = document.createElement('td');
+    let itemQ = document.createElement('input');
+    let itemNome = document.createElement('input');
+    let itemPeso = document.createElement('input');
+    let info = document.createElement('button');
 
-    const equipadoLinha = document.createElement('tr');
-    const equipadoTD = document.createElement('td');
-    const equipadoLabel = document.createElement('label');
-    const equipadoInput = document.createElement('input');
+    let equipadoLinha = document.createElement('tr');
+    let equipadoTD = document.createElement('td');
+    let equipadoLabel = document.createElement('label');
+    let equipadoInput = document.createElement('input');
 
-    const comoRecursoLinha = document.createElement('tr');
-    const comoRecursoTD = document.createElement('td');
-    const usarComoRecursoLabel = document.createElement('label');
-    const usarComoRecursoInput = document.createElement('input');
+    let comoRecursoLinha = document.createElement('tr');
+    let comoRecursoTD = document.createElement('td');
+    let usarComoRecursoLabel = document.createElement('label');
+    let usarComoRecursoInput = document.createElement('input');
 
-    const temAtaqueLinha = document.createElement('tr');
-    const temAtaqueTD = document.createElement('td');
-    const temAtaqueLabel = document.createElement('label');
-    const temAtaqueInput = document.createElement('input');
+    let temAtaqueLinha = document.createElement('tr');
+    let temAtaqueTD = document.createElement('td');
+    let temAtaqueLabel = document.createElement('label');
+    let temAtaqueInput = document.createElement('input');
 
-    const removerItemTD = document.createElement('td');
-    const removerItem = document.createElement('button');
+    let removerItemTD = document.createElement('td');
+    let removerItem = document.createElement('button');
 
-    const descricaoLinha = document.createElement('tr');
-    const descricaoTD = document.createElement('td');
-    const descricao = document.createElement('textarea');
+    let descricaoLinha = document.createElement('tr');
+    let descricaoTD = document.createElement('td');
+    let descricao = document.createElement('textarea');
 
-    const listaDeRecursos = document.getElementById('lista__recursos');
-    const recurso = document.createElement('li');
-    const recursoQuantidade = document.createElement('input');
-    const recursoNome = document.createElement('input');
-    const recursoBtn = document.createElement('button');
+    let listaDeRecursos = document.getElementById('lista__recursos');
+    let recurso = document.createElement('li');
+    let recursoQuantidade = document.createElement('input');
+    let recursoNome = document.createElement('input');
+    let recursoBtn = document.createElement('button');
 
     iventarioArrTables.forEach(element => {
         if(element.dataset.iventario == `${tabela}`){

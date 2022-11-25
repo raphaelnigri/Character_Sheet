@@ -5,15 +5,15 @@ const addProfBtn = document.getElementById('outras__prof--add');
 
 
 addProfBtn.addEventListener('click', () =>{
-    if(proficiencia.value != ''){
+    if(proficiencia.value != '' && checaProfRepetida(proficiencia) != 'repetido'){
         addProficiencia(proficiencia);
     }
 })
 
 function addProficiencia(nome){
-    const novaProf = document.createElement('li');
-    const prof = document.createElement('p');
-    const del = document.createElement('button');
+    let novaProf = document.createElement('li');
+    let prof = document.createElement('p');
+    let del = document.createElement('button');
 
     listaOutrasProf.appendChild(novaProf);
     novaProf.setAttribute('data-proficiencia',`${nome.value.toLowerCase()}`);
@@ -30,7 +30,6 @@ function addProficiencia(nome){
     del.addEventListener('click', ()=>{
         novaProf.remove();
     })
-
     proficiencia.value = '';
 }
 
@@ -41,15 +40,15 @@ const addIdiomaBtn = document.getElementById('idioma--add');
 
 
 addIdiomaBtn.addEventListener('click', () =>{
-    if(idioma.value != ''){
+    if(idioma.value != '' && checaProfRepetida(idioma) != 'repetido'){
         addIdioma(idioma);
     }
 })
 
 function addIdioma(nome){
-    const novaProf = document.createElement('li');
-    const prof = document.createElement('p');
-    const del = document.createElement('button');
+    let novaProf = document.createElement('li');
+    let prof = document.createElement('p');
+    let del = document.createElement('button');
 
     listaIdiomas.appendChild(novaProf);
     novaProf.setAttribute('data-proficiencia',`${nome.value.toLowerCase()}`);
@@ -77,24 +76,24 @@ const addFerramentaBtn = document.getElementById('ferramenta--add');
 
 
 addFerramentaBtn.addEventListener('click', () =>{
-    if(ferramenta.value != ''){
+    if(ferramenta.value != '' && checaProfRepetida(ferramenta) != 'repetido'){
         addFerramenta(ferramenta);
     }
 })
 
 function addFerramenta(nome){
-    const novaProf = document.createElement('li');
-    const prof = document.createElement('p');
-    const label = document.createElement('label');
-    const select = document.createElement('select');
-    const optionStr = document.createElement('option');
-    const optionDex = document.createElement('option');
-    const optionCon = document.createElement('option');
-    const optionInt = document.createElement('option');
-    const optionWis = document.createElement('option');
-    const optionCha = document.createElement('option');
-    const del = document.createElement('button');
-    const roll = document.createElement('button');
+    let novaProf = document.createElement('li');
+    let prof = document.createElement('p');
+    let label = document.createElement('label');
+    let select = document.createElement('select');
+    let optionStr = document.createElement('option');
+    let optionDex = document.createElement('option');
+    let optionCon = document.createElement('option');
+    let optionInt = document.createElement('option');
+    let optionWis = document.createElement('option');
+    let optionCha = document.createElement('option');
+    let del = document.createElement('button');
+    let roll = document.createElement('button');
 
     listaFerramentas.appendChild(novaProf);
     novaProf.setAttribute('data-proficiencia',`${nome.value.toLowerCase()}`);
@@ -226,8 +225,20 @@ function trocaCorDoValor(elemento){
     }
 }
 
-//rola o dado aplicando os bonus do atributo selecionado
+//checa repetição
+function checaProfRepetida(nome){
+    let lista = document.querySelectorAll('[data-proficiencia]');
+    var repetido = '';
+    
+    lista.forEach(element => {
+        if(element.dataset.proficiencia == nome.value){
+            repetido = 'repetido';
+        }
+    })
+    return repetido;
+}
 
+//rola o dado aplicando os bonus do atributo selecionado
 function rollSelectAtribute(){
     console.log('função ainda não feita => outras.js');
 }

@@ -3,7 +3,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
         "portrait portrait"
-        "xp jogador" 
+        "xp tendencia" 
         "antecedente race"
         "nome nome";
     position: relative;
@@ -15,11 +15,12 @@
     column-gap: 14%;
     margin-top: 50px;
     margin-inline: auto;
+    margin-bottom: -18px;
 }
 
 .caixa--char__lvl{
     position: absolute;
-    bottom: 184px;
+    bottom: 190px;
     left: 30px;
     display: flex;
     flex-direction: column-reverse;
@@ -34,42 +35,101 @@
     box-shadow: -1.5px 3px 3px 0px #333;
 }
 
-.xp{
-    grid-area: xp;
-}
-
-.jogador{
-    grid-area: jogador;
-}
-
-.input__presentation{
+.wrapper__presentation{
     box-shadow: -4px 4px 4px 2px #222;
     background: url(../../img/sheet2.jpg) no-repeat;
-    padding: 10px;
     font-weight: bold;
     font-size: 1rem;
 }
 
-.input__presentation--left{
+.wrapper__presentation--left{
     width: 100%;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    text-align: left;
 }
 
-.input__presentation--right{
+.wrapper__presentation--right{
     width: 100%;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     text-align: right;
-    padding-right: 20px;
 }
 
-.input__presentation--full{
+.wrapper__presentation--full{
     grid-column: span 2;
     border-radius: 20px;
     width: 80%;
     margin-inline: auto;
     text-align: center;
+}
+
+.label__presentation{
+    padding-top: 3px;
+    font-size: 0.85rem;
+    font-family: 'Baskervville', serif;
+}
+
+.label__presentation--left{
+    margin-left: 20px;
+}
+
+.label__presentation--right{
+    margin-right: 20px;
+}
+
+.input__presentation{
+    background: transparent;
+    font-size: 0.85rem;
+    padding-bottom: 3px;
+    margin-top: 4px;
+    width: 92%;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.input__presentation--left{
+    padding-left: 20px;
+}
+
+.input__presentation--right{
+    padding-right: 20px;
+}
+
+.input__presentation--select{
+    text-align: right;
+}
+
+.xp{
+    grid-area: xp;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "label label"
+        "xpinput xptotal";
+    align-items: baseline;
+}
+
+.label--xp{
+    grid-area: label;
+}
+
+.input--xp{
+    grid-area: xpinput;
+    width: 100%;
+    text-align: right;
+}
+
+.total--xp{
+    grid-area: xptotal;
+    text-align: left;
+    color: var(--int);
+    font-size: 0.85rem;
+    padding-top: 6px;
+}
+
+.tendencia{
+    grid-area: tendencia;
 }
 
 .antecedente{

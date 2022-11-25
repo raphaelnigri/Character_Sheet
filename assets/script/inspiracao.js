@@ -1,5 +1,3 @@
-
-
 //ativa coloca e remove inspiração
 const inspiracao = document.getElementById('inspiracao');
 

@@ -1,14 +1,14 @@
-const selectPassiva = document.getElementById('passiva__select');
-
-const percepcaoPassiva = document.getElementById('percepcao__passiva');
-const intuicaoPassiva = document.getElementById('intuicao__passiva');
-const investigacaoPassiva = document.getElementById('investigacao__passiva');
-
-const percepcaoPassivaLabel = document.getElementById('percepcao__passiva__label');
-const intuicaoPassivaLabel = document.getElementById('intuicao__passiva__label');
-const investigacaoPassivaLabel = document.getElementById('investigacao__passiva__label');
-
 document.addEventListener('DOMContentLoaded', ()=>{
+
+    let selectPassiva = document.getElementById('passiva__select');
+
+    let percepcaoPassiva = document.getElementById('percepcao__passiva');
+    let intuicaoPassiva = document.getElementById('intuicao__passiva');
+    let investigacaoPassiva = document.getElementById('investigacao__passiva');
+
+    let percepcaoPassivaLabel = document.getElementById('percepcao__passiva__label');
+    let intuicaoPassivaLabel = document.getElementById('intuicao__passiva__label');
+    let investigacaoPassivaLabel = document.getElementById('investigacao__passiva__label');
 
     selectPassiva.addEventListener('input', ()=>{
         if(selectPassiva.value == 'Percepção'){

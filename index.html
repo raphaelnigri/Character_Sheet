@@ -28,6 +28,7 @@
         <link rel="stylesheet" type="text/css" href="assets/css/iventario/tesouro.css">
         <link rel="stylesheet" type="text/css" href="assets/css/personalidade.css">
         <link rel="stylesheet" type="text/css" href="assets/css/fisico.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/rolagem.css">
         <link rel="stylesheet" type="text/css" href="assets/css/root.css">
         <link rel="stylesheet" type="text/css" href="assets/css/input.css">
 
@@ -48,11 +49,37 @@
                 <div class="caixa caixa--char__lvl">Lvl
                     <p class="char__lvl" id="char__lvl"></p>
                 </div>
-                <input class="input__presentation input__presentation--left xp" type="number" placeholder="Experiência" aria-label="Experiência">
-                <input class="input__presentation input__presentation--left antecedente" data-antecedente="" type="text" id="antecedente" placeholder="Antecedente" aria-label="Antecedente">
-                <input class="input__presentation input__presentation--right jogador" type="text" placeholder="Tendência" aria-label="Tendência">
-                <input class="input__presentation input__presentation--right race" data-race="" type="text" id="race" placeholder="Raça" aria-label="Raça">
-                <input class="input__presentation input__presentation--full nome" type="text" id="nome" aria-label="Nome do personagem" placeholder="Nome do personagem">
+                <div class="wrapper__presentation wrapper__presentation--left xp">
+                    <label class="label__presentation label__presentation--left label--xp" for="xp">Experiência:</label>
+                    <input class="input__presentation input--xp" id="xp" type="number" placeholder="0">
+                    <p class="total--xp" id="xp__subirlvl">/300</p>
+                </div>
+                <div class="wrapper__presentation wrapper__presentation--left antecedente">
+                    <label class="label__presentation label__presentation--left" for="antecedente">Antecedente:</label>
+                    <input class="input__presentation input__presentation--left" id="antecedente" data-antecedente="" type="text" placeholder="____________________________">
+                </div>
+                <div class="wrapper__presentation wrapper__presentation--right tendencia">
+                    <label class="label__presentation label__presentation--right">Tendência:</label>
+                    <select class="input__presentation input__presentation--select">
+                        <option>Caótico Bom</option>
+                        <option>Caótico Mal</option>
+                        <option>Caótico Neutro</option>
+                        <option>Leal Bom</option>
+                        <option>Leal Mal</option>
+                        <option>Leal Neutro</option>
+                        <option>Neutro Bom</option>
+                        <option>Neutro Mal</option>
+                        <option>Neutro Neutro</option>
+                    </select>
+                </div>
+                <div class="wrapper__presentation wrapper__presentation--right race">
+                    <label class="label__presentation label__presentation--right" for="race">Raça:</label>
+                    <input class="input__presentation input__presentation--right" id="race" data-race="" type="text" placeholder="____________________________">
+                </div>
+                <div class="wrapper__presentation wrapper__presentation--full nome">
+                    <label class="label__presentation" for="nome">Nome do personagem:</label>
+                    <input class="input__presentation" id="nome" type="text" placeholder="____________________________">
+                </div>
                 <div class="dice__wrapper">
                     <button class="dice d4" id="d4" aria-label="Rolar d4"></button>
                     <span class="dice__shadow shadow--d4"></span>
@@ -553,6 +580,14 @@
                 <div class="article__fisico">
                     <label class="title title--sub title--personalidade" for="fisico__olhos" >Olhos</label>
                     <input class="caixa caixa--fisico" type="text" id="fisico__olhos" placeholder="Cor...">
+                </div>
+            </section>
+            <section class="rolagem hidden">
+                <h2 class="title title--rolagem rolagem--d20">Resultado</h2>
+                <button class="btn--remove btn--remove--rolagem" aria-label="Fechar rolagem" id="fechar__rolagem"></button>
+                <div class="wrapper wrapper--resultado">
+                    <p class="resultado--expressao"></p>
+                    <p class="resultado--total"></p>
                 </div>
             </section>
         </main>
