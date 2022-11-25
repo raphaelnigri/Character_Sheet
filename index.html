@@ -81,26 +81,26 @@
                     <input class="input__presentation" id="nome" type="text" placeholder="____________________________">
                 </div>
                 <div class="dice__wrapper">
-                    <button class="dice d4" id="d4" aria-label="Rolar d4"></button>
+                    <button class="dice d4" data-dice="d4" aria-label="Rolar d4"></button>
                     <span class="dice__shadow shadow--d4"></span>
                 </div>
                 <div class="dice__wrapper">
-                    <button class="dice d6" id="d6" aria-label="Rolar d6"></button>
+                    <button class="dice d6" data-dice="d6" aria-label="Rolar d6"></button>
                     <span class="dice__shadow shadow--d6"></span>
                 </div>
                 <div class="dice__wrapper">
-                    <button class="dice d8" id="d8" aria-label="Rolar d8"></button>
+                    <button class="dice d8" data-dice="d8" aria-label="Rolar d8"></button>
                     <span class="dice__shadow shadow--d8"></span>
                 </div>
                 <div class="dice__wrapper">
-                    <button class="dice d10" id="d10" aria-label="Rolar d10"></button>
+                    <button class="dice d10" data-dice="d10" aria-label="Rolar d10"></button>
                     <span class="dice__shadow shadow--d10"></span>
                 </div>
                 <div class="dice__wrapper">
-                    <button class="dice d12" id="d12" aria-label="Rolar d12"></button>
+                    <button class="dice d12" data-dice="d12" aria-label="Rolar d12"></button>
                     <span class="dice__shadow shadow--d12"></span>
                 </div>
-                <button class="dice d20" id="d20" aria-label="Rolar d20"></button>
+                <button class="dice d20" data-dice="d20" aria-label="Rolar d20"></button>
             </section>
             <section class="inspiracao">
                 <h2 class="title title--inspiracao">Inspiração</h2>
@@ -582,12 +582,12 @@
                     <input class="caixa caixa--fisico" type="text" id="fisico__olhos" placeholder="Cor...">
                 </div>
             </section>
-            <section class="rolagem hidden">
-                <h2 class="title title--rolagem rolagem--d20">Resultado</h2>
+            <section class="rolagem hidden" id="rolagem__container">
+                <h2 class="title title--rolagem">Resultado</h2>
                 <button class="btn--remove btn--remove--rolagem" aria-label="Fechar rolagem" id="fechar__rolagem"></button>
                 <div class="wrapper wrapper--resultado">
-                    <p class="resultado--expressao"></p>
-                    <p class="resultado--total"></p>
+                    <p id="rolagem__expressao"></p>
+                    <p class="resultado--total" id="rolagem__resultado"></p>
                 </div>
             </section>
         </main>
@@ -603,5 +603,6 @@
         <script src="assets/script/hitdice.js"></script>
         <script src="assets/script/iventario.js"></script>
         <script src="assets/script/outras.js"></script>
+        <script src="assets/script/rolagem.js"></script>
     </body>
 </html>

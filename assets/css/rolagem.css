@@ -24,34 +24,51 @@
     height: 75px;
 }
 
+@keyframes rolagem {
+    from {
+        translate: -150px -60px;
+        transform: rotate(0deg);
+    }
+    to {
+        translate: 4px -2px;
+        transform: rotate(1080deg);
+    }
+}
+
 .rolagem--d4::after{
     background: url(../img/dice/d4.png) no-repeat;
     background-size: contain;
+    animation: rolagem 1.4s forwards;
 }
 
 .rolagem--d6::after{
     background: url(../img/dice/d6.png) no-repeat;
     background-size: contain;
+    animation: rolagem 1.4s forwards;
 }
 
 .rolagem--d8::after{
     background: url(../img/dice/d8.png) no-repeat;
     background-size: contain;
+    animation: rolagem 1.4s forwards;
 }
 
 .rolagem--d10::after{
     background: url(../img/dice/d10.png) no-repeat;
     background-size: contain;
+    animation: rolagem 1.4s forwards;
 }
 
 .rolagem--d12::after{
     background: url(../img/dice/d12.png) no-repeat;
     background-size: contain;
+    animation: rolagem 1.4s forwards;
 }
 
 .rolagem--d20::after{
     background: url(../img/dice/d20.png) no-repeat;
     background-size: contain;
+    animation: rolagem 1.4s forwards;
 }
 
 .btn--remove--rolagem{
@@ -66,4 +83,9 @@
     align-items: center;
     padding: 0px;
     border-radius: 2px;
+}
+
+.resultado--total{
+    font-size: 1.8rem;
+    font-weight: bold;
 }
