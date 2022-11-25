@@ -35,11 +35,10 @@ function rollDice(dado){
 
     if(dado.dataset.dice){
         rolagemContainer.classList.remove('hidden');
-        rolagemContainer.querySelector('h2').classList.add(`rolagem--${dado.dataset.dice}`);
+        rolagemContainer.querySelector('h2').classList.add(`rolagem--d${dado.dataset.dice}`);
 
-        rolagemExpressao.innerHTML = `1(${dado.dataset.dice})`;
+        rolagemExpressao.innerHTML = `1(d${dado.dataset.dice})`;
 
-        let n = dado.dataset.dice.replace('d','');
-        rolagemResultado.innerHTML = `${Math.floor(Math.random() * n + 1)}`;
+        rolagemResultado.innerHTML = `${Math.floor(Math.random() * dado.dataset.dice + 1)}`;
     }
 }
