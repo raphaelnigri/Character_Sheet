@@ -72,6 +72,18 @@ document.addEventListener('DOMContentLoaded', ()=>{
         })
     })
 
+    //botao iniciativa da seção estatisticas
+    let iniciativaBtn = document.getElementById('roll__iniciativa');
+    iniciativaBtn.addEventListener('click',()=>{
+        rolaIniciativa();
+    })
+
+    //botao resistir a morte da seção estatisticas
+    let resistirMorteBtn = document.getElementById('morte__roll');
+    resistirMorteBtn.addEventListener('click',()=>{
+        resistirMorte();
+    })
+
     //botâo de fechar a rolagem
     let fecharRolagemBtn = document.getElementById('fechar__rolagem');
     fecharRolagemBtn.addEventListener('click', ()=>{
@@ -151,5 +163,71 @@ function rolaSave(save){
     } else{
         rolagemExpressao.innerHTML = `1d20(${d20Resultado}) ${modificador}`;
         rolagemResultado.innerHTML = `${d20Resultado + parseInt(modificador)}`;
+    }
+}
+
+//botao iniciativa da seção estatisticas (rola o d20 e soma modificador de dex e possiveis alteraçoes de iniciativa)
+function rolaIniciativa(){
+    if(!rolagemContainer.classList.contains('hidden')){
+        fechaRolagem();
+        return;
+    }
+
+    let iniciativa = document.getElementById('iniciativa');
+    let d20Resultado = roll(20);
+    let modificador = '';
+    let sinal = '';
+
+    if(iniciativa.value == ''){
+        modificador = parseInt(iniciativa.placeholder);
+    }else{
+        modificador = parseInt(iniciativa.value);
+    }
+
+    if (modificador>=0){
+        sinal = '+'
+    }
+    rolagemExpressao.innerHTML = `1d20(${d20Resultado}) ${sinal}${modificador}`;
+    rolagemResultado.innerHTML = `${d20Resultado + modificador}`;
+}
+
+//botao resistir a morte da seção estatisticas (rola o d20, soma modificador de con, confere resultado e marca checkbox de acordo)
+function resistirMorte(){
+    if(!rolagemContainer.classList.contains('hidden')){
+        fechaRolagem();
+        return;
+    }
+    let pv = document.getElementById('pv__atual');
+    let resultado = roll(20);
+    let checkboxArray = document.querySelectorAll('[data-morte]');
+
+    rolagemExpressao.innerHTML = `1d20`;
+    rolagemResultado.innerHTML = `${resultado}`;
+    
+    if (resultado>=10){
+        for (let index = 0; index < checkboxArray.length; index++) {
+            const checkbox = checkboxArray[index];
+
+            if(checkbox.dataset.morte == 'sucesso' && !checkbox.checked){
+                checkbox.checked = true;
+                break;
+            }
+        }
+    }
+    if (resultado<10){
+        for (let index = 0; index < checkboxArray.length; index++) {
+            const checkbox = checkboxArray[index];
+
+            if(checkbox.dataset.morte == 'fracasso' && !checkbox.checked){
+                checkbox.checked = true;
+                break;
+            }
+        }
+    }
+    if (resultado==20){
+        checkboxArray.forEach(checkbox =>{
+            checkbox.checked = false;
+            pv.value = 1;
+        })
     }
 }

@@ -163,6 +163,7 @@ function addItem(tabela){
 
             td2.appendChild(itemNome);
             itemNome.classList.add('iventario__item');
+            itemNome.setAttribute('aria-label','nome do item');
             itemNome.setAttribute('type','text');
             itemNome.addEventListener('input', ()=>{
                 recursoNome.value = itemNome.value;
@@ -172,6 +173,7 @@ function addItem(tabela){
             itemPeso.classList.add('iventario__quantidade');
             itemPeso.classList.add('iventario__quantidade--peso');
             itemPeso.value = 0;
+            itemPeso.setAttribute('aria-label','peso');
             itemPeso.setAttribute('type','number');
             itemPeso.setAttribute('data-itempeso','0');
             itemPeso.addEventListener('input', ()=>{
@@ -184,6 +186,7 @@ function addItem(tabela){
 
             td4.appendChild(info);
             info.classList.add('btn--info');
+            info.setAttribute('aria-label','Abrir/fechar informaçôes');
             info.addEventListener('click', ()=>{
                 info.classList.toggle('btn--info--ativo');
                 equipadoLinha.classList.toggle('hidden');
@@ -216,6 +219,7 @@ function addItem(tabela){
                 recursoQuantidade.classList.add('caixa');
                 recursoQuantidade.classList.add('caixa--recurso');
                 recursoQuantidade.classList.add('caixa--quantidade');
+                recursoQuantidade.setAttribute('aria-label','Quantidade');
                 recursoQuantidade.setAttribute('type','number');
                 recursoQuantidade.value = `${itemQ.value}`;
                 recursoQuantidade.addEventListener('input', ()=>{
@@ -241,6 +245,7 @@ function addItem(tabela){
                 recurso.appendChild(recursoBtn);
                 recursoBtn.classList.add('btn--remove');
                 recursoBtn.classList.add('btn--remove--recurso');
+                recursoBtn.setAttribute('aria-label','Remover recurso.');
                 recursoBtn.addEventListener('click', ()=>{
                     usarComoRecursoInput.checked = false
                     recurso.remove();
@@ -267,6 +272,7 @@ function addItem(tabela){
 
             descricaoTD.appendChild(descricao);
             descricao.classList.add('textarea');
+            descricao.setAttribute('aria-label','Descricao');
             descricao.setAttribute('rows','3');
             descricao.setAttribute('cols','25');
             descricao.setAttribute('placeholder','Descrição...');

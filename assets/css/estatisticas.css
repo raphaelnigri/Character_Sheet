@@ -80,6 +80,12 @@
     background: bisque;
 }
 
+.roll--iniciativa{
+    position: absolute;
+        right: -4px;
+        bottom: 22px;
+}
+
 .input--desloc{
     background: bisque;
     top: 18px;
