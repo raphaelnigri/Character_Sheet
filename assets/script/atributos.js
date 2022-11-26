@@ -98,7 +98,7 @@ function calculaPontos(){
     }
 }
 
-//estatisticas
+//estatisticas e pericias passivas
 document.addEventListener('DOMContentLoaded', ()=>{
     calculaEstatisticasDex();
     calculaPericiasPassivas();

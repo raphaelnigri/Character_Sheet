@@ -102,9 +102,10 @@ function calculaLvlTotal(){
     })
 
     lvlTotal.innerHTML = nivelDeClasses;
-    calculaHitdice();//function in hitdice.js
     calculabonusDeProficiencia();
     calculaXP();
+    calculaPericiasPassivas();//function in atributos.js
+    calculaHitdice();//function in hitdice.js
 }
 
 function calculabonusDeProficiencia(){
