@@ -207,34 +207,34 @@
             <section class="saves">
                 <h2 class="title">Testes de Resistência</h2>
                 <div class="input__wrapper wrapper--saves">
-                    <input type="checkbox" id="str__save">
+                    <input type="checkbox" id="str__save" data-save__prof="">
                     <label class="input__label cor__str" for="str__save">Força</label>
-                    <button title="rolar resistência de força" class="roll cor__str"></button>
+                    <button title="rolar resistência de força" class="roll cor__str" data-roll__save="str"></button>
                 </div>
                 <div class="input__wrapper wrapper--saves">
-                    <input type="checkbox" id="dex__save">
+                    <input type="checkbox" id="dex__save" data-save__prof="">
                     <label class="input__label cor__dex" for="dex__save">Destreza</label>
-                    <button title="rolar resistência de destreza" class="roll cor__dex"></button>
+                    <button title="rolar resistência de destreza" class="roll cor__dex" data-roll__save="dex"></button>
                 </div>
                 <div class="input__wrapper wrapper--saves">
-                    <input type="checkbox" id="con__save">
+                    <input type="checkbox" id="con__save" data-save__prof="">
                     <label class="input__label cor__con" for="con__save">Constituição</label>
-                    <button title="rolar resistência de constituição" class="roll cor__con"></button>
+                    <button title="rolar resistência de constituição" class="roll cor__con" data-roll__save="con"></button>
                 </div>
                 <div class="input__wrapper wrapper--saves">
-                    <input type="checkbox" id="int__save">
+                    <input type="checkbox" id="int__save" data-save__prof="">
                     <label class="input__label cor__int" for="int__save">Inteligência</label>
-                    <button title="rolar resistência de inteligência" class="roll cor__int"></button>
+                    <button title="rolar resistência de inteligência" class="roll cor__int" data-roll__save="int"></button>
                 </div>
                 <div class="input__wrapper wrapper--saves">
-                    <input type="checkbox" id="wis__save">
+                    <input type="checkbox" id="wis__save" data-save__prof="">
                     <label class="input__label cor__wis" for="wis__save">Sabedoria</label>
-                    <button title="rolar resistência de sabedoria" class="roll cor__wis"></button>
+                    <button title="rolar resistência de sabedoria" class="roll cor__wis" data-roll__save="wis"></button>
                 </div>
                 <div class="input__wrapper wrapper--saves">
-                    <input type="checkbox" id="cha__save">
+                    <input type="checkbox" id="cha__save" data-save__prof="">
                     <label class="input__label cor__cha" for="cha__save">Carisma</label>
-                    <button title="rolar resistência de carisma" class="roll cor__cha"></button>
+                    <button title="rolar resistência de carisma" class="roll cor__cha" data-roll__save="cha"></button>
                 </div>
             </section>
             <section class="pericias">
@@ -451,11 +451,11 @@
                         </label>
                         <input class="caixa caixa--recurso caixa--quantidade" type="number" placeholder="0" id="quantidade__hitdice">
                         <select class="hitdice" id="select__hitdice">
-                            <option class="cor__cha" value="d4">d4</option>
-                            <option class="cor__int" value="d6" selected>d6</option>
-                            <option class="cor__wis" value="d8">d8</option>
-                            <option class="cor__dex" value="d10">d10</option>
-                            <option class="cor__str" value="d12">d12</option>
+                            <option class="cor__cha" value="4">d4</option>
+                            <option class="cor__int" value="6" selected>d6</option>
+                            <option class="cor__wis" value="8">d8</option>
+                            <option class="cor__dex" value="10">d10</option>
+                            <option class="cor__str" value="12">d12</option>
                         </select>
                         <input class="title title--sub title--recurso__input" value="Dados de Vida" type="text" readonly>
                         <button class="roll btn--remove--recurso" id="roll__hitdice"></button>

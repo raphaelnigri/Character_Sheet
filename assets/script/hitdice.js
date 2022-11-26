@@ -15,6 +15,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
             quantidadeHitDice.value = totalHitdice.value;
         }
     });
+
+    //botâo do recurso dado de vida
+    let hitdiceBtn = document.getElementById('roll__hitdice');
+
+    hitdiceBtn.addEventListener('click',()=>{
+        rollHitdice();
+    });
 })
 
 //calcula quantidade de dados de vida
@@ -65,5 +72,22 @@ function trocaCorDoHitdice(elemento){
         elemento.classList.remove('cor__int');
         elemento.classList.remove('cor__wis');
         elemento.classList.remove('cor__cha');
+    }
+}
+
+// rola o hitdice
+function rollHitdice(){
+    if(!rolagemContainer.classList.contains('hidden')){
+        fechaRolagem();
+        return;
+    }
+
+    if(quantidadeHitDice.value>0){
+        let dado = document.getElementById('select__hitdice').value;
+        let resultado = roll(dado);
+    
+        rolagemExpressao.innerHTML = `1d${dado}`;
+        rolagemResultado.innerHTML = `${resultado}`;
+        quantidadeHitDice.value -= 1;
     }
 }

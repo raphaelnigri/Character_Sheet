@@ -63,6 +63,15 @@ document.addEventListener('DOMContentLoaded', ()=>{
         })
     })
 
+    //botões da seção saves
+    let savesBtn = document.querySelectorAll('[data-roll__save]');
+
+    savesBtn.forEach(Element =>{
+        Element.addEventListener('click',()=>{
+            rolaSave(Element);
+        })
+    })
+
     //botâo de fechar a rolagem
     let fecharRolagemBtn = document.getElementById('fechar__rolagem');
     fecharRolagemBtn.addEventListener('click', ()=>{
@@ -122,5 +131,25 @@ function rolaPericia(pericia){
     if(prof.checked && exp.checked || !prof.checked && exp.checked){
         rolagemExpressao.innerHTML = `1d20(${d20Resultado}) ${modificador} +${parseInt(bonusDeProficiencia.innerHTML)*2}`;
         rolagemResultado.innerHTML = `${d20Resultado + parseInt(modificador) + parseInt(bonusDeProficiencia.innerHTML)*2}`;
+    }
+}
+
+//botões da seção saves (rola o d20, soma proficiencia e modificador do atributo correspondente)
+function rolaSave(save){
+    if(!rolagemContainer.classList.contains('hidden')){
+        fechaRolagem();
+        return;
+    }
+
+    let prof = save.parentNode.querySelector('[data-save__prof]');
+    let modificador = document.querySelector(`[data-${save.dataset.roll__save}]`).innerHTML;
+    let d20Resultado = roll(20);
+
+    if(prof.checked){
+        rolagemExpressao.innerHTML = `1d20(${d20Resultado}) ${modificador} ${bonusDeProficiencia.innerHTML}`;
+        rolagemResultado.innerHTML = `${d20Resultado + parseInt(modificador) + parseInt(bonusDeProficiencia.innerHTML)}`;
+    } else{
+        rolagemExpressao.innerHTML = `1d20(${d20Resultado}) ${modificador}`;
+        rolagemResultado.innerHTML = `${d20Resultado + parseInt(modificador)}`;
     }
 }
