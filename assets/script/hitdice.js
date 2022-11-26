@@ -33,7 +33,7 @@ function calculaHitdice(){
 
 //muda a cor do select baseado no valor selecionado
 function trocaCorDoHitdice(elemento){
-    if(elemento.value == 'd4'){
+    if(elemento.value == '4'){
         elemento.classList.remove('cor__str');
         elemento.classList.remove('cor__dex');
         elemento.classList.remove('cor__con');
@@ -41,7 +41,7 @@ function trocaCorDoHitdice(elemento){
         elemento.classList.remove('cor__wis');
         elemento.classList.add('cor__cha');
     }
-    if(elemento.value == 'd6'){
+    if(elemento.value == '6'){
         elemento.classList.remove('cor__str');
         elemento.classList.remove('cor__dex');
         elemento.classList.remove('cor__con');
@@ -49,7 +49,7 @@ function trocaCorDoHitdice(elemento){
         elemento.classList.remove('cor__wis');
         elemento.classList.remove('cor__cha');
     }
-    if(elemento.value == 'd8'){
+    if(elemento.value == '8'){
         elemento.classList.remove('cor__str');
         elemento.classList.remove('cor__dex');
         elemento.classList.remove('cor__con');
@@ -57,7 +57,7 @@ function trocaCorDoHitdice(elemento){
         elemento.classList.add('cor__wis');
         elemento.classList.remove('cor__cha');
     }
-    if(elemento.value == 'd10'){
+    if(elemento.value == '10'){
         elemento.classList.remove('cor__str');
         elemento.classList.add('cor__dex');
         elemento.classList.remove('cor__con');
@@ -65,7 +65,7 @@ function trocaCorDoHitdice(elemento){
         elemento.classList.remove('cor__wis');
         elemento.classList.remove('cor__cha');
     }
-    if(elemento.value == 'd12'){
+    if(elemento.value == '12'){
         elemento.classList.add('cor__str');
         elemento.classList.remove('cor__dex');
         elemento.classList.remove('cor__con');

@@ -66,10 +66,12 @@ function ajustaModificador(atributo){
         modifier.innerHTML = parseInt((atributo.value - 11)/2);
         calculaEstatisticasDex();
         calculaPericiasPassivas();
+        calculaPv();
     } else{
         modifier.innerHTML = `+${parseInt((atributo.value - 10)/2)}`;
         calculaEstatisticasDex();
         calculaPericiasPassivas();
+        calculaPv();
     }
 }
 

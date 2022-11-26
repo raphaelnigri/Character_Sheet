@@ -14,7 +14,7 @@ classLvl.addEventListener('input', ()=>{
 addClassBtn.addEventListener('click', () =>{
     if(checaLimiteDeLvl(classLvl) && checaClasseRepetida(className.value) != 'repetido' && className.value != '' && classLvl.value != ''){
         addClass(className,classLvl);
-        calculaLvlTotal();
+        calculaLvl();
         classLvl.value = '';
     }
 })
@@ -26,7 +26,8 @@ function addClass(nome,nivel){
     let del = document.createElement('button');
     let arquetipo = document.createElement('input');
     let custom = document.createElement('input');
-
+    //let customHitdice = document.createElement('input');
+    
     listaDeClasses.appendChild(novaClasse);
     novaClasse.setAttribute('data-classe',`${nome.value.toLowerCase()}`);
     novaClasse.classList.add('wrapper');
@@ -38,6 +39,7 @@ function addClass(nome,nivel){
         custom.setAttribute('placeholder','Nome da Classe...');
         custom.setAttribute('aria-label','Nome da Classe');
     } else{
+        novaClasse.setAttribute('data-hitdice',`${defineHitdice(nome.value.toLowerCase())}`);
         novaClasse.appendChild(label);
         label.classList.add('class__nome');
         label.setAttribute('for', `${nome.value.toLowerCase()}`);
@@ -59,7 +61,7 @@ function addClass(nome,nivel){
         if(input.value > 20){
             input.value = 20;
         };
-        calculaLvlTotal();
+        calculaLvl();
     });
 
     novaClasse.appendChild(del);
@@ -67,7 +69,7 @@ function addClass(nome,nivel){
     del.setAttribute('aria-label','Deleta classe.');
     del.addEventListener('click', ()=>{
         novaClasse.remove();
-        calculaLvlTotal();
+        calculaLvl();
     })
 
     novaClasse.appendChild(arquetipo);
@@ -92,7 +94,7 @@ function checaClasseRepetida(nome){
     return repetido;
 }
 
-function calculaLvlTotal(){
+function calculaLvl(){
     let nivelDeClasses = 0;
     let lista = document.querySelectorAll('[data-classe]');
     
@@ -103,9 +105,28 @@ function calculaLvlTotal(){
 
     lvlTotal.innerHTML = nivelDeClasses;
     calculabonusDeProficiencia();
+    calculaPv();
     calculaXP();
     calculaPericiasPassivas();//function in atributos.js
     calculaHitdice();//function in hitdice.js
+}
+
+function calculaPv(){
+    if(lvlTotal.innerHTML > 0){
+        let hitdices = document.querySelectorAll('[data-hitdice]');
+        let pvMaximo = document.getElementById('pv__maximo');
+        let pvInicial = document.querySelector('[data-hitdice]');
+        let pvDeClasses = 0;
+
+        hitdices.forEach(element => {
+            let modCon = parseInt(document.querySelector('[data-con]').innerHTML);
+            let nivelDaClasse = parseInt(element.querySelector('[data-inputLvl]').value);
+            let pv = (element.dataset.hitdice)/2 + 1 + modCon;
+
+            pvDeClasses += pv * nivelDaClasse;
+        })
+        pvMaximo.placeholder = pvDeClasses + (pvInicial.dataset.hitdice/2 - 1);
+    }
 }
 
 function calculabonusDeProficiencia(){
@@ -136,4 +157,45 @@ function calculaXP(){
     let xpArray = [300,900,2700,6500,14000,23000,34000,48000,64000,85000,100000,120000,140000,165000,195000,225000,265000,305000,355000,'max'];
 
     xpParaSubirLvl.innerHTML = `/${xpArray[lvl - 1]}`
+}
+
+//Define o dado de vida da classe selecionada
+function defineHitdice(nome){
+
+    if (nome == 'barbaro'){
+        return 12;
+    }
+    if (nome == 'bardo'){
+        return 8;
+    }
+    if (nome == 'clerigo'){
+        return 8;
+    }
+    if (nome == 'druida'){
+        return 8;
+    }
+    if (nome == 'guerreiro'){
+        return 10;
+    }
+    if (nome == 'monge'){
+        return 8;
+    }
+    if (nome == 'paladino'){
+        return 10;
+    }
+    if (nome == 'patrulheiro'){
+        return 10;
+    }
+    if (nome == 'ladino'){
+        return 8;
+    }
+    if (nome == 'feiticeiro'){
+        return 6;
+    }
+    if (nome == 'bruxo'){
+        return 8;
+    }
+    if (nome == 'mago'){
+        return 6;
+    }
 }
