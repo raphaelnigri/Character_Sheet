@@ -10,20 +10,20 @@ pericias.forEach(pericia => {
         
         if(!prof.checked){
             prof.checked = true;
-            calculaPericiasPassivas();//function in atributos.js
+            calculaPericiasPassivas();//from atributos.js
             return;
         }
 
         if(prof.checked && !esp.checked){
             esp.checked = true;
-            calculaPericiasPassivas();//function in atributos.js
+            calculaPericiasPassivas();//from atributos.js
             return;
         }
 
         if(prof.checked && esp.checked){
             esp.checked = false;
             prof.checked = false;
-            calculaPericiasPassivas();//function in atributos.js
+            calculaPericiasPassivas();//from atributos.js
             return;
         }
     })

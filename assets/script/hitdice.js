@@ -85,9 +85,15 @@ function rollHitdice(){
     if(quantidadeHitDice.value>0){
         let dado = document.getElementById('select__hitdice').value;
         let resultado = roll(dado);
-    
-        rolagemExpressao.innerHTML = `1d${dado}`;
-        rolagemResultado.innerHTML = `${resultado}`;
+        let modificador = document.querySelector(`[data-con]`).innerHTML;
+        let cura = 0;
+
+        cura = resultado + parseInt(modificador);
+
+        rolagemExpressao.innerHTML = `1d${dado}(${resultado}) ${modificador}`;
+        rolagemResultado.innerHTML = `${cura}`;
+
+        curaPv(cura); //from estatistica.js
         quantidadeHitDice.value -= 1;
     }
 }

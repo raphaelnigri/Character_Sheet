@@ -107,8 +107,8 @@ function calculaLvl(){
     calculabonusDeProficiencia();
     calculaPv();
     calculaXP();
-    calculaPericiasPassivas();//function in atributos.js
-    calculaHitdice();//function in hitdice.js
+    calculaPericiasPassivas();//from atributos.js
+    calculaHitdice();//from hitdice.js
 }
 
 function calculaPv(){

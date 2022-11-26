@@ -167,7 +167,7 @@ function addFerramenta(nome){
     roll.classList.add('roll--ferramenta');
     roll.setAttribute('aria-label','Rolar ferramenta.');
     roll.addEventListener('click', ()=>{
-        rolaFerramenta(select.value);//function in rolagem.js
+        rolaFerramenta(select.value);//from rolagem.js
     })
 
     ferramenta.value = '';
