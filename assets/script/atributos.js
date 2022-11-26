@@ -2,6 +2,16 @@ const controle = document.querySelectorAll("[data-controle]");
 const atributo = document.querySelectorAll("[data-atributo]");
 const pontosSobrando = document.querySelector("[data-pointbuy]");
 
+const percepcaoPassiva = document.getElementById('percepcao__passiva');
+const intuicaoPassiva = document.getElementById('intuicao__passiva');
+const investigacaoPassiva = document.getElementById('investigacao__passiva');
+const percepcaoProf = document.getElementById('percepcao');
+const percepcaoExp = percepcaoProf.parentNode.querySelector('[data-pericia__expertise]');
+const intuicaoProf = document.getElementById('intuicao');
+const intuicaoExp = intuicaoProf.parentNode.querySelector('[data-pericia__expertise]');
+const investigacaoProf = document.getElementById('investigacao');
+const investigacaoExp = investigacaoProf.parentNode.querySelector('[data-pericia__expertise]');
+
 //Configura o valor máximo e mínimo para os atributos e ajusta o modificador.
 atributo.forEach( (elemento) => {
 
@@ -45,10 +55,21 @@ function manipulaAtributo(botao, atributo){
 
 function ajustaModificador(atributo){
     let modifier = document.querySelector(`[data-${atributo.dataset.atributo}]`);
+    if(atributo.value > 20){
+        atributo.value = 20
+    }
+    if(atributo.value < 3){
+        atributo.value = 3
+    }
+
     if(atributo.value < 10){
         modifier.innerHTML = parseInt((atributo.value - 11)/2);
+        calculaEstatisticasDex();
+        calculaPericiasPassivas();
     } else{
         modifier.innerHTML = `+${parseInt((atributo.value - 10)/2)}`;
+        calculaEstatisticasDex();
+        calculaPericiasPassivas();
     }
 }
 
@@ -74,5 +95,73 @@ function calculaPontos(){
         pontosSobrando.innerHTML = `Pontos sobrando: Atributo inválido`;
     } else{
         pontosSobrando.innerHTML = `Pontos sobrando: ${27 - custoTotal}`;
+    }
+}
+
+//estatisticas
+document.addEventListener('DOMContentLoaded', ()=>{
+    calculaEstatisticasDex();
+    calculaPericiasPassivas();
+
+    percepcaoProf.addEventListener('input', ()=>{
+        calculaPericiasPassivas();
+    })
+
+    percepcaoExp.addEventListener('input', ()=>{
+        calculaPericiasPassivas();
+    })
+
+    intuicaoProf.addEventListener('input', ()=>{
+        calculaPericiasPassivas();
+    })
+
+    intuicaoExp.addEventListener('input', ()=>{
+        calculaPericiasPassivas();
+    })
+
+    investigacaoProf.addEventListener('input', ()=>{
+        calculaPericiasPassivas();
+    })
+
+    investigacaoExp.addEventListener('input', ()=>{
+        calculaPericiasPassivas();
+    })
+})
+
+function calculaEstatisticasDex(){
+    let modDex = parseInt(document.querySelector('[data-dex]').innerHTML);
+    let classeDeArmadura = document.getElementById('ca');
+    let iniciativa = document.getElementById('iniciativa');
+
+    iniciativa.placeholder = modDex;
+    classeDeArmadura.placeholder = 10 + modDex;
+}
+
+function calculaPericiasPassivas(){
+    let modInt = parseInt(document.querySelector('[data-int]').innerHTML);
+    let modWis = parseInt(document.querySelector('[data-wis]').innerHTML);
+    
+    percepcaoPassiva.placeholder = 10 + modWis;
+    if(percepcaoProf.checked && !percepcaoExp.checked){
+        percepcaoPassiva.placeholder = 10 + modWis + parseInt(bonusDeProficiencia.innerHTML);
+    }
+    if(percepcaoProf.checked && percepcaoExp.checked || !percepcaoProf.checked && percepcaoExp.checked){
+        percepcaoPassiva.placeholder = 10 + modWis + (parseInt(bonusDeProficiencia.innerHTML)*2);
+    }
+
+    intuicaoPassiva.placeholder = 10 + modWis;
+    if(intuicaoProf.checked && !intuicaoExp.checked){
+        intuicaoPassiva.placeholder = 10 + modWis + parseInt(bonusDeProficiencia.innerHTML);
+    }
+    if(intuicaoProf.checked && intuicaoExp.checked || !intuicaoProf.checked && intuicaoExp.checked){
+        intuicaoPassiva.placeholder = 10 + modWis + (parseInt(bonusDeProficiencia.innerHTML)*2);
+    }
+
+    investigacaoPassiva.placeholder = 10 + modInt;
+    if(investigacaoProf.checked && !investigacaoExp.checked){
+        investigacaoPassiva.placeholder = 10 + modWis + parseInt(bonusDeProficiencia.innerHTML);
+    }
+    if(investigacaoProf.checked && investigacaoExp.checked || !investigacaoProf.checked && investigacaoExp.checked){
+        investigacaoPassiva.placeholder = 10 + modWis + (parseInt(bonusDeProficiencia.innerHTML)*2);
     }
 }

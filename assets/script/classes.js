@@ -102,7 +102,7 @@ function calculaLvlTotal(){
     })
 
     lvlTotal.innerHTML = nivelDeClasses;
-    calculaHitdice();
+    calculaHitdice();//function in hitdice.js
     calculabonusDeProficiencia();
     calculaXP();
 }
@@ -127,7 +127,6 @@ function checaLimiteDeLvl(aumentoDeLvl){
         return true;
     }
 }
-
 
 //Xp para subir de lvl
 function calculaXP(){

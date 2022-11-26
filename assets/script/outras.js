@@ -167,7 +167,7 @@ function addFerramenta(nome){
     roll.classList.add('roll--ferramenta');
     roll.setAttribute('aria-label','Rolar ferramenta.');
     roll.addEventListener('click', ()=>{
-        rollSelectAtribute();
+        rolaFerramenta(select.value);//function in rolagem.js
     })
 
     ferramenta.value = '';
@@ -238,7 +238,16 @@ function checaProfRepetida(nome){
     return repetido;
 }
 
-//rola o dado aplicando os bonus do atributo selecionado
-function rollSelectAtribute(){
-    console.log('função ainda não feita => outras.js');
+//rola o d20 aplicando os bonus do atributo selecionado e soma proficiencia
+function rolaFerramenta(atributo){
+    if(!rolagemContainer.classList.contains('hidden')){
+        fechaRolagem();
+        return;
+    }
+
+    let modificador = document.querySelector(`[data-${atributo}]`).innerHTML;
+    let d20Resultado = roll(20);
+
+    rolagemExpressao.innerHTML = `1d20(${d20Resultado}) ${modificador} ${bonusDeProficiencia.innerHTML}`;
+    rolagemResultado.innerHTML = `${d20Resultado + parseInt(modificador) + parseInt(bonusDeProficiencia.innerHTML)}`;
 }
