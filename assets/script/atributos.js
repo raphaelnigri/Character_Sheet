@@ -161,9 +161,9 @@ function calculaPericiasPassivas(){
 
     investigacaoPassiva.placeholder = 10 + modInt;
     if(investigacaoProf.checked && !investigacaoExp.checked){
-        investigacaoPassiva.placeholder = 10 + modWis + parseInt(bonusDeProficiencia.innerHTML);
+        investigacaoPassiva.placeholder = 10 + modInt + parseInt(bonusDeProficiencia.innerHTML);
     }
     if(investigacaoProf.checked && investigacaoExp.checked || !investigacaoProf.checked && investigacaoExp.checked){
-        investigacaoPassiva.placeholder = 10 + modWis + (parseInt(bonusDeProficiencia.innerHTML)*2);
+        investigacaoPassiva.placeholder = 10 + modInt + (parseInt(bonusDeProficiencia.innerHTML)*2);
     }
 }
