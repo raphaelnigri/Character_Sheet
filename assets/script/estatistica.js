@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 })
 
-
 function curaPv(n){
     let pvAtual = document.getElementById('pv__atual');
     let pvMaximo = document.getElementById('pv__maximo');
