@@ -20,6 +20,7 @@ function roll(n){
 
 function mostraRolagem(dado){
     rolagemContainer.classList.remove('hidden');
+    rolagemContainer.focus();
     rolagemContainer.querySelector('h2').classList.add(`rolagem--d${dado}`);
 }
 
@@ -36,6 +37,11 @@ function fechaRolagem(){
 }
 
 document.addEventListener('DOMContentLoaded', ()=>{
+    //fecha rolagem clicando fora dela
+    rolagemContainer.addEventListener('blur',()=>{
+        fechaRolagem();
+    })
+
     //botões da seção apresentação
     let dadosBtn = document.querySelectorAll('[data-dice]');
 
