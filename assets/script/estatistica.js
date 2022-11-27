@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', ()=>{
     let pvAtual = document.getElementById('pv__atual');
 
-    pvAtual.addEventListener('input', ()=>{
+    pvAtual.addEventListener('blur', ()=>{
         let pvMaximo = document.getElementById('pv__maximo');
 
         if(pvAtual.value <= 0){
