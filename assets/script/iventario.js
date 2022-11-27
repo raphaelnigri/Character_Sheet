@@ -147,7 +147,7 @@ function addItem(tabela){
             itemQ.classList.add('iventario__quantidade');
             itemQ.setAttribute('type','number');
             itemQ.value=1;
-            itemQ.addEventListener('input', ()=>{
+            itemQ.addEventListener('blur', ()=>{
                 if(itemQ.value == ''){
                     itemQ.value = 0;
                 }
@@ -155,7 +155,7 @@ function addItem(tabela){
                 calculaPeso();
                 recursoQuantidade.value = itemQ.value;
             });
-            itemQ.addEventListener('input', ()=>{
+            itemQ.addEventListener('blur', ()=>{
                 if(itemQ.value===''){
                     itemQ.value = 0;
                 };
@@ -176,7 +176,7 @@ function addItem(tabela){
             itemPeso.setAttribute('aria-label','peso');
             itemPeso.setAttribute('type','number');
             itemPeso.setAttribute('data-itempeso','0');
-            itemPeso.addEventListener('input', ()=>{
+            itemPeso.addEventListener('blur', ()=>{
                 if(itemPeso.value == ''){
                     itemPeso.value = 0;
                 }
@@ -222,7 +222,7 @@ function addItem(tabela){
                 recursoQuantidade.setAttribute('aria-label','Quantidade');
                 recursoQuantidade.setAttribute('type','number');
                 recursoQuantidade.value = `${itemQ.value}`;
-                recursoQuantidade.addEventListener('input', ()=>{
+                recursoQuantidade.addEventListener('blur', ()=>{
                     if(recursoQuantidade.value == ''){
                         recursoQuantidade.value = 0;
                     }
@@ -287,12 +287,12 @@ const pesoDoTesouro = document.getElementById('peso__tesouro');
 
 document.addEventListener('DOMContentLoaded', ()=>{
 
-    pesoDoTesouro.addEventListener('input', ()=>{
+    pesoDoTesouro.addEventListener('blur', ()=>{
         calculaPeso();
     })
 
     tesouro.forEach(element =>{
-        element.addEventListener('input', ()=>{
+        element.addEventListener('blur', ()=>{
             if(element.value == ''){
                 element.value = 0;
             }
