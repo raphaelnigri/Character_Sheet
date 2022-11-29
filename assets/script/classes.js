@@ -70,6 +70,7 @@ function addClass(nome,nivel){
     del.addEventListener('click', ()=>{
         novaClasse.remove();
         calculaLvl();
+        defineSaves();
     })
 
     novaClasse.appendChild(arquetipo);
@@ -80,6 +81,8 @@ function addClass(nome,nivel){
     arquetipo.classList.add('title--sub');
     arquetipo.classList.add('fonte__caracteristica');
     arquetipo.classList.add('arquetipo');
+
+    defineSaves();
 }
 
 function checaClasseRepetida(nome){
@@ -112,7 +115,7 @@ function calculaLvl(){
 }
 
 function calculaPv(){
-    if(lvlTotal.innerHTML > 0){
+    if(lvlTotal.innerHTML > 0 && listaDeClasses.firstChild.dataset.classe != 'custom'){
         let hitdices = document.querySelectorAll('[data-hitdice]');
         let pvMaximo = document.getElementById('pv__maximo');
         let pvInicial = document.querySelector('[data-hitdice]');
@@ -161,7 +164,6 @@ function calculaXP(){
 
 //Define o dado de vida da classe selecionada
 function defineHitdice(nome){
-
     if (nome == 'barbaro'){
         return 12;
     }
@@ -197,5 +199,66 @@ function defineHitdice(nome){
     }
     if (nome == 'mago'){
         return 6;
+    }
+}
+
+function defineSaves(){
+    let listaSaves = document.querySelectorAll('[data-save__prof]');
+
+    listaSaves.forEach(element =>{
+        element.checked = false
+    })
+
+    if(listaDeClasses.firstChild && listaDeClasses.firstChild.dataset.classe != 'custom'){
+        let primeiraClasse = listaDeClasses.querySelector('[data-classe]').dataset.classe;
+
+        if (primeiraClasse == 'barbaro'){
+            document.querySelector('[data-save__prof="str"]').checked = true
+            document.querySelector('[data-save__prof="con"]').checked = true
+        }
+        if (primeiraClasse == 'bardo'){
+            document.querySelector('[data-save__prof="dex"]').checked = true
+            document.querySelector('[data-save__prof="cha"]').checked = true
+        }
+        if (primeiraClasse == 'clerigo'){
+            document.querySelector('[data-save__prof="wis"]').checked = true
+            document.querySelector('[data-save__prof="cha"]').checked = true
+        }
+        if (primeiraClasse == 'druida'){
+            document.querySelector('[data-save__prof="wis"]').checked = true
+            document.querySelector('[data-save__prof="int"]').checked = true
+        }
+        if (primeiraClasse == 'guerreiro'){
+            document.querySelector('[data-save__prof="str"]').checked = true
+            document.querySelector('[data-save__prof="dex"]').checked = true
+        }
+        if (primeiraClasse == 'monge'){
+            document.querySelector('[data-save__prof="str"]').checked = true
+            document.querySelector('[data-save__prof="dex"]').checked = true
+        }
+        if (primeiraClasse == 'paladino'){
+            document.querySelector('[data-save__prof="wis"]').checked = true
+            document.querySelector('[data-save__prof="str"]').checked = true
+        }
+        if (primeiraClasse == 'patrulheiro'){
+            document.querySelector('[data-save__prof="str"]').checked = true
+            document.querySelector('[data-save__prof="dex"]').checked = true
+        }
+        if (primeiraClasse == 'ladino'){
+            document.querySelector('[data-save__prof="dex"]').checked = true
+            document.querySelector('[data-save__prof="int"]').checked = true
+        }
+        if (primeiraClasse == 'feiticeiro'){
+            document.querySelector('[data-save__prof="con"]').checked = true
+            document.querySelector('[data-save__prof="cha"]').checked = true
+        }
+        if (primeiraClasse == 'bruxo'){
+            document.querySelector('[data-save__prof="wis"]').checked = true
+            document.querySelector('[data-save__prof="cha"]').checked = true
+        }
+        if (primeiraClasse == 'mago'){
+            document.querySelector('[data-save__prof="wis"]').checked = true
+            document.querySelector('[data-save__prof="int"]').checked = true
+        }
     }
 }
