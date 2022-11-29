@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 })
 
 //calcula quantidade de dados de vida
-function calculaHitdice(){
+function calculaNumeroDeHitdices(){
     let numeroDeDados = document.getElementById('char__lvl').innerHTML;
 
     totalHitdice.value = parseInt(numeroDeDados);

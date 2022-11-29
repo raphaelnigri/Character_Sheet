@@ -60,9 +60,14 @@ function addClass(nome,nivel){
     lvl.addEventListener('input', ()=>{
         if(lvl.value > 20){
             lvl.value = 20;
-        };
+        }
+    })
+    lvl.addEventListener('blur', ()=>{
+        if(lvl.value < 1){
+            lvl.value = 1;
+        }
         calculaLvl();
-    });
+    })
 
     novaClasse.appendChild(del);
     del.classList.add('btn--remove');
@@ -111,7 +116,7 @@ function calculaLvl(){
     calculaPv();
     calculaXP();
     calculaPericiasPassivas();//from atributos.js
-    calculaHitdice();//from hitdice.js
+    calculaNumeroDeHitdices();//from hitdice.js
 }
 
 function calculaPv(){
@@ -129,6 +134,9 @@ function calculaPv(){
             pvDeClasses += pv * nivelDaClasse;
         })
         pvMaximo.placeholder = pvDeClasses + (pvInicial.dataset.hitdice/2 - 1);
+    } else{
+        let pvMaximo = document.getElementById('pv__maximo');
+        pvMaximo.placeholder = 0;
     }
 }
 

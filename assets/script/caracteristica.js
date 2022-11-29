@@ -6,11 +6,11 @@ const addCaracteristicaBtn = document.getElementById('caracteristica--add');
 
 addCaracteristicaBtn.addEventListener('click', () =>{
     if(nomeCaracteristicaInput.value != '' && fonteCaracteristicaInput.value != '' && descricaoCaracteristicaInput.value != ''){
-        addCaracteristica(nomeCaracteristicaInput,fonteCaracteristicaInput,descricaoCaracteristicaInput);
+        addCaracteristica(nomeCaracteristicaInput.value,fonteCaracteristicaInput.value,descricaoCaracteristicaInput.value);
     }
 })
 
-function addCaracteristica(nome, fonte, desc){
+function addCaracteristica(nome, fonte, desc, setData){
     let caracteristica = document.createElement('li');
     let nomeDaCaracteristica = document.createElement('h3');
     let fonteDaCaracteristica = document.createElement('p');
@@ -20,18 +20,20 @@ function addCaracteristica(nome, fonte, desc){
 
     listaDeCaracteristicas.appendChild(caracteristica);
     caracteristica.classList.add('li__caracteristica');
-
+    if(setData == 'setData'){
+        caracteristica.setAttribute('data-fonte',`${fonte}`);
+    }
     caracteristica.appendChild(nomeDaCaracteristica);
-    nomeDaCaracteristica.innerHTML = `${nome.value}`;
+    nomeDaCaracteristica.innerHTML = `${nome}`;
     nomeDaCaracteristica.classList.add('nome__caracteristica');
 
     caracteristica.appendChild(fonteDaCaracteristica);
-    fonteDaCaracteristica.innerHTML = `${fonte.value}`;
+    fonteDaCaracteristica.innerHTML = `${fonte}`;
     fonteDaCaracteristica.classList.add('title--sub');
     fonteDaCaracteristica.classList.add('fonte__caracteristica');
 
     caracteristica.appendChild(descDaCaracteristica);
-    descDaCaracteristica.innerHTML = `${desc.value}`;
+    descDaCaracteristica.innerHTML = `${desc}`;
     descDaCaracteristica.classList.add('desc__caracteristica');
 
     caracteristica.appendChild(infoCaracteristicaBtn);
