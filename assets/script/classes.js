@@ -22,7 +22,7 @@ addClassBtn.addEventListener('click', () =>{
 function addClass(nome,nivel){
     let novaClasse = document.createElement('li');
     let label = document.createElement('label');
-    let input = document.createElement('input');
+    let lvl = document.createElement('input');
     let del = document.createElement('button');
     let arquetipo = document.createElement('input');
     let custom = document.createElement('input');
@@ -46,20 +46,20 @@ function addClass(nome,nivel){
         label.innerHTML = `${nome.value.toLowerCase()}:`;
     }
 
-    novaClasse.appendChild(input);
-    input.classList.add('class__input');
-    input.classList.add('class__input--lvl');
-    input.setAttribute('type','number');
-    input.setAttribute('data-inputLvl','');
+    novaClasse.appendChild(lvl);
+    lvl.classList.add('class__input');
+    lvl.classList.add('class__input--lvl');
+    lvl.setAttribute('type','number');
+    lvl.setAttribute('data-inputLvl','');
     if(nome.value != 'custom'){
-        input.setAttribute('id',`${nome.value.toLowerCase()}`);
+        lvl.setAttribute('id',`${nome.value.toLowerCase()}`);
     }
-    input.setAttribute('value',`${nivel.value}`);
-    input.setAttribute('placeholder','lvl');
-    input.setAttribute('aria-label','lvl');
-    input.addEventListener('input', ()=>{
-        if(input.value > 20){
-            input.value = 20;
+    lvl.setAttribute('value',`${nivel.value}`);
+    lvl.setAttribute('placeholder','lvl');
+    lvl.setAttribute('aria-label','lvl');
+    lvl.addEventListener('input', ()=>{
+        if(lvl.value > 20){
+            lvl.value = 20;
         };
         calculaLvl();
     });
@@ -141,9 +141,9 @@ function calculabonusDeProficiencia(){
 
 function checaLimiteDeLvl(aumentoDeLvl){
     let lvlAtual = parseInt(lvlTotal.innerHTML);
-    lvlAtual += parseInt(aumentoDeLvl.value);
+    let lvlPretendido = lvlAtual + parseInt(aumentoDeLvl.value);
 
-    if(lvlAtual > 20){
+    if(lvlPretendido > 20){
         return false;
     }else{
         return true;
