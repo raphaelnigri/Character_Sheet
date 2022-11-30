@@ -43,7 +43,7 @@ function addClass(nome,nivel){
         novaClasse.appendChild(label);
         label.classList.add('class__nome');
         label.setAttribute('for', `${nome.value.toLowerCase()}`);
-        label.innerHTML = `${nome.value.toLowerCase()}:`;
+        label.innerHTML = `${nome.value}:`;
     }
 
     novaClasse.appendChild(lvl);
@@ -117,6 +117,7 @@ function calculaLvl(){
     calculaXP();
     calculaPericiasPassivas();//from atributos.js
     calculaNumeroDeHitdices();//from hitdice.js
+    defineCaracteristicas();
 }
 
 function calculaPv(){
