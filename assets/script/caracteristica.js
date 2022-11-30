@@ -170,12 +170,13 @@ const bardoTabela = [
 
 const clerigoTabela = [
     function lvl1 (){
-        addCaracteristica('Domínio Divino', 'Clérigo', 'desc', 'clerigo');
+        addCaracteristica('Domínio Divino', 'Clérigo', 'Você escolhe um domínio relacionado a sua divindade. Essa escolha concede características no 1º nível, magias de domínio e outras formas de usar seu Canalizar Divindade quando você o adiquirir no 2º nível, bem como outros benefícios no 6º, 8º e 17º nível ', 'clerigo');
         addCaracteristica('Conjurador de Ritual (Clérigo)', 'Clérigo', 'Você pode conjurar qualquer magia de clérigo que conheça marcada como Ritual', 'clerigo');
         addCaracteristica('Foco de Conjuração (Clérigo)', 'Clérigo', 'Você pode usar um símbolo sagrado como foco de conjuração das suas magias de clérigo.', 'clerigo');
     },
     function lvl2 (){
-        addCaracteristica('Canalizar Divindade', 'Clérigo', 'desc', 'clerigo');
+        addCaracteristica('Canalizar Divindade', 'Clérigo', 'No 2º nível, você é capaz de canalizar a energia da sua divindade.Você começa com dois efeitos: Expulsar Mortos-Vivos e um efeito determinado pelo seu domínio. Você recupera os usos dessa característica ao realizar um descanso curto ou longo.<br><br> A CD para efeitos dessa característica é a mesma utilizada nas suas magias de clérigo.', 'clerigo');
+        addCaracteristica('Expulsar Mortos Vivos', 'Clérigo', 'Com uma ação, cada morto-vivo que puder ver ou ouvir você em um raio de 9m (30feet), devem fazer um teste de resistência de Sabedoria, se falhar a criatura é expulsa por 1 minuto ou até sofrer algum dano.<br><br> Uma criatura expulsada utiliza seus turnos tentando se mover para o mais longe possível de você, ela não pode usar reações e não consegue se aproximar voluntariamente para um espaço dentro do raio de emanação. A criatura só consegue utilizar a ação Disparada ou tentar escapar de um efeito que evite seu deslocamento, se não houver para onde se mover, a criatura usa a ação Esquiva.', 'clerigo');
     },
     function lvl3 (){
     },
@@ -183,7 +184,7 @@ const clerigoTabela = [
         addCaracteristica('Aumento de Habilidade (Clérigo)', 'Clérigo', 'Ao atingir o 4º nível dessa classe, e novamente no 8º, 12º, 16º e 19º nível, você pode aumentar um valor de habilidade a sua escolha em 2, ou você pode aumentar dois valores diferentes em 1. Você não pode atingir um valor de habilidade acima de 20 usando essa característica.', 'clerigo');
     },
     function lvl5 (){
-        addCaracteristica('Destruir Mortos Vivos', 'Clérigo', 'desc', 'clerigo');
+        addCaracteristica('Destruir Mortos Vivos', 'Clérigo', 'A partir do 5º nível, quando um morto-vivo falha no teste do seu Expulsar Mortos Vivos, a criatura é destruida desde que possua CR igual ou menor a 1/2 no 5º nível, CR1 no 8º nível, CR2 no 11º nível, CR3 no 14º nível, e CR4 no 17º nível.', 'clerigo');
     },
     function lvl6 (){
     },
@@ -220,64 +221,53 @@ const clerigoTabela = [
 
 const druidaTabela = [
     function lvl1 (){
-        addCaracteristica('nome', 'Druida', 'desc', 'druida');
+        addCaracteristica('Druídico', 'Druida', 'Você conhece o idioma secreto dos druidas, você pode falar ou deixar mensagens escondidas nessa linguagem. Você e aqueles que conhecem o idioma automaticamente percebem a mensagem, outros precisam passar num teste de Sabedoria(Percepção) CD15, mas não conseguem decifrar o conteúdo sem usar magias.', 'druida');
+        addCaracteristica('Conjurador de Ritual (Druida)', 'Druida', 'Você pode conjurar qualquer magia de druida que conheça marcada como Ritual', 'druida');
+        addCaracteristica('Foco de Conjuração (Druida)', 'Druida', 'Você pode usar um foco de conjuração druídico para suas magias de druida.', 'druida');
     },
     function lvl2 (){
-        addCaracteristica('nome', 'Druida', 'desc', 'druida');
+        addCaracteristica('Forma Selvagem', 'Druida', 'A partir do 2º nível, Você pode usar uma ação para assumir a forma de uma besta que você já tenha visto antes. Você recupera os usos dessa habilidade com um descanso curto ou longo.<br><br>No 2º nível você pode se transformar em uma besta de CR1/4 ou menor que não possua deslocamento de vôo ou aquático.No 4º nível, o CR máximo aumenta para 1/2 e a besta pode ter deslocamento aquático, no 8º nível, o CR máximo aumenta para 1 e a besta pode ter deslocamento de vôo.<br><br>Você é capaz de assumir essa forma por uma quantidade de horas igual a metade do seu nível de druida, arredondado para baixo, após esse tempo, você retorna a sua forma original a menos que gaste mais um uso dessa característica.<br><br>Você volta a sua forma normal se desejar usar uma ação bonus para isso, se ficar inconsciente, cair a 0 pontos de vida ou morrer.<br><br>Enquanto estiver transformado:<br>• Suas estatísticas de jogo são substituídas pelas da besta, exceto sua tendência, personalidade e valores de Inteligência, Sabedoria e Carisma. Você também mantem suas proficiências e recebe adicionalmente as da criatura. Você não pode usar as ações lendárias ou de covil da criatura.<br>• Você assume os pontos de vida e Dados de Vida da criatura, ao se transformar de volta você retorna a quantidade de pontos de vida que tinha antes de se transformar. Caso você sofra dano que diminua seus pontos de vida para abaixo de 0, o resulta excedente é subtraido dos pontos de vida da sua forma original. Você só cai inconsciente se esse dano reduzir os pontos de vida da sua forma original a 0.<br>• Você não consegue conjurar magias e sua capacidade de  fala ou realizar ações que necessitem de membros são limitadas as capacidades da forma assumida.Transformar não interrompe a sua concentração em magias já conjuradas nem impede que você execute ações que façam parte de tal magia.<br>• Você ainda mantem os benefícios de todas as características de classe, raça ou outras fontes e pode usa-los desde que sua nova forma seja fisicamente capaz.No entanto, você não é capaz de usar sentidos especiais como Visão no Escuro, a não ser que a nova forma também o possua.<br>• Você escolhe se o seu equipamento cai no chão, se funde a nova forma ou é usado por ela.O GM decide se é possível que a criatura faça uso de tal equipamento baseado na forma e tamanho da besta.Seu equipamento não é capaz de se modificar para se ajustar a criatura.', 'druida');
+        addCaracteristica('Círculo Druídico', 'Druida', 'No 2º nível, você escolhe um circulo de druidas, sua escolha concede a você características no 2º nível e novamente no 6º, 10º e 14º níveis.', 'druida');
     },
     function lvl3 (){
-        addCaracteristica('nome', 'Druida', 'desc', 'druida');
     },
     function lvl4 (){
-        addCaracteristica('nome', 'Druida', 'desc', 'druida');
+        addCaracteristica('Aumento de Habilidade (Druida)', 'Druida', 'Ao atingir o 4º nível dessa classe, e novamente no 8º, 12º, 16º e 19º nível, você pode aumentar um valor de habilidade a sua escolha em 2, ou você pode aumentar dois valores diferentes em 1. Você não pode atingir um valor de habilidade acima de 20 usando essa característica.', 'druida');
     },
     function lvl5 (){
-        addCaracteristica('nome', 'Druida', 'desc', 'druida');
     },
     function lvl6 (){
-        addCaracteristica('nome', 'Druida', 'desc', 'druida');
     },
     function lvl7 (){
-        addCaracteristica('nome', 'Druida', 'desc', 'druida');
     },
     function lvl8 (){
-        addCaracteristica('nome', 'Druida', 'desc', 'druida');
     },
     function lvl9 (){
-        addCaracteristica('nome', 'Druida', 'desc', 'druida');
     },
     function lvl10 (){
-        addCaracteristica('nome', 'Druida', 'desc', 'druida');
     },
     function lvl11 (){
-        addCaracteristica('nome', 'Druida', 'desc', 'druida');
     },
     function lvl12 (){
-        addCaracteristica('nome', 'Druida', 'desc', 'druida');
     },
     function lvl13 (){
-        addCaracteristica('nome', 'Druida', 'desc', 'druida');
     },
     function lvl14 (){
-        addCaracteristica('nome', 'Druida', 'desc', 'druida');
     },
     function lvl15 (){
-        addCaracteristica('nome', 'Druida', 'desc', 'druida');
     },
     function lvl16 (){
-        addCaracteristica('nome', 'Druida', 'desc', 'druida');
     },
     function lvl17 (){
-        addCaracteristica('nome', 'Druida', 'desc', 'druida');
     },
     function lvl18 (){
-        addCaracteristica('nome', 'Druida', 'desc', 'druida');
+        addCaracteristica('Corpo Atemporal', 'Druida', 'A partir do 18º nível, seu corpo envelhece apenas 1 ano para cada 10 que se passarem.', 'druida');
+        addCaracteristica('Magia Bestial', 'Druida', 'No 18º nível, você consegue realizar os componentes verbais e somáticos de suas magias mesmo usando sua Forma Selvagem.', 'druida');
     },
     function lvl19 (){
-        addCaracteristica('nome', 'Druida', 'desc', 'druida');
     },
     function lvl20 (){
-        addCaracteristica('nome', 'Druida', 'desc', 'druida');
+        addCaracteristica('Arquedruida', 'Druida', 'No 20º nível, Você é capaz de usar Forma Selvagem um número ilimitado de vezes.<br><br>Adicionalmente, ao conjurar uma magia de druida você pode ignorar os componentes verbais, somáticos e materiais desde que não possuam custo e não sejam consumidos pela magia, você também consegue usar esse benefício em sua forma selvagem.', 'druida');
     }
 ]
 
