@@ -13,19 +13,19 @@ document.addEventListener('DOMContentLoaded',()=>{
         if(nomeCaracteristicaInput.value != '' && fonteCaracteristicaInput.value != '' && descricaoCaracteristicaInput.value != ''){
             addCaracteristica(nomeCaracteristicaInput.value,fonteCaracteristicaInput.value,descricaoCaracteristicaInput.value);
         }
-    });
+    })
 
     btninspecionar.forEach(element =>{
         element.addEventListener('click', () =>{
             element.parentNode.querySelector('.desc__caracteristica').classList.toggle('hidden');
         })
-    });
+    })
 
     btnEsconder.forEach(element =>{
         element.addEventListener('click', () =>{
             element.parentNode.classList.add('hidden');
         })
-    });
+    })
 })
 
 function addCaracteristica(nome, fonte, desc){
@@ -82,7 +82,7 @@ function defineCaracteristicas(){
 
         classes.forEach(element => {
             let nivel = element.querySelector('[data-inputLvl]').value;
-            let nome = element.dataset.classe
+            let nome = element.dataset.classe;
 
             for (let index = 0; index < parseInt(nivel)+1; index++) {
                 let caracteristicasDeClasse = document.querySelectorAll(`[data-caracteristica="${nome}${index}"]`);
