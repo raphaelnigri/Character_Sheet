@@ -19,7 +19,7 @@
         <link rel="stylesheet" type="text/css" href="assets/css/pericias.css">
         <link rel="stylesheet" type="text/css" href="assets/css/passiva.css">
         <link rel="stylesheet" type="text/css" href="assets/css/estatisticas.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/caracteristicas.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/caracteristicas/caracteristicas.css">
         <link rel="stylesheet" type="text/css" href="assets/css/recursos/recursos.css">
         <link rel="stylesheet" type="text/css" href="assets/css/recursos/hitdice.css">
         <link rel="stylesheet" type="text/css" href="assets/css/outras.css">
@@ -416,7 +416,494 @@
                 <label class="class__label" for="caracteristica__descricao">Descrição:</label>
                 <button class="btn--add btn--caracteristica" id="caracteristica--add" aria-label="Adicionar característica."></button>
                 <textarea class="textarea textarea--caracteristica" id="caracteristica__descricao" rows="5" cols="25" placeholder="Descrição..."></textarea>
-                <ul class="lista__caracteristicas" id="lista__caracteristicas"></ul>
+                <div class="wrapper__caracteristicas">
+                    <ul><!--Barbaro-->
+                        <li class="li__caracteristica hidden" data-caracteristica="barbaro1" data-caracteristica="">
+                            <h3 class="nome__caracteristica">Fúria</h3>
+                            <p class="title--sub fonte__caracteristica">Bárbaro</p>
+                            <div class="desc__caracteristica">
+                                <p>Entrar em fúria requer usar uma ação bônus.Enquanto estiver em fúria, você recebe os seguintes benefícios desde que não esteja vestindo uma armadura pesada:</p>
+                                <p class="desc__caracteristica__lista">• Você tem vantagem em testes de Força e testes de resistência de Força.</p>
+                                <p class="desc__caracteristica__lista">• Quando você desferir um ataque com arma corpo-a-corpo usando Força, você recebe um bônus nas jogadas de dano que aumenta à medida que você adquire níveis de bárbaro (+2 de dano inicialmente, +3 no 9º nível, +4 no 16º nível).</p>
+                                <p class="desc__caracteristica__lista">• Você possui resistência contra danos de concussão, cortante e perfurante.</p>
+                                <br>
+                                <p>Você não pode conjurar magias ou se concentrar nelas enquanto estiver em fúria.</p>
+                                <br>
+                                <p>Sua fúria dura 1 minuto e termina prematuramente quando  você cair inconsciente ou caso seu turno termine sem que você tenha atacado uma criatura hostil ou sofrido dano. No seu turno com uma ação bônus, você pode terminar a sua fúria.</p>
+                                <br>
+                                <p>Você recupera suas fúrias com um descanso longo.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="barbaro1">
+                            <h3 class="nome__caracteristica">Defesa sem Armadura</h3>
+                            <p class="title--sub fonte__caracteristica">Bárbaro</p>
+                            <div class="desc__caracteristica">
+                                <p>Equanto você não estiver usando armaduras, sua Classe de Armadura é igual a 10 + seu modificador de Destreza + seu modificador de Constituição.</p>
+                                <br>
+                                <p>Esse benefício não é perdido ao utilizar escudos.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="barbaro2">
+                            <h3 class="nome__caracteristica">Ataque Descuidado</h3>
+                            <p class="title--sub fonte__caracteristica">Bárbaro</p>
+                            <div class="desc__caracteristica">
+                                <p>A partir do 2º nível, no seu turno, quando você fizer o seu primeiro ataque, você pode decidir atacar descuidadamente, isso lhe concede vantagem nas jogadas de ataque com armas corpo-a-corpo usando Força durante esse turno.</p>
+                                <br>
+                                <p>Até o início do seu próximo turno todas as jogadas de ataque feitas contra você também possuem vantagem.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="barbaro2">
+                            <h3 class="nome__caracteristica">Senso de Perigo</h3>
+                            <p class="title--sub fonte__caracteristica">Bárbaro</p>
+                            <div class="desc__caracteristica">
+                                <p>No 2º nível, você possui vantagem em testes de resistência de Destreza contra efeitos que você é capaz de enxergar, como armadilhas e magias, desde que você não esteja cego, surdo ou incapacitado.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="barbaro3">
+                            <h3 class="nome__caracteristica">Caminho Primordial</h3>
+                            <p class="title--sub fonte__caracteristica">Bárbaro</p>
+                            <div class="desc__caracteristica">
+                                <p>No 3º nível, você escolhe um caminho que molda a natureza da sua raiva. Sua escolha concede a você características no 3º nível e novamente no 6º, 10º e 14º níveis.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="barbaro4">
+                            <h3 class="nome__caracteristica">Aumento de Habilidade (Bárbaro)</h3>
+                            <p class="title--sub fonte__caracteristica">Bárbaro</p>
+                            <div class="desc__caracteristica">
+                                <p>Ao atingir o 4º nível dessa classe, e novamente no 8º, 12º, 16º e 19º nível, você pode aumentar um valor de habilidade a sua escolha em 2, ou você pode aumentar dois valores diferentes em 1.</p>
+                                <br>
+                                <p>Você não pode atingir um valor de habilidade acima de 20 usando essa característica.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="barbaro5">
+                            <h3 class="nome__caracteristica">Ataque Extra</h3>
+                            <p class="title--sub fonte__caracteristica">Bárbaro</p>
+                            <div class="desc__caracteristica">
+                                <p>A partir do 5º nível, você pode atacar duas vezes, ao invés de uma vez, sempre que utilizar a ação Ataque no seu turno.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="barbaro5">
+                            <h3 class="nome__caracteristica">Movimento Rápido</h3>
+                            <p class="title--sub fonte__caracteristica">Bárbaro</p>
+                            <div class="desc__caracteristica">
+                                <p>A partir do 5º nível, caso não esteja utilizando uma armadura pesada, seu deslocamento aumenta 3 metros (10feets).</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="barbaro7">
+                            <h3 class="nome__caracteristica">Instinto Selvagem</h3>
+                            <p class="title--sub fonte__caracteristica">Bárbaro</p>
+                            <div class="desc__caracteristica">
+                                <p>A partir do 7º nível você recebe vantagem nas jogadas de iniciativa.</p>
+                                <br>
+                                <p>Além disso, caso esteja surpreso e não estiver incapacitado, você pode agir normalmente no seu primeiro turno do combate desde que entre em fúria antes de realizar qualquer outra ação.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="barbaro9">
+                            <h3 class="nome__caracteristica">Crítico Brutal</h3>
+                            <p class="title--sub fonte__caracteristica">Bárbaro</p>
+                            <div class="desc__caracteristica">
+                                <p>A partir do 9º nível, você pode rolar um dado do dano de arma adicional quando realizar um acerto crítico com uma arma corpo-a-corpo.</p>
+                                <br>
+                                <p>No nível 13º, isso aumenta para dois dados adicionais e no nível 17º para três dados adicionais.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="barbaro11">
+                            <h3 class="nome__caracteristica">Fúria Implacável</h3>
+                            <p class="title--sub fonte__caracteristica">Bárbaro</p>
+                            <div class="desc__caracteristica">
+                                <p>A partir do 11º nível, se você cair para 0 pontos de vida enquanto estiver em fúria e não morrer instantaneamente, você pode realizar um teste de resistência de Constituição CD 10. Se for bem-sucedido, você cai para 1 pontos de vida ao invés de 0.</p>
+                                <br>
+                                <p>Cada utilização dessa característica aumenta a CD em 5 até você realizar um descanso curto ou longo.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="barbaro15">
+                            <h3 class="nome__caracteristica">Fúria Persistente</h3>
+                            <p class="title--sub fonte__caracteristica">Bárbaro</p>
+                            <div class="desc__caracteristica">
+                                <p>A partir do 15º nível, sua fúria só acaba prematuramente se você cair inconsciente ou se você escolher terminá-la.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="barbaro18">
+                            <h3 class="nome__caracteristica">Força Indomável</h3>
+                            <p class="title--sub fonte__caracteristica">Bárbaro</p>
+                            <div class="desc__caracteristica">
+                                <p>A partir do 18º nível, caso o resultado total de um teste de Força que você realizar seja menor que o seu valor de Força, você pode usar esse valor ao invés do resultado.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="barbaro20">
+                            <h3 class="nome__caracteristica">Campeão Primitivo</h3>
+                            <p class="title--sub fonte__caracteristica">Bárbaro</p>
+                            <div class="desc__caracteristica">
+                                <p>No 20º nível, seus valores de Força e Constituição aumentam em 4 pontos e agora podem chegar até o valor máximo de 24.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                    </ul>
+                    <ul><!--Bardo-->
+                        <li class="li__caracteristica hidden" data-caracteristica="bardo1">
+                            <h3 class="nome__caracteristica">Inspiração de Bardo</h3>
+                            <p class="title--sub fonte__caracteristica">Bardo</p>
+                            <div class="desc__caracteristica">
+                                <p>Você pode inspirar outras pessoas através de palavras emocionantes ou música. Para fazer isso, você usa uma ação bônus e escolhe uma criatura diferente de você dentro de 18m (60 feet) que possa ouvi-lo. Essa criatura ganha um dado de inspiração bárdica, que é um d6.</p>
+                                <br>
+                                <p>Nos próximos 10 minutos, a criatura pode rolar o dado e adicionar o valor obtido a um teste de habilidade, jogada de ataque ou teste de resistência. É possivel escolher usar o dado de Inspiração após o resultado do d20, mas antes do DM dizer se o teste foi bem-sucedido ou não.</p>
+                                <br>
+                                <p>Uma criatura pode ter no máximo um dado Inspiração de Bardo e uma vez que ele for lançado, é perdido.</p>
+                                <br>
+                                <p>Você pode usar este recurso um número de vezes igual ao seu modificador de Carisma (no mínimo uma vez). Você recupera seus usos ao  realizar um descanso longo.</p>
+                                <br>
+                                <p>O dado se torna um d8 no 5º nível, um d10 no 10º nível e um d12 no 15º nível.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="bardo1">
+                            <h3 class="nome__caracteristica">Conjurador de Ritual (Bardo)</h3>
+                            <p class="title--sub fonte__caracteristica">Bardo</p>
+                            <div class="desc__caracteristica">
+                                <p>Você pode conjurar qualquer magia de bardo que conheça marcada como Ritual.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="bardo1">
+                            <h3 class="nome__caracteristica">Foco de Conjuração (Bardo)</h3>
+                            <p class="title--sub fonte__caracteristica">Bardo</p>
+                            <div class="desc__caracteristica">
+                                <p>Você pode usar um instrumento musical como foco de conjuração das suas magias de bardo.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="bardo2">
+                            <h3 class="nome__caracteristica">Pau para toda obra</h3>
+                            <p class="title--sub fonte__caracteristica">Bardo</p>
+                            <div class="desc__caracteristica">
+                                <p>A partir do 2º nível, você pode adicionar metade do seu bônus de proficiencia, arredondado para baixo, em qualquer teste de habilidade que você não seja proficiente.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="bardo2">
+                            <h3 class="nome__caracteristica">Musica do descanso</h3>
+                            <p class="title--sub fonte__caracteristica">Bardo</p>
+                            <div class="desc__caracteristica">
+                                <p>A partir do 2º nível, durante um descanso curto, você e qualquer aliado que tenha escutado sua performance e gasto um ou mais Dados-de-Vida durante o descanso, recuperam mais 1d6 pontos de vida.</p>
+                                <br>
+                                <p>Esse valor aumenta para 1d8 no 9º nível, 1d10 no 13º nível e 1d12 no 17º nível.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="bardo3">
+                            <h3 class="nome__caracteristica">Colégios Bardicos</h3>
+                            <p class="title--sub fonte__caracteristica">Bardo</p>
+                            <div class="desc__caracteristica">
+                                <p>No 3º nível, você se especializa nas técnicas de um colégio bardico, à sua escolha. Isso concede a você características no 3º nível e novamente no 6º e 14º níveis.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="bardo3">
+                            <h3 class="nome__caracteristica">Especialização (Bardo)</h3>
+                            <p class="title--sub fonte__caracteristica">Bardo</p>
+                            <div class="desc__caracteristica">
+                                <p>No 3º nível, escolha duas pericias que você seja proficiente. Seu bônus de proficiência para essas pericias é dobrado em qualquer teste de habilidade.</p>
+                                <br>
+                                <p>No 10º nível, você escolhe mais duas pericias para se especializar.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="bardo4">
+                            <h3 class="nome__caracteristica">Aumento de Habilidade (Bardo)</h3>
+                            <p class="title--sub fonte__caracteristica">Bardo</p>
+                            <div class="desc__caracteristica">
+                                <p>Ao atingir o 4º nível dessa classe, e novamente no 8º, 12º, 16º e 19º nível, você pode aumentar um valor de habilidade a sua escolha em 2, ou você pode aumentar dois valores diferentes em 1.</p>
+                                <br>
+                                <p>Você não pode atingir um valor de habilidade acima de 20 usando essa característica.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="bardo5">
+                            <h3 class="nome__caracteristica">Fonte da Inspiração</h3>
+                            <p class="title--sub fonte__caracteristica">Bardo</p>
+                            <div class="desc__caracteristica">
+                                <p>A partir do 5º nível, você recupera seus usos de Inspiração de Bardo ao realizar um descanso curto ou longo.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="bardo6">
+                            <h3 class="nome__caracteristica">Contra-feitiço</h3>
+                            <p class="title--sub fonte__caracteristica">Bardo</p>
+                            <div class="desc__caracteristica">
+                                <p>A partir do 6º nível, usando uma ação, você pode começar uma atuação que dura até o fim do seu próximo turno. Durante esse tempo, você e quaisquer aliados a até 9 metros (30feet) de você possuem vantagem em testes de resistência contra as condições Amedrontado e Enfeitiçado.</p>
+                                <br>
+                                <p>O aliado deve ser capaz de ouvi-lo para receber esse benefício. A atuação termina prematuramente se você for incapacitado, silenciado ou se você desejar faze-lo (não requer ação).</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="bardo10">
+                            <h3 class="nome__caracteristica">Segredos Mágicos</h3>
+                            <p class="title--sub fonte__caracteristica">Bardo</p>
+                            <div class="desc__caracteristica">
+                                <p>No 10º nível, você escolhe duas magias de qualquer classe, desde que seja de um nível que você possa conjurar, ou um truque. Você aprende as magias escolhidas e elas contam como magias de bardo para você (usam seu modificador de Carisma).</p>
+                                <br>
+                                <p>Você aprende duas novas magias dessa mesma forma no 14º nível e no 18º nível.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="bardo20">
+                            <h3 class="nome__caracteristica">Inspiração Superior</h3>
+                            <p class="title--sub fonte__caracteristica">Bardo</p>
+                            <div class="desc__caracteristica">
+                                <p>No 20º nível, se você rolar iniciativa e não tiver nenhum uso de Inspiração de Bardo, você recupera um uso.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                    </ul>
+                    <ul><!--Clerigo-->
+                        <li class="li__caracteristica hidden" data-caracteristica="clerigo1">
+                            <h3 class="nome__caracteristica">Domínio Divino</h3>
+                            <p class="title--sub fonte__caracteristica">Clérigo</p>
+                            <div class="desc__caracteristica">
+                                <p>Você escolhe um domínio relacionado a sua divindade. Essa escolha concede características no 1º nível, magias de domínio e outras formas de usar o seu Canalizar Divindade quando você o adiquirir no 2º nível, bem como outros benefícios no 6º, 8º e 17º níveis.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="clerigo1">
+                            <h3 class="nome__caracteristica">Conjurador de Ritual (Clérigo)</h3>
+                            <p class="title--sub fonte__caracteristica">Clérigo</p>
+                            <div class="desc__caracteristica">
+                                <p>Você pode conjurar qualquer magia de clérigo que conheça marcada como Ritual.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="clerigo1">
+                            <h3 class="nome__caracteristica">Foco de Conjuração (Clérigo)</h3>
+                            <p class="title--sub fonte__caracteristica">Clérigo</p>
+                            <div class="desc__caracteristica">
+                                <p>Você pode usar um símbolo sagrado como foco de conjuração das suas magias de clérigo.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="clerigo2">
+                            <h3 class="nome__caracteristica">Canalizar Divindade (Clérigo)</h3>
+                            <p class="title--sub fonte__caracteristica">Clérigo</p>
+                            <div class="desc__caracteristica">
+                                <p>No 2º nível, você é capaz de canalizar a energia da sua divindade.Você começa com dois efeitos: Expulsar Mortos-Vivos e outro efeito determinado pelo seu domínio. Você recupera os usos dessa característica ao realizar um descanso curto ou longo.</p>
+                                <br>
+                                <p>A CD para efeitos dessa característica é a mesma utilizada nas suas magias de clérigo.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="clerigo2">
+                            <h3 class="nome__caracteristica">Expulsar Mortos Vivos</h3>
+                            <p class="title--sub fonte__caracteristica">Clérigo</p>
+                            <div class="desc__caracteristica">
+                                <p>Com uma ação, cada morto-vivo que puder ver ou ouvir você em um raio de 9m (30feet), devem fazer um teste de resistência de Sabedoria, se falhar a criatura é expulsa por 1 minuto ou até sofrer algum dano.</p>
+                                <br>
+                                <p>Uma criatura expulsada utiliza seus turnos tentando se mover para o mais longe possível de você, ela não pode usar reações e não consegue se aproximar voluntariamente para um espaço dentro do raio de emanação.</p>
+                                <br>
+                                <p>A criatura só pode utilizar sua ação para realizar a ação Disparada ou para tentar escapar de um efeito que impeça seu deslocamento. Se não houver para onde se mover, a criatura usa a ação Esquiva.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="clerigo4">
+                            <h3 class="nome__caracteristica">Aumento de Habilidade (Clérigo)</h3>
+                            <p class="title--sub fonte__caracteristica">Clérigo</p>
+                            <div class="desc__caracteristica">
+                                <p>Ao atingir o 4º nível dessa classe, e novamente no 8º, 12º, 16º e 19º nível, você pode aumentar um valor de habilidade a sua escolha em 2, ou você pode aumentar dois valores diferentes em 1.</p>
+                                <br>
+                                <p>Você não pode atingir um valor de habilidade acima de 20 usando essa característica.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="clerigo5">
+                            <h3 class="nome__caracteristica">Destruir Mortos Vivos</h3>
+                            <p class="title--sub fonte__caracteristica">Clérigo</p>
+                            <div class="desc__caracteristica">
+                                <p>A partir do 5º nível, quando um morto-vivo falha no teste do seu Expulsar Mortos Vivos, a criatura é destruida desde que ela possua CR igual ou menor que:</p>
+                                <p class="desc__caracteristica__lista">• 5º nível: CR1/2</p>
+                                <p class="desc__caracteristica__lista">• 8º nível: CR1</p>
+                                <p class="desc__caracteristica__lista">• 11º nível: CR2</p>
+                                <p class="desc__caracteristica__lista">• 14º nível: CR3</p>
+                                <p class="desc__caracteristica__lista">• 17º nível: CR4</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="clerigo10">
+                            <h3 class="nome__caracteristica">Intervenção Divina</h3>
+                            <p class="title--sub fonte__caracteristica">Clérigo</p>
+                            <div class="desc__caracteristica">
+                                <p>A partir do 10º nível, você pode implorar pela ajuda de sua divindade com uma ação, descrevendo a assistência que procura e rolando um dado de percentagem. Se você obter um resultado maior ou menor que o seu nível de clérigo, sua divindade atende sua súplica. O GM decide como isso vai ocorrer. O efeito de uma magia de clérigo de qualquer nível ou dominío é um resultado apropriado.</p>
+                                <br>
+                                <p>Caso sua divindade intervenha, você não pode usar essa característica novamente durante 7 dias.Caso contrário você pode usa-la de novo após um descanso longo.</p>
+                                <br>
+                                <p>No 20º nível, suas súplicas são automaticamente atendidas.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                    </ul>
+                    <ul><!--Druida-->
+                        <li class="li__caracteristica hidden" data-caracteristica="druida1">
+                            <h3 class="nome__caracteristica">Druídico</h3>
+                            <p class="title--sub fonte__caracteristica">Druida</p>
+                            <div class="desc__caracteristica">
+                                <p>Você conhece o idioma secreto dos druidas, você pode falar ou deixar mensagens escondidas nessa linguagem.</p>
+                                <br>
+                                <p>Você e aqueles que conhecem o idioma automaticamente percebem a mensagem, outros precisam passar num teste de Sabedoria(Percepção) CD15, mas não conseguem decifrar o conteúdo sem usar magias.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="druida1">
+                            <h3 class="nome__caracteristica">Conjurador de Ritual (Druida)</h3>
+                            <p class="title--sub fonte__caracteristica">Druida</p>
+                            <div class="desc__caracteristica">
+                                <p>Você pode conjurar qualquer magia de druida que conheça marcada como Ritual.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="druida1">
+                            <h3 class="nome__caracteristica">Foco de Conjuração (Druida)</h3>
+                            <p class="title--sub fonte__caracteristica">Druida</p>
+                            <div class="desc__caracteristica">
+                                <p>Você pode usar um foco de conjuração druídico para suas magias de druida.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="druida2">
+                            <h3 class="nome__caracteristica">Forma Selvagem</h3>
+                            <p class="title--sub fonte__caracteristica">Druida</p>
+                            <div class="desc__caracteristica">
+                                <p>A partir do 2º nível, Você pode usar uma ação para assumir a forma de uma besta que você já tenha visto antes. Você recupera os usos dessa habilidade com um descanso curto ou longo.</p>
+                                <br>
+                                <p>No 2º nível você pode se transformar em uma besta de CR1/4 ou menor que não possua deslocamento de vôo ou aquático. No 4º nível, o CR máximo aumenta para 1/2 e a besta pode ter deslocamento aquático, no 8º nível, o CR máximo aumenta para 1 e a besta pode ter deslocamento de vôo.</p>
+                                <br>
+                                <p>Você é capaz de assumir essa forma por uma quantidade de horas igual a metade do seu nível de druida, arredondado para baixo, após esse tempo, você retorna a sua forma original a menos que gaste mais um uso dessa característica.</p>
+                                <br>
+                                <p>Você volta a sua forma normal se desejar usar uma ação bonus para isso, se ficar inconsciente, cair a 0 pontos de vida ou morrer.</p>
+                                <br>
+                                <p>Enquanto estiver transformado:</p>
+                                <p class="desc__caracteristica__lista">• Suas estatísticas de jogo são substituídas pelas da besta, exceto sua tendência, personalidade e valores de Inteligência, Sabedoria e Carisma. Você também mantem suas proficiências e recebe adicionalmente as da criatura. Você não pode usar as ações lendárias ou de covil da criatura.</p>
+                                <p class="desc__caracteristica__lista">• Você assume os pontos de vida e Dados de Vida da criatura, ao se transformar de volta você retorna a quantidade de pontos de vida que tinha antes de se transformar. Caso você sofra dano que diminua seus pontos de vida para abaixo de 0, o resulta excedente é subtraido dos pontos de vida da sua forma original. Você só cai inconsciente se esse dano reduzir os pontos de vida da sua forma original a 0.</p>
+                                <p class="desc__caracteristica__lista">• Você não consegue conjurar magias e sua capacidade de  fala ou realizar ações que necessitem de membros são limitadas as capacidades da forma assumida.Transformar não interrompe a sua concentração em magias já conjuradas nem impede que você execute ações que façam parte de tal magia.</p>
+                                <p class="desc__caracteristica__lista">• Você ainda mantém os benefícios de todas as características de classe, raça ou outras fontes e pode usa-los desde que sua nova forma seja fisicamente capaz.No entanto, você não é capaz de usar sentidos especiais como Visão no Escuro, a não ser que a nova forma também o possua.</p>
+                                <p class="desc__caracteristica__lista">• Você escolhe se o seu equipamento cai no chão, se funde a nova forma ou é usado por ela.O GM decide se é possível que a criatura faça uso de tal equipamento baseado na forma e tamanho da besta.Seu equipamento não é capaz de se modificar para se ajustar a criatura.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="druida2">
+                            <h3 class="nome__caracteristica">Círculo Druídico</h3>
+                            <p class="title--sub fonte__caracteristica">Druida</p>
+                            <div class="desc__caracteristica">
+                                <p>No 2º nível, você escolhe um circulo de druidas, sua escolha concede a você características no 2º nível e novamente no 6º, 10º e 14º níveis.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="druida4">
+                            <h3 class="nome__caracteristica">Aumento de Habilidade (Druida)</h3>
+                            <p class="title--sub fonte__caracteristica">Druida</p>
+                            <div class="desc__caracteristica">
+                                <p>Ao atingir o 4º nível dessa classe, e novamente no 8º, 12º, 16º e 19º nível, você pode aumentar um valor de habilidade a sua escolha em 2, ou você pode aumentar dois valores diferentes em 1.</p>
+                                <br>
+                                <p>Você não pode atingir um valor de habilidade acima de 20 usando essa característica.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="druida18">
+                            <h3 class="nome__caracteristica">Corpo Atemporal</h3>
+                            <p class="title--sub fonte__caracteristica">Druida</p>
+                            <div class="desc__caracteristica">
+                                <p>A partir do 18º nível, seu corpo envelhece apenas 1 ano para cada 10 que se passarem.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="druida18">
+                            <h3 class="nome__caracteristica">Magia Bestial</h3>
+                            <p class="title--sub fonte__caracteristica">Druida</p>
+                            <div class="desc__caracteristica">
+                                <p>No 18º nível, durante a sua Forma Selvagem você consegue conjurar magias e pode realizar os componentes verbais e somáticos.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="druida20">
+                            <h3 class="nome__caracteristica">Arquedruida</h3>
+                            <p class="title--sub fonte__caracteristica">Druida</p>
+                            <div class="desc__caracteristica">
+                                <p>No 20º nível, Você é capaz de usar Forma Selvagem um número ilimitado de vezes.</p>
+                                <br>
+                                <p>Adicionalmente, ao conjurar uma magia de druida você pode ignorar os componentes verbais, somáticos e materiais desde que não possuam custo e não sejam consumidos pela magia, você também consegue usar esse benefício em sua forma selvagem.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                    </ul>
+                    <ul><!--Ladino-->
+                        <li class="li__caracteristica hidden" data-caracteristica="ladino1">
+                            <h3 class="nome__caracteristica">Especialização (Ladino)</h3>
+                            <p class="title--sub fonte__caracteristica">Ladino</p>
+                            <div class="desc__caracteristica">
+                                <p>No 1º nível, escolha duas pericias que você seja proficiente. Seu bônus de proficiência para essas pericias é dobrado em qualquer teste de habilidade.</p>
+                                <br>
+                                <p>Você pode escolher as Ferramentas de Ladrão ao invés de uma pericia.</p>
+                                <br>
+                                <p>No 6º nível, você escolhe mais duas pericias para se especializar.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica"></button>
+                            <button class="btn--remove btn--remove--caracteristica"></button>
+                        </li>
+                    </ul>
+                    <ul id="caracteristicas__adicionaveis"></ul>
+                </div>
             </section>
             <section class="outras">
                 <h2 class="title">Outras Proficiências</h2>
