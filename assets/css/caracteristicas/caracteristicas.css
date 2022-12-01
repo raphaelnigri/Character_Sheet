@@ -98,6 +98,18 @@
     text-transform: uppercase;
     width: 100%;
     font-size: 1rem;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+.select--caracteristica:hover{
+    color: var(--dex);
+    transition: 0.15s;
+}
+
+.select--caracteristica:focus-within{
+    color: var(--str);
+    transition: 0.15s;
 }
 
 .desc__caracteristica--option{
