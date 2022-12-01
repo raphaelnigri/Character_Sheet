@@ -694,6 +694,17 @@
                             <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
                         </li>
                     </ul>
+                    <ul><!--Bruxo-->
+                        <li class="li__caracteristica hidden" data-caracteristica="bruxo1">
+                            <h3 class="nome__caracteristica"></h3>
+                            <p class="title--sub fonte__caracteristica">Bruxo</p>
+                            <div class="desc__caracteristica">
+                                <p></p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
+                            <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
+                        </li>
+                    </ul>
                     <ul><!--Clerigo-->
                         <li class="li__caracteristica hidden" data-caracteristica="clerigo1">
                             <h3 class="nome__caracteristica">Domínio Divino</h3>
@@ -887,7 +898,126 @@
                             <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
                         </li>
                     </ul>
+                    <ul><!--Feiticeiro-->
+                        <li class="li__caracteristica hidden" data-caracteristica="feiticeiro1">
+                            <h3 class="nome__caracteristica"></h3>
+                            <p class="title--sub fonte__caracteristica">Feiticeiro</p>
+                            <div class="desc__caracteristica">
+                                <p></p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
+                            <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
+                        </li>
+                    </ul>
                     <ul><!--Guerreiro-->
+                        <li class="li__caracteristica hidden" data-caracteristica="guerreiro1">
+                            <h3 class="nome__caracteristica">Estilo de Luta</h3>
+                            <p class="title--sub fonte__caracteristica">Guerreiro</p>
+                            <div class="desc__caracteristica">
+                                <p>Você adota um estilo de luta particular como sua especialidade. Escolha uma das opções abaixo:</p>
+                                <select class="select--caracteristica" id="estilo__guerreiro">
+                                    <option value="arqueria">Arqueria</option>
+                                    <option value="defesa">Defesa</option>
+                                    <option value="duelismo">Duelismo</option>
+                                    <option value="gwf">Lutar com Armas Grandes</option>
+                                    <option value="twf">Lutar com Duas Armas</option>
+                                    <option value="protecao">Proteção</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                                <div class="desc__caracteristica--option" data-estilo__guerreiro="arqueria">
+                                    <p>Você ganha +2 de bonûs de ataque com armas à distância.</p>
+                                </div>
+                                <div class="desc__caracteristica--option hidden" data-estilo__guerreiro="defesa">
+                                    <p>Você ganha +1 de ac enquanto usar uma armadura.</p>
+                                </div>
+                                <div class="desc__caracteristica--option hidden" data-estilo__guerreiro="duelismo">
+                                    <p>Enquanto enpunhar uma arma corpo-a-corpo em uma mão e nenhuma outra arma, você ganha +2 de bonûs de dano com essa arma.</p>
+                                </div>
+                                <div class="desc__caracteristica--option hidden" data-estilo__guerreiro="gwf">
+                                    <p>Você pode rolar novamente o dado de dano de uma arma que você esteja empunhando com duas mãos quando tirar 1 ou 2 no resultado. Você deve usar o resultado da nova rolagem mesmo que seja 1 ou 2.</p>
+                                    <p>A arma empunhada deve possuir as propriedades duas-mãos ou versatil.</p>
+                                </div>
+                                <div class="desc__caracteristica--option hidden" data-estilo__guerreiro="twf">
+                                    <p>Você adiciona o seu modificador de habilidade de dano na jogada de dano do seu segundo ataque quando estiver lutando com duas armas.</p>
+                                </div>
+                                <div class="desc__caracteristica--option hidden" data-estilo__guerreiro="protecao">
+                                    <p>Quando uma criatura que você possa ver atacar um alvo que esteja a até 1,5m (5feet) de você, você pode usar sua reação para impor desvantagem a essa jogada de ataque. Você deve estar empunhando um escudo.</p>
+                                </div>
+                                <div class="desc__caracteristica--option hidden" data-estilo__guerreiro="outro">
+                                    <textarea class="textarea textarea--option"></textarea>
+                                </div>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
+                            <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="guerreiro1">
+                            <h3 class="nome__caracteristica">Retomar Fôlego</h3>
+                            <p class="title--sub fonte__caracteristica">Guerreiro</p>
+                            <div class="desc__caracteristica">
+                                <p>No seu turno, você pode usar uma ação bonus para recuperar pontos de vida igual a 1d10 + seu nível de guerreiro.</p>
+                                <br>
+                                <p>Você recupera o uso dessa característica após um descanso curto ou longo.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
+                            <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
+                        </li>
+                        <li class="li__caracteristica hidden hidden" data-caracteristica="guerreiro2">
+                            <h3 class="nome__caracteristica">Surto de Ação</h3>
+                            <p class="title--sub fonte__caracteristica">Guerreiro</p>
+                            <div class="desc__caracteristica">
+                                <p>A partir do 2º nível, no seu turno, você é capaz de executar uma ação adicional.</p>
+                                <br>
+                                <p>No 17º nível, você adiquire mais um uso dessa característica, mas só pode usa-la uma vez por turno.</p>
+                                <br>
+                                <p>Você recupera os usos dessa característica após um descanso curto ou longo.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
+                            <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="guerreiro3">
+                            <h3 class="nome__caracteristica">Arquétipo Marcial</h3>
+                            <p class="title--sub fonte__caracteristica">Guerreiro</p>
+                            <div class="desc__caracteristica">
+                                <p>No 3º nível você escolhe um arquétipo que você se esforça para imitar em seus estilos de combate e técnicas. Essa escolha lhe confere características no 3º nível, e novamente no 7º, 10º, 15º e 18º níveis.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
+                            <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="guerreiro4">
+                            <h3 class="nome__caracteristica">Aumento de Habilidade (Guerreiro)</h3>
+                            <p class="title--sub fonte__caracteristica">Guerreiro</p>
+                            <div class="desc__caracteristica">
+                                <p>Ao atingir o 4º nível dessa classe, e novamente no 6º 8º, 12º, 14º, 16º e 19º nível, você pode aumentar um valor de habilidade a sua escolha em 2, ou você pode aumentar dois valores diferentes em 1.</p>
+                                <br>
+                                <p>Você não pode atingir um valor de habilidade acima de 20 usando essa característica.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
+                            <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="guerreiro5">
+                            <h3 class="nome__caracteristica">Ataque Extra (Guerreiro)</h3>
+                            <p class="title--sub fonte__caracteristica">Guerreiro</p>
+                            <div class="desc__caracteristica">
+                                <p>A partir do 5º nível, você pode atacar duas vezes, ao invés de uma vez, sempre que utilizar a ação Ataque no seu turno.</p>
+                                <br>
+                                <p>O numero de ataques aumenta para três quando você chegar ao 11º nível e quatro no 20º nível.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
+                            <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="guerreiro9">
+                            <h3 class="nome__caracteristica">Indomável</h3>
+                            <p class="title--sub fonte__caracteristica">Guerreiro</p>
+                            <div class="desc__caracteristica">
+                                <p>A partir do 9º nível, rolar novamente um teste de resistência que tiver falhado, mas deve usar o novo resultado mesmo que seja menor.</p>
+                                <br>
+                                <p>Você adiquire mais um uso dessa caracteristica no 13º nível e no 17º nível.</p>
+                                <br>
+                                <p>Você recupera os usos dessa caracteristica ao realizar um descanso longo.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
+                            <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
+                        </li>
                     </ul>
                     <ul><!--Ladino-->
                         <li class="li__caracteristica hidden" data-caracteristica="ladino1">
@@ -899,6 +1029,50 @@
                                 <p>Você pode escolher as Ferramentas de Ladrão ao invés de uma pericia.</p>
                                 <br>
                                 <p>No 6º nível, você escolhe mais duas pericias para se especializar.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
+                            <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
+                        </li>
+                    </ul>
+                    <ul><!--Mago-->
+                        <li class="li__caracteristica hidden" data-caracteristica="mago1">
+                            <h3 class="nome__caracteristica"></h3>
+                            <p class="title--sub fonte__caracteristica">Mago</p>
+                            <div class="desc__caracteristica">
+                                <p></p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
+                            <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
+                        </li>
+                    </ul>
+                    <ul><!--Monge-->
+                        <li class="li__caracteristica hidden" data-caracteristica="monge1">
+                            <h3 class="nome__caracteristica"></h3>
+                            <p class="title--sub fonte__caracteristica">Monge</p>
+                            <div class="desc__caracteristica">
+                                <p></p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
+                            <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
+                        </li>
+                    </ul>
+                    <ul><!--Patrulheiro-->
+                        <li class="li__caracteristica hidden" data-caracteristica="patrulheiro1">
+                            <h3 class="nome__caracteristica"></h3>
+                            <p class="title--sub fonte__caracteristica">Patrulheiro</p>
+                            <div class="desc__caracteristica">
+                                <p></p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
+                            <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
+                        </li>
+                    </ul>
+                    <ul><!--Paladino-->
+                        <li class="li__caracteristica hidden" data-caracteristica="paladino1">
+                            <h3 class="nome__caracteristica"></h3>
+                            <p class="title--sub fonte__caracteristica">Paladino</p>
+                            <div class="desc__caracteristica">
+                                <p></p>
                             </div>
                             <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
                             <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
@@ -1091,6 +1265,7 @@
         <script src="assets/script/passiva.js"></script>
         <script src="assets/script/estatistica.js"></script>
         <script src="assets/script/caracteristica.js"></script>
+        <script src="assets/script/caracteristicas-de-classe/estilo-de-luta.js"></script>
         <script src="assets/script/recursos.js"></script>
         <script src="assets/script/hitdice.js"></script>
         <script src="assets/script/iventario.js"></script>

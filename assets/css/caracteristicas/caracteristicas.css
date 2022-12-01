@@ -89,3 +89,25 @@
     font-size: 1.25rem;
     grid-area: del;
 }
+
+.select--caracteristica{
+    background: transparent;
+    margin-top: 10px;
+    color: var(--str);
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.desc__caracteristica--option{
+    font-size: 1rem;
+    margin-top: 4px;
+    margin-left: 4px;
+}
+
+.textarea--option{
+    width: 100%;
+    max-width: 100%;
+    font-size: 1rem;
+}
