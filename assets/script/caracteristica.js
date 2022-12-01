@@ -4,10 +4,28 @@ const descricaoCaracteristicaInput = document.getElementById('caracteristica__de
 const listaDeCaracteristicas = document.getElementById('caracteristicas__adicionaveis');
 const addCaracteristicaBtn = document.getElementById('caracteristica--add');
 
-addCaracteristicaBtn.addEventListener('click', () =>{
-    if(nomeCaracteristicaInput.value != '' && fonteCaracteristicaInput.value != '' && descricaoCaracteristicaInput.value != ''){
-        addCaracteristica(nomeCaracteristicaInput.value,fonteCaracteristicaInput.value,descricaoCaracteristicaInput.value);
-    }
+let btninspecionar = document.querySelectorAll('[data-btn__caracteristica="inspecionar"]');
+let btnEsconder = document.querySelectorAll('[data-btn__caracteristica="esconder"]');
+document.addEventListener('DOMContentLoaded',()=>{
+
+
+    addCaracteristicaBtn.addEventListener('click', () =>{
+        if(nomeCaracteristicaInput.value != '' && fonteCaracteristicaInput.value != '' && descricaoCaracteristicaInput.value != ''){
+            addCaracteristica(nomeCaracteristicaInput.value,fonteCaracteristicaInput.value,descricaoCaracteristicaInput.value);
+        }
+    });
+
+    btninspecionar.forEach(element =>{
+        element.addEventListener('click', () =>{
+            element.parentNode.querySelector('.desc__caracteristica').classList.toggle('hidden');
+        })
+    });
+
+    btnEsconder.forEach(element =>{
+        element.addEventListener('click', () =>{
+            element.parentNode.classList.add('hidden');
+        })
+    });
 })
 
 function addCaracteristica(nome, fonte, desc){
