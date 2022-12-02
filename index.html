@@ -704,6 +704,86 @@
                             <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
                             <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
                         </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="bruxo1">
+                            <h3 class="nome__caracteristica">Magia de Pacto</h3>
+                            <p class="title--sub fonte__caracteristica">Bruxo</p>
+                            <div class="desc__caracteristica">
+                                <p>Suas pesquisas arcanas e a magia conferida a você por seu patrono, lhe concedem uma gama de feitiços.</p>
+                                <p class="subtitle--caracteristica">Truques</p>
+                                <p>Você conhece dois truques, à sua escolha, da lista de magias de bruxo. Você aprende um truque de bruxo adicional no 4º e 10º nível.</p>
+                                <p class="subtitle--caracteristica">Espaços de Magia</p>
+                                <p>Todos os seus espaços de magia são do mesmo nível. Para conjurar uma magia de bruxo de 1° nível ou superior, você deve gastar um espaço. Você recobra todos os espaços gastos quando você realiza um descanso curto ou longo.</p>
+                                <p class="subtitle--caracteristica">Magias Conhecidas</p>
+                                <p>No 1° nível, você conhece duas magias de 1° nível, à sua escolha da lista de magias de bruxo.</p>
+                                <br>
+                                <p>Além disso, quando você adquire um nível nessa classe, você pode escolher uma magia de bruxo que você conheça e substituí-la por outra da lista de magias de bruxo, desde que ela seja de um nível ao qual você tenha acesso a pelo menos um espaço de magia.</p>
+                                <p class="subtitle--caracteristica">Foco de Conjuração</p>
+                                <p>Você pode usar um foco arcano como foco de conjuração para suas magias de bruxo.</p>
+                                <p class="subtitle--caracteristica">Habilidade de Conjuração</p>
+                                <p>Sua habilidade de conjuração é Carisma.</p>
+                                <br>
+                                <p><em class="subtitle--caracteristica">CD para magias:</em> 8 + bônus de Proficiência + modificador de Carisma.</p>
+                                <br>
+                                <p><em class="subtitle--caracteristica">Modificador de ataque mágico:</em> bônus de Proficiência + modificador de Carisma.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
+                            <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="bruxo2">
+                            <h3 class="nome__caracteristica">Invocações Místicas</h3>
+                            <p class="title--sub fonte__caracteristica">Bruxo</p>
+                            <div class="desc__caracteristica">
+                                <p>No 2º nível, você adquire duas invocações místicas, à sua escolha. Você adquire uma nova invocação no 5º, 7º, 9º, 12º, 15º e 18º nível.</p>
+                                <br>
+                                <p>Quando você adquire um novo nível nessa classe, você pode escolher uma invocação que você conheça e substituí-la por outra que você possa aprender nesse nível.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
+                            <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="bruxo3">
+                            <h3 class="nome__caracteristica">Benefícios do Pacto</h3>
+                            <p class="title--sub fonte__caracteristica">Bruxo</p>
+                            <div class="desc__caracteristica">
+                                <p>No 3º nível, seu patrono transcendental lhe confere um dom por seus leais serviços. Escolha uma das características a seguir:</p>
+                                <select class="select--caracteristica" data-pacto__select="">
+                                    <option>Tipo de Pacto</option>
+                                    <option value="corrente">Pacto da Corrente</option>
+                                    <option value="lamina">Pacto da Lâmina</option>
+                                    <option value="tomo">Pacto do Tomo</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                                <div class="desc__caracteristica--option hidden" data-pacto__desc="corrente">
+                                    <p>Você aprende a magia convocar familiar e pode conjurá-la como um ritual. Essa magia não conta no número de magias que você conhece.</p>
+                                    <br>
+                                    <p>Quando você conjura essa magia, você pode escolher uma das formas convencionais para o seu familiar ou uma das seguintes formas especiais: diabrete, pseudodragão, quasit e sprite.</p>
+                                    <br>
+                                    <p>Além disso, quando você realiza a ação de Ataque, você pode renunciar a um deles para permitir que seu familiar realize um ataque utilizando a reação dele.</p>
+                                </div>
+                                <div class="desc__caracteristica--option hidden" data-pacto__desc="lamina">
+                                    <p>Você pode usar sua ação para invocar uma arma de pacto em sua mão vazia. Você escolhe a forma que essa arma corpo-a-corpo tem e adquire proficiência com ela enquanto a empunhar. A arma conta como mágica com os propósitos de ultrapassar resistências e imunidades a ataques e danos não-mágicos.</p>
+                                    <br>
+                                    <p>Sua arma de pacto desaparece se ela ficar a mais de 1,5m (5feet) de você por 1 minuto ou mais. Ela também desaparece se você usar essa característica novamente, se desejar dissipa-la (não requer ação) ou se você morrer.</p>
+                                    <br>
+                                    <p>Você pode transformar uma arma mágica em sua arma de pacto ao realizar um ritual especial enquanto empunha a arma. Você precisa de 1 hora para concluir o ritual e ele pode ser realizado durante um descanso curto.</p>
+                                    <br>
+                                    <p>Você pode dissipar a arma, guardando-a em um espaço extradimensional, e ela reaparece em sua mão toda vez que você invocar sua arma de pacto.</p>
+                                    <br>
+                                    <p>A arma deixa de ser sua arma de pacto se você morrer, se você realizar um ritual de 1 hora com uma arma diferente ou se você realizar um ritual de 1 hora para romper seu elo com ela. Quando o elo for quebrado, caso a arma esteja no espaço extradimensional, ela aparece aos seus pés.</p>
+                                </div>
+                                <div class="desc__caracteristica--option hidden" data-pacto__desc="tomo">
+                                    <p>Seu patrono lhe confere um grimório chamado Livro das Sombras. Escolha três truques da lista de magias de qualquer classe.</p> 
+                                    <br>
+                                    <p>Enquanto o livro estiver com você, você poderá conjurar esses truques à vontade e eles não contam para o número máximo de truques que você conhece. Esses truques são considerados magias de bruxo para você mesmo que não sejam da sua lista de magias.</p>
+                                    <br>
+                                    <p>Se você perder seu Livro das Sombras, você pode realizar uma cerimônia de 1 hora para receber um novo do seu patrono e isso pode ser feito durante um descanso curto ou longo. O ritual destrói o livro anterior. Se você morrer, o livro se torna cinzas.</p>
+                                </div>
+                                <div class="desc__caracteristica--option hidden" data-pacto__desc="outro">
+                                    <textarea class="textarea textarea--option"></textarea>
+                                </div>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
+                            <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
+                        </li>
                         <li class="li__caracteristica hidden" data-caracteristica="bruxo4">
                             <h3 class="nome__caracteristica">Aumento de Habilidade</h3>
                             <p class="title--sub fonte__caracteristica">Bruxo</p>
@@ -711,6 +791,28 @@
                                 <p>Ao atingir o 4º nível dessa classe, e novamente no 8º, 12º, 16º e 19º nível, você pode aumentar um valor de habilidade a sua escolha em 2, ou você pode aumentar dois valores diferentes em 1.</p>
                                 <br>
                                 <p>Você não pode atingir um valor de habilidade acima de 20 usando essa característica.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
+                            <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="bruxo11">
+                            <h3 class="nome__caracteristica">Arcana Mística</h3>
+                            <p class="title--sub fonte__caracteristica">Bruxo</p>
+                            <div class="desc__caracteristica">
+                                <p>No 11° nível, seu patrono confere a você um segredo mágico conhecido como arcana. Escolha uma magia de 6° nível da lista de magias de bruxo como sua arcana. Você pode conjurar essa arcana uma vez sem gastar um espaço de magia. Você deve realizar um descanso longo para poder fazer isso novamente.</p>
+                                <br>
+                                <p>No futuro, você adquire mais magias de bruxo de sua escolha que podem ser conjuradas dessa forma: uma magia de 7° nível no 13° nível, uma magia de 8° nível no 15° nível e uma magia de 9° nível no 17° nível.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
+                            <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="bruxo20">
+                            <h3 class="nome__caracteristica">Mestre Místico</h3>
+                            <p class="title--sub fonte__caracteristica">Bruxo</p>
+                            <div class="desc__caracteristica">
+                                <p>No 20° nível, você pode gastar 1 minuto suplicando pela ajuda do seu patrono para recuperar todos os espaços de magia gastos da sua característica Magia de Pacto.</p>
+                                <br>
+                                <p>Você recupera o uso dessa habilidade com um descanso longo.</p>
                             </div>
                             <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
                             <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
@@ -753,7 +855,6 @@
                                 <p>Ao usar seu Canalizar Divindade, você escolhe qual efeito deseja utilizar e recupera os usos dessa característica ao realizar um descanso curto ou longo.</p>
                                 <br>
                                 <p>A CD para efeitos dessa característica é a mesma utilizada nas suas magias de clérigo.</p>
-                                <br>
                                 <p class="subtitle--caracteristica">Canalizar Divindade – Expulsar Mortos Vivos</p>
                                 <p>Com uma ação, cada morto-vivo que puder ver ou ouvir você em um raio de 9m (30feet), devem fazer um teste de resistência de Sabedoria, se falhar a criatura é expulsa por 1 minuto ou até sofrer algum dano.</p>
                                 <br>
@@ -1207,7 +1308,7 @@
                             <div class="desc__caracteristica">
                                 <p>A partir do 2º nível, no seu turno, você é capaz de executar uma ação adicional.</p>
                                 <br>
-                                <p>No 17º nível, você adiquire mais um uso dessa característica, mas só pode usa-la uma vez por turno.</p>
+                                <p>No 17º nível, você adquire mais um uso dessa característica, mas só pode usa-la uma vez por turno.</p>
                                 <br>
                                 <p>Você recupera os usos dessa característica após um descanso curto ou longo.</p>
                             </div>
@@ -1251,7 +1352,7 @@
                             <div class="desc__caracteristica">
                                 <p>A partir do 9º nível, rolar novamente um teste de resistência que tiver falhado, mas deve usar o novo resultado mesmo que seja menor.</p>
                                 <br>
-                                <p>Você adiquire mais um uso dessa caracteristica no 13º nível e no 17º nível.</p>
+                                <p>Você adquire mais um uso dessa caracteristica no 13º nível e no 17º nível.</p>
                                 <br>
                                 <p>Você recupera os usos dessa caracteristica ao realizar um descanso longo.</p>
                             </div>
@@ -1359,7 +1460,7 @@
                             <h3 class="nome__caracteristica">Mente Escorregadia</h3>
                             <p class="title--sub fonte__caracteristica">Ladino</p>
                             <div class="desc__caracteristica">
-                                <p>No 15º nível, você adiquire proficiência nos testes de resistência de Sabedoria.</p>
+                                <p>No 15º nível, você adquire proficiência nos testes de resistência de Sabedoria.</p>
                             </div>
                             <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
                             <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
@@ -1506,18 +1607,15 @@
                             <div class="desc__caracteristica">
                                 <p>A partir do 2º nível, seu treinamento te permite aproveitar as energias místicas do ki. Seu acesso a essa energia é representado por seus Pontos de Ki, você possui uma quantidade de Pontos de Ki igual ao seu nível de monge.</p>
                                 <br>
-                                <p>Você pode gastar esses pontos para abastecer diversas características de ki e você começa conhecendo 3 delas (Rajada de Golpes, Defesa Paciente e Caminho do Vento) e aprende mais a medida que adiquire mais níveis nessa classe.</p>
+                                <p>Você pode gastar esses pontos para abastecer diversas características de ki e você começa conhecendo 3 delas (Rajada de Golpes, Defesa Paciente e Caminho do Vento) e aprende mais a medida que adquire mais níveis nessa classe.</p>
                                 <br>
                                 <p>Você recupera seus Pontos de Ki com um descanso curto ou longo, desde que gaste pelo menos 30 minutos do descanso meditando.</p>
                                 <br>
                                 <p>A CD para suas características de ki é igual a 8 + seu bônus de proficiência + seu modificador de Sabedoria.</p>
-                                <br>
                                 <p class="subtitle--caracteristica">Rajada de Golpes</p>
                                 <p>Imediatamente após realizar a ação Atacar no seu turno, você pode gastar 1 ponto de ki para fazer dois ataques desarmados com uma ação bônus.</p>
-                                <br>
                                 <p class="subtitle--caracteristica">Defesa Paciente</p>
                                 <p>Você pode gastar 1 ponto de ki para usar a ação Esquiva como uma ação bônus no seu turno.</p>
-                                <br>
                                 <p class="subtitle--caracteristica">Passo do Vento</p>
                                 <p>Você pode gastar 1 ponto de ki para dobrar a distância dos seus saltos no seu turno e usar a ação Desengajar ou Disparada como uma ação bônus.</p>
                             </div>
@@ -1744,7 +1842,7 @@
                                 <br>
                                 <p>Você também aprende um idioma, à sua escolha, que seja falado pelos seus inimigos favoritos, se eles falarem algum.</p>
                                 <br>
-                                <p>Você adiquire um inimigo favorito adicional no 6º e 14º nivel.</p>
+                                <p>Você adquire um inimigo favorito adicional no 6º e 14º nivel.</p>
                             </div>
                             <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
                             <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
@@ -1800,7 +1898,7 @@
                                 <p class="desc__caracteristica__lista">• Quando forrageia, você encontra o dobro de comida.</p>
                                 <p class="desc__caracteristica__lista">• Quando rastreia outras criaturas você sabe a quantidade exata delas, seus tamanhos e a quanto tempo passaram pela área.</p>
                                 <br>
-                                <p>Você adiquire um terreno favorito adicional no 6º e 10º nivel.</p>
+                                <p>Você adquire um terreno favorito adicional no 6º e 10º nivel.</p>
                             </div>
                             <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
                             <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
@@ -2008,7 +2106,7 @@
                             <h3 class="nome__caracteristica">Saúde Divina</h3>
                             <p class="title--sub fonte__caracteristica">Paladino</p>
                             <div class="desc__caracteristica">
-                                <p>No 3° nível, você adiquire imunidade a doenças.</p>
+                                <p>No 3° nível, você adquire imunidade a doenças.</p>
                             </div>
                             <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
                             <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
@@ -2018,12 +2116,10 @@
                             <p class="title--sub fonte__caracteristica">Paladino</p>
                             <div class="desc__caracteristica">
                                 <p>No 3º nível, você realiza um juramento que marca o seu caminho como um paladino para sempre. Seu juramento concede caracteristicas no 3º nível e novamente no 7º, 15º e 20º níveis.</p>
-                                <br>
                                 <p class="subtitle--caracteristica">Magias de Juramento</p>
                                 <p>Cada juramento possui uma lista de magias associada a ele. Você ganha acesso a essas magias nos níveis especificados na descrição do juramento. Uma vez que você tenha ganhado acesso a uma magia de juramento, você sempre a terá preparada. Magias de juramento não contam para o número total de magias que você pode preparar a cada dia.</p>
                                 <br>
                                 <p>Se você ganhar uma magia de juramento que não apareça na lista de magias de paladino, a magia será, no entanto, uma magia de paladino para você.</p>
-                                <br>
                                 <p class="subtitle--caracteristica">Canalizar Divindade</p>
                                 <p>Seu juramento permite que você canalize energia divina para abastecer efeitos mágicos. Cada opção de Canalizar Divindade concedida por um juramento explica como usá-la.</p>
                                 <br>
@@ -2285,6 +2381,7 @@
         <script src="assets/script/caracteristicas-de-classe/estilo-de-luta.js"></script>
         <script src="assets/script/caracteristicas-de-classe/metamagia.js"></script>
         <script src="assets/script/caracteristicas-de-classe/inimigoeterreno.js"></script>
+        <script src="assets/script/caracteristicas-de-classe/pacto.js"></script>
         <script src="assets/script/recursos.js"></script>
         <script src="assets/script/hitdice.js"></script>
         <script src="assets/script/iventario.js"></script>

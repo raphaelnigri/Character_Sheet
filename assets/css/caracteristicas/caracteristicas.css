@@ -103,6 +103,7 @@
 }
 
 .subtitle--caracteristica{
+    margin-top: 1.4rem;
     font-size: 1.1rem;
 }
 
@@ -128,7 +129,7 @@
 }
 
 .desc__caracteristica--option{
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin-top: 4px;
     margin-left: 4px;
 }
@@ -136,7 +137,7 @@
 .textarea--option{
     width: 100%;
     max-width: 100%;
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 .wrapper--caracteristicas{
