@@ -418,7 +418,7 @@
                 <textarea class="textarea textarea--caracteristica" id="caracteristica__descricao" rows="5" cols="25" placeholder="Descrição..."></textarea>
                 <div class="wrapper__caracteristicas">
                     <ul><!--Barbaro-->
-                        <li class="li__caracteristica hidden" data-caracteristica="barbaro1" data-caracteristica="">
+                        <li class="li__caracteristica hidden" data-caracteristica="barbaro1">
                             <h3 class="nome__caracteristica">Fúria</h3>
                             <p class="title--sub fonte__caracteristica">Bárbaro</p>
                             <div class="desc__caracteristica">
@@ -696,10 +696,10 @@
                     </ul>
                     <ul><!--Bruxo-->
                         <li class="li__caracteristica hidden" data-caracteristica="bruxo1">
-                            <h3 class="nome__caracteristica"></h3>
+                            <h3 class="nome__caracteristica">Patrono Transcendental</h3>
                             <p class="title--sub fonte__caracteristica">Bruxo</p>
                             <div class="desc__caracteristica">
-                                <p></p>
+                                <p>No 1º nível, você firma um pacto com um ser transcendental que você escolher. Sua escolha concede a você características no 1º nível e novamente no 6º, 10º e 14º níveis.</p>
                             </div>
                             <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
                             <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
@@ -947,12 +947,12 @@
                             <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
                         </li>
                         <li class="li__caracteristica hidden" data-caracteristica="feiticeiro3">
-                            <h3 class="nome__caracteristica">Metamagia (3º nível)</h3>
+                            <h3 class="nome__caracteristica">Metamagia</h3>
                             <p class="title--sub fonte__caracteristica">Feiticeiro</p>
                             <div class="desc__caracteristica">
                                 <p>No 3º nível, escolha 2 opções de metamagia para ajustar seus feitiços às suas necessidades.</p>
                                 <select class="select--caracteristica" data-metamagia__select="1">
-                                    <option>Escolha uma opção.</option>
+                                    <option>Metamagia (3º nível)</option>
                                     <option value="acelerado" data-metamagia__opt="acelerado">Feitiço Acelerado</option>
                                     <option value="aumentado" data-metamagia__opt="aumentado">Feitiço Aumentado</option>
                                     <option value="cuidadoso" data-metamagia__opt="cuidadoso">Feitiço Cuidadoso</option>
@@ -994,7 +994,7 @@
                                     <textarea class="textarea textarea--option"></textarea>
                                 </div>
                                 <select class="select--caracteristica" data-metamagia__select="2">
-                                    <option>Escolha uma opção.</option>
+                                    <option>Metamagia (3º nível)</option>
                                     <option value="acelerado" data-metamagia__opt="acelerado">Feitiço Acelerado</option>
                                     <option value="aumentado" data-metamagia__opt="aumentado">Feitiço Aumentado</option>
                                     <option value="cuidadoso" data-metamagia__opt="cuidadoso">Feitiço Cuidadoso</option>
@@ -1035,20 +1035,8 @@
                                 <div class="desc__caracteristica--option hidden" data-metamagia__desc="outro2">
                                     <textarea class="textarea textarea--option"></textarea>
                                 </div>
-                                <br><br>
-                                <p>Você escolhe mais uma opção no 10º e no 17º níveis</p>
-                                <br>
-                                <p>Você pode usar apenas uma opção de metamagia em uma magia a menos que seja especificado o contrário.</p>
-                            </div>
-                            <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
-                            <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
-                        </li>
-                        <li class="li__caracteristica hidden" data-caracteristica="feiticeiro10">
-                            <h3 class="nome__caracteristica">Metamagia (10º nível)</h3>
-                            <p class="title--sub fonte__caracteristica">Feiticeiro</p>
-                            <div class="desc__caracteristica">
-                                <select class="select--caracteristica" data-metamagia__select="3">
-                                    <option>Escolha uma opção.</option>
+                                <select class="select--caracteristica hidden" data-caracteristica="feiticeiro10" data-metamagia__select="3">
+                                    <option>Metamagia (10º nível)</option>
                                     <option value="acelerado" data-metamagia__opt="acelerado">Feitiço Acelerado</option>
                                     <option value="aumentado" data-metamagia__opt="aumentado">Feitiço Aumentado</option>
                                     <option value="cuidadoso" data-metamagia__opt="cuidadoso">Feitiço Cuidadoso</option>
@@ -1089,16 +1077,8 @@
                                 <div class="desc__caracteristica--option hidden" data-metamagia__desc="outro3">
                                     <textarea class="textarea textarea--option"></textarea>
                                 </div>
-                            </div>
-                            <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
-                            <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
-                        </li>
-                        <li class="li__caracteristica hidden" data-caracteristica="feiticeiro17">
-                            <h3 class="nome__caracteristica">Metamagia (17º nível)</h3>
-                            <p class="title--sub fonte__caracteristica">Feiticeiro</p>
-                            <div class="desc__caracteristica">
-                                <select class="select--caracteristica" data-metamagia__select="4">
-                                    <option>Escolha uma opção.</option>
+                                <select class="select--caracteristica hidden" data-caracteristica="feiticeiro17" data-metamagia__select="4">
+                                    <option>Metamagia (17º nível)</option>
                                     <option value="acelerado" data-metamagia__opt="acelerado">Feitiço Acelerado</option>
                                     <option value="aumentado" data-metamagia__opt="aumentado">Feitiço Aumentado</option>
                                     <option value="cuidadoso" data-metamagia__opt="cuidadoso">Feitiço Cuidadoso</option>
@@ -1139,6 +1119,10 @@
                                 <div class="desc__caracteristica--option hidden" data-metamagia__desc="outro4">
                                     <textarea class="textarea textarea--option"></textarea>
                                 </div>
+                                <br><br>
+                                <p>Você pode usar apenas uma opção de metamagia em uma magia a menos que seja especificado o contrário.</p>
+                                <br>
+                                <p>Você escolhe mais uma opção no 10º e no 17º níveis</p>
                             </div>
                             <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
                             <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
@@ -1171,7 +1155,7 @@
                             <div class="desc__caracteristica">
                                 <p>Você adota um estilo de luta particular como sua especialidade. Escolha uma das opções abaixo:</p>
                                 <select class="select--caracteristica" data-estilodeluta__select="guerreiro">
-                                    <option>Escolha uma opção.</option>
+                                    <option>Estilo de Luta</option>
                                     <option value="arqueria" data-estilodeluta__opt="arqueria">Arqueria</option>
                                     <option value="defesa" data-estilodeluta__opt="defesa">Defesa</option>
                                     <option value="duelismo" data-estilodeluta__opt="duelismo">Duelismo</option>
@@ -1688,10 +1672,135 @@
                     </ul>
                     <ul><!--Patrulheiro-->
                         <li class="li__caracteristica hidden" data-caracteristica="patrulheiro1">
-                            <h3 class="nome__caracteristica"></h3>
+                            <h3 class="nome__caracteristica">Inimigo Favorito</h3>
                             <p class="title--sub fonte__caracteristica">Patrulheiro</p>
                             <div class="desc__caracteristica">
-                                <p></p>
+                                <p>Você tem experiência significativa estudando, rastreando, caçando e, até mesmo, falando com um certo tipo de inimigo. Escolha um tipo de inimigo:</p>
+                                <select class="select--caracteristica" data-inimigofavorito__select="1">
+                                    <option>Inimigo Favorito (1º Nível)</option>
+                                    <option value="Aberrações" data-inimigofavorito__opt="Aberrações">Aberrações</option>
+                                    <option value="Bestas" data-inimigofavorito__opt="Bestas">Bestas</option>
+                                    <option value="Celestiais" data-inimigofavorito__opt="Celestiais">Celestiais</option>
+                                    <option value="Constructos" data-inimigofavorito__opt="Constructos">Constructos</option>
+                                    <option value="Corruptores" data-inimigofavorito__opt="Corruptores">Corruptores</option>
+                                    <option value="Dragões" data-inimigofavorito__opt="Dragões">Dragões</option>
+                                    <option value="Elementais" data-inimigofavorito__opt="Elementais">Elementais</option>
+                                    <option value="Fadas" data-inimigofavorito__opt="Fadas">Fadas</option>
+                                    <option value="Gigantes" data-inimigofavorito__opt="Gigantes">Gigantes</option>
+                                    <option value="Limos" data-inimigofavorito__opt="Limos">Limos</option>
+                                    <option value="Monstruosidades" data-inimigofavorito__opt="Monstruosidades">Monstruosidades</option>
+                                    <option value="Mortos-Vivos" data-inimigofavorito__opt="Mortos-Vivos">Mortos-Vivos</option>
+                                    <option value="Plantas" data-inimigofavorito__opt="Plantas">Plantas</option>
+                                    <option value="humanoides">Duas raças humanoides</option>
+                                </select>
+                                <div class="wrapper--caracteristicas hidden" data-inimigofavorito__desc="1">
+                                    <input type="text" aria-label="Inimigo favorito humanoide 1" class="textarea">
+                                    <input type="text" aria-label="Inimigo favorito humanoide 2" class="textarea">
+                                </div>
+                                <select class="select--caracteristica hidden" data-inimigofavorito__select="2" data-caracteristica="patrulheiro6">
+                                    <option>Inimigo Favorito (6º Nível)</option>
+                                    <option value="Aberrações" data-inimigofavorito__opt="Aberrações">Aberrações</option>
+                                    <option value="Bestas" data-inimigofavorito__opt="Bestas">Bestas</option>
+                                    <option value="Celestiais" data-inimigofavorito__opt="Celestiais">Celestiais</option>
+                                    <option value="Constructos" data-inimigofavorito__opt="Constructos">Constructos</option>
+                                    <option value="Corruptores" data-inimigofavorito__opt="Corruptores">Corruptores</option>
+                                    <option value="Dragões" data-inimigofavorito__opt="Dragões">Dragões</option>
+                                    <option value="Elementais" data-inimigofavorito__opt="Elementais">Elementais</option>
+                                    <option value="Fadas" data-inimigofavorito__opt="Fadas">Fadas</option>
+                                    <option value="Gigantes" data-inimigofavorito__opt="Gigantes">Gigantes</option>
+                                    <option value="Limos" data-inimigofavorito__opt="Limos">Limos</option>
+                                    <option value="Monstruosidades" data-inimigofavorito__opt="Monstruosidades">Monstruosidades</option>
+                                    <option value="Mortos-Vivos" data-inimigofavorito__opt="Mortos-Vivos">Mortos-Vivos</option>
+                                    <option value="Plantas" data-inimigofavorito__opt="Plantas">Plantas</option>
+                                    <option value="humanoides">Duas raças humanoides</option>
+                                </select>
+                                <div class="wrapper--caracteristicas hidden" data-inimigofavorito__desc="2">
+                                    <input type="text" aria-label="Inimigo favorito humanoide 1" class="textarea">
+                                    <input type="text" aria-label="Inimigo favorito humanoide 2" class="textarea">
+                                </div>
+                                <select class="select--caracteristica hidden" data-inimigofavorito__select="3" data-caracteristica="patrulheiro14">
+                                    <option>Inimigo Favorito (14º Nível)</option>
+                                    <option value="Aberrações" data-inimigofavorito__opt="Aberrações">Aberrações</option>
+                                    <option value="Bestas" data-inimigofavorito__opt="Bestas">Bestas</option>
+                                    <option value="Celestiais" data-inimigofavorito__opt="Celestiais">Celestiais</option>
+                                    <option value="Constructos" data-inimigofavorito__opt="Constructos">Constructos</option>
+                                    <option value="Corruptores" data-inimigofavorito__opt="Corruptores">Corruptores</option>
+                                    <option value="Dragões" data-inimigofavorito__opt="Dragões">Dragões</option>
+                                    <option value="Elementais" data-inimigofavorito__opt="Elementais">Elementais</option>
+                                    <option value="Fadas" data-inimigofavorito__opt="Fadas">Fadas</option>
+                                    <option value="Gigantes" data-inimigofavorito__opt="Gigantes">Gigantes</option>
+                                    <option value="Limos" data-inimigofavorito__opt="Limos">Limos</option>
+                                    <option value="Monstruosidades" data-inimigofavorito__opt="Monstruosidades">Monstruosidades</option>
+                                    <option value="Mortos-Vivos" data-inimigofavorito__opt="Mortos-Vivos">Mortos-Vivos</option>
+                                    <option value="Plantas" data-inimigofavorito__opt="Plantas">Plantas</option>
+                                    <option value="humanoides">Duas raças humanoides</option>
+                                </select>
+                                <div class="wrapper--caracteristicas hidden" data-inimigofavorito__desc="3">
+                                    <input type="text" aria-label="Inimigo favorito humanoide 1" class="textarea">
+                                    <input type="text" aria-label="Inimigo favorito humanoide 2" class="textarea">
+                                </div>
+                                <br><br>
+                                <p>Você tem vantagem em testes de Sabedoria (Sobrevivência) para rastrear seus inimigos favoritos, assim como em testes de Inteligência para lembrar informações sobre eles.</p>
+                                <br>
+                                <p>Você também aprende um idioma, à sua escolha, que seja falado pelos seus inimigos favoritos, se eles falarem algum.</p>
+                                <br>
+                                <p>Você adiquire um inimigo favorito adicional no 6º e 14º nivel.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
+                            <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="patrulheiro1">
+                            <h3 class="nome__caracteristica">Explorador Natural</h3>
+                            <p class="title--sub fonte__caracteristica">Patrulheiro</p>
+                            <div class="desc__caracteristica">
+                                <p>Você está particularmente familiarizado com um tipo de ambiente natural e é perito em viajar e sobreviver em tais regiões.</p>
+                                <br>
+                                <p>Escolha um tipo de terreno favorito:</p>
+                                <select class="select--caracteristica" data-terrenofavorito__select="1">
+                                    <option>Terreno Favorito (1º Nível)</option>
+                                    <option value="Ártico" data-terrenofavorito__opt="Ártico">Ártico</option>
+                                    <option value="Costa" data-terrenofavorito__opt="Costa">Costa</option>
+                                    <option value="Deserto" data-terrenofavorito__opt="Deserto">Deserto</option>
+                                    <option value="Floresta" data-terrenofavorito__opt="Floresta">Floresta</option>
+                                    <option value="Montanha" data-terrenofavorito__opt="Montanha">Montanha</option>
+                                    <option value="Pântano" data-terrenofavorito__opt="Pântano">Pântano</option>
+                                    <option value="Planície" data-terrenofavorito__opt="Planície">Planície</option>
+                                    <option value="Subterraneo" data-terrenofavorito__opt="Subterraneo">Subterraneo</option>
+                                </select>
+                                <select class="select--caracteristica hidden" data-terrenofavorito__select="2" data-caracteristica="patrulheiro6">
+                                    <option>Terreno Favorito (6º Nível)</option>
+                                    <option value="Ártico" data-terrenofavorito__opt="Ártico">Ártico</option>
+                                    <option value="Costa" data-terrenofavorito__opt="Costa">Costa</option>
+                                    <option value="Deserto" data-terrenofavorito__opt="Deserto">Deserto</option>
+                                    <option value="Floresta" data-terrenofavorito__opt="Floresta">Floresta</option>
+                                    <option value="Montanha" data-terrenofavorito__opt="Montanha">Montanha</option>
+                                    <option value="Pântano" data-terrenofavorito__opt="Pântano">Pântano</option>
+                                    <option value="Planície" data-terrenofavorito__opt="Planície">Planície</option>
+                                    <option value="Subterraneo" data-terrenofavorito__opt="Subterraneo">Subterraneo</option>
+                                </select>
+                                <select class="select--caracteristica hidden" data-terrenofavorito__select="3" data-caracteristica="patrulheiro10">
+                                    <option>Terreno Favorito (10º Nível)</option>
+                                    <option value="Ártico" data-terrenofavorito__opt="Ártico">Ártico</option>
+                                    <option value="Costa" data-terrenofavorito__opt="Costa">Costa</option>
+                                    <option value="Deserto" data-terrenofavorito__opt="Deserto">Deserto</option>
+                                    <option value="Floresta" data-terrenofavorito__opt="Floresta">Floresta</option>
+                                    <option value="Montanha" data-terrenofavorito__opt="Montanha">Montanha</option>
+                                    <option value="Pântano" data-terrenofavorito__opt="Pântano">Pântano</option>
+                                    <option value="Planície" data-terrenofavorito__opt="Planície">Planície</option>
+                                    <option value="Subterraneo" data-terrenofavorito__opt="Subterraneo">Subterraneo</option>
+                                </select>
+                                <br><br>
+                                <p>Quando você fizer um teste de Inteligência ou de Sabedoria relacionado ao seu terreno favorito e usar uma perícia na qual seja proficiente, você pode dobrar seu bônus de proficiência.</p>
+                                <br>
+                                <p>Ao viajar por 1 hora ou mais no seu terreno favorito, você ganha os seguintes bônus:</p>
+                                <p class="desc__caracteristica__lista">• Terreno difícil não atrasa a viagem de seu grupo.</p>
+                                <p class="desc__caracteristica__lista">• Seu grupo não pode se perder por meios não mágicos.</p>
+                                <p class="desc__caracteristica__lista">• Você sempre está alerta ao perigo mesmo que esteja realizando outra atividade.</p>
+                                <p class="desc__caracteristica__lista">• Caso esteja sozinho, voce pode se mover furtivamente em uma velocidade normal.</p>
+                                <p class="desc__caracteristica__lista">• Quando forrageia, você encontra o dobro de comida.</p>
+                                <p class="desc__caracteristica__lista">• Quando rastreia outras criaturas você sabe a quantidade exata delas, seus tamanhos e a quanto tempo passaram pela área.</p>
+                                <br>
+                                <p>Você adiquire um terreno favorito adicional no 6º e 10º nivel.</p>
                             </div>
                             <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
                             <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
@@ -1702,7 +1811,7 @@
                             <div class="desc__caracteristica">
                                 <p>Você adota um estilo de luta particular como sua especialidade. Escolha uma das opções abaixo:</p>
                                 <select class="select--caracteristica" data-estilodeluta__select="patrulheiro">
-                                    <option>Escolha uma opção.</option>
+                                    <option>Estilo de Luta</option>
                                     <option value="arqueria" data-estilodeluta__opt="arqueria">Arqueria</option>
                                     <option value="defesa" data-estilodeluta__opt="defesa">Defesa</option>
                                     <option value="duelismo" data-estilodeluta__opt="duelismo">Duelismo</option>
@@ -1728,6 +1837,24 @@
                             <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
                             <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
                         </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="patrulheiro3">
+                            <h3 class="nome__caracteristica">Arquétipo de Patrulheiro</h3>
+                            <p class="title--sub fonte__caracteristica">Patrulheiro</p>
+                            <div class="desc__caracteristica">
+                                <p>No 3º nível você escolhe um arquétipo que você se esforça para emular. Essa escolha lhe confere características no 3º nível, e novamente no 7º, 11º e 15º níveis.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
+                            <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="patrulheiro3">
+                            <h3 class="nome__caracteristica">Atenção Primitiva</h3>
+                            <p class="title--sub fonte__caracteristica">Patrulheiro</p>
+                            <div class="desc__caracteristica">
+                                <p>A partir do 3° nível, você pode usar sua ação e gastar um espaço de magia de patrulheiro para focar sua atenção na região a seu redor. Por 1 minuto vezes o nível do espaço de magia gasto, você pode sentir se os seguintes tipos de criaturas estão presentes a 1,5 quilômetros de você (ou dentro de até 9 quilômetros se você estiver em seu terreno favorito): aberrações, celestiais, corruptores, dragões, elementais, fadas e mortos-vivos. Essa característica não revela a localização ou quantidade de criaturas.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
+                            <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
+                        </li>
                         <li class="li__caracteristica hidden" data-caracteristica="patrulheiro4">
                             <h3 class="nome__caracteristica">Aumento de Habilidade</h3>
                             <p class="title--sub fonte__caracteristica">Patrulheiro</p>
@@ -1744,6 +1871,59 @@
                             <p class="title--sub fonte__caracteristica">Patrulheiro</p>
                             <div class="desc__caracteristica">
                                 <p>A partir do 5º nível, você pode atacar duas vezes, ao invés de uma vez, sempre que utilizar a ação Ataque no seu turno.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
+                            <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="patrulheiro8">
+                            <h3 class="nome__caracteristica">Caminho da Terra</h3>
+                            <p class="title--sub fonte__caracteristica">Patrulheiro</p>
+                            <div class="desc__caracteristica">
+                                <p>No 8° nível, se mover através de terreno difícil não-mágico não lhe custa deslocamento adicional. Você também pode passar através de plantas não-mágicas sem ter seu deslocamento reduzido e sem sofrer dano caso apresentem espinhos ou perigos similares.</p>
+                                <br>
+                                <p>Você também tem vantagem em testes de resistência contra plantas criadas ou manipuladas magicamente para impedir movimento.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
+                            <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="patrulheiro10">
+                            <h3 class="nome__caracteristica">Esconder-se em Plena Vista</h3>
+                            <p class="title--sub fonte__caracteristica">Patrulheiro</p>
+                            <div class="desc__caracteristica">
+                                <p>A partir do 10° nível, você pode gastar 1 minuto criando uma camuflagem para si mesmo. Você precisa ter acesso a lama fresca, terra, plantas, fuligem ou outros materiais naturalmente comuns.</p>
+                                <br>
+                                <p>Quando você estiver camuflado dessa forma, você pode tentar se esconder ao se pressionar contra uma superfície sólida, como uma árvore ou muro, que seja, pelo menos, tão alto quanto você. Você recebe +10 de bônus em testes de Destreza (Furtividade) enquanto você permanecer ali parado e sem realizar ações. Caso você se mova ou realize uma ação ou reação, você precisa se camuflar novamente.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
+                            <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="patrulheiro14">
+                            <h3 class="nome__caracteristica">Sumir</h3>
+                            <p class="title--sub fonte__caracteristica">Patrulheiro</p>
+                            <div class="desc__caracteristica">
+                                <p>No 14° nível, no seu turno, você pode usar a ação de Esconder-se, com uma ação bônus. Além disso, você não pode ser rastreado por meios não-mágicos, a menos que você decida deixar um rastro.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
+                            <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="patrulheiro18">
+                            <h3 class="nome__caracteristica">Sentidos Selvagens</h3>
+                            <p class="title--sub fonte__caracteristica">Patrulheiro</p>
+                            <div class="desc__caracteristica">
+                                <p>No 18° nível, quando atacar uma criatura que você não possa ver, você não possui desvantagem nas suas jogadas de ataque.</p>
+                                <br>
+                                <p>Se você não estiver cego ou surdo, você está ciente da localização de qualquer criatura invisível a até 9 metros de você, desde que ela não esteja se escondendo.</p>
+                            </div>
+                            <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
+                            <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
+                        </li>
+                        <li class="li__caracteristica hidden" data-caracteristica="patrulheiro20">
+                            <h3 class="nome__caracteristica">Matador de Inimigos</h3>
+                            <p class="title--sub fonte__caracteristica">Patrulheiro</p>
+                            <div class="desc__caracteristica">
+                                <p>No 20° nível, você se torna um caçador incomparável de inimigos. Uma vez, em cada um dos seus turnos, você pode adicionar seu modificador de Sabedoria na jogada de ataque ou na jogada de dano de um ataque que você faça contra um dos seus inimigos favoritos.</p>
+                                <br>
+                                <p>Você pode decidir usar essa característica antes ou depois da rolagem, mas antes de qualquer efeito da jogada ser aplicado.</p>
                             </div>
                             <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
                             <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
@@ -1786,7 +1966,7 @@
                             <div class="desc__caracteristica">
                                 <p>No 2º nível, você adota um estilo de luta particular como sua especialidade. Escolha uma das opções abaixo:</p>
                                 <select class="select--caracteristica" data-estilodeluta__select="paladino">
-                                    <option>Escolha uma opção.</option>
+                                    <option>Estilo de Luta</option>
                                     <option value="defesa" data-estilodeluta__opt="defesa">Defesa</option>
                                     <option value="duelismo" data-estilodeluta__opt="duelismo">Duelismo</option>
                                     <option value="gwf" data-estilodeluta__opt="gwf">Lutar com Armas Grandes</option>
@@ -2104,6 +2284,7 @@
         <script src="assets/script/caracteristica.js"></script>
         <script src="assets/script/caracteristicas-de-classe/estilo-de-luta.js"></script>
         <script src="assets/script/caracteristicas-de-classe/metamagia.js"></script>
+        <script src="assets/script/caracteristicas-de-classe/inimigoeterreno.js"></script>
         <script src="assets/script/recursos.js"></script>
         <script src="assets/script/hitdice.js"></script>
         <script src="assets/script/iventario.js"></script>

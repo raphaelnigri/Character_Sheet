@@ -121,6 +121,12 @@
     margin-top: 4px;
 }
 
+.select--caracteristica--inline{
+    display: inline;
+    width: auto;
+    margin-top: 0px;
+}
+
 .desc__caracteristica--option{
     font-size: 1rem;
     margin-top: 4px;
@@ -131,4 +137,13 @@
     width: 100%;
     max-width: 100%;
     font-size: 1rem;
+}
+
+.wrapper--caracteristicas{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 8px;
+    row-gap: 12px;
+    column-gap: 36px;
+    justify-content: center;
 }

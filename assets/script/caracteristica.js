@@ -24,17 +24,11 @@ document.addEventListener('DOMContentLoaded',()=>{
     btnEsconder.forEach(element =>{
         element.addEventListener('click', () =>{
             element.parentNode.classList.add('hidden');
-            
-            let metamagia = element.parentNode.querySelector('[data-metamagia__select]')
-            if(metamagia){
-                element.parentNode.getElementsByTagName('option')[0].selected = true;
-                limpaOpcoesDeMetamagia ();
-            }
 
             let estiloDeLuta = element.parentNode.querySelector('[data-estilodeluta__select]')
             if(estiloDeLuta){
                 element.parentNode.getElementsByTagName('option')[0].selected = true;
-                limpaOpcoesEstiloDeLuta();
+                limpaOpcoesEstiloDeLuta(); //from estilo-de-luta.js
             }
         })
     })
