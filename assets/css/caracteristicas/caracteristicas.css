@@ -148,3 +148,9 @@
     column-gap: 36px;
     justify-content: center;
 }
+
+.wrapper--caracteristicas--select{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
