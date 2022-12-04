@@ -1,6 +1,7 @@
 const rolagemContainer = document.getElementById('rolagem__container');
 const rolagemExpressao = document.getElementById('rolagem__expressao');
 const rolagemResultado = document.getElementById('rolagem__resultado');
+const rolagemCD = document.getElementById('rolagem__cd');
 
 function roll(n){
     let resultado = Math.floor(Math.random() * n + 1);
@@ -34,6 +35,9 @@ function fechaRolagem(){
     rolagemContainer.querySelector('h2').classList.remove('rolagem--d20');
     rolagemResultado.classList.remove('critico');
     rolagemResultado.classList.remove('fracasso');
+    rolagemCD.innerHTML = ''
+    rolagemResultado.innerHTML = ''
+    rolagemExpressao.innerHTML = ''
 }
 
 document.addEventListener('DOMContentLoaded', ()=>{
@@ -195,7 +199,24 @@ function rolaIniciativa(){
     }
     rolagemExpressao.innerHTML = `1d20(${d20Resultado}) ${sinal}${modificador}`;
     rolagemResultado.innerHTML = `${d20Resultado + modificador}`;
+
+    ajustaRecursosAoRolarIniciativa();
 }
+
+//ajusta recursos baseados na rolagem de iniciativa
+function ajustaRecursosAoRolarIniciativa(){
+
+    //Inspiração Superior (bardo lvl 20)
+    let bardInspiracaoQuantidade = document.querySelector('[data-recursoquantidade="bardo__inspiracao"]');
+    let bardLvl = document.querySelector('[data-classe="bardo"]');
+
+    if(bardLvl){
+        if(bardLvl.parentNode.querySelector('[data-inputLvl]').value == 20 && bardInspiracaoQuantidade.value == 0){
+            bardInspiracaoQuantidade.value = 1;
+        }
+    }
+}
+
 
 //botao resistir a morte da seção estatisticas (rola o d20, soma modificador de con, confere resultado e marca checkbox de acordo)
 function resistirMorte(){
@@ -216,6 +237,7 @@ function resistirMorte(){
 
             if(checkbox.dataset.morte == 'sucesso' && !checkbox.checked){
                 checkbox.checked = true;
+                rolagemCD.innerHTML = `CD10 – Sucesso!`;
                 break;
             }
         }
@@ -226,6 +248,7 @@ function resistirMorte(){
 
             if(checkbox.dataset.morte == 'fracasso' && !checkbox.checked){
                 checkbox.checked = true;
+                rolagemCD.innerHTML = `CD10 – Fracasso!`;
                 break;
             }
         }

@@ -1,0 +1,65 @@
+.li__recurso--barbaro::before{
+    content: "\f66d";
+    color: var(--str);
+}
+
+.li__recurso--bardo::before{
+    content: "\f7a6";
+    color: var(--cha);
+}
+
+.li__recurso--bruxo::before{
+    content: "\f6a0";
+    color: var(--cha);
+}
+
+.li__recurso--clerigo::before{
+    content: "\f647";
+    color: var(--wis);
+    opacity: 0.825;
+}
+
+.li__recurso--druid::before{
+    font: var(--fa-font-brands);
+    font-size: 1.5rem;
+    content: "\f785";
+    color: var(--wis);
+    opacity: 0.825;
+}
+
+.li__recurso--feiticeiro::before{
+    content: "\e05d";
+    color: var(--cha);
+}
+
+.li__recurso--guerreiro::before{
+    content: "\f3ed";
+    color: var(--str);
+}
+
+.li__recurso--ladino::before{
+    content: "\e139";
+    color: var(--int);
+    transform: rotate(45deg);
+}
+
+.li__recurso--mago::before{
+    content: "\f6e8";
+    color: var(--int);
+}
+
+.li__recurso--monge::before{
+    content: "\f684";
+    color: var(--dex);
+}
+
+.li__recurso--paladino::before{
+    content: "\f441";
+    color: var(--dex);
+}
+
+.li__recurso--patrulheiro::before{
+    content: "\f1b0";
+    color: var(--wis);
+    opacity: 0.825;
+}

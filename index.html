@@ -22,6 +22,7 @@
         <link rel="stylesheet" type="text/css" href="assets/css/caracteristicas/caracteristicas.css">
         <link rel="stylesheet" type="text/css" href="assets/css/recursos/recursos.css">
         <link rel="stylesheet" type="text/css" href="assets/css/recursos/hitdice.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/recursos/recursos--classe.css">
         <link rel="stylesheet" type="text/css" href="assets/css/outras.css">
         <link rel="stylesheet" type="text/css" href="assets/css/iventario/iventario.css">
         <link rel="stylesheet" type="text/css" href="assets/css/iventario/table.css">
@@ -431,7 +432,7 @@
                                 <br>
                                 <p>Sua fúria dura 1 minuto e termina prematuramente quando  você cair inconsciente ou caso seu turno termine sem que você tenha atacado uma criatura hostil ou sofrido dano. No seu turno com uma ação bônus, você pode terminar a sua fúria.</p>
                                 <br>
-                                <p>Você recupera suas fúrias com um descanso longo.</p>
+                                <p>Você pode entrar em fúria 2 vezes no 1º nível e ganha um uso adicional dessaa característica no 3º, 6º, 12º e 17º níveis e recupera suas fúrias com um descanso longo.</p>
                             </div>
                             <button class="btn--inspecionar btn--inspecionar--caracteristica" data-btn__caracteristica="inspecionar"></button>
                             <button class="btn--remove btn--remove--caracteristica" data-btn__caracteristica="esconder"></button>
@@ -852,9 +853,9 @@
                             <div class="desc__caracteristica">
                                 <p>No 2º nível, você é capaz de canalizar a energia da sua divindade.Você começa com dois efeitos: Expulsar Mortos-Vivos e outro efeito determinado pelo seu domínio.</p>
                                 <br>
-                                <p>Ao usar seu Canalizar Divindade, você escolhe qual efeito deseja utilizar e recupera os usos dessa característica ao realizar um descanso curto ou longo.</p>
+                                <p>Ao usar seu Canalizar Divindade, você escolhe qual efeito deseja utilizar e a CD para eles, caso necessitem, é sempre a mesma utilizada nas suas magias de clérigo.</p>
                                 <br>
-                                <p>A CD para efeitos dessa característica é a mesma utilizada nas suas magias de clérigo.</p>
+                                <p>Você ganha um uso adicional dessa caracteristica no 6º e 18º níveis e recupera os seus usos ao realizar um descanso curto ou longo.</p>
                                 <p class="subtitle--caracteristica">Canalizar Divindade – Expulsar Mortos Vivos</p>
                                 <p>Com uma ação, cada morto-vivo que puder ver ou ouvir você em um raio de 9m (30feet), devem fazer um teste de resistência de Sabedoria, se falhar a criatura é expulsa por 1 minuto ou até sofrer algum dano.</p>
                                 <br>
@@ -938,7 +939,7 @@
                             <h3 class="nome__caracteristica">Forma Selvagem</h3>
                             <p class="title--sub fonte__caracteristica">Druida</p>
                             <div class="desc__caracteristica">
-                                <p>A partir do 2º nível, Você pode usar uma ação para assumir a forma de uma besta que você já tenha visto antes. Você recupera os usos dessa habilidade com um descanso curto ou longo.</p>
+                                <p>A partir do 2º nível, Você pode usar uma ação para assumir a forma de uma besta que você já tenha visto antes. Você pode usar essa caracteristica 2 vezes e recupera seus usos com um descanso curto ou longo.</p>
                                 <br>
                                 <p>No 2º nível você pode se transformar em uma besta de CR1/4 ou menor que não possua deslocamento de vôo ou aquático. No 4º nível, o CR máximo aumenta para 1/2 e a besta pode ter deslocamento aquático, no 8º nível, o CR máximo aumenta para 1 e a besta pode ter deslocamento de vôo.</p>
                                 <br>
@@ -2227,9 +2228,9 @@
                 <ul class="lista__recursos" id="lista__recursos">
                     <li class="li__recurso li__recurso--hitdice">
                         <label class="total__label">Total:
-                            <input class="caixa caixa--recurso caixa--total" type="number" placeholder="0" readonly id="total__hitdice">
+                            <input class="caixa caixa--recurso caixa--total" data-recursototal="" type="number" placeholder="0" readonly id="total__hitdice">
                         </label>
-                        <input class="caixa caixa--recurso caixa--quantidade" type="number" placeholder="0" id="quantidade__hitdice">
+                        <input class="caixa caixa--recurso caixa--quantidade" data-recursoquantidade="" type="number" placeholder="0" id="quantidade__hitdice">
                         <select class="hitdice" id="select__hitdice">
                             <option class="cor__cha" value="4">d4</option>
                             <option class="cor__int" value="6" selected>d6</option>
@@ -2239,6 +2240,120 @@
                         </select>
                         <input class="title title--sub title--recurso__input" value="Dados de Vida" type="text" readonly>
                         <button aria-label="Rolar Dado de Vida" class="roll btn--remove--recurso" id="roll__hitdice"></button>
+                    </li>
+                    <li class="li__recurso li__recurso--barbaro hidden" data-caracteristica="barbaro1">
+                        <label class="total__label">Total:
+                            <input class="caixa caixa--recurso caixa--total" data-recursototal="barbaro__furia" type="number" value="2" readonly>
+                        </label>
+                        <input class="caixa caixa--recurso caixa--quantidade" data-recursoquantidade="" type="number" placeholder="0">
+                        <input class="title title--sub title--recurso__input" value="Fúria" type="text" readonly>
+                    </li>
+                    <li class="li__recurso li__recurso--hitdice li__recurso--barbaro hidden" data-caracteristica="barbaro11">
+                        <label class="total__label">Usos:
+                            <input class="caixa caixa--recurso caixa--total" type="number" value="0" readonly id="furiaimplacavel__usos">
+                        </label>
+                        <p class="hitdice hitdice--CD">CD:</p>
+                        <input class="caixa caixa--recurso caixa--quantidade" type="number" value="10" readonly id="furiaimplacavel__CD">
+                        <input class="title title--sub title--recurso__input" value="F. Implacável" type="text" readonly>
+                        <button aria-label="Rolar Dado de Vida" class="roll btn--remove--recurso" id="roll__furiaimplacavel"></button>
+                    </li>
+                    <li class="li__recurso li__recurso--bardo hidden" data-caracteristica="bardo1">
+                        <label class="total__label">Total:
+                            <input class="caixa caixa--recurso caixa--total" data-recursototal="bardo__inspiracao" type="number" value="0" readonly>
+                        </label>
+                        <input class="caixa caixa--recurso caixa--quantidade" data-recursoquantidade="bardo__inspiracao" type="number" placeholder="0">
+                        <input class="title title--sub title--recurso__input" value="B. Inspiração" type="text" readonly>
+                    </li>
+                    <li class="li__recurso li__recurso--bruxo hidden" data-caracteristica="bruxo20">
+                        <label class="total__label">Total:
+                            <input class="caixa caixa--recurso caixa--total" data-recursototal="" type="number" value="1" readonly>
+                        </label>
+                        <input class="caixa caixa--recurso caixa--quantidade" data-recursoquantidade="" type="number" placeholder="0">
+                        <input class="title title--sub title--recurso__input" value="Mestre Místico" type="text" readonly>
+                    </li>
+                    <li class="li__recurso li__recurso--clerigo hidden" data-caracteristica="clerigo2">
+                        <label class="total__label">Total:
+                            <input class="caixa caixa--recurso caixa--total" data-recursototal="clerigo__canalizar" type="number" value="1" readonly>
+                        </label>
+                        <input class="caixa caixa--recurso caixa--quantidade" data-recursoquantidade="" type="number" placeholder="0">
+                        <input class="title title--sub title--recurso__input" value="Canalizar D." type="text" readonly>
+                    </li>
+                    <li class="li__recurso li__recurso--clerigo hidden" data-caracteristica="clerigo10">
+                        <label class="total__label">Total:
+                            <input class="caixa caixa--recurso caixa--total" data-recursototal="" type="number" value="1" readonly>
+                        </label>
+                        <input class="caixa caixa--recurso caixa--quantidade" data-recursoquantidade="" type="number" placeholder="0">
+                        <input class="title title--sub title--recurso__input" value="Intervenção D." type="text" readonly>
+                    </li>
+                    <li class="li__recurso li__recurso--druid hidden" data-caracteristica="druid2">
+                        <label class="total__label">Total:
+                            <input class="caixa caixa--recurso caixa--total" data-recursototal="" type="number" value="2" readonly>
+                        </label>
+                        <input class="caixa caixa--recurso caixa--quantidade" data-recursoquantidade="" type="number" placeholder="0">
+                        <input class="title title--sub title--recurso__input" value="Forma Selvgm." type="text" readonly>
+                    </li>
+                    <li class="li__recurso li__recurso--feiticeiro hidden" data-caracteristica="feiticeiro2">
+                        <label class="total__label">Total:
+                            <input class="caixa caixa--recurso caixa--total" data-recursototal="feiticeiro__fonte" type="number" value="1" readonly>
+                        </label>
+                        <input class="caixa caixa--recurso caixa--quantidade" data-recursoquantidade="" type="number" placeholder="0">
+                        <input class="title title--sub title--recurso__input" value="Fonte de Magia" type="text" readonly>
+                    </li>
+                    <li class="li__recurso li__recurso--guerreiro hidden" data-caracteristica="guerreiro1">
+                        <label class="total__label">Total:
+                            <input class="caixa caixa--recurso caixa--total" data-recursototal="" type="number" value="1" readonly>
+                        </label>
+                        <input class="caixa caixa--recurso caixa--quantidade" data-recursoquantidade="" type="number" placeholder="0">
+                        <input class="title title--sub title--recurso__input" value="Re. Fôlego" type="text" readonly>
+                    </li>
+                    <li class="li__recurso li__recurso--guerreiro hidden" data-caracteristica="guerreiro2">
+                        <label class="total__label">Total:
+                            <input class="caixa caixa--recurso caixa--total" data-recursototal="guerreiro__surto" type="number" value="1" readonly>
+                        </label>
+                        <input class="caixa caixa--recurso caixa--quantidade" data-recursoquantidade="" type="number" placeholder="0">
+                        <input class="title title--sub title--recurso__input" value="Surto de Ação" type="text" readonly>
+                    </li>
+                    <li class="li__recurso li__recurso--guerreiro hidden" data-caracteristica="guerreiro9">
+                        <label class="total__label">Total:
+                            <input class="caixa caixa--recurso caixa--total" data-recursototal="guerreiro__indomavel" type="number" value="1" readonly>
+                        </label>
+                        <input class="caixa caixa--recurso caixa--quantidade" data-recursoquantidade="" type="number" placeholder="0">
+                        <input class="title title--sub title--recurso__input" value="Indomável" type="text" readonly>
+                    </li>
+                    <li class="li__recurso li__recurso--ladino hidden" data-caracteristica="ladino20">
+                        <label class="total__label">Total:
+                            <input class="caixa caixa--recurso caixa--total" data-recursototal="" type="number" value="1" readonly>
+                        </label>
+                        <input class="caixa caixa--recurso caixa--quantidade" data-recursoquantidade="" type="number" placeholder="0">
+                        <input class="title title--sub title--recurso__input" value="Golpe De Sorte" type="text" readonly>
+                    </li>
+                    <li class="li__recurso li__recurso--monge hidden" data-caracteristica="monge2">
+                        <label class="total__label">Total:
+                            <input class="caixa caixa--recurso caixa--total" data-recursototal="monge__ki" type="number" value="2" readonly>
+                        </label>
+                        <input class="caixa caixa--recurso caixa--quantidade" data-recursoquantidade="" type="number" placeholder="0">
+                        <input class="title title--sub title--recurso__input" value="ki" type="text" readonly>
+                    </li>
+                    <li class="li__recurso li__recurso--paladino hidden" data-caracteristica="paladino1">
+                        <label class="total__label">Total:
+                            <input class="caixa caixa--recurso caixa--total" data-recursototal="paladino__curar" type="number" value="5" readonly>
+                        </label>
+                        <input class="caixa caixa--recurso caixa--quantidade" data-recursoquantidade="" type="number" placeholder="0">
+                        <input class="title title--sub title--recurso__input" value="Curar p. Mãos" type="text" readonly>
+                    </li>
+                    <li class="li__recurso li__recurso--paladino hidden" data-caracteristica="paladino3">
+                        <label class="total__label">Total:
+                            <input class="caixa caixa--recurso caixa--total" data-recursototal="" type="number" value="1" readonly>
+                        </label>
+                        <input class="caixa caixa--recurso caixa--quantidade" data-recursoquantidade="" type="number" placeholder="0">
+                        <input class="title title--sub title--recurso__input" value="Canalizar D." type="text" readonly>
+                    </li>
+                    <li class="li__recurso li__recurso--paladino hidden" data-caracteristica="paladino1">
+                        <label class="total__label">Total:
+                            <input class="caixa caixa--recurso caixa--total" data-recursototal="paladino__purificante" type="number" value="1" readonly>
+                        </label>
+                        <input class="caixa caixa--recurso caixa--quantidade" data-recursoquantidade="paladino__purificante" type="number" placeholder="0">
+                        <input class="title title--sub title--recurso__input" value="T. Purificante" type="text" readonly>
                     </li>
                 </ul>
             </section>
@@ -2369,6 +2484,7 @@
                 <div class="wrapper wrapper--resultado">
                     <p id="rolagem__expressao"></p>
                     <p class="resultado--total" id="rolagem__resultado"></p>
+                    <p id="rolagem__cd"></p>
                 </div>
             </section>
         </main>
@@ -2385,6 +2501,7 @@
         <script src="assets/script/caracteristicas-de-classe/metamagia.js"></script>
         <script src="assets/script/caracteristicas-de-classe/inimigoeterreno.js"></script>
         <script src="assets/script/caracteristicas-de-classe/pacto.js"></script>
+        <script src="assets/script/caracteristicas-de-classe/furia.js"></script>
         <script src="assets/script/recursos.js"></script>
         <script src="assets/script/hitdice.js"></script>
         <script src="assets/script/iventario.js"></script>

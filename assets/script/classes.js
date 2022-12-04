@@ -118,6 +118,7 @@ function calculaLvl(){
     calculaPericiasPassivas();//from atributos.js
     calculaNumeroDeHitdices();//from hitdice.js
     defineCaracteristicas();
+    ajustaRecursosPorLvl();
 }
 
 function calculaPv(){
@@ -269,5 +270,90 @@ function defineSaves(){
             document.querySelector('[data-save__prof="wis"]').checked = true
             document.querySelector('[data-save__prof="int"]').checked = true
         }
+    }
+}
+
+function ajustaRecursosPorLvl(){
+    //Furia
+    let barbaroFuriaTotal = document.querySelector('[data-recursototal="barbaro__furia"]');
+    let barbaroLvl = document.querySelector('[data-classe="barbaro"]');
+
+    if(barbaroLvl){
+        if(barbaroLvl.parentNode.querySelector('[data-inputLvl]').value <= 3){
+            barbaroFuriaTotal.value = 2;
+        }
+        if(barbaroLvl.parentNode.querySelector('[data-inputLvl]').value >= 3){
+            barbaroFuriaTotal.value = 3;
+        }
+        if(barbaroLvl.parentNode.querySelector('[data-inputLvl]').value >= 6){
+            barbaroFuriaTotal.value = 4;
+        }
+        if(barbaroLvl.parentNode.querySelector('[data-inputLvl]').value >= 12){
+            barbaroFuriaTotal.value = 5;
+        }
+        if(barbaroLvl.parentNode.querySelector('[data-inputLvl]').value >= 17){
+            barbaroFuriaTotal.value = 6;
+        }
+    }
+
+    //Canalizar Divindade
+    let canalizarClerigoTotal = document.querySelector('[data-recursototal="clerigo__canalizar"]');
+    let clerigoLvl = document.querySelector('[data-classe="clerigo"]');
+
+    if(clerigoLvl){
+        if(clerigoLvl.parentNode.querySelector('[data-inputLvl]').value < 6){
+            canalizarClerigoTotal.value = 1;
+        }
+        if(clerigoLvl.parentNode.querySelector('[data-inputLvl]').value >= 6){
+            canalizarClerigoTotal.value = 2;
+        }
+        if(clerigoLvl.parentNode.querySelector('[data-inputLvl]').value >= 18){
+            canalizarClerigoTotal.value = 3;
+        }
+    }
+
+    //Surto de Ação e Indomavel
+    let surtoTotal = document.querySelector('[data-recursototal="guerreiro__surto"]');
+    let indomavelTotal = document.querySelector('[data-recursototal="guerreiro__indomavel"]');
+    let guerreiroLvl = document.querySelector('[data-classe="guerreiro"]');
+
+    if(guerreiroLvl){
+        if(guerreiroLvl.parentNode.querySelector('[data-inputLvl]').value < 13){
+            indomavelTotal.value = 1;
+        }
+        if(guerreiroLvl.parentNode.querySelector('[data-inputLvl]').value >= 13){
+            indomavelTotal.value = 2;
+        }
+        if(guerreiroLvl.parentNode.querySelector('[data-inputLvl]').value < 17){
+            surtoTotal.value = 1;
+        }
+        if(guerreiroLvl.parentNode.querySelector('[data-inputLvl]').value >= 17){
+            surtoTotal.value = 2;
+            indomavelTotal.value = 3;
+        }
+    }
+
+    //Fonte de Magia
+    let fonteMagiaTotal = document.querySelector('[data-recursototal="feiticeiro__fonte"]');
+    let feiticeiroLvl = document.querySelector('[data-classe="feiticeiro"]');
+
+    if(feiticeiroLvl){
+        fonteMagiaTotal.value = feiticeiroLvl.parentNode.querySelector('[data-inputLvl]').value;
+    }
+
+    //Ki
+    let kiTotal = document.querySelector('[data-recursototal="monge__ki"]');
+    let mongeLvl = document.querySelector('[data-classe="monge"]');
+
+    if(mongeLvl){
+        kiTotal.value = mongeLvl.parentNode.querySelector('[data-inputLvl]').value;
+    }
+
+    //Curar Pelas Mãos
+    let curarTotal = document.querySelector('[data-recursototal="paladino__curar"]');
+    let paladinoLvl = document.querySelector('[data-classe="paladino"]');
+
+    if(paladinoLvl){
+        curarTotal.value = (paladinoLvl.parentNode.querySelector('[data-inputLvl]').value)*5;
     }
 }

@@ -18,4 +18,12 @@
     background: transparent;
     border-right: 1px solid black;
     cursor: pointer;
+
+}
+
+.hitdice--CD{
+    text-align: center;
+    align-self: center;
+    border: none;
+    font-weight: bold;
 }

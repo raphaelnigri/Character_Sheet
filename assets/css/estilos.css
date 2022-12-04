@@ -130,7 +130,7 @@ main{
 }
 
 .hidden{
-  position: absolute;
+  position: absolute !important;
   visibility: hidden;
   opacity: 0;
 }

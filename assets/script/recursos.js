@@ -1,5 +1,20 @@
 const listaDeRecursos = document.getElementById('lista__recursos');
 const addRecursoBtn = document.getElementById('recurso__btn--add');
+const docRecursoQuantidade = document.querySelectorAll('[data-recursoquantidade]');
+
+function limitaQuantidadeRecurso(recurso){
+    let docRecursoTotal = parseInt(recurso.parentNode.querySelector('[data-recursototal]').value);
+
+    if(parseInt(recurso.value) >= docRecursoTotal){
+        recurso.value = docRecursoTotal;
+    }
+}
+
+docRecursoQuantidade.forEach(element =>{
+    element.addEventListener('input', ()=>{
+        limitaQuantidadeRecurso(element);
+    })
+})
 
 addRecursoBtn.addEventListener('click', () =>{
         addRecurso();
@@ -19,12 +34,13 @@ function addRecurso(){
     recurso.appendChild(recursoLabel);
     recursoLabel.classList.add('total__label');
     recursoLabel.innerHTML = 'Total:';
-    
+
     recursoLabel.appendChild(recursoTotal);
     recursoTotal.classList.add('caixa');
     recursoTotal.classList.add('caixa--recurso');
     recursoTotal.classList.add('caixa--total');
     recursoTotal.setAttribute('type','number');
+    recursoTotal.setAttribute('data-recursototal','');
     recursoTotal.setAttribute('placeholder','0');
 
     recurso.appendChild(recursoQuantidade);
@@ -32,7 +48,11 @@ function addRecurso(){
     recursoQuantidade.classList.add('caixa--recurso');
     recursoQuantidade.classList.add('caixa--quantidade');
     recursoQuantidade.setAttribute('type','number');
-    recursoQuantidade.setAttribute('placeholder','0/0');
+    recursoQuantidade.setAttribute('data-recursoquantidade','');
+    recursoQuantidade.setAttribute('placeholder','0');
+    recursoQuantidade.addEventListener('input', ()=>{
+        limitaQuantidadeRecurso(recursoQuantidade);
+    });
 
     recurso.appendChild(recursoNome);
     recursoNome.classList.add('title');

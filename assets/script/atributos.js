@@ -65,11 +65,13 @@ function ajustaModificador(atributo){
     if(atributo.value < 10){
         modifier.innerHTML = parseInt((atributo.value - 11)/2);
         calculaEstatisticasDex();
+        calculaEstatisticasCha();
         calculaPericiasPassivas();
         calculaPv();
     } else{
         modifier.innerHTML = `+${parseInt((atributo.value - 10)/2)}`;
         calculaEstatisticasDex();
+        calculaEstatisticasCha();
         calculaPericiasPassivas();
         calculaPv();
     }
@@ -130,15 +132,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
     })
 })
 
-function calculaEstatisticasDex(){
-    let modDex = parseInt(document.querySelector('[data-dex]').innerHTML);
-    let classeDeArmadura = document.getElementById('ca');
-    let iniciativa = document.getElementById('iniciativa');
-
-    iniciativa.placeholder = modDex;
-    classeDeArmadura.placeholder = 10 + modDex;
-}
-
 function calculaPericiasPassivas(){
     let modInt = parseInt(document.querySelector('[data-int]').innerHTML);
     let modWis = parseInt(document.querySelector('[data-wis]').innerHTML);
@@ -165,5 +158,29 @@ function calculaPericiasPassivas(){
     }
     if(investigacaoProf.checked && investigacaoExp.checked || !investigacaoProf.checked && investigacaoExp.checked){
         investigacaoPassiva.placeholder = 10 + modInt + (parseInt(bonusDeProficiencia.innerHTML)*2);
+    }
+}
+
+function calculaEstatisticasDex(){
+    let modDex = parseInt(document.querySelector('[data-dex]').innerHTML);
+    let classeDeArmadura = document.getElementById('ca');
+    let iniciativa = document.getElementById('iniciativa');
+
+    iniciativa.placeholder = modDex;
+    classeDeArmadura.placeholder = 10 + modDex;
+}
+
+function calculaEstatisticasCha(){
+    let modCha = parseInt(document.querySelector('[data-cha]').innerHTML);
+
+    let bardInspiracaoTotal = document.querySelector('[data-recursototal="bardo__inspiracao"]');
+    let paladinToquePurificanteTotal = document.querySelector('[data-recursototal="paladino__purificante"]');
+    
+    if(modCha >= 1){
+        bardInspiracaoTotal.value = modCha;
+        paladinToquePurificanteTotal.value = modCha;
+    } else{
+        bardInspiracaoTotal.value = 1;
+        paladinToquePurificanteTotal.value = 1;
     }
 }

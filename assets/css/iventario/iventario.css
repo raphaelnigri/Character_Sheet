@@ -91,7 +91,7 @@
 
 .li__recurso--iventario::before{
     content: "\f0c3";
-    color: var(--str);
+    color: black;
     margin-top: 4px;
 }
 
