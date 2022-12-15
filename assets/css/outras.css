@@ -56,19 +56,10 @@
 }
 
 .outras__p{
-    font-family: 'montez', sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
     text-align: left;
     margin-right: 12px;
-}
-
-.outras__p--prof{
-    color: var(--dex)
-}
-
-.outras__p--idioma{
-    color: var(--cha)
 }
 
 .wrapper--ferramenta{
@@ -77,11 +68,6 @@
     "ferramenta ferramenta remover"
     "label select roll";
     row-gap: 4px;
-}
-
-.outras__p--ferramenta{
-    color: var(--int);
-    grid-area: ferramenta;
 }
 
 .label--ferramenta{

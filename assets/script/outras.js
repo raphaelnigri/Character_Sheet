@@ -21,7 +21,7 @@ function addProficiencia(nome){
 
     novaProf.appendChild(prof);
     prof.classList.add('outras__p');
-    prof.classList.add('outras__p--prof');
+    prof.classList.add('cor__prof');
     prof.innerHTML=`${nome.value}`;
 
     novaProf.appendChild(del);
@@ -56,7 +56,7 @@ function addIdioma(nome){
 
     novaProf.appendChild(prof);
     prof.classList.add('outras__p');
-    prof.classList.add('outras__p--idioma');
+    prof.classList.add('cor__cha');
     prof.innerHTML=`${nome.value}`;
 
     novaProf.appendChild(del);
@@ -102,7 +102,7 @@ function addFerramenta(nome){
 
     novaProf.appendChild(prof);
     prof.classList.add('outras__p');
-    prof.classList.add('outras__p--ferramenta');
+    prof.classList.add('cor__int');
     prof.innerHTML=`${nome.value}`;
 
     novaProf.appendChild(label);
