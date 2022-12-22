@@ -273,6 +273,9 @@ function defineSaves(){
     }
 }
 
+
+//recursos de classes:
+
 function ajustaRecursosPorLvl(){
     //Furia
     let barbaroFuriaTotal = document.querySelector('[data-recursototal="barbaro__furia"]');
