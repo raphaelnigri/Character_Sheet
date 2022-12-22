@@ -38,7 +38,6 @@ const idioma = document.getElementById('idioma');
 const listaIdiomas = document.getElementById('lista__idioma');
 const addIdiomaBtn = document.getElementById('idioma--add');
 
-
 addIdiomaBtn.addEventListener('click', () =>{
     if(idioma.value != '' && checaProfRepetida(idioma) != 'repetido'){
         addIdioma(idioma);
@@ -73,7 +72,6 @@ function addIdioma(nome){
 const ferramenta = document.getElementById('ferramenta');
 const listaFerramentas = document.getElementById('lista__ferramenta');
 const addFerramentaBtn = document.getElementById('ferramenta--add');
-
 
 addFerramentaBtn.addEventListener('click', () =>{
     if(ferramenta.value != '' && checaProfRepetida(ferramenta) != 'repetido'){

@@ -76,6 +76,7 @@ function addClass(nome,nivel){
         novaClasse.remove();
         calculaLvl();
         defineSaves();
+        defineProficiencias();
     })
 
     novaClasse.appendChild(arquetipo);
@@ -88,6 +89,7 @@ function addClass(nome,nivel){
     arquetipo.classList.add('arquetipo');
 
     defineSaves();
+    defineProficiencias();
 }
 
 function checaClasseRepetida(nome){
@@ -359,4 +361,496 @@ function ajustaRecursosPorLvl(){
     if(paladinoLvl){
         curarTotal.value = (paladinoLvl.parentNode.querySelector('[data-inputLvl]').value)*5;
     }
+}
+
+
+// Proficiencias de Classe:
+
+function defineProficiencias(){
+    let primeiraClasse = document.querySelector('[data-classe]');
+    let multiclasse = document.querySelectorAll('[data-classe]');
+    let proficienciasDeClasse = document.querySelectorAll('[data-proficiencia__classe]');
+
+    proficienciasDeClasse.forEach(element =>{
+        element.classList.add('hidden');
+    })
+
+    if(primeiraClasse){
+        primeiraClasse = primeiraClasse.dataset.classe;
+
+        if (primeiraClasse == 'barbaro'){
+            proficienciasDeClasse.forEach(element =>{
+                let prof = element.dataset.proficiencia__classe;
+                
+                if (prof == 'shields'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'lightarmor'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'mediumarmor'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'simpleweapons'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'martialweapons'){
+                    element.classList.remove('hidden');
+                }
+            })
+        }
+        
+        if (primeiraClasse == 'bardo'){
+            proficienciasDeClasse.forEach(element =>{
+                let prof = element.dataset.proficiencia__classe;
+                
+                if (prof == 'lightarmor'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'mediumarmor'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'simpleweapons'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'simpleweapons'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'handcrossbows'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'longswords'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'shortswords'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'rapiers'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'instrument1'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'instrument2'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'instrument3'){
+                    element.classList.remove('hidden');
+                }
+            })
+        }
+
+        if (primeiraClasse == 'clerigo'){
+            proficienciasDeClasse.forEach(element =>{
+                let prof = element.dataset.proficiencia__classe;
+                
+                if (prof == 'shields'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'lightarmor'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'mediumarmor'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'simpleweapons'){
+                    element.classList.remove('hidden');
+                }
+            })
+        }
+
+        if (primeiraClasse == 'druida'){
+            proficienciasDeClasse.forEach(element =>{
+                let prof = element.dataset.proficiencia__classe;
+                
+                if (prof == 'shields'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'lightarmor'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'mediumarmor'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'clubs'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'daggers'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'darts'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'javelins'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'maces'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'staffs'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'scimitars'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'sickles'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'slings'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'spears'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'herbalism'){
+                    element.classList.remove('hidden');
+                }
+            })
+        }
+
+        if (primeiraClasse == 'guerreiro'){
+            proficienciasDeClasse.forEach(element =>{
+                let prof = element.dataset.proficiencia__classe;
+                
+                if (prof == 'shields'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'lightarmor'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'mediumarmor'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'heavyarmor'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'simpleweapons'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'martialweapons'){
+                    element.classList.remove('hidden');
+                }
+            })
+        }
+
+        if (primeiraClasse == 'monge'){
+            proficienciasDeClasse.forEach(element =>{
+                let prof = element.dataset.proficiencia__classe;
+                
+                if (prof == 'simpleweapons'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'shortswords'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'monktool'){
+                    element.classList.remove('hidden');
+                }
+            })
+        }
+
+        if (primeiraClasse == 'paladino'){
+            proficienciasDeClasse.forEach(element =>{
+                let prof = element.dataset.proficiencia__classe;
+                
+                if (prof == 'shields'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'lightarmor'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'mediumarmor'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'heavyarmor'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'simpleweapons'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'martialweapons'){
+                    element.classList.remove('hidden');
+                }
+            })
+        }
+
+        if (primeiraClasse == 'patrulheiro'){
+            proficienciasDeClasse.forEach(element =>{
+                let prof = element.dataset.proficiencia__classe;
+                
+                if (prof == 'shields'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'lightarmor'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'mediumarmor'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'simpleweapons'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'martialweapons'){
+                    element.classList.remove('hidden');
+                }
+            })
+        }
+
+        if (primeiraClasse == 'ladino'){
+            proficienciasDeClasse.forEach(element =>{
+                let prof = element.dataset.proficiencia__classe;
+                
+                if (prof == 'lightarmor'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'simpleweapons'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'handcrossbows'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'longswords'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'shortswords'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'rapiers'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'thievestools'){
+                    element.classList.remove('hidden');
+                }
+            })
+        }
+
+        if (primeiraClasse == 'feiticeiro'){
+            proficienciasDeClasse.forEach(element =>{
+                let prof = element.dataset.proficiencia__classe;
+                
+                if (prof == 'daggers'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'darts'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'staffs'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'slings'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'lightcrossbows'){
+                    element.classList.remove('hidden');
+                }
+            })
+        }
+
+        if (primeiraClasse == 'bruxo'){
+            proficienciasDeClasse.forEach(element =>{
+                let prof = element.dataset.proficiencia__classe;
+                
+                if (prof == 'lightarmor'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'simpleweapons'){
+                    element.classList.remove('hidden');
+                }
+            })
+        }
+
+        if (primeiraClasse == 'mago'){
+            proficienciasDeClasse.forEach(element =>{
+                let prof = element.dataset.proficiencia__classe;
+                
+                if (prof == 'daggers'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'darts'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'staffs'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'slings'){
+                    element.classList.remove('hidden');
+                }
+                if (prof == 'lightcrossbows'){
+                    element.classList.remove('hidden');
+                }
+            })
+        }
+    }
+
+    multiclasse.forEach(element =>{
+        if(element.dataset.classe != primeiraClasse){
+            multiclasse = element.dataset.classe;
+
+            if(multiclasse == 'barbaro'){
+                proficienciasDeClasse.forEach(element =>{
+                    let prof = element.dataset.proficiencia__classe;
+
+                    if (prof == 'shields'){
+                        element.classList.remove('hidden');
+                    }
+                    if (prof == 'simpleweapons'){
+                        element.classList.remove('hidden');
+                    }
+                    if (prof == 'martialweapons'){
+                        element.classList.remove('hidden');
+                    }
+                })
+            }
+
+            if(multiclasse == 'bardo'){
+                proficienciasDeClasse.forEach(element =>{
+                    let prof = element.dataset.proficiencia__classe;
+
+                    if (prof == 'lightarmor'){
+                        element.classList.remove('hidden');
+                    }
+                    if (prof == 'instrument1'){
+                        element.classList.remove('hidden');
+                    }
+                })
+            }
+
+            if(multiclasse == 'clerigo'){
+                proficienciasDeClasse.forEach(element =>{
+                    let prof = element.dataset.proficiencia__classe;
+
+                    if (prof == 'shields'){
+                        element.classList.remove('hidden');
+                    }
+                    if (prof == 'lightarmor'){
+                        element.classList.remove('hidden');
+                    }
+                    if (prof == 'mediumarmor'){
+                        element.classList.remove('hidden');
+                    }
+                })
+            }
+
+            if(multiclasse == 'druida'){
+                proficienciasDeClasse.forEach(element =>{
+                    let prof = element.dataset.proficiencia__classe;
+
+                    if (prof == 'shields'){
+                        element.classList.remove('hidden');
+                    }
+                    if (prof == 'lightarmor'){
+                        element.classList.remove('hidden');
+                    }
+                    if (prof == 'mediumarmor'){
+                        element.classList.remove('hidden');
+                    }
+                })
+            }
+
+            if(multiclasse == 'guerreiro'){
+                proficienciasDeClasse.forEach(element =>{
+                    let prof = element.dataset.proficiencia__classe;
+
+                    if (prof == 'shields'){
+                        element.classList.remove('hidden');
+                    }
+                    if (prof == 'lightarmor'){
+                        element.classList.remove('hidden');
+                    }
+                    if (prof == 'mediumarmor'){
+                        element.classList.remove('hidden');
+                    }
+                    if (prof == 'simpleweapons'){
+                        element.classList.remove('hidden');
+                    }
+                    if (prof == 'martialweapons'){
+                        element.classList.remove('hidden');
+                    }
+                })
+            }
+
+            if(multiclasse == 'monge'){
+                proficienciasDeClasse.forEach(element =>{
+                    let prof = element.dataset.proficiencia__classe;
+
+                    if (prof == 'simpleweapons'){
+                        element.classList.remove('hidden');
+                    }
+                    if (prof == 'shortswords'){
+                        element.classList.remove('hidden');
+                    }
+                })
+            }
+
+            if(multiclasse == 'paladino'){
+                proficienciasDeClasse.forEach(element =>{
+                    let prof = element.dataset.proficiencia__classe;
+
+                    if (prof == 'shields'){
+                        element.classList.remove('hidden');
+                    }
+                    if (prof == 'lightarmor'){
+                        element.classList.remove('hidden');
+                    }
+                    if (prof == 'mediumarmor'){
+                        element.classList.remove('hidden');
+                    }
+                    if (prof == 'simpleweapons'){
+                        element.classList.remove('hidden');
+                    }
+                    if (prof == 'martialweapons'){
+                        element.classList.remove('hidden');
+                    }
+                })
+            }
+
+            if(multiclasse == 'patrulheiro'){
+                proficienciasDeClasse.forEach(element =>{
+                    let prof = element.dataset.proficiencia__classe;
+
+                    if (prof == 'shields'){
+                        element.classList.remove('hidden');
+                    }
+                    if (prof == 'lightarmor'){
+                        element.classList.remove('hidden');
+                    }
+                    if (prof == 'mediumarmor'){
+                        element.classList.remove('hidden');
+                    }
+                    if (prof == 'simpleweapons'){
+                        element.classList.remove('hidden');
+                    }
+                    if (prof == 'martialweapons'){
+                        element.classList.remove('hidden');
+                    }
+                })
+            }
+
+            if(multiclasse == 'ladino'){
+                proficienciasDeClasse.forEach(element =>{
+                    let prof = element.dataset.proficiencia__classe;
+
+                    if (prof == 'lightarmor'){
+                        element.classList.remove('hidden');
+                    }
+                    if (prof == 'thievestools'){
+                        element.classList.remove('hidden');
+                    }
+                })
+            }
+
+            if(multiclasse == 'bruxo'){
+                proficienciasDeClasse.forEach(element =>{
+                    let prof = element.dataset.proficiencia__classe;
+
+                    if (prof == 'lightarmor'){
+                        element.classList.remove('hidden');
+                    }
+                    if (prof == 'simpleweapons'){
+                        element.classList.remove('hidden');
+                    }
+                })
+            }
+        }
+    })
 }
