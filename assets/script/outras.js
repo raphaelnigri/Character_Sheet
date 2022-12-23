@@ -172,6 +172,14 @@ function addFerramenta(nome){
 }
 
 //muda a cor do select baseado no valor selecionado
+const ferramentaSelect = document.querySelectorAll('[data-ferramenta="select"]');
+
+ferramentaSelect.forEach(select =>{
+    select.addEventListener('change', ()=>{
+        trocaCorDoValor(select);
+    });
+});
+
 function trocaCorDoValor(elemento){
     if(elemento.value == 'str'){
         elemento.classList.add('cor__str');
@@ -223,6 +231,7 @@ function trocaCorDoValor(elemento){
     }
 }
 
+
 //checa repetição
 function checaProfRepetida(nome){
     let lista = document.querySelectorAll('[data-proficiencia]');
@@ -236,7 +245,17 @@ function checaProfRepetida(nome){
     return repetido;
 }
 
+
 //rola o d20 aplicando os bonus do atributo selecionado e soma proficiencia
+const ferramentaRoll = document.querySelectorAll('[data-ferramenta="roll"]');
+
+ferramentaRoll.forEach(btn =>{
+    btn.addEventListener('click', ()=>{
+        let select = btn.parentNode.querySelector('[data-ferramenta="select"]')
+        rolaFerramenta(select.value);
+    });
+});
+
 function rolaFerramenta(atributo){
     if(!rolagemContainer.classList.contains('hidden')){
         fechaRolagem();

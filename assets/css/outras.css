@@ -70,6 +70,11 @@
     row-gap: 4px;
 }
 
+.input--ferramenta{
+    background: transparent;
+    width: 100%;
+}
+
 .label--ferramenta{
     font-family: 'montez', sans-serif;
     font-size: 1.2rem;

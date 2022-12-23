@@ -2205,7 +2205,94 @@
                     <label class="class__label" for="ferramenta">Ferramenta:</label>
                     <input class="outra__input" type="text" id="ferramenta" value="">
                     <button class="btn--add" id="ferramenta--add" aria-label="Adicionar ferramenta."></button>
-                    <ul class="wrapper__outras" id="lista__ferramenta"></ul>
+                    <ul class="wrapper__outras" id="lista__ferramenta">
+                        <li class="wrapper wrapper--ferramenta hidden" data-proficiencia__classe="herbalism">
+                            <p class="outras__p cor__int">Kit de Herbalista</p>
+                            <label class="label--ferramenta" for="herbalism">Atribute:</label>
+                            <select class="select--atribute cor__int" id="herbalism" data-ferramenta="select">
+                                <option class="pericia__label--atribute cor__str" value="str">For</option>
+                                <option class="pericia__label--atribute cor__dex" value="dex">Dex</option>
+                                <option class="pericia__label--atribute cor__con" value="con">Con</option>
+                                <option class="pericia__label--atribute cor__int" value="int" selected>Int</option>
+                                <option class="pericia__label--atribute cor__wis" value="wis">Sab</option>
+                                <option class="pericia__label--atribute cor__cha" value="cha">Cha</option>
+                            </select>
+                            <button class="roll roll--ferramenta" data-ferramenta="roll"></button>
+                        </li>
+                        <li class="wrapper wrapper--ferramenta hidden" data-proficiencia__classe="thievestools">
+                            <p class="outras__p cor__int">Ferramentas de Ladrão</p>
+                            <label class="label--ferramenta" for="thievestools">Atribute:</label>
+                            <select class="select--atribute cor__dex" id="thievestools" data-ferramenta="select">
+                                <option class="pericia__label--atribute cor__str" value="str">For</option>
+                                <option class="pericia__label--atribute cor__dex" value="dex" selected>Dex</option>
+                                <option class="pericia__label--atribute cor__con" value="con">Con</option>
+                                <option class="pericia__label--atribute cor__int" value="int">Int</option>
+                                <option class="pericia__label--atribute cor__wis" value="wis">Sab</option>
+                                <option class="pericia__label--atribute cor__cha" value="cha">Cha</option>
+                            </select>
+                            <button class="roll roll--ferramenta" data-ferramenta="roll"></button>
+                        </li>
+                        <li class="wrapper wrapper--ferramenta hidden" data-proficiencia__classe="instrument1">
+                            <label class="outras__p cor__int">Instrumento:
+                                <input class="input--ferramenta" type="text" placeholder="nome...">
+                            </label>
+                            <label class="label--ferramenta" for="instrument1">Atribute:</label>
+                            <select class="select--atribute cor__cha" id="instrument1" data-ferramenta="select">
+                                <option class="pericia__label--atribute cor__str" value="str">For</option>
+                                <option class="pericia__label--atribute cor__dex" value="dex">Dex</option>
+                                <option class="pericia__label--atribute cor__con" value="con">Con</option>
+                                <option class="pericia__label--atribute cor__int" value="int">Int</option>
+                                <option class="pericia__label--atribute cor__wis" value="wis">Sab</option>
+                                <option class="pericia__label--atribute cor__cha" value="cha" selected>Cha</option>
+                            </select>
+                            <button class="roll roll--ferramenta" data-ferramenta="roll"></button>
+                        </li>
+                        <li class="wrapper wrapper--ferramenta hidden" data-proficiencia__classe="instrument2">
+                            <label class="outras__p cor__int">Instrumento:
+                                <input class="input--ferramenta" type="text" placeholder="nome...">
+                            </label>
+                            <label class="label--ferramenta" for="instrument2">Atribute:</label>
+                            <select class="select--atribute cor__cha" id="instrument2" data-ferramenta="select">
+                                <option class="pericia__label--atribute cor__str" value="str">For</option>
+                                <option class="pericia__label--atribute cor__dex" value="dex">Dex</option>
+                                <option class="pericia__label--atribute cor__con" value="con">Con</option>
+                                <option class="pericia__label--atribute cor__int" value="int">Int</option>
+                                <option class="pericia__label--atribute cor__wis" value="wis">Sab</option>
+                                <option class="pericia__label--atribute cor__cha" value="cha" selected>Cha</option>
+                            </select>
+                            <button class="roll roll--ferramenta" data-ferramenta="roll"></button>
+                        </li>
+                        <li class="wrapper wrapper--ferramenta hidden" data-proficiencia__classe="instrument3">
+                            <label class="outras__p cor__int">Instrumento:
+                                <input class="input--ferramenta" type="text" placeholder="nome...">
+                            </label>
+                            <label class="label--ferramenta" for="instrument3">Atribute:</label>
+                            <select class="select--atribute cor__cha" id="instrument3" data-ferramenta="select">
+                                <option class="pericia__label--atribute cor__str" value="str">For</option>
+                                <option class="pericia__label--atribute cor__dex" value="dex">Dex</option>
+                                <option class="pericia__label--atribute cor__con" value="con">Con</option>
+                                <option class="pericia__label--atribute cor__int" value="int">Int</option>
+                                <option class="pericia__label--atribute cor__wis" value="wis">Sab</option>
+                                <option class="pericia__label--atribute cor__cha" value="cha" selected>Cha</option>
+                            </select>
+                            <button class="roll roll--ferramenta" data-ferramenta="roll"></button>
+                        </li>
+                        <li class="wrapper wrapper--ferramenta hidden" data-proficiencia__classe="monktool">
+                            <label class="outras__p cor__int">Ferramenta ou Instrumento:
+                                <input class="input--ferramenta" type="text" placeholder="nome...">
+                            </label>
+                            <label class="label--ferramenta" for="monktool">Atribute:</label>
+                            <select class="select--atribute cor__str" id="monktool" data-ferramenta="select">
+                                <option class="pericia__label--atribute cor__str" value="str">For</option>
+                                <option class="pericia__label--atribute cor__dex" value="dex">Dex</option>
+                                <option class="pericia__label--atribute cor__con" value="con">Con</option>
+                                <option class="pericia__label--atribute cor__int" value="int">Int</option>
+                                <option class="pericia__label--atribute cor__wis" value="wis">Sab</option>
+                                <option class="pericia__label--atribute cor__cha" value="cha">Cha</option>
+                            </select>
+                            <button class="roll roll--ferramenta" data-ferramenta="roll"></button>
+                        </li>
+                    </ul>
                 </article>
                 <article class="outras__container">
                     <h2 class="title title--sub title--outras">Idiomas</h2>
