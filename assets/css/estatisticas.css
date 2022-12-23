@@ -44,7 +44,7 @@
     content:"\f21e";
     font: var(--fa-font-solid);
     color: bisque;
-    text-shadow: 0px 0px 10px black, 0px 0px 16px var(--con);
+    text-shadow: 0px 0px 8px black, 0px 0px 12px var(--con);
     font-size: 14rem;
 }
 
